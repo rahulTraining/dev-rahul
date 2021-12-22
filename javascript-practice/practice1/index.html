@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript practice</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .container {
+        background: silver;
+        padding: 10px;
+        /* display: table; */
+        overflow: hidden;
+        width: 100%;
+    }
+
+    h2 {
+        float: left;
+    }
+
+    h3 {
+        float: right;
+    }
+
+    button {
+        margin: 0 0 20px 20px;
+        padding: 6px 10px;
+        border-radius: 5px;
+    }
+
+    .loading-bar {
+        display: none;
+    }
+
+    .loading-bar.active {
+        display: block;
+    }
+
+    #table2 {
+        position: relative;
+    }
+
+    #table2 .span {
+        background-color: red;
+        padding: 0px 3px;
+        position: absolute;
+        right: 18%;
+        top: 92%;
+        color: white;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h2>rahul</h2>
+        <h3>ui Developer</h3>
+    </div>
+    <div class="one"></div>
+    <div id="table" style="margin-bottom: 30px"></div>
+    <div id="table1" style="margin-bottom: 30px"></div>
+    <div id="table2" style="margin-bottom: 30px">
+        <!-- <span>&#10005;</span> -->
+    </div>
+    <div class="loading-bar">
+        <img src="https://miro.medium.com/max/1400/1*CsJ05WEGfunYMLGfsT2sXA.gif" type="image/gif" width="100px"
+            height="60px" alt="loaders">
+    </div>
+    <button style="cursor: pointer;">click-here</button>
+
+
+
+
+    <script>
+        let a = 20;
+        let b = 30;
+
+        function devide(a, b) {
+            if (b == 0) {
+                throw 'division by zero'
+            }
+            return a / b
+        }
+        let items = ['rahul', 'katkuri', 'ui', 'dev']
+        for (i = 0; i < items.length; i++) {
+            console.log(items[i])
+        }
+
+        for (let item of items) {
+            console.log(item)
+        }
+        {
+            tmp = a;
+            a = b;
+            b = tmp;
+            console.log(tmp)
+        }
+        var day = 2;
+        var dayName;
+        switch (day) {
+            case 1:
+                dayName = 'sunday';
+                break;
+
+            case 2: dayName = 'monday';
+                break;
+
+            case 3: dayName = 'tuesday';
+                break;
+
+            case 4: dayName = 'wednesday';
+                break;
+
+            default:
+                dayName = 'invalid day'
+
+        }
+        console.log(dayName);
+
+        let count = 0;
+
+        do {
+            count++;
+            console.log('count is:' + count)
+        } while (count < 10)
+
+        let sum = 0;
+        for (let i = 0; i <= 9; i++) {
+            sum += i
+            console.log(sum);
+        }
+        let name = 'John';
+        let message = `Hello ${name}`;
+
+        console.log(message);
+        let firstName = 'John';
+        let fullName = firstName.concat(' doe')
+        console.log(fullName); // "John Doe"
+        console.log(firstName); // "John"
+
+        let cities = [
+            { name: 'hyderabad', population: 3752254 },
+            { name: 'karimnager', population: 200005 },
+            { name: 'peddapalli', population: 100050 }
+        ]
+
+        // let bigCity =[];
+        // for(let i=0;i<cities.length;i++){
+        //     if(cities[i].population > 300000){
+        //         bigCity.push(cities[i])
+        //     }
+        // }
+
+        // let bigCity = cities.filter(function(e){
+        //     return e.population > 300000
+        // })
+        // console.log(bigCity)
+
+        let bigCity = cities.filter(city => city.population > 300000);
+        console.log(bigCity)
+
+
+    </script>
+
+    <script>
+        // function num(){
+        //     for(i=0;i<=5;i++){
+        //         console.log(i)
+        //     }
+        // }
+        // num();
+
+        // print all one's
+
+        // let coun='';
+        // for (let i = 0; i < 5; i++) {
+        //     for (let j = 0; j < 5; j++) {
+        //         coun += '1' + '   '
+        //     }
+        //     coun += '\n'            
+        // }
+        // console.log(coun);
+
+        const nameR = 'rahul';
+        const job = 'developer';
+        const age = 25;
+
+        console.log('my name is' + name + ', job role is ' + job + ', age is ' + age);
+        console.log(`my name is ${name}, my job role is ${job}, age is ${age}`)
+
+        let coun = '';
+        for (let i = 0; i < 5; i++) {
+            for (let j = 0; j < 5; j++) {
+                coun += '1' + " &nbsp;"
+            }
+            coun += "<br>"
+        }
+
+        document.querySelector('.one').innerHTML = `<pre>${coun}</pre>`
+        // document.querySelector('.one').innerHTML=coun
+
+
+        // print one to five
+
+        let str = '';
+        for (let i = 0; i <= 5; i++) {
+            // let count=1;
+            for (let j = 1; j <= 5; j++) {
+                // str += count++ + '   '
+                // str += i + '  '
+                str += j + '  '
+            }
+            str += '\n'
+        }
+        console.log(str)
+
+        // print all stars
+
+        let sta = '';
+
+        for (let i = 0; i < 5; i++) {
+            for (let j = 0; j < 5; j++) {
+                sta += '*' + '   '
+            }
+            sta += '\n'
+        }
+        console.log(sta)
+
+        // print I with stars
+
+        let halo = '';
+        for (let i = 0; i < 5; i++) {
+            for (let j = 0; j < 5; j++) {
+                if (j === 1 || j === 5 - 2 || j === 5 - 3) {
+                    halo += '*' + '   '
+                } else {
+                    if (i === 0 || i === 5 - 1) {
+                        halo += '*' + '  '
+                    }
+                    else {
+                        halo += '   '
+                    }
+                }
+            }
+            halo += '\n'
+        }
+        console.log(halo);
+
+        // print stars with spaces
+
+        let star = '';
+        for (let i = 0; i < 5; i++) {
+            for (let j = 0; j < 5; j++) {
+                if (i === 0 || i === 5 - 1) {
+                    star += '*' + '  '
+                }
+                else if (j === 0 || j === 5 - 1) {
+                    star += '*' + '  '
+                }
+                else {
+                    star += '   '
+                }
+            }
+            star += '\n'
+        }
+        console.log(star)
+
+        // print right angle triangle
+
+        let tri = '';
+        for (let i = 0; i <= 5; i++) {
+            for (let j = 0; j < 5 - i; j++) {
+                tri += ' '
+            }
+            for (let k = 0; k < i; k++) {
+                tri += '*'
+            }
+            tri += '\n'
+        }
+        console.log(tri)
+
+        // print right angle from left
+
+        let tria = '';
+        for (let i = 0; i <= 5; i++) {
+            for (let j = 0; j < i; j++) {
+                tria += '* '
+            }
+            tria += '\n'
+        }
+        console.log(tria);
+
+        // print downward triangle 
+
+        let trian = '';
+        for (let i = 0; i < 5; i++) {
+            for (let j = 0; j < 5 - i; j++) {
+                trian += '*' + ' '
+            }
+            trian += '\n'
+        }
+        console.log(trian)
+
+        // print downward triangle from left
+
+        let triang = '';
+        for (let i = 0; i < 5; i++) {
+            for (let j = 0; j < i; j++) {
+                triang += ' ';
+            }
+            for (let k = 0; k < 5 - i; k++) {
+                triang += '*'
+            }
+            triang += '\n'
+        }
+        console.log(triang);
+
+        let array = [1, 2, 3, 4, 5, 6];
+        let array1 = [7, 8, 9, 10, 11];
+
+        // console.log(array.splice(2));
+        // console.log(array)
+
+        // console.log(array.concat(array1)) //concate method
+        // console.log([...array,...array1]) //spread operator
+
+        console.log(array.join(',')) //join metod
+
+        // for (let i = 0; i < array.length; i++) {
+
+        //     if (i%2 === 0) {
+        //         alert('even')
+        //     }
+
+        // }
+
+        str = 'the quick brown fox jumps over the lazy dog';
+        const words = str.split('');
+        console.log(words)
+        console.log(str.split('')[5]);
+        // console.log(chars[8])
+
+        console.log(str.split('').reverse().join('-').concat(array))
+
+        const friuts = ["banana", "apple", "grapes", "mango"];
+        var text = "";
+        // friuts.slice(1)
+        // const p = friuts.shift();
+        console.log(friuts.slice(1, 3));
+        console.log(friuts);
+
+
+        // for (let i = 0; i < friuts.length; i++) {
+        //     text += "<li>" + friuts[i] + "</li>"
+        //     text += "</ul>";
+        // }
+
+        // friuts.forEach(item => {
+        //     text += "<li>" + item + "</li>";
+        //     text += "</ul>"
+        // })
+
+        for (let item of friuts) {
+            text += "<li>" + item + "</li>";
+            text += "</ul>"
+        }
+        document.write(text);
+
+        let triangl = "";
+        for (let i = 1; i <= 6; i++) {
+            for (let j = 0; j < 5; j++) {
+                if (i === 6) {
+                    triangl += "*"
+                }
+                if (j == 0 || j == i - 1) {
+
+                }
+            }
+        }
+
+
+        //  array of objects
+
+        const details = [
+            {
+                name: "rahul",
+                age: 25,
+                email: "rahul.k@indianEagle.com"
+            },
+            {
+                name: "vijay",
+                age: 25,
+                email: "vijay@indianEagle.com"
+            },
+            {
+                name: "rajashekar",
+                age: 24,
+                email: "rajashekar@indianEagle.com"
+            },
+            {
+                name: "sai-kishore",
+                age: 22,
+                email: "sai@indianEagle.com"
+            },
+            {
+                name: "vamshi",
+                age: 25,
+                email: "vamshi@indianEagle.com"
+            }
+        ];
+        let detail = '';
+        console.log(details);
+        for (let i = 0; i < details.length; i++) {
+            console.log(details[i].name);
+            detail += "<li>" + details[i].name + "</li>";
+            detail += "</ul>"
+
+            document.write(`<li> ${details[i].email} </li>`);
+
+            document.write("<li>" + details[i].age + "</li>");
+        }
+        document.write(detail);
+
+    </script>
+
+    <script>
+        const getData = [];
+
+        fetch("main.json").then(response => response.json()).then(obj => console.log(obj)).catch(err => console.error("something is wrong unable to get data from server"));
+
+        fetch("main.json").then(response => response.json()).then(obj => {
+            console.log("::obj", obj)
+            let tableData1 = "";
+            tableData1 += "<table style='border-collapse:collapse' border=01 align=center cellpadding=10 cellspacing=1>"
+            tableData1 += "<tr align=center >"
+            tableData1 += "<th> id </th> "
+            tableData1 += "<th> name </th> "
+            tableData1 += "<th> age </th> "
+            tableData1 += "<th> email </th> "
+            tableData1 += "</tr>"
+            // obj.map(data => {
+            // console.log("::data", data);
+            // tableData1 += "<tr align=center>"
+            // tableData1 += "<td>" + data.id + "</td>";
+            // tableData1 += "<td>" + data.name + "</td>";
+            // tableData1 += "<td>" + data.age + "</td>";
+            // tableData1 += "<td>" + data.email + "</td>";
+
+            // tableData1 += "</tr>"
+            // });
+            for (let i = 0; i < obj.length; i++) {
+                console.log("::data", obj[i]);
+                tableData1 += "<tr align=center>"
+                tableData1 += "<td>" + obj[i].id + "</td>";
+                tableData1 += "<td>" + obj[i].name + "</td>";
+                tableData1 += "<td>" + obj[i].age + "</td>";
+                tableData1 += "<td>" + obj[i].email + "</td>";
+
+                tableData1 += "</tr>"
+
+            }
+            tableData1 += '</table>'
+            document.getElementById("table1").innerHTML = tableData1;
+        })
+
+
+        // useEffect(() => {
+        //     fetch("main.json").then(response => response.json()).then(data => {
+        //         getData.push(...data);
+        //         setDataState(getData.map(d => d.name));
+        //     })
+        // },[])
+
+        try {
+            fetch('main.json').then(response => response.json())
+                .then((resData) => {
+                    console.log('resData:::', resData);
+                    let tableData = "";
+                    tableData += "<table style='border-collapse:collapse' border=01 align=center cellpadding=10 cellspacing=1>"
+                    tableData += "<tr align=center >"
+                    tableData += "<th> id </th> "
+                    tableData += "<th> name </th> "
+                    tableData += "<th> age </th> "
+                    tableData += "<th> email </th> "
+                    tableData += "</tr>"
+
+                    resData.map((d) => {
+                        console.log('d:::', d);
+
+                        tableData += "<tr align=center>"
+                        tableData += "<td>" + d.id + "</td>";
+                        tableData += "<td>" + d.name + "</td>";
+                        tableData += "<td>" + d.age + "</td>";
+                        tableData += "<td>" + d.email + "</td>";
+
+                        tableData += "</tr>"
+                    });
+                    tableData += '</table>'
+                    document.getElementById("table").innerHTML = tableData;
+                })
+        } catch (error) {
+            console.error('something wenr wrong')
+        }
+
+    </script>
+
+    <script>
+        var span = document.createElement('span');
+        span.className = "span"
+        var txt = document.createTextNode('\u00D7');
+        span.appendChild(txt)
+        function fetchData() {
+            fetch('https://jsonplaceholder.typicode.com/users').then(response => response.json())
+                .then((resData) => {
+                    console.log('resData:::', resData);
+                    let tableData = "";
+                    tableData += "<table style='border-collapse:collapse' border=01 align=center cellpadding=10 cellspacing=1>"
+                    tableData += "<tr align=center >"
+                    tableData += "<th> id </th> "
+                    tableData += "<th> name </th> "
+                    tableData += "<th> usename </th> "
+                    tableData += "<th> email </th> "
+                    tableData += "</tr>"
+                    resData.map((d) => {
+                        console.log('d:::', d);
+
+                        tableData += "<tr align=center>"
+                        tableData += "<td>" + d.id + "</td>";
+                        tableData += "<td>" + d.name + "</td>";
+                        tableData += "<td>" + d.username + "</td>";
+                        tableData += "<td>" + d.email + "</td>";
+
+                        tableData += "</tr>"
+                    });
+                    tableData += '</table>'
+                    document.getElementById("table2").innerHTML = tableData;
+                    document.getElementById('table2').appendChild(span)
+                })
+        }
+        document.querySelector('button').addEventListener('click', function () {
+            document.querySelector('.loading-bar').classList.add('active')
+            setTimeout(() => {
+                document.querySelector('.loading-bar').classList.remove('active')
+                fetchData()
+            }, 2500);
+        }, { once: true })
+        var span1 = document.querySelector('span')
+        span1.addEventListener('click', function () {
+            fetchData().remove()
+        })
+
+    </script>
+
+    <script>
+        let numbers = [1, 2, 4, 7, 3, 5, 6];
+        console.log(numbers.filter((number) => number % 2))
+
+        function oddNumber(number) {
+            return number % 2;
+        }
+        console.log(numbers.filter(oddNumber))
+    </script>
+
+    <script>
+        async function fetchText() {
+            let response = await fetch('main.json');
+            let data = await response.text();
+            console.log("::await", data)
+        }
+    </script>
+
+</body>
+
+</html>

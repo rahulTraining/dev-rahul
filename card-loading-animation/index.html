@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Card-load-animation</title>
+</head>
+
+<body>
+    <div class="dark_mode" onmouseover="darkMode()" onclick="darkMode()" title="dark-mode">🌑</div>
+    <div class="card">
+        <div class="card-header animated-bg">
+            <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_BRGdHwDpy2CV5stq2OmMAaPlSnSmVmD4rg&usqp=CAU" alt="header-image"> -->
+        </div>
+        <div class="card-content">
+            <div class="card-body">
+                <h2 class="animated-bg animated-bg-text">
+                    <!-- Lorem ipsum dolor sit amet. -->
+                </h2>
+                <p>
+                    <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Error aliquid optio facere quasi? -->
+                    <span class="animated-bg animated-bg-text"></span>
+                    <span class="animated-bg animated-bg-text"></span>
+                    <span class="animated-bg animated-bg-text"></span>
+                </p>
+            </div>
+            <div class="author">
+                <div class="author-logo animated-bg">
+                    <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjaYtiCq-knrwxPEEX7a5yCx2_XA_V34vmwA&usqp=CAU" alt="author"> -->
+                </div>
+                <div class="author-info">
+                    <h4 class="animated-bg animated-bg-text" id="name">
+                        <!-- Rahul Katkuri  -->
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                    </h4>
+                    <small class="animated-bg animated-bg-text" id="date">
+                        <!-- Oct 27,2021 -->
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                    </small>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var header = document.querySelector('.card-header')
+        var title = document.querySelector('h2')
+        var content = document.querySelector('p')
+        var logo = document.querySelector('.author-logo')
+        var h4ele = document.getElementById('name')
+        var date = document.getElementById('date')
+
+        var animated_bgs = document.querySelectorAll('.animated-bg')
+        var animated_bgtxt = document.querySelectorAll('.animated-bg-text')
+
+        setTimeout(getData, 2000)
+        function getData() {
+            header.innerHTML = '<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_BRGdHwDpy2CV5stq2OmMAaPlSnSmVmD4rg&usqp=CAU" alt="header-image">';
+            title.innerHTML = 'Lorem ipsum dolor sit amet.';
+            content.innerHTML = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Error aliquid optio facere quasi?';
+            logo.innerHTML = '<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjaYtiCq-knrwxPEEX7a5yCx2_XA_V34vmwA&usqp=CAU" alt="author">';
+            h4ele.innerHTML = 'Rahul Katkuri';
+            date.innerHTML = 'Oct 27,2021';
+
+            for (let i = 0; i < animated_bgs.length; i++) {
+                animated_bgs[i].classList.remove('animated-bg');
+            }
+            for (let j = 0; j < animated_bgtxt.length; j++) {
+                animated_bgtxt[j].classList.remove('animated-bg-text');
+            }
+        }
+
+        // var body = document.getElementsByTagName('body')[0]
+
+        var body = document.documentElement || document.body;
+        var card = document.querySelector('.card-content')
+        // document.querySelector('.dark_mode').addEventListener('click',function(){
+        //     if(body.style.backgroundColor == '#ecf0f1'){
+        //         body.style.backgroundColor='#000'
+        //     } else{
+        //         body.style.backgroundColor ="#ecf0f1"
+        //     }
+        // })
+
+        function darkMode(){
+            
+            if(card.style.background == "white"){
+                document.querySelector('.dark_mode').innerHTML="⚪"
+                card.style.cssText=`background:black;color:silver;transition: all 0.45s ease;`
+            }else{
+                document.querySelector('.dark_mode').innerHTML="🌑"
+                card.style.cssText=`background:white;color:initial;transition: all 0.45s ease;`
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>

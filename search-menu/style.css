@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.heading{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,194,232,1) 0%, rgba(232,9,89,1) 0%, rgba(68,9,232,1) 91%);
+    transition: all 0.4s ease;
+    animation: gradient 3s ease infinite;
+}
+@keyframes gradient {
+    0%{
+        background-size: 300%;
+    }
+    50%{
+        background-size: 200%;
+    }
+    100%{
+        background-size: 100%;
+    }
+}
+.heading h2,p{
+    text-align: center;
+    padding: 10px;
+    color: white;
+}
+p{
+    font-size: 1.2rem;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container h2{
+    padding: 10px;
+}
+.container input{
+    outline: none;
+    border: none;
+    width: 60vw;
+    padding: 10px;
+    background: gray;
+}
+::placeholder{
+    color: white;
+}
+.container input:focus{
+    border: 1px solid hsl(0, 0%, 60%);
+    color: white;
+}
+li{
+    margin: 15px 0;
+    padding: 5px;
+    text-transform: capitalize;
+}
+li.hide{
+    display: none;

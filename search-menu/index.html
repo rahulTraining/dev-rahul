@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Search-menu</title>
+</head>
+
+<body>
+    <div class="heading">
+        <h2>Search menu</h2>
+        <p>this example shows Search menu with filter </p>
+    </div>
+
+    <div class="container">
+        <h2>Menu</h2>
+        <input id="input" type="search" placeholder="search your item.......">
+        <ul id="list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+            <li>php</li>
+            <li>python</li>
+            <li>jquery</li>
+            <li>sql</li>
+            <li>bootstrap</li>
+            <li>node.js</li>
+        </ul>
+    </div>
+
+    <script>
+        var input = document.getElementById('input')
+
+        // input.addEventListener('keyup',function(){
+        //     var filter = input.value.toUpperCase()
+        //     var li = document.getElementsByTagName('li')
+        //     // var span = document.querySelectorAll('#list span')
+            
+        //     for(i=0;i<li.length;i++){
+        //         if(li[i].innerHTML.toUpperCase().indexOf(filter) > -1){
+        //             li[i].style.display="block"
+        //         } else {
+        //             li[i].style.display = "none"
+        //         }
+        //     }
+        // })
+
+        // input.onkeyup=function(){
+        //     var filter = input.value.toUpperCase();
+        //     var li = document.querySelectorAll('li');
+
+        //     for(i=0;i<li.length;i++){
+        //         if(li[i].innerHTML.toUpperCase().indexOf(filter) > -1){
+        //             li[i].style.display="list-item";
+        //             // li[i].style.display="block";
+        //         }else{
+        //             li[i].style.display="none"
+        //         }
+        //     }
+        // }
+
+        input.onkeyup=function(){
+            var filter = input.value.toUpperCase();
+            var li = document.querySelectorAll('li');
+
+            for(i=0;i<li.length;i++){
+                if(li[i].innerHTML.toUpperCase().includes(filter)){
+                    li[i].style.display="list-item";
+                    // li[i].style.display="block";
+                }else{
+                    li[i].style.display="none"
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

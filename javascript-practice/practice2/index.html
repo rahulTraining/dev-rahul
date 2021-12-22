@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript practice2</title>
+</head>
+
+<body>
+    <script>
+
+        let employee = {
+            firstName: 'Peter',
+            lastName: 'Doe',
+            employeeId: 1
+        };
+        for (let nam in employee) {
+            console.log(nam)
+        }
+        console.log('rahul' in employee)
+        console.log('firstName' in employee)
+
+        names = ["rahul", "sai", "rajashekar", "vijay"];
+        names.map(name => console.log(name));
+
+        function person(name) {
+            this.name = name
+        }
+        console.log(person)
+
+        function swap(x, y) {
+            let tmp = x;
+            x = y;
+            y = tmp;
+        }
+        console.log(swap.length)
+        console.log(swap.prototype);
+
+        // function methods
+
+        // 1. anonymous function
+        let cat = { type: "cat", sound: "meow" };
+        let dog = { type: "dog", sound: "woof" };
+
+        let say = function () {
+            console.log(cat.type + ' says ' + cat.sound)
+        }
+        say();
+
+        // apply method
+
+        function sayS(greetings) {
+            console.log(greetings);
+            console.log(this.type + ' says ' + this.sound)
+        }
+        sayS.apply(dog, ['hi']);
+
+        // call method
+
+        function sayS(greetings) {
+            console.log(greetings);
+            console.log(this.type + ' says ' + this.sound)
+        }
+        sayS.call(cat, 'hi');
+
+        let name = 'javascript';
+
+        console.log(name.split("").reverse().join(""));
+
+
+        // function reverseString(str){
+        //     var nameArr ="";
+        //     for (let i >= 0; i = str.length-1; i--) {
+        //     nameArr += name1[i];
+        // }
+        // return()
+        // }
+
+        // console.log(nameArr);
+        let x = 20,
+            y = 10;
+
+        let result = add(x, y);
+        console.log(result);
+
+        function add(a, b) {
+            return a + b;
+        }
+
+        let arr = [1, 2, 3, 4, 5];
+        let arr2 = [3, 4, 5, 6, 7, 8];
+
+        // let array1 = arr.concat(arr2);
+        let array1 = [...arr, ...arr2]
+
+        // console.log(array1)
+        // let a = [... new Set(array1)];
+        // console.log(a);
+
+        // let array2=[];
+
+        // for (let i = 0; i < array1.length; i++) {
+        //     if(array2.indexOf(array1[i]) === -1){
+        //         array2.push(array1[i])
+        //     }
+        // }
+        // console.log(array2);
+
+        let array3 = array1.filter((a, b) => {
+            return array1.indexOf(a) === b
+        });
+        console.log(array3)
+
+// let array4= array1.reduce((c,d)=>{
+//     if(c.indexOf(d) <0 ){
+//         c.push(d)
+//     }
+//     return c
+// },[])
+// console.log(array4);
+    </script>
+
+    <script>
+        let features = 'height=600,width=800',
+            url = 'http://localhost/js/about.html';
+
+        let jsWindow = window.open(url, 'about', features);
+
+        setTimeout(() => {
+            window.open('http://localhost/js/contact.html', 'about')
+        }, 3000);
+
+        window.resizeTo
+    </script>
+</body>
+
+</html>

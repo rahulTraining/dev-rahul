@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Password-validation</title>
+</head>
+<body>
+    <h3>Password Validation</h3>
+    <p>Submit below form</p>
+    <div class="container">
+        <form action="###">
+            <label for="username">Username:-</label>
+            <input type="text" id="username" required>
+            <label for="pwd">Password:-</label>
+            <input type="password" id="pwd" required>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <div id="msgs">
+        <h3>Password must contain:-</h3>
+        <p id="smallLetter" class="invalid"> must contain one lower case letter.</p>
+        <p id="capitalLetter" class="invalid"> must contain one uppercase letter.</p>
+        <p id="specialChr" class="invalid">one special character.</p>
+        <p id="number1" class="invalid">a number.</p>
+        <p id="length" class="invalid">minimum 8 character length.</p>
+    </div>
+
+    <script>
+        var smallLetter = document.getElementById("smallLetter");
+        var capitalLetter = document.getElementById("capitalLetter");
+        var specialChar = document.getElementById("specialChr");
+        var number = document.getElementById("number");
+        var length = document.getElementById("length");
+        var input = document.getElementById("pwd");
+
+        input.onfocus= function() {
+            document.getElementById("msgs").style.display="block"
+        }
+        input.onblur=function() {
+            document.getElementById("msgs").style.display="none"
+        }
+        input.onkeyup = function(){
+            // small letter
+            var lowerCase = /[a-z]/g;
+            if(input.value.match(lowerCase)){
+                smallLetter.classList.remove('invalid');
+                smallLetter.classList.add('valid');
+            }else{
+                smallLetter.classList.remove('valid');
+                smallLetter.classList.add('invalid');
+            }
+            // capital letter
+            var upperCase = /[A-Z]/g;
+            if(input.value.match(upperCase)){
+                capitalLetter.classList.remove('invalid');
+                capitalLetter.classList.add('valid')
+            }else{
+                capitalLetter.classList.remove('valid')
+                capitalLetter.classList.add('invalid')
+            }
+            // special character
+            // var specialChr = /[$&+,:;=?@#|'<>.^*()%!-]/g
+            // var specialChr = /[$&+,:;=?@#|'<>.-^*()%!]/g
+            var specialChr = /[?@#]/g
+            if (input.value.match(specialChr)) {
+                specialChar.classList.remove('invalid')
+                specialChar.classList.add('valid')
+            }else{
+                specialChar.classList.remove('valid');
+                specialChar.classList.add('invalid')
+            }
+            // number
+            var number =/[0-9]/g;
+            if (input.value.match(number)) {
+                number1.classList.remove('invalid');
+                number1.classList.add('valid')
+            }else{
+                number1.classList.remove('valid');
+                number1.classList.add('invalid')
+            };
+            // length
+            if (input.value.length >= 8) {
+                 length.classList.remove('invalid');
+                 length.classList.add('valid')
+            }else{
+                length.classList.remove('valid');
+                length.classList.add('invalid')
+            }
+
+        }
+    </script>
+
+    <script>
+        function createDiv(height="250px",width="250px",background="red"){
+            let div = document.createElement('div');
+            div.style.height=height;
+            div.style.width=width;
+            div.style.background=background;
+            document.body.appendChild(div)
+            
+        }
+        createDiv()
+    </script>
+</body>
+</html>

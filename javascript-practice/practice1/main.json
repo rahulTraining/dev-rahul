@@ -1,0 +1,32 @@
+[
+    {   
+        "id":1,
+        "name": "rahul",
+        "age":25,
+        "email": "rahul.k@indianEagle.com"
+    },
+    {
+        "id":2, 
+        "name": "vijay",
+        "age":25,
+        "email": "vijay@indianEagle.com"
+    },
+    {
+        "id":3,
+        "name": "rajashekar",
+        "age":24,
+        "email": "rajashekar@indianEagle.com"
+    },
+    {
+        "id":4, 
+        "name": "sai-kishore",
+        "age":22,
+        "email": "sai@indianEagle.com"
+    },
+    {
+        "id":5,
+        "name": "vamshi",
+        "age":25,
+        "email": "vamshi@indianEagle.com"
+    }
+]

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Quiz-app</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="./images/Group.png" alt="company-logo">
+        </div>
+        <nav>
+            <ul>
+                <li> <img src="./images/Group 16.png" alt="profile-logo"> </li>
+                <li> <img src="./images/Group 10.png" alt="menu-btn"> </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="heading">
+        <h2 style="text-decoration: underline;text-underline-offset: 5px;">Quiz</h2>
+    </div>
+    <section>
+        <div class="container">
+            <div class="question-panel">
+                    <span style="margin-right: 8px;"> <b style="font-size: 1.5rem;">Q1.</b> </span> 
+                    <h1> question goes here question goes here</h1>
+            </div>
+            <div class="options">
+                <ul>
+                    <li>
+                        <input type="radio" name="radio" id="opt1">
+                        <label class="option1" for="opt1">Option1</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="radio" id="opt2">
+                        <label class="option2" for="opt2">Option2</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="radio" id="opt3">
+                        <label class="option3" for="opt3">Option3</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="radio" id="opt4">
+                        <label class="option4" for="opt4">Option4</label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="buttons">
+            <button class="answer" onclick="result()">Result</button>
+            <div class="nex-prv">
+                <button style="margin-right: 15px;" class="prev" onclick="Prev()">Previous</button>
+                <button class="next" onclick="next()">Next</button>
+            </div>
+        </div>
+    </section>
+    <div class="score">
+        <h3>Your Score: <span></span> </h3>
+        <h3>Get Winning Percentage:- <span class="percentage">Click here</span> </h3> 
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>

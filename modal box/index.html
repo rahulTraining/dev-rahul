@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Medal pop-up</title>
+</head>
+<body>
+    <h2>Modal pop-up</h2>
+    <button id="btn">Modal</button>
+        <div class="container">
+            <h1>header</h1>
+            <p> <span>body</span> hello world</p>
+            <p>footer</p>
+        </div>
+
+    <script>
+        var btn = document.getElementById("btn");
+        var box = document.querySelector(".container");
+        var modal = document.querySelector('.modal-container')
+        var body = document.getElementsByTagName('body')[0]
+
+        btn.addEventListener('click',function(){
+            // box.classList.toggle('active');
+            box.classList.add('active')
+            body.style.cssText=`overflow:hidden`;
+            btn.disabled = true;
+        })
+        var span = document.createElement('span');
+        var txt = document.createTextNode('\u00D7');
+            span.appendChild(txt);
+            box.appendChild(span).className="close"
+            span.onclick=function(){
+                // var div = this.parentElement;
+                // div.style.display="none"
+                box.classList.remove('active')
+                body.style.cssText=`overflow:initial`
+                btn.disabled = false;
+            }
+            // window.onclick=function(e){
+            //     if(e.target == modal){
+            //         box.classList.remove('active')
+            //         btn.disabled = false;
+            //         body.style.cssText=`overflow:initial`
+            //     }
+            // }
+    </script>
+</body>
+</html>

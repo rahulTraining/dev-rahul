@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1,p{
+    text-align: center;
+    padding: 10px;
+    margin: 20px 0 30px;
+}
+.container{
+    text-align: center;
+}
+button{
+    border: none;
+    background: transparent;
+    padding: 6px 10px;
+    background: hsl(16, 100%, 45%);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+button:hover{
+    background: hsl(16, 100%, 50%);
+}
+.loading-bar{
+    position: fixed;
+    left: 50%;
+    top: 12%;
+    transform: translateX(-50%);
+    display: none;
+}
+.loading-bar.active{
+    display: block;
+}
+.loading-bar.active1{
+    display: none;
+}
+/* body.active1 .loading-bar{
+    display: block;
+} */

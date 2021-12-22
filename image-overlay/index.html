@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.css" integrity="sha512-NtU/Act0MEcVPyqC153eyoq9L+UHkd0s22FjIaKByyA6KtZPrkm/O5c5xzaia4pyCfReCS634HyQ7tJwKNxC/g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>image-overlay</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        position: relative;
+    }
+    img{
+        width: 150px;
+        height: 150px;
+        cursor: pointer;
+    }
+    .content{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 150px;
+        height: 150px;
+        background-color: pink;
+        display: grid;
+        place-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease-in;
+    }
+    img:hover .content{
+        opacity: 1;
+        transition: opacity 0.3s ease-in;
+    }
+    #icon{
+        transition: 0.5s;
+    }
+</style>
+<body>
+    <!-- <div class="content">
+        <img src="https://www.w3schools.com/images/w3lynx_200.png" alt="image">
+        hello
+    </div> -->
+    <li id="icon"><i class="fa fa-bars" aria-hidden="true"></i></li>
+
+    <script>
+        var menu = document.getElementById('icon')
+
+        menu.addEventListener('mouseover',function(){
+            var logo = document.createElement('span');
+            logo.innerText='rahul'
+            menu.appendChild(logo)
+            // menu.innerHTML='<i class="fa fa-address-book" aria-hidden="true"></i>'
+            menu.style.color='red'
+        })
+    </script>
+</body>
+</html>

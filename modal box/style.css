@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h2{
+    text-align: center;
+    margin-top: 15px;
+    padding: 10px 15px;
+}
+button{
+    display: block;
+    margin: 5px auto;
+    cursor: pointer;
+}
+.container{
+    width: 70%;
+    margin: 10px auto;
+    padding: 20px 10px;
+    background-color: burlywood;
+    transform: translateY(-350px);
+    position: relative;
+}
+.container.active{
+    transform: translateY(0);
+    transition: transform 0.4s ease;
+}
+.container .close{
+    position: absolute;
+    right: 10px;
+    top: -8px;
+    padding: 5px;
+    cursor: pointer;
+}
+.container h1{
+    text-align: center;
+    padding: 10px;
+    background-color: tomato;
+}
+.container p, span{
+    display: block;
+    text-align: center;
+    margin: 5px 0;
+    padding: 10px 0;
+}
+.container> :nth-child(2){
+    background-color:turquoise;
+}
+.container> :nth-child(3){
+    background-color: wheat;
+}

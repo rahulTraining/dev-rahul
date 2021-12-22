@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Photo-Gallery</title>
+</head>
+
+<body>
+    <h1>Photo-Gallery</h1>
+    <input id="input" type="text" placeholder="search your favorites...">
+    <div class="btns">
+        <button onclick="getPhoto()">click1</button>
+        <button>click2</button>
+        <button>click3</button>
+        <button>click4</button>
+    </div>
+    <div id="photos"></div>
+    <div id="getPhoto"></div>
+
+    <script>
+        var input = document.getElementById("input");
+        var photoss = document.getElementById('photos');
+        var searchedPhotos = document.getElementById('getPhoto');
+        let gallery = '';
+        let allPhotos;
+        fetch("https://picsum.photos/v2/list?limit=30").then(response => response.json()).then(photos => {
+            console.log(photos);
+            allPhotos = photos
+            photos.map(photo => {
+                // console.log(photo.download_url);
+                gallery += `<img src=${photo.download_url} width=300 height=200 />`
+                // console.log(gallery);
+                document.getElementById("photos").innerHTML = gallery;
+            })
+        })
+        function search(){
+            input.onkeydown = function(){
+                var inputValue = input.value;
+                // document.getElementById("photos").innerHTML=inputValue;
+                allPhotos.filter(fil => {
+                    fil.id == inputValue;
+                    // photoss.innerHTML=`<img src= ${fil} width=300 height=200 />`
+                    photoss.innerHTML=`<img src= ${fil.download_url} width=300 height=200 />`;
+                    console.log(fil);
+                })
+            }
+        }
+        search()
+
+        var filter = "author";
+        // var keyword ="Paul Jarvis";
+        var photo1 = ""
+        function getPhoto() {
+            allPhotos.filter(fil => {
+                fil == filter;
+                photoss.innerHTML = `<img src= ${fil.download_url} width=300 height=200 />`;
+
+            })
+        }
+
+    </script>
+</body>
+
+</html>

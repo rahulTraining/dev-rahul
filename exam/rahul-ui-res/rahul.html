@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,500&family=Exo:wght@600&family=Inter:wght@200;300&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,500&family=Exo:wght@600&family=Inter:wght@200&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    <title>Design-test</title>
+</head>
+
+<body>
+    <div class="container-main">
+        <header>
+            <a href="###" class="logo">
+                <img src="./ImageFilesNew/Group.png" alt="logo">
+            </a>
+            <div class="menu">
+                <div class="profile">
+                    <img src="./ImageFilesNew/Group 16.png" alt="prifile">
+                </div>
+                <div class="menu-btn">
+                    <img src="./ImageFilesNew/Group 10.png" alt="menu-btn">
+                </div>
+            </div>
+        </header>
+        <div class="hero-section">
+            <div class="main-heading">
+                <h1>Search <span>for</span> Cheap <span>and</span> Best Flights</h1>
+            </div>
+            <div class="trips">
+                <h5>one way</h5>
+                <h5>round trip</h5>
+                <h5>multi city</h5>
+            </div>
+
+            <!-- ================== One way =================== -->
+
+            <div class="schedule-flights" id="schedule-flights">
+                <div class="from" id="one">
+                    <span><img src="./ImageFilesNew/Group 11.png" alt="from-place"></span>
+                    <p>Austin - Tx (AUS)</p>
+                    <ul class="city-list" id="oneO">
+                        <li> <i class="fa fa-plane" aria-hidden="true"></i> Austin, TX-Austin Bergstorm (AUS)</li>
+                        <li> <i class="fa fa-plane" aria-hidden="true"></i> Green Bay, WI-Austin Straubel (GRB)</li>
+                        <li> <i class="fa fa-plane" aria-hidden="true"></i> Austin, NV-Austin(ASQ)</li>
+                    </ul>
+                </div>
+                <div class="to" id="one">
+                    <span><img src="./ImageFilesNew/Group 12.png" alt="to-place"></span>
+                    <p>Hyderabad - India (HYD)</p>
+                    <ul class="city-list" id="oneO">
+                        <li> <i class="fa fa-plane" aria-hidden="true"></i> Hyderabad, Rajiv Gandhi Intl (HYD)</li>
+                        <li> <i class="fa fa-plane" aria-hidden="true"></i> Hyderabad, AK-SPB (HYG)</li>
+                        <li> <i class="fa fa-plane" aria-hidden="true"></i> Hyder, AK-SPB (WHD)</li>
+                    </ul>
+                </div>
+                <div class="date" id="one">
+                    <span><img src="./ImageFilesNew/Group 13.png" alt="calender"></span>
+                    <!-- <p>20 Oct 2021</p> -->
+                    <input type="text" id="datepicker" value="mm/dd/yyyy">
+                </div>
+                <div class="person" id="one">
+                    <span><img src="./ImageFilesNew/Group 16.png" alt="profile"></span>
+                    <!-- <p>1 Adult,Economy</p> -->
+                    <select class="select">
+                        <optgroup label="persons">
+                            <option> 1 Adult,Economy</option>
+                            <option> 2 Adult,Economy</option>
+                            <option> 3 Adult,Economy</option>
+                        </optgroup>
+                    </select>
+                    <!-- <i class="fa fa-angle-down" aria-hidden="true"></i> -->
+                </div>
+                <div class="search-btn" id="one">Search</div>
+            </div>
+
+            <!-- ================== Round trip =============== -->
+
+            <div class="schedule-flights" id="schedule-flights">
+                <div class="from" id="two">
+                    <span><img src="./ImageFilesNew/Group 11.png" alt="from-place"></span>
+                    <p>Austin - Tx (AUS)</p>
+                    <ul class="city-list" id="twoO">
+                        <li> <i class="fa fa-plane" aria-hidden="true"></i> Austin, TX-Austin Bergstorm (AUS)</li>
+                        <li> <i class="fa fa-plane" aria-hidden="true"></i> Green Bay, WI-Austin Straubel (GRB)</li>
+                        <li> <i class="fa fa-plane" aria-hidden="true"></i> Austin, NV-Austin(ASQ)</li>
+                    </ul>
+                </div>
+                <div class="to" id="two">
+                    <span><img src="./ImageFilesNew/Group 12.png" alt="to-place"></span>
+                    <p>Hyderabad - India (HYD)</p>
+                    <ul class="city-list" id="twoO">
+                        <li> <i class="fa fa-plane" aria-hidden="true"></i> Hyderabad, Rajiv Gandhi Intl (HYD)</li>
+                        <li> <i class="fa fa-plane" aria-hidden="true"></i> Hyderabad, AK-SPB (HYG)</li>
+                        <li> <i class="fa fa-plane" aria-hidden="true"></i> Hyder, AK-SPB (WHD)</li>
+                    </ul>
+                </div>
+                <div class="date" id="two">
+                    <span><img src="./ImageFilesNew/Group 13.png" alt="calender"></span>
+                    <!-- <p>20 Oct 2021</p> -->
+                    <input type="text" id="datepicker" value="mm/dd/yyyy">
+                </div>
+                <div class="date" id="two">
+                    <span><img src="./ImageFilesNew/Group 13.png" alt="calender"></span>
+                    <!-- <p>30 Oct 2021</p> -->
+                    <input type="text" id="datepicker" value="mm/dd/yyyy">
+                </div>
+                <div class="person" id="two">
+                    <span><img src="./ImageFilesNew/Group 16.png" alt="profile"></span>
+                    <!-- <p>1 Adult,Economy</p>
+                    <i class="fa fa-angle-down" aria-hidden="true"></i> -->
+                    <select class="select">
+                        <optgroup label="persons">
+                            <option> 1 Adult,Economy</option>
+                            <option> 2 Adult,Economy</option>
+                            <option> 3 Adult,Economy</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="search-btn" id="two">Search</div>
+            </div>
+
+            <!-- =================== Multy city ======================== -->
+
+            <div id="schedule-flights" class="multy-city">
+                <div class="Flight">
+                    <div class="schedule-flights">
+                        <div class="from" id="three">
+                            <span><img src="./ImageFilesNew/Group 11.png" alt="from-place"></span>
+                            <p>Austin - Tx (AUS)</p>
+                            <ul class="city-list" id="threeO">
+                                <li> <i class="fa fa-plane" aria-hidden="true"></i> Austin, TX-Austin Bergstorm (AUS)
+                                </li>
+                                <li> <i class="fa fa-plane" aria-hidden="true"></i> Green Bay, WI-Austin Straubel (GRB)
+                                </li>
+                                <li> <i class="fa fa-plane" aria-hidden="true"></i> Austin, NV-Austin(ASQ)</li>
+                            </ul>
+                        </div>
+                        <div class="to" id="three">
+                            <span><img src="./ImageFilesNew/Group 12.png" alt="to-place"></span>
+                            <p>Hyderabad - India (HYD)</p>
+                            <ul class="city-list" id="threeO">
+                                <li> <i class="fa fa-plane" aria-hidden="true"></i> Hyderabad, Rajiv Gandhi Intl (HYD)
+                                </li>
+                                <li> <i class="fa fa-plane" aria-hidden="true"></i> Hyderabad, AK-SPB (HYG)</li>
+                                <li> <i class="fa fa-plane" aria-hidden="true"></i> Hyder, AK-SPB (WHD)</li>
+                            </ul>
+                        </div>
+                        <div class="date" onclick="dissapear()">
+                            <span><img src="./ImageFilesNew/Group 13.png" alt="calender"></span>
+                            <!-- <p>20 Oct 2021</p> -->
+                            <input type="text" id="datepicker" value="mm/dd/yyyy">
+                        </div>
+                        <div class="person" onclick="dissapear()">
+                            <span><img src="./ImageFilesNew/Group 16.png" alt="profile"></span>
+                            <!-- <p>1 Adult,Economy</p> -->
+                            <select class="select">
+                                <optgroup label="persons">
+                                    <option> 1 Adult,Economy</option>
+                                    <option> 2 Adult,Economy</option>
+                                    <option> 3 Adult,Economy</option>
+                                </optgroup>
+                            </select>
+                            <!-- <i class="fa fa-angle-down" aria-hidden="true"></i> -->
+                        </div>
+                        <!-- <span class="Close">&times;</span> -->
+                    </div>
+                    <div class="schedule-flights">
+                        <div class="from" id="three">
+                            <span><img src="./ImageFilesNew/Group 11.png" alt="from-place"></span>
+                            <p>Austin - Tx (AUS)</p>
+                            <ul class="city-list" id="threeO">
+                                <li> <i class="fa fa-plane" aria-hidden="true"></i> Austin, TX-Austin Bergstorm (AUS)
+                                </li>
+                                <li> <i class="fa fa-plane" aria-hidden="true"></i> Green Bay, WI-Austin Straubel (GRB)
+                                </li>
+                                <li> <i class="fa fa-plane" aria-hidden="true"></i> Austin, NV-Austin(ASQ)</li>
+                            </ul>
+                        </div>
+                        <div class="to" id="three">
+                            <span><img src="./ImageFilesNew/Group 12.png" alt="to-place"></span>
+                            <p>Hyderabad - India (HYD)</p>
+                            <ul class="city-list" id="threeO">
+                                <li> <i class="fa fa-plane" aria-hidden="true"></i> Hyderabad, Rajiv Gandhi Intl (HYD)
+                                </li>
+                                <li> <i class="fa fa-plane" aria-hidden="true"></i> Hyderabad, AK-SPB (HYG)</li>
+                                <li> <i class="fa fa-plane" aria-hidden="true"></i> Hyder, AK-SPB (WHD)</li>
+                            </ul>
+                        </div>
+                        <div class="date" id="three">
+                            <span><img src="./ImageFilesNew/Group 13.png" alt="calender"></span>
+                            <input type="text" id="datepicker" value="mm/dd/yyyy">
+                        </div>
+                        <div class="person" id="three">
+                            <span><img src="./ImageFilesNew/Group 16.png" alt="profile"></span>
+                            <select class="select">
+                                <optgroup label="persons">
+                                    <option> 1 Adult,Economy</option>
+                                    <option> 2 Adult,Economy</option>
+                                    <option> 3 Adult,Economy</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        <!-- <span class="Close">&times;</span> -->
+                    </div>
+                    <div id="GFG_FORM"></div>
+                </div>
+                <div class="add-another">
+                    <a href="##" id="addAnotherFlight">+ Add Another Flight</a>
+                    <div class="search-btn" id="three">Search</div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p class="footer">
+                copyright 2021 indianEagle pvt ltd. all rights reserved
+            </p>
+        </footer>
+    </div>
+    <script>
+
+        var from1 = document.querySelectorAll("#one");
+        var cityList1 = document.querySelectorAll("#oneO");
+
+        // from1.forEach((from, index) => {
+        //     from.addEventListener("click", function () {
+        //         cityList1.forEach(t => t.classList.remove("active"))
+        //         cityList1[index].classList.add("active")
+        //     })
+        // });
+        from1.forEach((from, index) => {
+            from.addEventListener("click", function () {
+                cityList1.forEach(function (t) {
+                    t.classList.remove("active")
+                })
+                cityList1[index].classList.add("active")
+            })
+        });
+
+        // ======= multy city ========
+
+        var from3 = document.querySelectorAll("#three");
+        var cityList3 = document.querySelectorAll("#threeO");
+
+        from3.forEach((a, b) => {
+            a.addEventListener("click", function () {
+                cityList3.forEach(z => z.classList.remove("active1"))
+                cityList3[b].classList.add("active1")
+                cityList4.forEach(j => j.classList.remove('active1'))
+            })
+        });
+
+        function dissapear() {
+            cityList3.forEach(z => z.classList.remove("active1"))
+        }
+
+        var from2 = document.querySelectorAll("#two");
+        var cityList2 = document.querySelectorAll("#twoO");
+
+        for (let i = 0; i < from2.length; i++) {
+            from2[i].addEventListener('click', function () {
+                for (let j = 0; j < cityList2.length; j++) {
+                    cityList2[j].classList.remove('active')
+                }
+                cityList2[i].classList.add('active')
+            })
+        }
+
+        // click event
+
+        var btns = document.querySelectorAll("h5");
+        var contents = document.querySelectorAll("#schedule-flights");
+        // console.log(btns, contents)
+
+        // for Each
+        btns.forEach((btn, index) => {
+            btn.addEventListener('click', function () {
+                btns.forEach(b => b.classList.remove("active"));
+                btn.classList.add("active");
+                cityList1.forEach(t => t.classList.remove("active"))
+                cityList2.forEach(t => t.classList.remove("active"))
+                contents.forEach(f => f.classList.remove("active"));
+                contents[index].classList.add("active");
+            })
+
+            btns[0].click()
+        })
+        // for Loop
+
+        // for(let i=0;i<btns.length;i++){
+        //     btns[i].addEventListener('click',function(){
+        //         for(let k=0;k<btns.length;k++){
+        //             btns[k].classList.remove('active')
+        //         }
+        //         btns[i].classList.add('active')
+        //         for(j=0;j<contents.length;j++){
+        //             contents[j].classList.remove('active');
+        //         }
+        //         contents[i].classList.add('active')
+        //     })
+        //     btns[0].click()
+        // }
+
+
+        // add another flight 
+
+        var addFlight = document.getElementById('addAnotherFlight');
+        var add_div = document.querySelector('.Flight')
+        var clone_div = document.querySelector('#schedule-flights .schedule-flights')
+        var Close = document.querySelector('.Close')
+        var FORM = document.getElementById('GFG_FORM');
+        let clone = window.localStorage.getItem("rahul")
+
+        addFlight.onclick = function () {
+            cityList3.forEach(z => z.classList.remove("active1"))
+
+            var p_clone = clone_div.cloneNode(true)
+            p_clone.setAttribute('id', 'dynamic_form')
+            window.localStorage.setItem("rahul", p_clone);
+
+            add_div.appendChild(p_clone)
+            var x = document.createElement("span");
+            x.className = "close"
+            var t = document.createTextNode('\u00D7');
+            x.appendChild(t);
+            p_clone.appendChild(x);
+            // var close_x = document.getElementsByClassName('close');
+            var close_x = document.querySelectorAll('.close');
+            console.log(close_x.length);
+            for (var i = 0; i < close_x.length; i++) {
+                close_x[i].addEventListener('click', function () {
+                    // alert('hi')
+                    this.parentElement.remove();
+                    addFlight.style.transform = "scale(1)"
+                })
+            }
+            // console.log(NodeList)
+            if (close_x.length == 3) {
+                addFlight.style.transform = "scale(0)"
+            }
+
+            let from4 = document.querySelectorAll('#dynamic_form #three')
+            let cityList4 = document.querySelectorAll('#dynamic_form #threeO')
+            let date = document.querySelectorAll('#dynamic_form .date')
+            let person = document.querySelectorAll('#dynamic_form .person')
+            
+            var datePicker = document.querySelectorAll('#dynamic_form .ui-datepicker')
+            console.log(datePicker)
+
+            from4.forEach((h, i) => {
+                h.addEventListener('click', function () {
+                    cityList4.forEach(j => j.classList.remove('active1'))
+                    cityList4[i].classList.add('active1')
+                })
+            })
+            date.forEach(a => {
+                a.addEventListener('click', function () {
+                    cityList4.forEach(j => j.classList.remove('active1'))
+                })
+            })
+            person.forEach(a => {
+                a.addEventListener('click', function () {
+                    cityList4.forEach(j => j.classList.remove('active1'))
+                })
+            })
+            cityList4.forEach(j => j.classList.remove('active1'))
+
+            $(function () {
+                $(date).on('click',function () {
+                    $(this).datepicker({
+                        numberOfMonths: 2,
+                        showButtonPanel: true
+                    })
+                })
+            })
+
+            var uiDate = document.querySelectorAll('.ui-datepicker')
+
+            var modal = document.querySelector('.container-main')
+            window.onclick = function (e) {
+                if (e.target === modal) {
+                    cityList3.forEach(z => z.classList.remove("active1"))
+                    cityList4.forEach(j => j.classList.remove('active1'))
+                    datePicker.forEach(d => d.classList.add('active'))
+                    // uiDate.forEach(d=> d.style.display="none")
+                }
+            }
+
+        }
+
+        // date picker
+
+        $(function () {
+            $("#datepicker").datepicker({
+                numberOfMonths: 2,
+                showButtonPanel: true
+            });
+        });
+        // multy-city
+        $(function () {
+            $("#schedule-flights #datepicker").datepicker({
+                numberOfMonths: 2,
+                showButtonPanel: true
+            });
+        });
+
+        // outside click
+
+        var modal = document.querySelector('.container-main')
+        window.onclick = function (e) {
+            if (e.target === modal) {
+                cityList1.forEach(t => t.classList.remove("active"))
+                cityList2.forEach(t => t.classList.remove("active"))
+                cityList3.forEach(z => z.classList.remove("active1"))
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // Dynamic form
+
+        addFlight.addEventListener('click', function () {
+            var form = document.createElement('form')
+            form.setAttribute('class', 'dynamic_form')
+
+            var input1 = document.createElement('input')
+            var div_input1 = document.createElement('div')
+            input1.setAttribute('type', "button")
+            input1.setAttribute('id', "dynamic_active")
+            input1.setAttribute('class', "from")
+            input1.setAttribute('value', "Austin - Tx (AUS)")
+
+            // city-list
+
+            var ul = document.createElement('ul')
+            var li1 = document.createElement('li')
+            var li2 = document.createElement('li')
+            var li3 = document.createElement('li')
+            li1.innerHTML = `<i class="fa fa-plane" aria-hidden="true"></i> Hyderabad, Rajiv Gandhi Intl (HYD)`
+            li2.innerHTML = `<i class="fa fa-plane" aria-hidden="true"></i> Hyderabad, AK-SPB (HYG)`
+            li3.innerHTML = `<i class="fa fa-plane" aria-hidden="true"></i> Hyder, AK-SPB (WHD)`
+
+            ul.append(li1, li2, li3)
+            div_input1.append(input1, ul)
+
+            // <ul class="city-list" id="twoO">
+            //     <li> <i class="fa fa-plane" aria-hidden="true"></i> Hyderabad, Rajiv Gandhi Intl (HYD)</li>
+            //     <li> <i class="fa fa-plane" aria-hidden="true"></i> Hyderabad, AK-SPB (HYG)</li>
+            //     <li> <i class="fa fa-plane" aria-hidden="true"></i> Hyder, AK-SPB (WHD)</li>
+            // </ul>
+
+            var input2 = document.createElement('input')
+            input2.setAttribute('type', "button")
+            input1.setAttribute('id', "dynamic_active")
+            input2.setAttribute('class', "to")
+            input2.setAttribute('value', "Hyderabad - India (HYD)")
+
+            var input3 = document.createElement('input')
+            input3.setAttribute('type', "text")
+            input3.setAttribute('class', "date")
+            input3.setAttribute('value', "mm/dd/yyyy")
+
+            var input4 = document.createElement('select')
+            input4.setAttribute('class', "person")
+            var input5 = document.createElement('option')
+            var input6 = document.createElement('option')
+            var input7 = document.createElement('option')
+            input5.innerHTML = `1 Adult,Economy`
+            input6.innerHTML = `2 Adult,Economy`
+            input7.innerHTML = `3 Adult,Economy`
+            // input5.setAttribute('value',"2 Adult,Economy")
+            input4.appendChild(input5)
+            input4.appendChild(input6)
+            input4.appendChild(input7)
+
+            form.append(div_input1)
+            form.appendChild(input2)
+            form.appendChild(input3)
+            form.appendChild(input4)
+
+            // FORM.appendChild(form)
+        })
+
+    </script>
+</body>
+
+</html>

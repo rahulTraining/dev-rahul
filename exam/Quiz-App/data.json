@@ -1,0 +1,52 @@
+[
+    {
+        "id":1,
+        "qno":"Q1.",
+        "question":"Popular three front-end technologies",
+        "a":"python,java,ruby",
+        "b":"HTML,CSS,JS",
+        "c":"C,C++,C#",
+        "d":"none of the above",
+        "ans":"HTML,CSS,JS"
+    },
+    {
+        "id":2,
+        "qno":"Q2.",
+        "question":"Which tag is used to create a check box",
+        "a":"<checkbox>",
+        "b":"<type='checkbox'",
+        "c":"<Input type='checkbox'>",
+        "d":"<Input type='radio'>",
+        "ans":"<Input type='checkbox'>"
+    },
+    {
+        "id":3,
+        "qno":"Q3.",
+        "question":"From which tag descriptive list starts ?",
+        "a":"<DL>",
+        "b":"<LL>",
+        "c":"<LDL>",
+        "d":" <DD>",
+        "ans":"<DL>"
+    },
+    {
+        "id":4,
+        "qno":"Q4.",
+        "question":"Which attribute set the text direction ",
+        "a":"dir",
+        "b":"lang",
+        "c":"direction",
+        "d":"sub",
+        "ans":"direction"
+    },
+    {
+        "id":5,
+        "qno":"Q5.",
+        "question":"HTML is subset of which of the following",
+        "a":"GHL",
+        "b":"SHL",
+        "c":"SGHL",
+        "d":"SGML",
+        "ans":"SGML"
+    }
+]

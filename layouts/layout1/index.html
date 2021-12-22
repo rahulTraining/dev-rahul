@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>layout</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="heading">
+            <a href="##">Register</a>
+        </div>
+        <form action="" id="regForm">
+            <div class="tab">
+                <h3>Name:</h3>
+                <div class="user-name">
+                    <input type="text" id="input1" required onfocus="test(id)">
+                    <!-- <input type="text" id="input1" required> -->
+                    <label>FirstName</label>
+                    <span class="close" id="close1">&times;</span>
+                </div>
+                <div class="user-name">
+                    <input type="text" id="input2" required>
+                    <!-- <input type="text" id="input2" required> -->
+                    <label>LastName</label>
+                    <span class="close" id="close2">&times;</span>
+                </div>
+            </div>
+
+           <div class="tab">
+               <h3>Contact Info:</h3>
+                <div class="user-name">
+                    <input type="text" id="input3" required>
+                    <label>mail</label>
+                    <span class="close" id="close3">&times;</span>
+                </div>
+                <div class="user-name">
+                    <input type="text" id="input4" required>
+                    <label>Phone</label>
+                    <span class="close" id="close4">&times;</span>
+                </div>
+            </div>
+
+            <div class="tab">
+                <h3>Login Info:</h3>
+                <div class="user-name">
+                    <input type="text" id="input5" required>
+                    <label>Username</label>
+                    <span class="close" id="close5">&times;</span>
+                </div>
+                <div class="user-name">
+                    <input type="password" id="input6" required>
+                    <label>Password</label>
+                    <span class="close" id="close6">&times;</span>
+                </div>
+            </div>
+            <div class="buttons">
+                <div><button type="submit" id="prevBtn" onclick="nextForm(-1)">Previous</button></div>
+                <div style="margin-left: 15px;"><button type="submit" id="nextBtn" onclick="nextForm(1)">Next</button></div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        var inputField = document.querySelectorAll('input');
+        var label = document.querySelector('label')
+        var input_div = document.querySelectorAll('.user-name')
+        var close = document.querySelectorAll('.close')
+
+        // for(let i=0;i<inputField.length;i++){
+        //     inputField[i].addEventListener('input',function(){
+        //         if(this.value.length === 6){
+        //             let span = document.createElement('span');
+        //             span.className='close'
+        //             let txt = document.createTextNode('\u00D7')
+        //             span.appendChild(txt)
+        //             // input_div.forEach(x => x.appendChild(span))
+        //             this.parentElement.appendChild(span)
+        //         }else if(this.value.length <=6){
+        //             document.querySelector('.close').display="none"
+        //         }
+        //         // var close = document.querySelector('.close').onclick=function(){
+        //         //   this.value = " "
+        //         // }
+        //     })
+        // }
+
+        // for(let i=0;i<inputField.length;i++){
+        //     inputField[i].addEventListener('input',function(){
+        //         if(this.value.length >= 6){
+        //             close.style.display="block"
+        //         }else if(this.value.length <=6){
+        //             close.style.display="none"
+        //         }
+        //         // var close = document.querySelector('.close').onclick=function(){
+        //         //   this.value = " "
+        //         // }
+        //     })
+        // }
+
+        // for(let i=0;i<inputField.length;i++){
+        //     inputField[i].addEventListener('input',function(){
+        //         if(this.value.length >= 6  && this.focus){
+        //             close.forEach(r => r.style.display="block")
+        //         }else if(this.value.length <=6){
+        //             close.forEach(r => r.style.display="none")
+        //         }
+        //         close.forEach(clr =>{
+        //             clr.addEventListener('click',function(){
+        //                 inputField[i].value =' '
+        //                 close.forEach(r => r.style.display="none")
+        //             })
+        //         })
+        //     })
+        // }
+
+        let inputField1 = document.querySelector('#input1')
+        let close1 = document.querySelector('#close1')
+
+        inputField1.addEventListener('input', function () {
+            if (inputField1.value.length >= 6) {
+                close1.style.display = "block"
+            } else if (inputField1.value.length <= 6) {
+                close1.style.display = "none"
+            }
+            close1.addEventListener('click', function () {
+                inputField1.value = ""
+                close1.style.display = "none"
+
+            })
+        })
+
+         function test(id) {
+            console.log('data:::', id)
+        }
+
+        let inputField2 = document.querySelector('#input2')
+        let close2 = document.querySelector('#close2')
+
+        inputField2.addEventListener('input', function () {
+            if (inputField2.value.length >= 6) {
+                close2.style.display = "block"
+            } else if (inputField2.value.length <= 6) {
+                close2.style.display = "none"
+            }
+            close2.addEventListener('click', function () {
+                inputField2.value = ""
+                close2.style.display = "none"
+
+            })
+        })
+        let inputField3 = document.querySelector('#input3')
+        let close3 = document.querySelector('#close3')
+
+        inputField3.addEventListener('input', function () {
+            if (inputField3.value.length >= 6) {
+                close3.style.display = "block"
+            } else if (inputField3.value.length <= 6) {
+                close3.style.display = "none"
+            }
+            close3.addEventListener('click', function () {
+                inputField3.value = ""
+                close3.style.display = "none"
+
+            })
+        })
+        let inputField4 = document.querySelector('#input4')
+        let close4 = document.querySelector('#close4')
+
+        inputField4.addEventListener('input', function () {
+            if (inputField4.value.length >= 6) {
+                close4.style.display = "block"
+            } else if (inputField4.value.length <= 6) {
+                close4.style.display = "none"
+            }
+            close4.addEventListener('click', function () {
+                inputField4.value = ""
+                close4.style.display = "none"
+
+            })
+        })
+        let inputField5 = document.querySelector('#input5')
+        let close5 = document.querySelector('#close5')
+
+        inputField5.addEventListener('input', function () {
+            if (inputField5.value.length >= 6) {
+                close5.style.display = "block"
+            } else if (inputField5.value.length <= 6) {
+                close5.style.display = "none"
+            }
+            close5.addEventListener('click', function () {
+                inputField5.value = ""
+                close5.style.display = "none"
+
+            })
+        })
+        let inputField6 = document.querySelector('#input6')
+        let close6 = document.querySelector('#close6')
+
+        inputField6.addEventListener('input', function () {
+            if (inputField6.value.length >= 6) {
+                close6.style.display = "block"
+            } else if (inputField6.value.length <= 6) {
+                close6.style.display = "none"
+            }
+            close6.addEventListener('click', function () {
+                inputField6.value = ""
+                close6.style.display = "none"
+
+            })
+        })
+
+        // =======================  next prev =======================
+
+        var currentTab=0;
+        showTab(currentTab)
+
+        function showTab(n){
+            var x = document.getElementsByClassName('tab')
+            x[n].style.display="flex"
+
+            if(n == 0){
+                document.getElementById('prevBtn').style.display="none"
+            }else{
+                document.getElementById('prevBtn').style.display="block"
+            }
+            if(currentTab >= (x.length-1)){
+                document.getElementById('nextBtn').innerHTML="Submit"
+            }else{
+                document.getElementById('nextBtn').innerHTML="Next"
+            }
+        }
+
+        function nextForm(n){
+            var x = document.getElementsByClassName('tab')
+
+            x[currentTab].style.display="none"
+            currentTab = currentTab+n
+            
+            if(currentTab >= (x.length)){
+                document.getElementById('regForm').submit()
+            }
+            showTab(currentTab)
+        }
+    </script>
+</body>
+
+</html>

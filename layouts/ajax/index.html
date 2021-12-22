@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Ajax</title>
+</head>
+<body>
+    <h1>Load the content dynamically</h1>
+    <div class="container">
+        <div class="content">
+            <p>replace content by clicking button</p>
+        </div>
+        <button onclick="load()">Click</button>
+        <div class="loading-bar">
+            <img src="https://miro.medium.com/max/1400/1*CsJ05WEGfunYMLGfsT2sXA.gif" type="image/gif" width="100px" height="60px" alt="loaders">
+        </div>
+        
+    </div>
+
+    <script>
+
+        // function load(){
+        //     const xhttp = new XMLHttpRequest();
+        //     xhttp.onload = function(){
+        //         document.querySelector('p').innerHTML=""
+        //         document.querySelector('.loading-bar').classList.add('active')
+        //         setTimeout(()=>{
+        //             document.querySelector('.loading-bar').classList.remove('active')
+        //             document.querySelector('p').innerHTML = this.responseText
+        //         },2000)
+        //     }
+        //     xhttp.open('GET',"data.txt");
+        //     xhttp.send()
+        // }
+
+        $(function(){
+            $('button').click(function(){
+                $('p').text('')
+                $('.loading-bar').addClass('active')
+                setTimeout(()=>{
+                    $('.loading-bar').removeClass('active')
+                    $('p').load('data.txt').draggable()
+                },2000)
+            })
+        })
+
+        // $.ajax({
+        //     url: "data.txt",
+        //     data: {
+        //         zipcode: 97201
+        //     },
+        //     success: function( result ) {
+        //         $( "#weather-temp" ).html( "<strong>" + result + "</strong> degrees" );
+        //     }
+        // });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // function load(){
+        //     const xhttp = new XMLHttpRequest();
+        //     // xhttp.onprogress = function(){
+        //     //     // document.body.className =""
+        //     // }
+        //     xhttp.onload =function(){
+        //         document.querySelector('p').innerHTML = ""
+        //         document.querySelector('.loading-bar').classList.add('active')
+        //         setTimeout(()=>{
+        //             document.querySelector('.loading-bar').classList.remove('active');
+        //             document.querySelector('p').innerHTML = this.responseText
+        //         }, 2000)
+        //     }
+        //     xhttp.open('GET',"data.txt");
+        //     xhttp.send()
+        // }
+
+        
+//         (function() {
+//   var httpRequest;
+//   document.getElementById("ajaxButton").addEventListener('click', makeRequest);
+
+//   function makeRequest() {
+//     httpRequest = new XMLHttpRequest();
+
+//     if (!httpRequest) {
+//       alert('Giving up :( Cannot create an XMLHTTP instance');
+//       return false;
+//     }
+//     httpRequest.onreadystatechange = alertContents;
+//     httpRequest.open('GET', 'data.txt');
+//     httpRequest.send();
+//   }
+
+//   function alertContents() {
+//     if (httpRequest.readyState === XMLHttpRequest.DONE) {
+//       if (httpRequest.status === 200) {
+//         alert(httpRequest.responseText);
+//       } else {
+//         alert('There was a problem with the request.');
+//       }
+//     }
+//   }
+// })();
+        
+    </script>
+</body>
+</html>

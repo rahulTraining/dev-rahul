@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <title>JQuery</title>
+
+    <style>
+        p {
+            padding: 20px;
+        }
+
+        button {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <p>this is jquery</p>
+    <button>click</button>
+    <script>
+        $(function () {
+            $('p').on({
+                mouseenter: function () {
+                    $(this).css('background', "red")
+                },
+                mouseleave: function () {
+                    $(this).css("background", "yellow")
+                }
+            });
+            $('button').click(function () {
+                $('p').css('background', "gray")
+                $('p').animate({ padding: "toggle" }, 2000)
+            })
+        })
+        var txt;
+        $(function () {
+            txt = $('<p></p>').text('this is from jquery')
+            $('body').append(txt)
+        })
+
+        document.querySelector('button').onclick = function () {
+            txt.empty()
+        }
+    </script>
+</body>
+
+</html>

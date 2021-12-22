@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>sign-up&login</title>
+</head>
+
+<body>
+    <div class="load">
+        <div class="loader"></div>
+    </div>
+    <div class="container">
+        <h3>JOIN</h3>
+        <div class="headings">
+            <h5>login</h5>
+            <h5>Sign-up</h5>
+        </div>
+        <div class="form">
+            <form id="form">
+                <input type="text" placeholder="enter your name">
+                <input type="password" placeholder="enter your password">
+                <input type="submit" value="submit">
+            </form>
+            <form id="form">
+                <input type="text" placeholder="enter your email">
+                <input type="password" placeholder="enter your password">
+                <input type="submit" value="submit">
+            </form>
+        </div>
+
+        <script>
+            var spinner = document.querySelector(".load")
+
+            function loader() {
+                spinner.style.display = "none"
+            }
+            setTimeout(loader, 1500)
+
+            var submit = document.querySelector("#form");
+            submit.addEventListener('click', function(e) {
+                e.preventDefault()
+            })
+            var tabs = document.querySelectorAll("h5")
+            var forms = document.querySelectorAll("#form")
+            tabs.forEach((tab, index) => {
+                tab.addEventListener('click', function() {
+                    tabs.forEach((t) => t.classList.remove("active"))
+                    tab.classList.add("active")
+                    forms.forEach((f) => f.classList.remove("active"))
+                    forms[index].classList.add("active")
+                })
+                tabs[0].click()
+            })
+        </script>
+</body>
+
+</html>

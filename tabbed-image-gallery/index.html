@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tabbed-image-gallery</title>
+</head>
+<body>
+    <div>
+        <h1>Tabbed Image Gallery</h1>
+        <p style="font-size: 1.4rem;">Click on the images below</p>
+    </div>
+    <div class="row">
+        <img onclick="myFunction(this)" src="https://www.w3schools.com/howto/img_nature.jpg" alt="nature">
+        <img onclick="myFunction(this)" src="https://www.w3schools.com/howto/img_snow.jpg" alt="snow">
+        <img onclick="myFunction(this)" src="https://www.w3schools.com/howto/img_mountains.jpg" alt="mountains">
+        <img onclick="myFunction(this)" src="https://www.w3schools.com/howto/img_lights.jpg" alt="lights">
+    </div>
+    <div class="container">
+        <span class="close">&times;</span>
+        <img src="" id="expanding">
+        <div class="imgText"></div>
+    </div>
+
+    <script>
+        var imgs = document.querySelectorAll('img')
+        
+        // imgs.forEach(img => {
+        //     img.addEventListener('click',function(imgs){
+        //     var expanding = document.getElementById('expanding');
+        //     var imgText = document.querySelector('.imgText')
+        //     expanding.src = imgs.src;
+        //     imgText.innerHTML=imgs.alt;
+        //     expanding.parentElement.style.display="block"
+        //     })
+        // });
+        function myFunction(imgs){
+            var expanding = document.getElementById('expanding');
+            var imgText = document.querySelector('.imgText')
+            expanding.src = imgs.src;
+            imgText.innerHTML=imgs.alt;
+            expanding.parentElement.style.display="block"
+        }
+        var close = document.querySelector('.close');
+        close.onclick = function(){
+            this.parentElement.style.display="none"
+        }
+        imgs[0].click();
+    </script>
+</body>
+</html>

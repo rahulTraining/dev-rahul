@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.css" integrity="sha512-NtU/Act0MEcVPyqC153eyoq9L+UHkd0s22FjIaKByyA6KtZPrkm/O5c5xzaia4pyCfReCS634HyQ7tJwKNxC/g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>toggle nav bar</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>home</li>
+            <li>about</li>
+            <li>services</li>
+            <li>contact-us</li>
+        </ul>
+    </nav>
+    <div>
+        <p>this example shows how nav-bar slide down when the user scroll the page</p>
+    </div>
+    <div class="top" title="go-to-top"><i class="fa fa-arrow-up" aria-hidden="true"></i></div>
+    <script>
+        var nav = document.querySelector('nav')
+
+        var prevScrollpos = window.pageYOffset;
+        // var prevScrollpos = 0;
+        window.onscroll = function(){
+            var currentScrollpos = window.pageYOffset;
+            if(prevScrollpos < currentScrollpos){
+                nav.classList.add('scroll-down')
+            } else {
+                nav.classList.remove('scroll-down')
+            }
+            prevScrollpos = currentScrollpos
+        }
+
+        var topY = document.querySelector('.top')
+        var body = document.getElementsByTagName('body')[0]
+        var zero = 0;
+        topY.style.transform='scale(0)'
+        window.addEventListener('scroll',function(){
+            if(window.pageYOffset > 100){
+                topY.style.transform='scale(1)'
+            } else{
+                topY.style.transform='scale(0)'
+            }
+        })
+        topY.onclick = function(){
+           scrollTopY()
+        }
+        function scrollTopY(){
+            document.body.scrollTo(0,0)
+            document.documentElement.scrollTo(0,0)
+        }
+        // setInterval(scrollTopY,3000)
+
+        // var prevScrollpos = 0;
+        // window.onscroll = function(){
+        //    scrollNav()
+        // }
+        // function scrollNav(){
+        //     nav.classList.toggle('scroll-down',window.pageYOffset > prevScrollpos)
+        //     prevScrollpos = window.pageYOffset
+        // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // window.onscroll = function(){
+        //     scrollFunction()
+        // }
+
+        // function scrollFunction(){
+        //     if(document.body.scrollTop > 100 || document.documentElement.scrollTop > 100){
+        //         nav.style.top="0"
+        //     } else {
+        //         nav.style.top = "-80px"
+        //     }
+        // }
+
+        // window.addEventListener('scroll',function(){
+        //     if(document.body.scrollTop > 80 || document.documentElement.scrollTop > 80){
+        //         nav.style.top = '0'
+        //     }else{
+        //         nav.style.top = "-80px"
+        //     }
+
+        // })
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h3,p{
+    padding: 10px;
+}
+.container{
+    margin:6px;
+    max-width: 350px;
+    background-color:#ddd;
+    padding: 10px;
+}
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+label{
+    margin: 10px 0;
+}
+input{
+    width: 200px;
+    padding: 2px;
+    outline: none;
+}
+input[type="password"]{
+    margin-bottom: 15px;
+}
+#msgs{
+    background: #ddd;
+    margin-top: 10px;
+    max-width: 350px;
+    margin: 6px;
+    display: none;
+}
+#msgs p{
+    text-transform: capitalize;
+}
+.invalid{
+    color: red;
+}
+.invalid::before{
+    content: "❌";
+    margin-right: 5px;
+}
+.valid{
+    color: green;
+}
+.valid::before{
+    content: '✔';
+    margin-right: 5px;
+}

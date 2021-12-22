@@ -1,0 +1,193 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --header-bg:#F4F5F7;
+    --tomato:#F26D22;
+    --font-family:'Inter', sans-serif;;
+}
+header{
+    width: 100%;
+    background: var(--header-bg);
+    padding:15px 35px;
+    display: flex;
+    justify-content:space-between;
+    overflow: hidden;
+}
+.menu {
+    display: flex;
+    width: 65px;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-heading {
+    font-size:22px;
+    font-family: 'Exo 2', sans-serif;
+}
+span{
+    font-family: sans-serif;
+}
+.hero-section{
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hero-section .main-heading{
+    padding:10px;
+    text-align: center;
+    /* 48px 14px */
+}
+.hero-section .trips{
+    cursor: pointer;
+    display: flex;
+    justify-content:center;
+    column-gap:12px;
+    margin: 30px;
+}
+.hero-section .trips h5{
+    font-family: var(--font-family);
+    border: 1.5px solid hsl(0, 0%, 90%);
+    border-radius: 5px;
+    padding:8px 22px;
+    font-weight: 500;
+    text-transform:capitalize;
+    font-weight: bold;
+}
+.hero-section .trips h5.active{
+    outline:1.5px solid var(--tomato);
+    color: var(--tomato);
+}
+.schedule-flights{
+    margin:0;
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+    gap: 8px;;
+    align-items: center;
+    font-family: var(--font-family);
+    font-weight: bold;
+    display: none;
+    animation: anime 500ms linear;
+}
+@keyframes anime {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.schedule-flights.active{
+    display: flex;
+}
+.schedule-flights :is(.from,.to,.date,.person,.select){
+    /* padding:10px 30px 10px 10px; */
+    width: 185.43px;
+    height: 38.2px;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    column-gap:8px;
+    font-size:13px;
+    background: var(--header-bg);
+    cursor: pointer;
+    border: none;
+}
+.schedule-flights .from{
+    padding:10px 30px 10px 10px;
+}
+.city-list1,.city-list2,.city-list3,.city-list4{
+    background-color: #fff;
+    text-align: center;
+    width:300px;
+    height: 130px;
+    box-shadow: 1px 2px 10px hsl(0, 0%, 70%);
+    position: fixed;
+    /* display: none; */
+    z-index: 5;
+    padding:13px 0;
+    border-radius:5px;
+}
+.city-list1 li,.city-list2 li,.city-list3 li,.city-list4 li{
+    list-style: none;
+    text-align: left;
+    margin-left: 5px;
+    padding: 10px;
+    font-weight: bold;
+    font-family: var(--font-family);
+    font-size: 13px;
+}
+i{
+    margin-right: 20px;
+}
+#oneO{
+    display: none;
+}
+#oneO.active{
+    display: block;
+}
+#twoO{
+    display: none;
+}
+#twoO.active{
+    display: block;
+}
+li:hover{
+    background:hsl(0, 0%, 80%);
+}
+.city-list1{
+    transform:translate(-270px, 180px );
+}
+.city-list2{
+    transform:translate(-90px, 180px );
+}
+.city-list3{
+    transform:translate(250px, 10px );
+}
+.city-list4{
+    transform:translate(500px, 10px );
+}
+.schedule-flights .to{
+    padding:5px 12px 5px 10px;
+}
+.schedule-flights .date{
+    padding:5px 12px 5px 10px;
+}
+.schedule-flights .person{
+    padding:5px 10px 5px 10px;
+}
+.schedule-flights :is(.from,.to,.date,.person) span img{
+    width: 15px;
+    height: 15px;
+}
+.schedule-flights .search-btn{
+    width: 95.43px;
+    display: grid;
+    place-content: center;
+    height: 38.2px;
+    background: var(--tomato);
+    padding:5px 14px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+option{
+    background-color: hsl(0, 0%, 95%);
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background:var(--header-bg);
+    text-align: center;
+    padding:20px;
+    font-family: var(--font-family);
+    font-size:16px;
+    font-weight: bold;
+    text-transform: capitalize;
+}

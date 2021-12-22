@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exam</title>
+</head>
+
+<body>
+    <div id="star"></div>
+
+
+    <script>
+        // 8
+
+        let star = "";
+        for (let i = 0; i < 5; i++) {
+            for (let j = 0; j < 5 - i; j++) {
+                star += "*" + "&nbsp;"
+            }
+            star += "</br>"
+        }
+        document.getElementById("star").innerHTML = star;
+
+        // 7
+        var animals = [
+            { name: "Jason", species: "rabbit" },
+            { name: "Jessica", species: "dog" },
+            { name: "Jacky", species: "owl" },
+            { name: "Luke", species: "fish" },
+            { name: "Junior", species: "rat" },
+            { name: "Thomas", species: "cat" },
+        ];
+
+        let speciesList = [];
+        let anime = []
+        for (let i = 0; i < animals.length; i++) {
+            let species = animals[i].species;
+            if (animals[i].species == "dog") {
+                // console.log(animals[i])
+                anime.push(animals[i]);
+            }
+
+            speciesList.push(species);
+        }
+        console.log(speciesList);
+        console.log(anime);
+
+        // 6
+        var items = ["milk", "bread", "sugar"];
+        function checkForProduct(item) {
+            for (const product of items) {
+                if (product == item) {
+                    console.log(product);
+                    console.log(items.indexOf(product));
+                    console.log(items.splice(items.indexOf(product), 1), items)
+
+                } else {
+                    console.log("not there")
+                }
+            }
+        }
+        checkForProduct('milk')
+
+        // function checkForProduct(item) {
+        //     for (const product of items) {
+        //         if (product.indexOf(item) !== -1) {
+        //             console.log(product);
+        //             console.log(items.indexOf(product))
+        //             console.log(items.splice(items.indexOf(product),1),items)
+        //         }
+        //     }
+        // }
+        // checkForProduct('bread')
+        // checkForProduct('socks');
+
+        // console.log(items.indexOf('milk'));
+        // items.shift();
+        // console.log(items);
+
+        function fun(x) {
+            console.log(typeof x, arguments.length);
+        };
+        fun();
+        fun(7);
+        fun('1','3','5');
+    </script>
+</body>
+
+</html>

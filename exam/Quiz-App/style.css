@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --header-bg:#F4F5F7;
+    --tomato:#F26D22;
+    --font-family:'Inter', sans-serif;;
+}
+body{
+    width: 100%;
+    height: 100vh;
+}
+header{
+    background: var(--header-bg);
+    overflow: hidden;
+    padding: 15px 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo img{
+    width: clamp(15vw,50%,26vw);
+    max-height: 60px;
+}
+nav{
+    float: right;
+    padding: 8px 0 0 0;
+}
+nav li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 30px;
+}
+.heading{
+    text-align: center;
+    position: relative;
+    top: 20px;
+    font-size: clamp(1.5rem,7vmin,2rem);
+}
+section{
+    width: auto;
+    max-width: 550px;
+    height: auto;
+    max-height: 450px;
+    margin: 50px auto;
+    background: hsl(0, 0%, 90%);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 5px 10px hsl(0, 0%, 90%);
+}
+.question-panel{
+    display: flex;
+    background-image: linear-gradient(to right,red,blue);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    padding: 10px 0;
+}
+.question-panel h1{
+    line-height: 30px;
+}
+section li{
+    list-style-type: none;
+    margin:15px;
+    padding: 10px;
+    font-size: 1.1rem;
+}
+section li input,label{
+    cursor: pointer;
+}
+section .buttons{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding: 5px 10px;
+}
+section .buttons button{
+    border: none;
+    outline: none;
+    padding: 6px 12px;
+    background: teal;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transform: scale(1.1);
+    transition: transform 0.3s;
+}
+section .buttons button:focus{
+    transform: scale(1);
+}
+.score{
+    max-width: 550px;
+    margin: auto;
+    padding: 15px;
+    display: grid;
+    gap: 20px;
+    border-radius: 10px;
+    background: hsl(0, 0%, 90%);
+    box-shadow: 2px 5px 10px hsl(0, 0%, 90%);
+}
+.score .percentage{
+    color: red;
+    text-decoration: underline;
+    margin-left: 6px;
+    cursor: pointer;
+}
+@media screen and (max-width:375px) {
+    header{
+        padding: 15px;
+    }
+    nav [alt="menu-btn"]{
+        width: 22px;
+        height: 18px;
+    }
+    nav li{
+        margin-left: 10px;
+    }
+}
+@media screen and (max-width:560px){
+    section{
+        margin: 50px 10px;
+    }
+    .score{
+        margin: 50px 10px;
+    }
+}

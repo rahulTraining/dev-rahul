@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>--Count++</title>
+
+    <style>
+        h2,div{
+            text-align: center;
+        }
+        .btn{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .btn1,.btn2{
+            background: chocolate;
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>0</h2>
+    <div class="btn">
+        <div class="btn1">Incre</div>
+        <div class="btn2">Decre</div>
+    </div>
+
+    <script>
+        var button1 = document.querySelector('.btn1')
+        var button2 = document.querySelector('.btn2')
+        var num = document.querySelector('h2');
+
+        var count = 0;
+
+        button1.onclick = function(){
+            count++;
+            num.innerHTML=count + '😀'
+        }
+        button2.onclick = function(){
+            count--;
+            num.innerHTML=count + '😣'
+        }
+    </script>
+</body>
+</html>

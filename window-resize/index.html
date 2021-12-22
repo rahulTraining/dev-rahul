@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window-resize</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 300vh;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 15px;
+        }
+
+        h3 {
+            text-align: center;
+            line-height: 30px;
+        }
+
+        #height,
+        #width {
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
+            margin-right: 15px;
+        }
+
+        span {
+            background: red;
+        }
+
+        .top {
+            position: fixed;
+            right: 2%;
+            bottom: 2%;
+            background: orange;
+            padding: 10px 15px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .down {
+            position: fixed;
+            right: 2%;
+            top: 3%;
+            background: orange;
+            padding: 10px 15px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Window Resolution</h1>
+
+    <h3>Resizing the screen size and display its <br>Corresponding width and height</h3>
+    <div id="height">Height: <span></span></div>
+    <div id="width">Width: <span></span></div>
+
+    <div class="top">&uarr;</div>
+    <div class="down">&darr;</div>
+
+    <script>
+        var hegt = document.getElementById('height');
+        var widt = document.getElementById('width');
+
+        window.addEventListener('resize', function () {
+            hegt.innerHTML = window.innerHeight;
+            widt.innerHTML = window.innerWidth
+        });
+
+        // top down
+
+        var topBtn = document.querySelector('.top');
+        console.log(topBtn)
+        var downBtn = document.querySelector('.down');
+        topBtn.style.display = 'none'
+        downBtn.style.display = 'none'
+
+        window.onscroll = function () {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                topBtn.style.display = 'block'
+                downBtn.style.display='none'
+            } else {
+                topBtn.style.display = 'none'
+                downBtn.style.display='block'
+            }
+        }
+
+        function toDown() {
+            downBtn.onclick = function () {
+                window.scrollTo({bottom:0, top:document.body.scrollHeight,behavior:"smooth"})
+            }
+        }
+        toDown()
+        function toTop() {
+            topBtn.addEventListener('click', function () {
+                // document.body.scrollTo(0, 0)
+                // document.documentElement.scrollTo(0, 0);
+
+                window.scrollTo({top:0, bottom: document.body.scrollHeight, behavior:"smooth"})
+                
+            })
+        }
+        toTop()
+    </script>
+</body>
+
+</html>

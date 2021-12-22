@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.accordion{
+    width: 80vw;
+    margin: 90px auto;
+    overflow: hidden;
+}
+@media all and (min-width:768px) {
+    .accordion{
+        width: 800px;
+    }
+}
+.accordion h1{
+    text-align: center;
+    padding: 10px 5px;
+    margin-bottom: 10px;
+}
+.accordion .acc-btn{
+    font-size: 25px;
+    margin: 12px 0;
+    cursor: pointer;
+}
+.accordion .content{
+    margin: 5px 15px;
+    padding: 5px;
+    border-bottom: 1px solid black;
+}
+.accordion .content p::first-letter{
+    font-size: 22px;
+    color: chocolate;
+}
+.accordion .content p{
+    text-indent: 20px;
+}
+.accordion .content{
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+}
+.content.active{
+    height: 150px;
+}

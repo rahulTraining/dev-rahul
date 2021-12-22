@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>to-do-list</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>My To do list</h2>
+        <div class="input">
+            <input type="text" placeholder="your to do........" id="input">
+            <span id="span">Add</span>
+        </div>
+    </div>
+    <div id="alertBox"></div>
+    <ul id="items">
+        <li>Wake up early</li>
+        <li>Plan for a trip</li>
+        <li>Book a ticket</li>
+        <li>Travel</li>
+        <li>Return</li>
+    </ul>
+</body>
+
+<script>
+    var myNodeList = document.getElementsByTagName("LI");
+    var items = document.getElementById('items')
+
+    let todos = [];
+    for (var i = 0; i < myNodeList.length; i++) {
+        var span = document.createElement('span')
+        var txt = document.createTextNode('\u00D7');
+        span.className = "close";
+        span.appendChild(txt);
+        myNodeList[i].appendChild(span)
+    }
+
+    var close = document.getElementsByClassName('close');
+    for (var j = 0; j < close.length; j++) {
+        close[j].onclick = function () {
+            var div = this.parentElement;
+            div.style.display = "none"
+        }
+    }
+    var list = document.querySelector('ul');
+    list.addEventListener('click', function (ev) {
+        if (ev.target.tagName == 'LI') {
+            ev.target.classList.toggle('checked')
+        }
+    }, false);
+
+    var span = document.getElementById('span')
+
+    span.addEventListener('click', function () {
+        var inputValue = document.getElementById('input').value
+        var t = document.createTextNode(inputValue);
+        var item = document.createElement('li');
+        item.appendChild(t);
+        var alert = document.getElementById('alert')
+        if (inputValue === '') {
+            var alertBox = document.createElement('div');
+            var alertClose = document.createElement('span');
+            var alertCloseTxt = document.createTextNode('\u00D7');
+            alertClose.setAttribute('id', 'alertclose');
+            alertClose.appendChild(alertCloseTxt)
+            document.querySelector('#alertBox').appendChild(alertClose)
+            alertBox.innerHTML = '<h3 id="alert">you must write something </h3>'
+            document.querySelector('#alertBox').appendChild(alertBox)
+            // alert('you must write something')
+            // setTimeout(remove,3000)
+            alertClose.onclick = function () {
+                remove()
+            }
+        } else {
+            document.getElementById('items').appendChild(item);
+        }
+        // todos.push(items)
+        // localStorage.setItem('Rahul-todo',JSON.stringify(todos))
+       
+        document.getElementById("input").value = "";
+
+        var span = document.createElement('span');
+        var txt = document.createTextNode('\u00D7');
+        span.appendChild(txt);
+        span.className = "close";
+        item.appendChild(span)
+
+        // var close = document.getElementsByClassName('close');
+
+        for (i = 0; i < close.length; i++) {
+            close[i].onclick = function () {
+                var div = this.parentElement;
+                div.style.display = "none"
+            }
+        }
+    })
+    function remove() {
+        alertBox.innerText = "";
+    }
+</script>
+
+</html>
