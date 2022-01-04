@@ -1,19 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>practice3</title>
+
+    <style>
+        li{
+            margin-block: 5rem;
+        }
+    </style>
 </head>
+
 <body>
-    
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS scrollIntoView Demo</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <button class="btn">Scroll Into View</button>
+            <ul>
+                <li id="c">C</li>
+                <li id="java">Java</li>
+                <li id="python">Python</li>
+                <li>C++</li>
+                <li>C#</li>
+                <li>Go</li>
+                <li>Visual Basic</li>
+                <li>JavaScript</li>
+                <li>PHP</li>
+                <li>SQL</li>
+                <li>R</li>
+                <li>Swift</li>
+                <li class="special">JavaScript</li>
+                <li>MATLAB</li>
+                <li>Assembly language</li>
+                <li>Ruby</li>
+                <li>PL/SQL</li>
+                <li>Classic Visual Basic</li>
+                <li>Perl</li>
+                <li>Scratch</li>
+                <li>Objective-C</li>
+            </ul>
+        </div>
+        
+    </body>
+
+    </html>
 
     <script>
+
+        let ul = document.querySelector('ul');
+        let btn = document.querySelector('.btn');
+        let el = document.querySelector('.special');
+
+        btn.addEventListener('click', function () {
+            el.scrollIntoView(true,'behavior:smoooth');
+        });
+
+        ul.addEventListener('click',function(e){
+            let target = e.target;
+            switch(target.id){
+                case "c" : c.style.color="red"
+                break;
+                case "java" : java.style.color="teal",c.style.color="orange"
+                break
+            }
+        })
+
         // ================= reverse string =================
         let name = 'javascript'
         let str = []
-        
+
         let spilt = name.split('')
         let rvr = spilt.reverse()
         console.log(rvr.join(''))
@@ -21,7 +89,7 @@
 
         // reverse string with loop
 
-        for(let i=name.length-1;i>=0;i--){
+        for (let i = name.length - 1; i >= 0; i--) {
             str += name[i]
         }
         console.log(str);
@@ -32,25 +100,25 @@
 
         // ==================== filter two arrays ====================
 
-        let arr = [1,2,3,4,5];
-        let arr2 =[3,4,5,6,7,8];
-        let array =[]
-        
+        let arr = [1, 2, 3, 4, 5];
+        let arr2 = [3, 4, 5, 6, 7, 8];
+        let array = []
+
         console.log(arr.concat(arr2))
-        let addArray = [...arr,...arr2]
+        let addArray = [...arr, ...arr2]
         console.log(addArray)
 
         let filterArray1 = [... new Set(addArray)]
         console.log(filterArray1);
 
-        for(var i=0;i<addArray.length;i++){
-            if(array.indexOf(addArray[i]) == -1){
+        for (var i = 0; i < addArray.length; i++) {
+            if (array.indexOf(addArray[i]) == -1) {
                 array.push(addArray[i])
             }
         }
         console.log(array)
 
-        let filterArray2 = addArray.filter((a,b)=>{
+        let filterArray2 = addArray.filter((a, b) => {
             return addArray.indexOf(a) === b
         })
         console.log(filterArray2)
@@ -58,14 +126,14 @@
 
         // ========================= find FirstFactorial ==================
 
-        function firstFactorial(num){
-            if(num < 0){
+        function firstFactorial(num) {
+            if (num < 0) {
                 return -1
             }
-            else if(num == 0){
+            else if (num == 0) {
                 return 1
             }
-            else{
+            else {
                 return (num * firstFactorial(num - 1))
             }
         }
@@ -79,10 +147,10 @@
                 if (i % 3 == 0) {
                     console.log('fizz' + " ")
                 }
-                else if(i % 5 == 0){
+                else if (i % 5 == 0) {
                     console.log('buzz');
                 }
-                else{
+                else {
                     console.log(i);
                 }
             }
@@ -90,61 +158,62 @@
         drinks(10);
 
 
-    // ======== two strings str1 ="cdore" str2="coder" return true=========
+        // ======== two strings str1 ="cdore" str2="coder" return true=========
 
-    function twoStr(str1,str2){
-        for(i=0;i<str2.length;i++){
-            if(str1.indexOf(str2[i]) === -1){
-                return false
-            }
-        }
-        return true
-    }
-    console.log(twoStr("dwlor","world"))
-// 
-    function strCh(str){
-        let wordsArr = str.split(" ")
-        function re(pattern){
-            let count=1;
-            const source = pattern.replace(/([+*$])(?:\{(\d+)\})\)?/g,(match,rule,repeat=3) =>{
-                switch (rule){
-                    case "+":
-                        return "[a-z]"
-                    case "$":
-                        return "\\d"
-                    case "*":
-                        return "(.)\\${count++}{${repeat - 1}}"
+        function twoStr(str1, str2) {
+            for (i = 0; i < str2.length; i++) {
+                if (str1.indexOf(str2[i]) === -1) {
+                    return false
                 }
-            }).replace(/(.+?)\1+/g,(match,capture)=>{
-
-            })
-        }
-    }
-    console.log(strCh("$**+*{2} 9mmmrrrkbb"));
-
-    // ============ string challenge input:"Hello -5LoL6",output:"hELLo -6lol5" ===
-
-    function stringChallenge(str){
-        let cap = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-        let small = "abcdefghijklmnopqrstuvwxyz"
-        let result = []
-        let space = " "
-        let hifine = " - "
-
-        for(var i=0;i<str.length;i++){
-            if(cap.indexOf(str[i]) === -1){
-                result.push(str[i].toLowerCase())
             }
-            else if(small.indexOf(str[i]) === -1){
-                result.push(str[i].toUpperCase())
+            return true
+        }
+        console.log(twoStr("dwlor", "world"))
+        // 
+        function strCh(str) {
+            let wordsArr = str.split(" ")
+            function re(pattern) {
+                let count = 1;
+                const source = pattern.replace(/([+*$])(?:\{(\d+)\})\)?/g, (match, rule, repeat = 3) => {
+                    switch (rule) {
+                        case "+":
+                            return "[a-z]"
+                        case "$":
+                            return "\\d"
+                        case "*":
+                            return "(.)\\${count++}{${repeat - 1}}"
+                    }
+                }).replace(/(.+?)\1+/g, (match, capture) => {
+
+                })
             }
         }
-        return result
-    }
+        console.log(strCh("$**+*{2} 9mmmrrrkbb"));
 
-    console.log(stringChallenge("Hello -5LoL6"));
+        // ============ string challenge input:"Hello -5LoL6",output:"hELLo -6lol5" ===
+
+        function stringChallenge(str) {
+            let cap = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            let small = "abcdefghijklmnopqrstuvwxyz"
+            let result = []
+            let space = " "
+            let hifine = " - "
+
+            for (var i = 0; i < str.length; i++) {
+                if (cap.indexOf(str[i]) === -1) {
+                    result.push(str[i].toLowerCase())
+                }
+                else if (small.indexOf(str[i]) === -1) {
+                    result.push(str[i].toUpperCase())
+                }
+            }
+            return result
+        }
+
+        console.log(stringChallenge("Hello -5LoL6"));
 
     </script>
 
 </body>
+
 </html>

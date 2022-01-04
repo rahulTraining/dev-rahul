@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checkboxes</title>
+
+    <style>
+        button{
+            cursor: pointer;
+        }
+        .checkBoxes{
+            display: grid;
+            gap: 1rem;
+            margin-block-start: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button>Select-All</button>
+        <div class="checkBoxes">
+            <label for="check1">
+                <input type="checkbox" id="check1" name="check">Red
+            </label>
+            <label for="check2">
+                <input type="checkbox" id="check2" name="check">green
+            </label>
+            <label for="check3">
+                <input type="checkbox" id="check3" name="check">blue
+            </label>
+        </div>
+    </div>
+
+    <script>
+        const btn = document.querySelector('button');
+        const checkBoxes = document.getElementsByName('check');
+
+        // btn.onclick = checkAll
+        // function check(checked = true){
+        //     checkBoxes.forEach(ch =>{
+        //         ch.checked = checked
+        //     })
+        // }
+
+        // function checkAll(){
+        //     check()
+        //     this.onclick = uncheckedAll
+        // }
+        // function uncheckedAll(){
+        //     check(false)
+        //     this.onclick = checkAll
+        // }
+
+        // btn.addEventListener('click',checkedAll)
+
+        // function check(){
+        //     checkBoxes.forEach(ch =>{
+        //         ch.checked = true
+        //     })
+        // }
+        // function checkedAll(){
+        //     check();
+        //     this.onclick = uncheckAll
+        // }
+        // function uncheckAll(){
+        //     check(false);
+        //     this.onclick = checkedAll
+        // }
+
+        btn.addEventListener('click',function(){
+            checkBoxes.forEach(ch =>{
+                let check = ch.checked = true
+                if(check = false){
+                    this.onclick= check;console.log(this.onclick= check);
+                }
+                else if (check){
+                    this.onclick= check = false
+                    console.log(this.onclick= check = false);
+                }
+            })
+        })
+        
+
+    </script>
+</body>
+</html>

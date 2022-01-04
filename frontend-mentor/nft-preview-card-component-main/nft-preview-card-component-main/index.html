@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Frontend Mentor | NFT preview card component</title>
+
+</head>
+
+<body>
+  <div class="card-container">
+    <div class="card">
+      <div class="card-header">
+        <img id="head" src=".\images\image-equilibrium.jpg" alt="box">
+      </div>
+      <div class="card-body">
+        <h5>equilibrium #3429</h5>
+        <p class="p">our equilibrium collection promotes balance and calm</p>
+        <div class="price">
+          <div>
+            <img src="./images/icon-ethereum.svg" alt="etherium"> 0.041ETH
+          </div>
+          <div>
+            <img src="./images/icon-clock.svg" alt="clock">3 days left
+          </div>
+        </div>
+        <div class="profile">
+          <span> <img src="./images/image-avatar.png" alt="image-avatar"> </span>
+          <div><p style="color: white;"><span class="s">creation of</span> jules wyverm</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    var card_header = document.querySelector('.card-header');
+    var img_head = document.querySelector('#head');
+    card_header.addEventListener('mouseenter',()=>{
+      img_head.src = `images/icon-view.svg`;
+      img_head.style.background = "hsl(178, 100%, 50%)";
+      img_head.style.transition ="0.5s ease"
+    })
+    card_header.addEventListener('mouseleave',()=>{
+      img_head.src = "images/image-equilibrium.jpg";
+      img_head.style.transition ="0.5s ease"
+    })
+
+    
+  </script>
+</body>
+
+</html>

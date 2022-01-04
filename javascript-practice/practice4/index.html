@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>window-object</title>
+<style>
+  *{
+    /* margin: 0; */
+  }
+</style>
+</head>
+
+<body>
+  <!--The content below is only a placeholder and can be replaced.-->
+  <div style="text-align:center">
+    <h1>
+      Welcome to App!
+    </h1>
+    <img width="300" alt="Angular Logo"
+      src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+  </div>
+  <h2>Here are some links to help you start: </h2>
+  <ul>
+    <li>
+      <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
+    </li>
+    <li>
+      <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a>
+      </h2>
+    </li>
+    <li>
+      <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
+    </li>
+  </ul>
+
+  <button class="back">back</button>
+  <button class="forward">forward</button>
+  <button class="go">go</button>
+
+  <div id="app">
+    <header>
+      <nav>
+        <ul id="menu">
+          <li class="item">HTML</li>
+          <li class="item">CSS</li>
+          <li class="item highlight">JavaScript</li>
+          <li class="item">TypeScript</li>
+        </ul>
+      </nav>
+      <h1>getElementsByClassName Demo</h1>
+    </header>
+    <section>
+      <article>
+        <h2 class="heading-secondary">Example 1</h2>
+      </article>
+      <article>
+        <h2 class="heading-secondary">Example 2</h2>
+      </article>
+    </section>
+  </div>
+  <div id="id"></div>
+  <ul class="ul"></ul>
+  <div id="note">
+    JavaScript textContent Demo!
+    <span style="display:none">Hidden Text!</span>
+    <span style="opacity: 0;">opacity Text!</span>
+    <span style="visibility: hidden;">visibility Text!</span>
+  </div>
+ 
+  <ul id="nav">
+    <li class="item">HTML</li>
+    <li class="item">CSS</li>
+    <li class="item highlight">JavaScript</li>
+    <li class="item">TypeScript</li>
+  </ul>
+
+  <script>
+    // let jsWindow = window.open(
+    //     'http://localhost/js/about.html',
+    //     'about',
+    //     'height=600,width=800');
+
+    // setTimeout(() => {
+    //     jsWindow.resizeTo(600, 300);
+    // }, 10000);
+
+    document.querySelector('.back').addEventListener('click', function () {
+      window.history.back()
+    })
+    document.querySelector('.forward').addEventListener('click', function () {
+      window.history.forward()
+    })
+    document.querySelector('.go').addEventListener('click', function () {
+      console.log(window.history.go());
+    })
+
+    // text content
+
+    let menu = document.getElementById('menu');
+    let items = menu.getElementsByClassName('item');
+
+    let data = [].map.call(items, item => item.textContent);
+
+    console.log(data);
+
+    console.log(menu.lastElementChild.nodeName)
+
+
+    let div = document.createElement('div');
+    div.id = 'content';
+    div.innerHTML = '<p>CreateElement example</p>';
+    document.body.appendChild(div);
+    console.log(div.id)
+
+    function createMenuItem(name) {
+      let li = document.createElement('li');
+      li.textContent = name;
+      return li
+    }
+    // get the ul#menu
+    const mn = document.querySelector('#id');
+    // add menu item
+    mn.appendChild(createMenuItem('Home'));
+    mn.appendChild(createMenuItem('Services'));
+    mn.appendChild(createMenuItem('About Us'));
+
+    let note = document.getElementById('note');
+    console.log(note.innerText);
+    console.log(note.textContent);
+
+
+    let languages = ['HTML','CSS','JS','BOOTSTARP','REACT'];
+    let frag =new DocumentFragment()
+    let lang = document.querySelector('.lang');
+    let ul = document.createElement('ul');
+
+    languages.forEach(language =>{
+      let li = document.createElement('li');
+      li.textContent=language;
+      frag.appendChild(li)
+    })
+    document.body.appendChild(ul).appendChild(frag)
+    let add = document.querySelector( 'li:nth-child(2)')
+    let li = document.createElement('li');
+    li.textContent="HOME"
+    ul.insertBefore(li,ul.firstChild.nextSibling.nextSibling);
+
+    menu.insertAdjacentHTML('beforeBegin','<h2>Dev</h2>')
+    menu.insertAdjacentHTML('afterend','<h3>End</h3>')
+    menu.insertAdjacentHTML('beforeend','<li>React</li>')
+    menu.insertAdjacentHTML('afterbegin','<li>Adobe</li>')
+
+    menu.insertAdjacentElement('beforebegin',li)
+    menu.insertAdjacentText('afterend','end')
+   
+   var nav = document.querySelector('nav');
+   var item
+  </script>
+</body>
+
+</html>
