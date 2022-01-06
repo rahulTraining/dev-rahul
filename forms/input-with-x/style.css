@@ -89,7 +89,10 @@ input[type=text]:not(:read-only){
     font-weight: bold;
     cursor: pointer;
     padding: 8px 0;
-    /* display: none; */
+    display: none;
+}
+.user-name.active .close{
+    display: block;
 }
 .buttons{
     display: flex;
