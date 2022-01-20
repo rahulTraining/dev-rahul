@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Slider</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <p>
+                On November 8, 2021, the US government lifted the travel and entry restrictions for Covishield and
+                Covaxin-vaccinated travelers from India. Click here to check the guidelines for hassle-free travel to
+                the
+                US.
+            </p>
+            <p>
+                Effective December 6, all US-bound travelers are required to show the airline a negative report of the
+                COVID-19 viral test taken no more than one calendar day before their international flight departure from
+                India or documentation of recent recovery from COVID-19. Read the CDC guidelines here.
+            </p>
+            <p>With effect from Jan 11, all international arrivals are subject to mandatory 7-day home quarantine in
+                India.
+                Click here to check the guidelines in detail.
+            </p>
+        </div>
+        <div class="indicaters">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+
+    <script>
+        var content = document.querySelectorAll('p');
+        var indicaters = document.querySelectorAll('span');
+        var count=0;
+
+        indicaters.forEach((indicater, index) => {
+            indicater.addEventListener('click', function () {
+                indicaters.forEach(ir => ir.classList.remove('active'))
+                indicater.classList.add('active')
+                content.forEach(c => c.classList.remove('active'));
+                content[index].classList.add('active')
+            })
+            indicaters[0].click()
+        })
+
+        function myFunction(){
+            content.forEach(x => x.classList.remove('active'));
+            indicaters.forEach(idr => idr.classList.remove('active'));
+            count++;
+            if (count > content.length) {
+                count = 1
+            }
+            indicaters[count - 1].classList.add("active")
+            content[count - 1].classList.add("active");
+            setTimeout(myFunction,2000)
+        }
+        myFunction()
+
+
+    </script>
+</body>
+
+</html>

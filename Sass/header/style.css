@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+nav {
+  background-color: red;
+}
+
+nav ul {
+  padding: 10px 15px;
+}
+
+nav li {
+  margin: 10px;
+  display: inline;
+}
+
+nav a {
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */
