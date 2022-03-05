@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fetch</title>
+</head>
+
+<body>
+    <script>
+        let div = document.createElement("div");
+        let body = document.querySelector('body').appendChild(div);
+        let table = document.createElement("table");
+        div.appendChild(table);
+        Object.assign(table, {
+            border : 1,
+            width : 600,
+            cellPadding:10,
+            cellSpacing:0,
+            align:"center",
+            borderSpacing:1,
+        })
+        table.innerHTML += `<tr>
+            <th>s.no</th>
+            <th>Name</th>
+            <th>user-name</th>
+            <th>Email</th>
+            </tr>`
+        fetch('https://jsonplaceholder.typicode.com/users').then(res => {
+            return res.json()
+        }).then(data => {
+            data.map(d => {
+                const  {id,name,username,email} = d
+                table.innerHTML += `<tr>
+                    <td>${id}</td>
+                    <td>${name}</td>
+                    <td>${username}</td>
+                    <td>${email}</td>
+                    </tr>`
+                
+            })
+        })
+
+
+        var a = [1,2,3]
+        var [c,b,d] = a
+        console.log(c)
+
+    </script>
+</body>
+
+</html>
