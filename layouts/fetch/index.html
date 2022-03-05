@@ -9,44 +9,94 @@
 </head>
 
 <body>
+
     <script>
         let div = document.createElement("div");
         let body = document.querySelector('body').appendChild(div);
         let table = document.createElement("table");
+        let img = document.createElement("img")
+        let btn = document.createElement("button");
+        div.appendChild(btn)
         div.appendChild(table);
-        Object.assign(table, {
-            border : 1,
-            width : 600,
-            cellPadding:10,
-            cellSpacing:0,
-            align:"center",
-            borderSpacing:1,
+        div.appendChild(img)
+        btn.innerText="Click here to get data"
+        Object.assign(btn,{
+            "value":"Click here to get data",
+            "style":`position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);cursor:pointer`,
         })
-        table.innerHTML += `<tr>
+        img.src = "loader.gif";
+        img.style.cssText = `position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:300px;height:300px;z-index:-1;`;
+        imgNone()
+        btn.onclick = function() {
+            getData();
+            this.remove()
+        }
+        function getData() {
+            img.style.display = "block";
+            setTimeout(() => {
+                imgNone()
+                fetchtable();
+            }, 2000)
+        }
+        function imgNone() {
+            img.style.display = "none"
+        }
+        function fetchtable() {
+            Object.assign(table, {
+                border: 1,
+                width: 600,
+                cellPadding: 10,
+                cellSpacing: 0,
+                align: "center",
+                borderSpacing: 1,
+            })
+            table.innerHTML += `<tr>
             <th>s.no</th>
             <th>Name</th>
             <th>user-name</th>
             <th>Email</th>
             </tr>`
-        fetch('https://jsonplaceholder.typicode.com/users').then(res => {
-            return res.json()
-        }).then(data => {
-            data.map(d => {
-                const  {id,name,username,email} = d
-                table.innerHTML += `<tr>
-                    <td>${id}</td>
-                    <td>${name}</td>
-                    <td>${username}</td>
-                    <td>${email}</td>
-                    </tr>`
-                
-            })
-        })
+            fetch('https://jsonplaceholder.typicode.com/users').then(res => {
+                return res.json()
+            }).then(data => {
+                data.map(d => {
+                    const { id, name, username, email } = d
+                    table.innerHTML += `<tr>
+                            <td>${id}</td>
+                            <td>${name}</td>
+                            <td>${username}</td>
+                            <td>${email}</td>
+                            </tr>`
+                })
+            }).catch(err => console.error("Unable to load data from server"))
+        }
+
+        // throw "unable to fetch details" //throw method for show error in console via err argument
+        // catch (err) {
+        //     console.error(err);
+        // }
 
 
-        var a = [1,2,3]
-        var [c,b,d] = a
+        var a = [1, 2, 3]
+        var [c, b, d] = a
         console.log(c)
+
+        // async function fetchQuote() {
+        //     const rsp = await fetch("https://api.icndb.com/jokes/random"),
+        //         data = await rsp.json();
+        //     return data.value.joke;
+        // }
+
+        // async function sayJoke() {
+        //     try {
+        //         let result = await fetchQuote();
+        //         document.writeln(`Joke: ${result}`);
+        //     } catch (err) {
+        //         console.error(err);
+        //     }
+        // }
+        // sayJoke();
+
 
     </script>
 </body>
