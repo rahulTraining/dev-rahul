@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <title>alert-box</title>
+</head>
+
+<body>
+    <div class="alertScrollDiv">
+        <div class="alertIcon"><img src="./alert-icon.jfif" class="mmr" alt="alert-icon" title="alert-icon" /></div>
+        <div class="alert-content">
+            <div th:if="${surveyInsurance == null or !surveyInsurance}"
+                class="alert mb bg-orenge-lighter no-radius no-border text-orenge md-18 sm-14 xs-12 alertMessage text-center mmt alertMsg"
+                id="alertMessage">
+                <div class="alertContent text-left">
+                    <div>1. On November 8, 2021, the US government lifted the travel and entry restrictions for
+                        Covishield and
+                        Covaxin-vaccinated travelers from India.
+                        <a href="https://www.indianeagle.com/travelbeats/usa-requires-foreign-visitors-vaccinated/"
+                            target="_blank"> Click here</a>
+                        to check the guidelines for hassle-free travel to the US.
+                    </div>
+                </div>
+            </div>
+            <div th:if="${surveyInsurance == null or !surveyInsurance}"
+                class="alert mb bg-orenge-lighter no-radius no-border text-orenge md-18 sm-14 xs-12 alertMessage text-center mmt alertMsg"
+                id="alertMessage">
+                <div class="alertContent text-left">
+                    <div>2. Effective December 6, all US-bound travelers are required to show the airline a negative
+                        report of
+                        the COVID-19 viral test taken no more than one calendar day before their international
+                        flight
+                        departure from India or documentation of recent recovery from COVID-19. Read the CDC
+                        guidelines <a
+                            href="https://www.cdc.gov/quarantine/pdf/Amended-Global-Testing-Order_12-02-2021-p.pdf"
+                            target="_blank">here</a>.</div>
+                </div>
+            </div>
+            <div th:if="${surveyInsurance == null or !surveyInsurance}"
+                class="alert mb bg-orenge-lighter no-radius no-border text-orenge md-18 sm-14 xs-12 alertMessage text-center mmt alertMsg"
+                id="alertMessage">
+                <div class="alertContent text-left">
+                    <div>3. With effect from Jan 11, all international arrivals are subject to mandatory 7-day home
+                        quarantine
+                        in India.
+                        <a href="https://www.indianeagle.com/travelbeats/india-revised-guidelines-for-international-arrivals/"
+                            target="_blank"> Click here </a>
+                        to check the guidelines in detail.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var contents = document.querySelectorAll("#alertMessage");
+
+        contents.forEach(function (content, index) {
+            content.addEventListener("mouseenter", function (e) {
+                var alertContent = document.querySelector(".alert-content");
+                // alertContent.style.cssText=`animation: 0s`
+                var body = document.querySelector('body');
+                var div = document.createElement("div");
+                div.className = "hover-content";
+                body.appendChild(div)
+                div.innerHTML = e.target.innerHTML
+                var hoverContent = document.querySelectorAll(".hover-content");
+                hoverContent[index].classList.toggle('active')
+            })
+        })
+        contents.forEach(function (content, index) {
+            content.addEventListener("mouseleave", function () {
+                var alertContent = document.querySelector(".alert-content");
+                // alertContent.style.cssText=`animation: scroll 30s linear infinite`
+                var hoverContent = document.querySelectorAll(".hover-content");
+                // hoverContent.forEach(c => c.classList.remove('active'));
+                hoverContent[index].classList.toggle('active')
+            })
+        })
+
+        
+        // contents.forEach(function (content, index) {
+        //     content.addEventListener("hover", function (e) {
+        //         var body = document.querySelector('body');
+        //         var div = document.createElement("div");
+        //         div.className = "hover-content";
+        //         body.appendChild(div)
+        //         div.innerHTML = e.target.innerHTML
+        //         var hoverContent = document.querySelectorAll(".hover-content");
+        //         hoverContent[index].toggleClass('active')
+                
+        //     })
+        // })
+        // contents.forEach(function (content, index) {
+        //     content.addEventListener("mouseleave", function () {
+        //         var hoverContent = document.querySelectorAll(".hover-content");
+        //         hoverContent.forEach(c => c.classList.remove('active'));
+        //         hoverContent[index].classList.remove('active')
+        //     })
+        // })
+
+
+        // $(function() {
+        //     $(contents).each(function(content, index) {
+        //         $(contents[content]).mouseenter(function(e, value) {
+        //             var body = document.querySelector('body');
+        //             var div = document.createElement("div");
+        //             div.className = "hover-content";
+        //             body.appendChild(div)
+        //             div.innerHTML = e.target.innerHTML
+        //             var hoverContent = document.querySelectorAll(".hover-content");
+        //             // $(hoverContent).each(function(c) {
+        //             //     $(c).removeClass('active')
+        //             // })
+        //             $(hoverContent[content]).addClass('active')
+        //         })
+        //     })
+        // })
+        // $(function() {
+        //     $("#alertMessage").each(function(content, index) {
+        //         $(this).mouseleave(function(e) {
+        //             var hoverContent = document.querySelectorAll(".hover-content");
+        //             // $(".hover-content").each(function(c) {
+        //             //     $(c).removeClass('active')
+        //             // })
+        //             $(hoverContent[content]).removeClass('active')
+        //         })
+        //     })
+        // })
+
+    </script>
+</body>
+
+</html>

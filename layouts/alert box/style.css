@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* .alertScrollDiv {
+    width: 320%;
+    background-color: #ffefdc;
+    position: fixed;
+    left: 0;
+    right: 0;
+    display: flex;
+    overflow: hidden;
+}
+.alertScrollDiv > * {
+    width: 1600px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color: #f26d22;
+    padding: 10px;
+    white-space: nowrap;
+}
+i {
+    margin-right: 10px;
+} */
+
+.alertScrollDiv {
+    background-color: #ffefdc;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 50px 0;
+    cursor: pointer;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+i {
+    color: #f26d22;
+    margin: 0 10px;
+}
+
+.alert-content {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    column-gap: 40px;
+}
+
+.alert-content > * {
+    color: #f26d22;
+    padding: 10px 0;
+    width: fit-content;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.alertContent {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.alertScroll {
+    background-color: #ffefdc;
+    overflow: hidden;
+}
+.alert-Content {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.alert-Content > * {
+    color: #f26d22;
+    padding: 10px 0;
+    width: fit-content;
+    white-space: nowrap;
+    cursor: pointer;
+}
+.alertScrollDiv.div3 {
+    /* position: relative; */
+}
+.hover-content {
+    /* position: absolute; */
+    /* left: 5%;
+    top: 40%; */
+    background-color: #ffefdc;
+    color: #f26d22;
+    padding: 15px;
+    width: clamp(90%,50vw + 2rem,60%);
+    margin: 10px auto;
+    display: none;
+    animation: fadeOut 0.3s ease-in-out;
+    z-index: 10;
+    border-radius: 5px;
+    box-shadow: 2px 3px 10px #ffefdc;
+}
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+.hover-content.active {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.alertDiv4 {
+    width: 95%;
+    margin: auto;
+    background-color: #ffefdc;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 2px 3px 10px #ffefdc;
+    display: none;
+}
+.alertDiv4.active {
+    display: flex;
+}
+#alertMessage4 {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color: #f26d22;
+    margin: 5px 0;
+}

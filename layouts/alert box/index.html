@@ -10,94 +10,12 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jQuery.Marquee/1.5.0/jquery.marquee.min.js"></script>
+    <link rel="stylesheet" href="style.css">
     <title>Alert box</title>
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* .alertScrollDiv {
-            width: 320%;
-            background-color: #ffefdc;
-            position: fixed;
-            left: 0;
-            right: 0;
-            display: flex;
-            overflow: hidden;
-        }
-        .alertScrollDiv > * {
-            width: 1600px;
-            display: flex;
-            justify-content: left;
-            align-items: center;
-            color: #f26d22;
-            padding: 10px;
-            white-space: nowrap;
-        }
-        i {
-            margin-right: 10px;
-        } */
-
-        .alertScrollDiv {
-            background-color: #ffefdc;
-            display: flex;
-            justify-content: left;
-            align-items: center;
-            margin: 50px 0;
-            cursor: pointer;
-            width: 100%;
-            overflow-x: hidden;
-        }
-
-        i {
-            color: #f26d22;
-            margin: 0 10px;
-        }
-
-        .alert-content {
-            display: flex;
-            justify-content: left;
-            align-items: center;
-            column-gap: 40px;
-        }
-
-        .alert-content > * {
-            color: #f26d22;
-            padding: 10px 0;
-            width: fit-content;
-            white-space: nowrap;
-            cursor: pointer;
-        }
-        
-        .alertContent {
-            display: flex;
-            justify-content: left;
-            align-items: center;
-        }
-        .alertScroll {
-            background-color: #ffefdc;
-            overflow: hidden;
-        }
-        .alert-Content {
-            display: flex;
-            justify-content: left;
-            align-items: center;
-        }
-        .alert-Content > * {
-            color: #f26d22;
-            padding: 10px 0;
-            width: fit-content;
-            white-space: nowrap;
-            cursor: pointer;
-        }
-        </style>
 </head>
 
 <body>
-    <!-- <div class="alertScrollDiv">
+    <div class="alertScrollDiv">
         <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
         <marquee onmouseenter="this.stop();" onmouseleave="this.start()" behavior="" direction="" scrollamount=10>
             <div class="alert-content">
@@ -195,9 +113,9 @@
                 </div>
             </div>
         </marquee>
-    </div> -->
+    </div>
 
-    <div class="alertScroll">
+    <!-- <div class="alertScroll">
         <div class="alert-Content">
             <div th:if="${surveyInsurance == null or !surveyInsurance}"
                 class="alert mb bg-orenge-lighter no-radius no-border text-orenge md-18 sm-14 xs-12 alertMessage text-center mmt alertMsg"
@@ -238,21 +156,184 @@
                 </div>
             </div>
         </div>
+    </div> -->
+
+    <div class="alertScrollDiv div3">
+        <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+        <marquee onmouseenter="this.stop();" onmouseleave="this.start()" behavior="" direction="" scrollamount=10>
+            <div class="alert-content">
+                <div th:if="${surveyInsurance == null or !surveyInsurance}"
+                class="alert mb bg-orenge-lighter no-radius no-border text-orenge md-18 sm-14 xs-12 alertMessage text-center mmt alertMsg"
+                    id="alertMessage3">
+                    <div class="alertContent text-left">
+                        <div>1. On November 8, 2021, the US government lifted the travel and entry restrictions for
+                            Covishield and
+                            Covaxin-vaccinated travelers from India.
+                            <a href="https://www.indianeagle.com/travelbeats/usa-requires-foreign-visitors-vaccinated/"
+                                target="_blank"> Click here</a>
+                            to check the guidelines for hassle-free travel to the US.
+                        </div>
+                    </div>
+                </div>
+                <div th:if="${surveyInsurance == null or !surveyInsurance}"
+                    class="alert mb bg-orenge-lighter no-radius no-border text-orenge md-18 sm-14 xs-12 alertMessage text-center mmt alertMsg"
+                    id="alertMessage3">
+                    <div class="alertContent text-left">
+                        <div>2. Effective December 6, all US-bound travelers are required to show the airline a negative
+                            report of
+                            the COVID-19 viral test taken no more than one calendar day before their international
+                            flight
+                            departure from India or documentation of recent recovery from COVID-19. Read the CDC
+                            guidelines <a
+                                href="https://www.cdc.gov/quarantine/pdf/Amended-Global-Testing-Order_12-02-2021-p.pdf"
+                                target="_blank">here</a>.</div>
+                    </div>
+                </div>
+                <div th:if="${surveyInsurance == null or !surveyInsurance}"
+                    class="alert mb bg-orenge-lighter no-radius no-border text-orenge md-18 sm-14 xs-12 alertMessage text-center mmt alertMsg"
+                    id="alertMessage3">
+                    <div class="alertContent text-left">
+                        <div>3. With effect from Jan 11, all international arrivals are subject to mandatory 7-day home
+                            quarantine
+                            in India.
+                            <a href="https://www.indianeagle.com/travelbeats/india-revised-guidelines-for-international-arrivals/"
+                            target="_blank"> Click here </a>
+                            to check the guidelines in detail.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </marquee>
     </div>
+
+    <div class="alertScrollDiv">
+        <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+        <marquee onmouseenter="this.stop();" onmouseleave="this.start()" behavior="" direction="" scrollamount=10>
+            <div class="alert-content div4">
+                <div th:if="${surveyInsurance == null or !surveyInsurance}"
+                class="alert mb bg-orenge-lighter no-radius no-border text-orenge md-18 sm-14 xs-12 alertMessage text-center mmt alertMsg"
+                    id="alertMessage">
+                    <div class="alertContent text-left">
+                        <div>1. On November 8, 2021, the US government lifted the travel and entry restrictions for
+                            Covishield and
+                            Covaxin-vaccinated travelers from India.
+                            <a href="https://www.indianeagle.com/travelbeats/usa-requires-foreign-visitors-vaccinated/"
+                                target="_blank"> Click here</a>
+                            to check the guidelines for hassle-free travel to the US.
+                        </div>
+                    </div>
+                </div>
+                <div th:if="${surveyInsurance == null or !surveyInsurance}"
+                    class="alert mb bg-orenge-lighter no-radius no-border text-orenge md-18 sm-14 xs-12 alertMessage text-center mmt alertMsg"
+                    id="alertMessage">
+                    <div class="alertContent text-left">
+                        <div>2. Effective December 6, all US-bound travelers are required to show the airline a negative
+                            report of
+                            the COVID-19 viral test taken no more than one calendar day before their international
+                            flight
+                            departure from India or documentation of recent recovery from COVID-19. Read the CDC
+                            guidelines <a
+                                href="https://www.cdc.gov/quarantine/pdf/Amended-Global-Testing-Order_12-02-2021-p.pdf"
+                                target="_blank">here</a>.</div>
+                    </div>
+                </div>
+                <div th:if="${surveyInsurance == null or !surveyInsurance}"
+                    class="alert mb bg-orenge-lighter no-radius no-border text-orenge md-18 sm-14 xs-12 alertMessage text-center mmt alertMsg"
+                    id="alertMessage">
+                    <div class="alertContent text-left">
+                        <div>3. With effect from Jan 11, all international arrivals are subject to mandatory 7-day home
+                            quarantine
+                            in India.
+                            <a href="https://www.indianeagle.com/travelbeats/india-revised-guidelines-for-international-arrivals/"
+                            target="_blank"> Click here </a>
+                            to check the guidelines in detail.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </marquee>
+    </div>
+
+    <!-- <div class="alertDiv4">
+        <div th:if="${surveyInsurance == null or !surveyInsurance}"  class="alert mb bg-orenge-lighter no-radius no-border text-orenge md-18 sm-14 xs-12 alertMessage text-center mmt" id="alertMessage4">
+            <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+            <div class="alertContent text-left">
+                <div>On November 8, 2021, the US government lifted the travel and entry restrictions for Covishield and Covaxin-vaccinated travelers from India.
+                    <a href="https://www.indianeagle.com/travelbeats/usa-requires-foreign-visitors-vaccinated/" target="_blank"> Click here</a>
+                    to check the guidelines for hassle-free travel to the US.</div>
+            </div>
+            
+        </div>
+        <div th:if="${surveyInsurance == null or !surveyInsurance}"  class="alert mb bg-orenge-lighter no-radius no-border text-orenge md-18 sm-14 xs-12 alertMessage text-center mmt" id="alertMessage4">
+            <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+            <div class="alertContent text-left">
+                <div>Effective December 6, all US-bound travelers are required to show the airline a negative report of the COVID-19 viral test taken no more than one calendar day before  their international flight departure from India or documentation of recent recovery from COVID-19. Read the CDC guidelines <a href="https://www.cdc.gov/quarantine/pdf/Amended-Global-Testing-Order_12-02-2021-p.pdf" target="_blank">here</a>.</div>
+            </div>
+            
+        </div>
+        <div th:if="${surveyInsurance == null or !surveyInsurance}"  class="alert mb bg-orenge-lighter no-radius no-border text-orenge md-18 sm-14 xs-12 alertMessage text-center mmt" id="alertMessage4">
+            <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+            <div class="alertContent text-left">
+                <div>With effect from February 14, new guidelines are applicable to international travelers to India.
+                    <a href="https://www.indianeagle.com/travelbeats/india-revised-guidelines-for-international-arrivals/" target="_blank"> Click here </a>
+                    to check the guidelines in detail.
+                </div>
+            </div>
+            
+        </div>
+    </div> -->
     <script>
         //if you have images in marquee
         // $(window).load(function () {
         //     $('.alertScrollDiv').marquee();
         // });
-        $(document).ready(function(){
-            $('.alert-Content').marquee({
-                duration: 4000,
-                gap: 50,
-                delayBeforeStart: 0,
-                direction: 'left',
-                duplicated: false
-            });
+        // $(document).ready(function(){
+        //     $('.alert-Content').marquee({
+        //         duration: 4000,
+        //         gap: 50,
+        //         delayBeforeStart: 0,
+        //         direction: 'left',
+        //         duplicated: false
+        //     });
+        // })
+
+        var contents = document.querySelectorAll("#alertMessage3"); 
+        
+        
+        contents.forEach(function(content,index) {
+            content.addEventListener("mouseenter",function(e){
+                var body = document.querySelector('body');
+                var div = document.createElement("div");
+                div.innerText= e.target.innerText
+                div.className = "hover-content";
+                body.appendChild(div)
+                var hoverContent = document.querySelectorAll(".hover-content");
+                hoverContent.forEach(c => c.classList.remove('active'));
+                hoverContent[index].classList.add('active')
+            })
         })
+        contents.forEach(function(content,index) {
+            content.addEventListener("mouseleave",function(){
+                var hoverContent = document.querySelectorAll(".hover-content");
+                hoverContent.forEach(c => c.classList.remove('active'));
+                hoverContent[index].classList.remove('active')
+            })
+        })
+
+        // var contents = document.querySelectorAll("#alertMessage4");
+        // var alertDiv4 = document.querySelector('.alertDiv4');
+        
+        // contents.forEach(function(content,index) {
+        //     content.addEventListener("mouseenter",function(){
+        //         alert('hi')
+        //         alertDiv4.classList.add('active')
+        //     })
+        // })
+        // contents.forEach(function(content,index) {
+        //     content.addEventListener("mouseleave",function(){
+        //         alertDiv4.classList.remove('active')
+        //     })
+        // })
     </script>
     
 

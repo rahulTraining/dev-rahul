@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.alertScrollDiv {
+    background-color: #ffefdc;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 50px 0;
+    cursor: pointer;
+    width: 100%;
+    overflow-x: hidden;
+}
+.alertIcon {
+    z-index: 2;
+}
+.alertIcon img {
+    width: 20px;
+
+}
+.alert-content {
+    position: relative;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    column-gap: 40px;
+    animation: scroll 30s linear infinite;
+    z-index: 1;
+}
+@keyframes scroll {
+    from {
+        left: 100%;
+    }
+
+    to {
+        left: -300%;
+    }
+}
+.alert-content > * {
+    color: #f26d22;
+    padding: 10px 0;
+    width: fit-content;
+    white-space: nowrap;
+    cursor: pointer;
+}
+.alertContent {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.hover-content {
+    background-color: #ffefdc;
+    color: #f26d22;
+    padding: 15px;
+    width: 60%;
+    margin: auto;
+    display: none;
+    animation: fadeOut 0.3s ease-in-out;
+    z-index: 10;
+    border-radius: 5px;
+    box-shadow: 2px 3px 10px #ffefdc;
+}
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+.hover-content.active {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+@media only screen and (max-width: 1124px) {
+    .hover-content {
+        width: 90%;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .alert-content {
+        animation: scroll 50s linear infinite;
+    }
+    @keyframes scroll {
+        from {
+            left: 100%;
+        }
+    
+        to {
+            left: -620%;
+        }
+    }
+}

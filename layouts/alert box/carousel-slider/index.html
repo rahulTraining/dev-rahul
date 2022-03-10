@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>carousel-slider</title>
+</head>
+<body>
+    <div class="sliderDiv mmb mmt">
+        <div th:if="${surveyInsurance == null or !surveyInsurance}"  class="alert mb bg-orenge-lighter no-radius no-border text-orenge md-18 sm-14 xs-12 alertMessage text-center mmt alertMsg" id="alertMessage1">
+            
+            <div class="alertContent text-left">
+                <div>On November 8, 2021, the US government lifted the travel and entry restrictions for Covishield and Covaxin-vaccinated travelers from India.
+                    <a href="https://www.indianeagle.com/travelbeats/usa-requires-foreign-visitors-vaccinated/" target="_blank"> Click here</a>
+                    to check the guidelines for hassle-free travel to the US.</div>
+            </div>
+            <!--<div class="closeIcon pull-right"><img src="/images/close-icon-orange.png" class="pointer closeIcon pull-right" onclick="$(this).parent().parent().removeClass('alertMessage').hide();" title="close-icon"  alt="close-icon" /></div>-->
+        </div>
+        <div th:if="${surveyInsurance == null or !surveyInsurance}"  class="alert mb bg-orenge-lighter no-radius no-border text-orenge md-18 sm-14 xs-12 alertMessage text-center mmt alertMsg" id="alertMessage2">
+            
+            <div class="alertContent text-left">
+                <div>Effective December 6, all US-bound travelers are required to show the airline a negative report of the COVID-19 viral test taken no more than one calendar day before  their international flight departure from India or documentation of recent recovery from COVID-19. Read the CDC guidelines <a href="https://www.cdc.gov/quarantine/pdf/Amended-Global-Testing-Order_12-02-2021-p.pdf" target="_blank">here</a>.</div>
+            </div>
+            <!--<div class="closeIcon pull-right"><img src="/images/close-icon-orange.png" class="pointer closeIcon pull-right" onclick="$(this).parent().parent().removeClass('alertMessage').hide();" title="close-icon"  alt="close-icon" /></div>-->
+        </div>
+        <div th:if="${surveyInsurance == null or !surveyInsurance}"  class="alert mb bg-orenge-lighter no-radius no-border text-orenge md-18 sm-14 xs-12 alertMessage text-center mmt alertMsg" id="alertMessage">
+           
+            <div class="alertContent text-left">
+                <div>With effect from Jan 11, all international arrivals are subject to mandatory 7-day home quarantine in India.
+                    <a href="https://www.indianeagle.com/travelbeats/india-revised-guidelines-for-international-arrivals/" target="_blank"> Click here </a>
+                    to check the guidelines in detail.
+                </div>
+            </div>
+            <!--<div class="closeIcon pull-right"><img src="/images/close-icon-orange.png" class="pointer closeIcon pull-right" onclick="$(this).parent().parent().removeClass('alertMessage').hide();" title="close-icon"  alt="close-icon" /></div>-->
+        </div>
+    
+        <div class="indicaters">
+            <div class="indicater"></div>
+            <div class="indicater"></div>
+            <div class="indicater"></div>
+        </div>
+    </div>
+
+    <script>
+        var slides = document.querySelectorAll('.alertMsg');
+    var indicaters = document.querySelectorAll('.indicater');
+    var myIndex = 0;
+
+    indicaters.forEach(function(space,index){
+        space.addEventListener('click',function(){
+        indicaters.forEach(function(s){
+            s.classList.remove('active');
+        });
+        indicaters[index].classList.add('active');
+
+        slides.forEach(function(c){
+            c.classList.remove('active');
+        });
+        slides[index].classList.add('active');
+    });
+    indicaters[0].click()
+});
+
+    function myFun(){
+        slides.forEach(function(x){
+            x.classList.remove("active");
+            indicaters.forEach(function(c){
+                c.classList.remove("active");
+            });
+
+        });
+        myIndex++;
+        if (myIndex > slides.length) {
+            myIndex = 1
+        }
+        indicaters[myIndex - 1].classList.add("active");
+        slides[myIndex - 1].classList.add("active");
+        setTimeout(myFun, 5000);
+    }
+    myFun();
+    </script>
+</body>
+</html>
