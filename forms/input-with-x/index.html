@@ -59,7 +59,7 @@
             </div>
         </form>
     </div>
-
+    <!-- var longName = $('#' + id).val(); -->
     <script>
         var form = document.getElementById('regForm')
         var label = document.querySelector('label')
@@ -67,6 +67,8 @@
         var inputField = document.querySelectorAll('input');
 
         function test(data) {
+            console.log(data,"input element");
+            console.log(document.querySelector("#" + data),"log id");
             inputField.forEach(i => {
                 i.addEventListener('input', function () {
                     if (this.value.length >= 6) {
