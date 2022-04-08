@@ -10,7 +10,7 @@
         *{
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            box-sizing: border-box
         }
         body {
             height: 100vh;
@@ -31,15 +31,40 @@
             font-size: 1.1rem;
             position: relative;
         }
-        li:hover::before {
+        li::before {
             content: attr(hover-content);
             position: absolute;
-            right: -80px;
+            width: 70%;
+            font-size: 0.85rem;
+            right: -70px;
             background-color: red;
             color: white;
             text-align: center;
             border-radius: 5px;
             padding: 5px;
+            transform: translateY(-10%);
+            opacity: 0;
+            transition: all 0.3s ease-in-out;
+        }
+        li::after {
+            content: "";
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            transform: rotate(45deg);
+            background-color: red;
+            right: -2px;
+            top: 40%;
+            opacity: 0;
+            transition: all 0.3s ease-in-out;
+        }
+        li:hover::before {
+            right: -100px;
+            opacity: 1;
+        }
+        li:hover::after {
+            right: -32px;
+            opacity: 1;
         }
     </style>
 </head>
