@@ -13,43 +13,57 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <title>Minifox-layout</title>
 </head>
 
 <body>
-    <section class="hero-section shadow rounded">
+    <div class="loader">
+        <img src="./Images/m-loader-crop.gif" width="200px" alt="loader">
+    </div>
+    <div class="up">
+        <i class="fa-solid fa-arrow-up"></i>
+    </div>
+    <div class="cursor">
+        <span></span>
+    </div>
+    <section class="hero-section rounded">
         <div class="newyork-img">
             <img src="./Images/newyork.jpg" class="img-fluid" alt="newyork-city">
         </div>
         <div class="hero-section-content px-5 rounded text-white">
             <div class="col-md col-lg-12 px-0">
                 <h1 class="display-4 fw-bold">HELLO</h1>
-                <p class="lead my-3 fw-bold">Create a stunning photo book from your phone in a snap</p>
+                <p class="lead my-3 fw-bold">Create a stunning photo book from your phone in a snap.</p>
                 <button style="background-color: rgb(242,109,34);" type="button"
                     class="border-0 No shadow text-white fw-bold btn btn-warning text-uppercase">get started
                     now</button>
             </div>
         </div>
+    </section>
+    <header class="hero-section shadow sticky-top bg-white" style="z-index: 2;">
+        <div id="progressbar-hoz"></div>
         <div class="nav-scroller d-flex justify-content-around align-items-center py-1 mb-2">
             <div class="logo d-grid align-content-center ps-lg-5 me-md-2 me-sm-1">
                 <img src="./Images/Logo.png" width="160px" class="img-fluid" alt="logo-fox">
             </div>
-            <div class="d-sm-block d-md-none" menu-icon>
-                <i class="fa-solid fa-bars"></i>
+            <div menu-icon>
+                <i class="fa-solid fa-bars" icon></i>
             </div>
-            <nav class="nav d-flex justify-content-lg-evenly fw-bold text-uppercase pe-lg-5 d-md-block">
-                <a class="p-2 text-decoration-none" href="#">Home</a>
-                <a class="p-2 text-decoration-none" href="#">features</a>
-                <a class="p-2 text-decoration-none" href="#">testimonials</a>
-                <a class="p-2 text-decoration-none" href="#">about</a>
-                <a class="p-2 text-decoration-none" href="#">blog</a>
-                <a class="p-2 text-decoration-none" href="#">prices</a>
-                <a class="p-2 text-decoration-none" href="#">services</a>
-                <a class="p-2 text-decoration-none" href="#">team</a>
-                <a class="p-2 text-decoration-none" href="#">contact</a>
+            <nav class="nav d-flex justify-content-lg-evenly fw-bold text-uppercase text-lg-end pe-lg-5">
+                <a class="p-2 text-decoration-none" href="#######">Home</a>
+                <a class="p-2 text-decoration-none" href="#######">features</a>
+                <a class="p-2 text-decoration-none" href="#######">testimonials</a>
+                <a class="p-2 text-decoration-none" href="#######">about</a>
+                <a class="p-2 text-decoration-none" href="#######">blog</a>
+                <a class="p-2 text-decoration-none" href="#######">prices</a>
+                <a class="p-2 text-decoration-none" href="#######">services</a>
+                <a class="p-2 text-decoration-none" href="#######">team</a>
+                <a class="p-2 text-decoration-none" href="#######">contact</a>
             </nav>
         </div>
-    </section>
+    </header>
 
     <section class="hero-section2 m-md-5 m-4">
         <div class="p-3 p-md-2 p-lg-3 mt-3 rounded text-center">
@@ -71,38 +85,34 @@
             <div class="col-lg-3 col-md-5 col-sm-5 col-12 p-lg-1 my-3">
                 <img src="./Images/Cloud.png" class="img-fluid mb-5" alt="cloud">
                 <h6 class="text-uppercase">clean & unique design</h6>
-                <p class="p-lg-2 text-uppercase text-black-50">Some representative placeholder content for the three
-                    columns of text below the carousel. This is the
-                    first column.</p>
+                <p class="p-lg-2 text-uppercase text-black-50">Completly flexible layout/Easily tailored and customised
+                    to fit any business neeeds </p>
             </div>
             <div class="col-lg-3 col-md-5 col-sm-5 col-12 p-lg-1 my-3">
                 <img src="./Images/Thinking.png" class="img-fluid mb-5" alt="bulb">
                 <h6 class="text-uppercase">flexible and multipurpose</h6>
-                <p class="p-lg-2 text-uppercase text-black-50">Another exciting bit of representative placeholder
-                    content. This time, we've moved on to the second
-                    column.</p>
+                <p class="p-lg-2 text-uppercase text-black-50">We care about our customers products and offer free
+                    updates and the best support around</p>
             </div>
             <div class="col-lg-3 col-md-5 col-sm-5 col-12 p-lg-1 my-3">
                 <img src="./Images/Support.png" class="img-fluid mb-5" alt="support">
                 <h6 class="text-uppercase">professional support</h6>
-                <p class="p-lg-2 text-uppercase text-black-50">Another exciting bit of representative placeholder
-                    content. This time, we've moved on to the second
-                    column.</p>
+                <p class="p-lg-2 text-uppercase text-black-50">Over 25 pixel perfect, easily customised PSD files
+                    provide complete flexibility and many options</p>
             </div>
             <div class="col-lg-3 col-md-5 col-sm-5 col-12 p-lg-1 my-3">
                 <img src="./Images/Print.png" class="img-fluid mb-5" alt="print">
                 <h6 class="text-uppercase">pixel perfect files</h6>
-                <p class="p-lg-2 text-uppercase text-black-50">Another exciting bit of representative placeholder
-                    content. This time, we've moved on to the second
-                    column.</p>
+                <p class="p-lg-2 text-uppercase text-black-50">Clean, unique and sophisticated design to help all types
+                    of business grow and impress customers</p>
             </div>
         </div>
     </div>
 
     <section class="features-section container-fluid bg-light p-0">
-        <div class="hero-section2 m-md-5 m-4">
+        <div class="hero-section2 m-md-2 m-2">
             <div class="p-3 p-md-2 p-lg-3 mt-3 rounded text-center">
-                <div class="col col-lg-7 m-auto py-2">
+                <div class="col col-lg-7 m-auto py-2 mt-2 mt-md-5">
                     <h2 class="text-uppercase fw-bold">start developing ios apps today</h2>
                     <p class="my-3 text-uppercase text-black-50">
                         before you can start developing great apps set up a development environment to
@@ -143,9 +153,10 @@
                         </div>
                         <div class="col-12 col-md-8 col-lg-12">
                             <h4 class="text-white text-center">beautiful one-page design</h4>
-                            <p class="text-center">minifox is for company's seaking a clean, saphisticated ways to
-                                showcase
-                                portfolios,services,products and more on a single page</p>
+                            <p class="text-center">contains two blog options, simple blog post layouts for a clean,
+                                clear
+                                reading experience and conversion-heavy traditional blog posts
+                            </p>
                         </div>
                     </div>
                     <div
@@ -155,18 +166,21 @@
                         </div>
                         <div class="col-12 col-md-8 col-lg-12">
                             <h4 class="text-white text-center">beautiful one-page design</h4>
-                            <p class="text-center">minifox is for company's seaking a clean, saphisticated ways to
-                                showcase
-                                portfolios,services,products and more on a single page</p>
+                            <p class="text-center">with over 25 PSDs included, minifox can quickly and easily be
+                                customised
+                                to suit any brand and any online marketing needs
+                            </p>
                         </div>
                     </div>
-                    <div class="row mb-5 mx-auto d-flex justify-content-sm-center justify-content-md-center justify-content-lg-start ms-md-3">
-                        <div class="col-5">
+                    <div class="row mb-5 mx-auto d-flex justify-content-center justify-content-md-center ms-md-3">
+                        <div
+                            class="col-5 me-auto d-flex justify-content-center justify-content-lg-start align-items-center">
                             <button type="button"
                                 class="btn border-white shadow-none text-white text-uppercase text-nowrap fw-bold">learn
                                 more</button>
                         </div>
-                        <div class="col-5">
+                        <div
+                            class="col-5 me-auto d-flex justify-content-center justify-content-lg-start align-content-center">
                             <button type="button"
                                 class="btn border-white shadow-none text-white text-uppercase text-nowrap fw-bold">purchase
                                 theme</button>
@@ -193,18 +207,142 @@
         </div>
     </section>
 
-    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+
+    <!-- for medium to large screnn -->
+
+    <main class="d-none d-sm-block">
+        <div class="row mx-auto my-4">
+            <div class="col-12 col-md-6 col-lg-3 mb-3">
+                <div class="row">
+                    <div class="col-3">
+                        <img src="./Images/User.png" class="img-fluid" alt="user">
+                    </div>
+                    <div class="col-8">
+                        <h6 class="text-uppercase">michal balazi</h6>
+                        <p class="text-uppercase">april 26,2022</p>
+                        <hr>
+                        <small class="text-black-50">I like minifox more and each day beacuse it makes my life a lot
+                            easier. thinks guys, keep up the good work i recommanded minifox to everyone interested in
+                            running successfull online business! i will recommanded you to my colleagues</small>
+                        <ul class="list-unstyled p-0 m-0">
+                            <li><i class="fa-brands fa-facebook-square"></i></li>
+                            <li><i class="fa-brands fa-twitter-square"></i></li>
+                            <li><i class="fa-brands fa-pinterest-square"></i></li>
+                            <li><i class="fa-brands fa-telegram"></i></li>
+                        </ul>
+                        <ul class="list-unstyled p-0 m-0" social-media-icons>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 mb-3">
+                <div class="row">
+                    <div class="col-3">
+                        <img src="./Images/User.png" class="img-fluid" alt="user">
+                    </div>
+                    <div class="col-8">
+                        <h6 class="text-uppercase">michal balazi</h6>
+                        <p class="text-uppercase">april 26,2022</p>
+                        <hr>
+                        <small class="text-black-50">I like minifox more and each day beacuse it makes my life a lot
+                            easier. thinks guys, keep up the good work i recommanded minifox to everyone interested in
+                            running successfull online business! i will recommanded you to my colleagues</small>
+                        <ul class="list-unstyled p-0 m-0">
+                            <li><i class="fa-brands fa-facebook-square"></i></li>
+                            <li><i class="fa-brands fa-twitter-square"></i></li>
+                            <li><i class="fa-brands fa-pinterest-square"></i></li>
+                            <li><i class="fa-brands fa-telegram"></i></li>
+                        </ul>
+                        <ul class="list-unstyled p-0 m-0" social-media-icons>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 mb-3">
+                <div class="row">
+                    <div class="col-3">
+                        <img src="./Images/User.png" class="img-fluid" alt="user">
+                    </div>
+                    <div class="col-8">
+                        <h6 class="text-uppercase">michal balazi</h6>
+                        <p class="text-uppercase">april 26,2022</p>
+                        <hr>
+                        <small class="text-black-50">I like minifox more and each day beacuse it makes my life a lot
+                            easier. thinks guys, keep up the good work i recommanded minifox to everyone interested in
+                            running successfull online business! i will recommanded you to my colleagues</small>
+                        <ul class="list-unstyled p-0 m-0">
+                            <li><i class="fa-brands fa-facebook-square"></i></li>
+                            <li><i class="fa-brands fa-twitter-square"></i></li>
+                            <li><i class="fa-brands fa-pinterest-square"></i></li>
+                            <li><i class="fa-brands fa-telegram"></i></li>
+                        </ul>
+                        <ul class="list-unstyled p-0 m-0" social-media-icons>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 mb-3">
+                <div class="row">
+                    <div class="col-3">
+                        <img src="./Images/User.png" class="img-fluid" alt="user">
+                    </div>
+                    <div class="col-8">
+                        <h6 class="text-uppercase">michal balazi</h6>
+                        <p class="text-uppercase">april 26,2022</p>
+                        <hr>
+                        <small class="text-black-50">I like minifox more and each day beacuse it makes my life a lot
+                            easier. thinks guys, keep up the good work i recommanded minifox to everyone interested in
+                            running successfull online business! i will recommanded you to my colleagues</small>
+                        <ul class="list-unstyled p-0 m-0">
+                            <li><i class="fa-brands fa-facebook-square"></i></li>
+                            <li><i class="fa-brands fa-twitter-square"></i></li>
+                            <li><i class="fa-brands fa-pinterest-square"></i></li>
+                            <li><i class="fa-brands fa-telegram"></i></li>
+                        </ul>
+                        <ul class="list-unstyled p-0 m-0" social-media-icons>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- for mobile devices -->
+
+    <div id="carouselExampleDark" class="carousel carousel-dark slide d-sm-none" data-bs-ride="carousel">
         <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner">
-          <div class="carousel-item active" data-bs-interval="10000">
-            <main>
-                <div class="row mx-auto my-4">
-                    <div class="col-12 col-md-6 col-lg-3 mb-3">
-                        <div class="row">
+            <div class="carousel-item active" data-bs-interval="10000">
+                <main>
+                    <div class="col-12 col-md-6 col-lg-3 pb-5">
+                        <div class="row d-flex justify-content-center align-content-center">
                             <div class="col-3">
                                 <img src="./Images/User.png" class="img-fluid" alt="user">
                             </div>
@@ -212,7 +350,10 @@
                                 <h6 class="text-uppercase">michal balazi</h6>
                                 <p class="text-uppercase">april 26,2022</p>
                                 <hr>
-                                <small class="text-black-50">I like minifox more and each day beacuse it makes my life a lot easier. thinks guys, keep up the good work i recommanded minifox to everyone interested in running successfull online business! i will recommanded you to my colleagues</small>
+                                <small class="text-black-50">I like minifox more and each day beacuse it makes my life a
+                                    lot easier. thinks guys, keep up the good work i recommanded minifox to everyone
+                                    interested in running successfull online business! i will recommanded you to my
+                                    colleagues</small>
                                 <ul class="list-unstyled p-0 m-0">
                                     <li><i class="fa-brands fa-facebook-square"></i></li>
                                     <li><i class="fa-brands fa-twitter-square"></i></li>
@@ -229,8 +370,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-3 mb-3">
-                        <div class="row">
+                </main>
+            </div>
+            <div class="carousel-item" data-bs-interval="10000">
+                <main>
+                    <div class="col-12 col-md-6 col-lg-3 pb-5">
+                        <div class="row d-flex justify-content-center align-content-center">
                             <div class="col-3">
                                 <img src="./Images/User.png" class="img-fluid" alt="user">
                             </div>
@@ -238,7 +383,10 @@
                                 <h6 class="text-uppercase">michal balazi</h6>
                                 <p class="text-uppercase">april 26,2022</p>
                                 <hr>
-                                <small class="text-black-50">I like minifox more and each day beacuse it makes my life a lot easier. thinks guys, keep up the good work i recommanded minifox to everyone interested in running successfull online business! i will recommanded you to my colleagues</small>
+                                <small class="text-black-50">I like minifox more and each day beacuse it makes my life a
+                                    lot easier. thinks guys, keep up the good work i recommanded minifox to everyone
+                                    interested in running successfull online business! i will recommanded you to my
+                                    colleagues</small>
                                 <ul class="list-unstyled p-0 m-0">
                                     <li><i class="fa-brands fa-facebook-square"></i></li>
                                     <li><i class="fa-brands fa-twitter-square"></i></li>
@@ -255,8 +403,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-3 mb-3">
-                        <div class="row">
+                </main>
+            </div>
+            <div class="carousel-item" data-bs-interval="10000">
+                <main>
+                    <div class="col-12 col-md-6 col-lg-3 pb-5">
+                        <div class="row d-flex justify-content-center align-content-center">
                             <div class="col-3">
                                 <img src="./Images/User.png" class="img-fluid" alt="user">
                             </div>
@@ -264,7 +416,10 @@
                                 <h6 class="text-uppercase">michal balazi</h6>
                                 <p class="text-uppercase">april 26,2022</p>
                                 <hr>
-                                <small class="text-black-50">I like minifox more and each day beacuse it makes my life a lot easier. thinks guys, keep up the good work i recommanded minifox to everyone interested in running successfull online business! i will recommanded you to my colleagues</small>
+                                <small class="text-black-50">I like minifox more and each day beacuse it makes my life a
+                                    lot easier. thinks guys, keep up the good work i recommanded minifox to everyone
+                                    interested in running successfull online business! i will recommanded you to my
+                                    colleagues</small>
                                 <ul class="list-unstyled p-0 m-0">
                                     <li><i class="fa-brands fa-facebook-square"></i></li>
                                     <li><i class="fa-brands fa-twitter-square"></i></li>
@@ -281,267 +436,107 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-3 mb-3">
-                        <div class="row">
-                            <div class="col-3">
-                                <img src="./Images/User.png" class="img-fluid" alt="user">
-                            </div>
-                            <div class="col-8">
-                                <h6 class="text-uppercase">michal balazi</h6>
-                                <p class="text-uppercase">april 26,2022</p>
-                                <hr>
-                                <small class="text-black-50">I like minifox more and each day beacuse it makes my life a lot easier. thinks guys, keep up the good work i recommanded minifox to everyone interested in running successfull online business! i will recommanded you to my colleagues</small>
-                                <ul class="list-unstyled p-0 m-0">
-                                    <li><i class="fa-brands fa-facebook-square"></i></li>
-                                    <li><i class="fa-brands fa-twitter-square"></i></li>
-                                    <li><i class="fa-brands fa-pinterest-square"></i></li>
-                                    <li><i class="fa-brands fa-telegram"></i></li>
-                                </ul>
-                                <ul class="list-unstyled p-0 m-0" social-media-icons>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </main>
-          </div>
-          <div class="carousel-item" data-bs-interval="2000">
-            <main>
-                <div class="row mx-auto my-4">
-                    <div class="col-12 col-md-6 col-lg-3 mb-3">
-                        <div class="row">
-                            <div class="col-3">
-                                <img src="./Images/User.png" class="img-fluid" alt="user">
-                            </div>
-                            <div class="col-8">
-                                <h6 class="text-uppercase">michal balazi</h6>
-                                <p class="text-uppercase">april 26,2022</p>
-                                <hr>
-                                <small class="text-black-50">I like minifox more and each day beacuse it makes my life a lot easier. thinks guys, keep up the good work i recommanded minifox to everyone interested in running successfull online business! i will recommanded you to my colleagues</small>
-                                <ul class="list-unstyled p-0 m-0">
-                                    <li><i class="fa-brands fa-facebook-square"></i></li>
-                                    <li><i class="fa-brands fa-twitter-square"></i></li>
-                                    <li><i class="fa-brands fa-pinterest-square"></i></li>
-                                    <li><i class="fa-brands fa-telegram"></i></li>
-                                </ul>
-                                <ul class="list-unstyled p-0 m-0" social-media-icons>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-3 mb-3">
-                        <div class="row">
-                            <div class="col-3">
-                                <img src="./Images/User.png" class="img-fluid" alt="user">
-                            </div>
-                            <div class="col-8">
-                                <h6 class="text-uppercase">michal balazi</h6>
-                                <p class="text-uppercase">april 26,2022</p>
-                                <hr>
-                                <small class="text-black-50">I like minifox more and each day beacuse it makes my life a lot easier. thinks guys, keep up the good work i recommanded minifox to everyone interested in running successfull online business! i will recommanded you to my colleagues</small>
-                                <ul class="list-unstyled p-0 m-0">
-                                    <li><i class="fa-brands fa-facebook-square"></i></li>
-                                    <li><i class="fa-brands fa-twitter-square"></i></li>
-                                    <li><i class="fa-brands fa-pinterest-square"></i></li>
-                                    <li><i class="fa-brands fa-telegram"></i></li>
-                                </ul>
-                                <ul class="list-unstyled p-0 m-0" social-media-icons>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-3 mb-3">
-                        <div class="row">
-                            <div class="col-3">
-                                <img src="./Images/User.png" class="img-fluid" alt="user">
-                            </div>
-                            <div class="col-8">
-                                <h6 class="text-uppercase">michal balazi</h6>
-                                <p class="text-uppercase">april 26,2022</p>
-                                <hr>
-                                <small class="text-black-50">I like minifox more and each day beacuse it makes my life a lot easier. thinks guys, keep up the good work i recommanded minifox to everyone interested in running successfull online business! i will recommanded you to my colleagues</small>
-                                <ul class="list-unstyled p-0 m-0">
-                                    <li><i class="fa-brands fa-facebook-square"></i></li>
-                                    <li><i class="fa-brands fa-twitter-square"></i></li>
-                                    <li><i class="fa-brands fa-pinterest-square"></i></li>
-                                    <li><i class="fa-brands fa-telegram"></i></li>
-                                </ul>
-                                <ul class="list-unstyled p-0 m-0" social-media-icons>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-3 mb-3">
-                        <div class="row">
-                            <div class="col-3">
-                                <img src="./Images/User.png" class="img-fluid" alt="user">
-                            </div>
-                            <div class="col-8">
-                                <h6 class="text-uppercase">michal balazi</h6>
-                                <p class="text-uppercase">april 26,2022</p>
-                                <hr>
-                                <small class="text-black-50">I like minifox more and each day beacuse it makes my life a lot easier. thinks guys, keep up the good work i recommanded minifox to everyone interested in running successfull online business! i will recommanded you to my colleagues</small>
-                                <ul class="list-unstyled p-0 m-0">
-                                    <li><i class="fa-brands fa-facebook-square"></i></li>
-                                    <li><i class="fa-brands fa-twitter-square"></i></li>
-                                    <li><i class="fa-brands fa-pinterest-square"></i></li>
-                                    <li><i class="fa-brands fa-telegram"></i></li>
-                                </ul>
-                                <ul class="list-unstyled p-0 m-0" social-media-icons>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </main>
-          </div>
-          <div class="carousel-item">
-            <main>
-                <div class="row mx-auto my-4">
-                    <div class="col-12 col-md-6 col-lg-3 mb-3">
-                        <div class="row">
-                            <div class="col-3">
-                                <img src="./Images/User.png" class="img-fluid" alt="user">
-                            </div>
-                            <div class="col-8">
-                                <h6 class="text-uppercase">michal balazi</h6>
-                                <p class="text-uppercase">april 26,2022</p>
-                                <hr>
-                                <small class="text-black-50">I like minifox more and each day beacuse it makes my life a lot easier. thinks guys, keep up the good work i recommanded minifox to everyone interested in running successfull online business! i will recommanded you to my colleagues</small>
-                                <ul class="list-unstyled p-0 m-0">
-                                    <li><i class="fa-brands fa-facebook-square"></i></li>
-                                    <li><i class="fa-brands fa-twitter-square"></i></li>
-                                    <li><i class="fa-brands fa-pinterest-square"></i></li>
-                                    <li><i class="fa-brands fa-telegram"></i></li>
-                                </ul>
-                                <ul class="list-unstyled p-0 m-0" social-media-icons>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-3 mb-3">
-                        <div class="row">
-                            <div class="col-3">
-                                <img src="./Images/User.png" class="img-fluid" alt="user">
-                            </div>
-                            <div class="col-8">
-                                <h6 class="text-uppercase">michal balazi</h6>
-                                <p class="text-uppercase">april 26,2022</p>
-                                <hr>
-                                <small class="text-black-50">I like minifox more and each day beacuse it makes my life a lot easier. thinks guys, keep up the good work i recommanded minifox to everyone interested in running successfull online business! i will recommanded you to my colleagues</small>
-                                <ul class="list-unstyled p-0 m-0">
-                                    <li><i class="fa-brands fa-facebook-square"></i></li>
-                                    <li><i class="fa-brands fa-twitter-square"></i></li>
-                                    <li><i class="fa-brands fa-pinterest-square"></i></li>
-                                    <li><i class="fa-brands fa-telegram"></i></li>
-                                </ul>
-                                <ul class="list-unstyled p-0 m-0" social-media-icons>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-3 mb-3">
-                        <div class="row">
-                            <div class="col-3">
-                                <img src="./Images/User.png" class="img-fluid" alt="user">
-                            </div>
-                            <div class="col-8">
-                                <h6 class="text-uppercase">michal balazi</h6>
-                                <p class="text-uppercase">april 26,2022</p>
-                                <hr>
-                                <small class="text-black-50">I like minifox more and each day beacuse it makes my life a lot easier. thinks guys, keep up the good work i recommanded minifox to everyone interested in running successfull online business! i will recommanded you to my colleagues</small>
-                                <ul class="list-unstyled p-0 m-0">
-                                    <li><i class="fa-brands fa-facebook-square"></i></li>
-                                    <li><i class="fa-brands fa-twitter-square"></i></li>
-                                    <li><i class="fa-brands fa-pinterest-square"></i></li>
-                                    <li><i class="fa-brands fa-telegram"></i></li>
-                                </ul>
-                                <ul class="list-unstyled p-0 m-0" social-media-icons>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-3 mb-3">
-                        <div class="row">
-                            <div class="col-3">
-                                <img src="./Images/User.png" class="img-fluid" alt="user">
-                            </div>
-                            <div class="col-8">
-                                <h6 class="text-uppercase">michal balazi</h6>
-                                <p class="text-uppercase">april 26,2022</p>
-                                <hr>
-                                <small class="text-black-50">I like minifox more and each day beacuse it makes my life a lot easier. thinks guys, keep up the good work i recommanded minifox to everyone interested in running successfull online business! i will recommanded you to my colleagues</small>
-                                <ul class="list-unstyled p-0 m-0">
-                                    <li><i class="fa-brands fa-facebook-square"></i></li>
-                                    <li><i class="fa-brands fa-twitter-square"></i></li>
-                                    <li><i class="fa-brands fa-pinterest-square"></i></li>
-                                    <li><i class="fa-brands fa-telegram"></i></li>
-                                </ul>
-                                <ul class="list-unstyled p-0 m-0" social-media-icons>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </main>
-          </div>
+                </main>
+            </div>
         </div>
-      </div>
+    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <section class="container-fluid bg-light p-0">
+        <div class="hero-section2 m-md-2 m-2">
+            <div class="p-3 p-md-2 p-lg-3 mt-3 rounded text-center">
+                <div class="col col-lg-7 m-auto py-2 mt-2 mt-md-5">
+                    <h1 class="text-uppercase fw-bold">about minifox</h1>
+                    <p class="my-3 text-uppercase text-black-50">
+                        we work with household names and companies of all sizes all over the world and
+                        we'd love to work with you too.
+                    </p>
+                    <div class="borders d-flex justify-content-center col-6 m-auto">
+                        <span></span><span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 
     <script>
-        var icon = document.querySelector("[menu-icon]");
-        var nav = document.querySelector(".nav");
         
-        icon.addEventListener('click',function() {
-            nav.classList.toggle('active')
+        var loader = document.querySelector('.loader');
+        window.onload = function() {
+            setTimeout(function() {
+                loader.classList.add('active')
+            },2500)
+        }
+        
+        var cursor = document.querySelector('.cursor');
+        cursor.style.display = 'none'
+        document.onmousemove = function(e) {
+            cursor.style.left = (e.pageX) + "px"
+            cursor.style.top = (e.pageY)  + "px"
+            cursor.style.display = 'grid'
+        }
+
+        var menuIcon = document.querySelector("[menu-icon]");
+        var icon = document.querySelector('[icon]');
+
+        var nav = document.querySelector(".nav");
+
+        menuIcon.addEventListener('click', function () {
+            nav.classList.toggle('active');
+            icon.classList.toggle('fa-xmark')
         })
+
+        var a = document.querySelectorAll('.hero-section nav a');
+
+        a.forEach((nav, index) => {
+            nav.addEventListener('click', function () {
+                a.forEach(head => head.classList.remove('active'));
+                nav.classList.add('active')
+            })
+            a[0].click();
+        })
+
+        var header = document.querySelector('header');
+        var prevScrollpos = window.pageYOffset;
+        // var prevScrollpos = 0;
+        window.onscroll = function () {
+            var currentScrollpos = window.pageYOffset;
+            if (prevScrollpos < currentScrollpos) {
+                header.classList.add('active')
+            } else {
+                header.classList.remove('active')
+            }
+            prevScrollpos = currentScrollpos
+        }
+
+        var up = document.querySelector('.up');
+        up.onclick = function () {
+            document.body.scrollTo(0, 0);
+            document.documentElement.scrollTo(0, 0)
+        }
+
+        window.addEventListener('scroll', function () {
+            if (window.pageYOffset > 200) {
+                up.style.right = "25px"
+            } else {
+                up.style.right = "-40px"
+            }
+        })
+
+        $(document).ready(function () {
+            $('#progressbar-hoz').hide()
+            $(window).scroll(function () {
+                $('#progressbar-hoz').show();
+                var scroll = $(window).show().scrollTop(),
+                    dh = $(document).height(),
+                    wh = $(window).height();
+                scrollPercentage = (scroll / (dh - wh)) * 100;
+                $('#progressbar-hoz').css('width', scrollPercentage + '%')
+            })
+        });
     </script>
 </body>
 
