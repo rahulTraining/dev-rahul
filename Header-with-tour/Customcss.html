@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .div::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(hsl(0, 0%, 40%), hsl(0, 0%, 60%));
+            clip-path: circle(60% at top left);
+            /* clip-path: circle(69.2% at 32% 0); */
+            opacity: 0.2;
+        }
+
+        header {
+            padding: 15px 10px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        ul {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
+        }
+
+        li {
+            list-style: none;
+            display: block;
+            margin: 10px 0;
+            text-align: center;
+            cursor: pointer;
+            clear: both;
+        }
+
+        li:hover {
+            background-color: gray;
+            color: white;
+        }
+
+        .logo {
+            padding: 10px;
+            display: inline;
+            /* text-shadow: 5px 2px 2px black; */
+        }
+
+        .menu-icon {
+            float: right;
+
+        }
+
+        #menu-icon {
+            display: none;
+        }
+
+        @media all and (min-width:625px) {
+            header {
+                background-color: gainsboro;
+                overflow: hidden;
+                box-shadow: 3px 5px 10px gray;
+            }
+
+            .logo {
+                float: left;
+            }
+
+            .menu-icon {
+                display: none;
+            }
+
+            ul {
+                float: right;
+                padding: 10px;
+                max-height: initial;
+                overflow: auto;
+            }
+
+            li {
+                display: inline;
+                clear: both;
+                margin-right: 15px;
+            }
+        }
+
+        h1 {
+
+            background: linear-gradient(90deg, rgb(69, 65, 138) 0%, rgb(121, 101, 9) 35%, rgb(255, 25, 0) 57%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        span {
+            width: 20px;
+            height: 2px;
+            background-color: black;
+            display: block;
+            margin: 3px 0;
+            position: relative;
+            transition: all 0.3s ease-in-out;
+        }
+
+        span::before {
+            content: "";
+            position: absolute;
+            display: inherit;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            top: 5px;
+        }
+
+        span::after {
+            content: "";
+            position: absolute;
+            display: inherit;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            top: -5px;
+        }
+
+        input[type="checkbox"]:checked~ul {
+            max-height: 325px;
+            transition: max-height 0.3s ease-in-out;
+        }
+
+        input[type="checkbox"]:checked+.menu-icon span {
+            background: transparent;
+            transition: all 0.3s ease-in-out;
+        }
+
+        input[type="checkbox"]:checked+.menu-icon span::before {
+            transform: rotate(45deg);
+            top: 0;
+            transition: all 0.3s ease-in-out;
+        }
+
+        input[type="checkbox"]:checked+.menu-icon span::after {
+            transform: rotate(-45deg);
+            top: 0;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .circle-main {
+            border: 50px solid chocolate !important;
+            box-shadow: none !important;
+        }
+
+        /* .circle-background {
+           box-shadow: none !important;
+        } */
+        .btnContent {
+            display: flex;
+            justify-content: center;
+            place-items: center;
+            gap: 15px;
+            color: yellow;
+            position: absolute;
+            left: 45%;
+            transform: translateX(0%);
+            top: 160px;
+        }
+
+        .button {
+            border: 2px solid yellow;
+            border-radius: 8px;
+            padding: 5px 10px;
+            background-color: hsl(0, 0%, 30%);
+            color: yellow;
+            cursor: pointer;
+        }
+
+        .about {
+            background-color: white;
+            padding: 6px 10px;
+            border-radius: 5px;
+            color: black;
+            font-weight: bold;
+        }
+
+        .div {
+            display: block;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .div.active {
+            display: none;
+            animation: fade-out 0.30s ease-in-out;
+        }
+
+        @keyframes fade-out {
+            0% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .btnContent div.span {
+            width: 250px;
+            height: 250px;
+            border: 2px solid yellow;
+            border-radius: 50%;
+            position: relative;
+            top: -140px;
+            left: 20px;
+            border-top-color: transparent;
+            border-right-color: transparent;
+            border-left-color: transparent;
+            transform: rotate(334deg);
+        }
+
+        .arrow {
+            color: yellow;
+            font-weight: bold;
+            font-size: 1.5rem;
+            transform: translate(167px, 118px) rotate(-45deg);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">Indian Eagle</div>
+        <input type="checkbox" id="menu-icon">
+        <label for="menu-icon" class="menu-icon">
+            <span class="span1"></span>
+        </label>
+        <ul>
+            <li class="home"><a href="#">Home</a></li>
+            <li><a href="#" class="about">About</a></li>
+            <li class="services"><a href="#">Services</a></li>
+            <li class="contact"><a href="#">Contact-us</a></li>
+        </ul>
+    </header>
+    <div class="div">
+        <div class="btnContent">
+            <button class="button">Dismiss</button>
+            <p>Click here to change currency</p>
+            <div class="span">
+                <div class="arrow">&#62;</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous">
+        </script>
+    <!-- <script src="./guided-tours-interactive/guided-tours-interactive/interactive.v0.0.2.js"></script> -->
+
+    <script>
+        // $(document).ready(function () {
+        //     $('.menu-icon').interactive({
+        //         size: 50,
+        //         textPosition: {
+        //             top: '120px'
+        //         },
+        //         color: 'red',
+        //         text: 'Click here to change currency',
+        //         author: 'Click here to change currency'
+        //     })
+        // .then(function () {
+        //     return $('.element-2').interactive({
+        //         size: 100,
+        //         textPosition: {
+        //             bottom: '100px'
+        //         },
+        //         text: 'Step 2',
+        //         author: 'jQueryScript'
+        //     })
+        // })
+        // .then(function () {
+        //     return $('.element-3').interactive({
+        //         size: 100,
+        //         textPosition: {
+        //             bottom: '100px'
+        //         },
+        //         text: 'Step 3',
+        //         author: 'jQueryScript'
+        //     })
+        // })
+        // })
+
+        var div = document.querySelector('.div')
+        var dismiss = document.querySelector('.button')
+        var about = document.querySelector(".about")
+
+        dismiss.onclick = function () {
+            div.classList.add('active')
+            about.classList.remove('about')
+        }
+    </script>
+</body>
+
+</html>

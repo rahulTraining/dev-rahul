@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <title>GST_Tax_Invoice-pdf</title>
+</head>
+
+<body bgcolor="#E6E6E6" style="color: #101010;font-family: 'Questrial', sans-serif;overscroll-behavior: none;">
+    <!-- <div class="gstInvoicePdf" style="width: 826px;margin: 10px auto;background-color: white;box-shadow: #bbb 0 2px 6px 1px;padding: 25px 0;">
+        <table width="90%" style="margin: auto;">
+            <thead>
+                <tr>
+                    <th align="left"><img src="./Group.png" alt="indianeagle-logo"></th>
+                    <th align="left" bgcolor="#E6E6E6" style="font-size: 1.4rem;padding-left: 20px;">Tax Invoice</th>
+                </tr>
+            </thead>
+        </table>
+        <table  width="90%" style="margin: 25px auto 0;border: 0.5px solid black;padding: 15px 5px;">
+            <tbody>
+                <tr align="left">
+                    <th>Invoice No</th>
+                    <th>Trip ID</th>
+                    <th>Place of supply</th>
+                </tr>
+                <tr align="left">
+                    <td>IE/2021-22/SALE/2</td>
+                    <td>ATQB78L1E</td>
+                    <td>Telangana</td>
+                </tr>
+                <tr align="left">
+                    <th>Date</th>
+                    <th>Transactional Type</th>
+                    <th>Document Type</th>
+                </tr>
+                <tr align="left">
+                    <td>31-March-2022</td>
+                    <td>B2C</td>
+                    <td>INVOICE</td>
+                </tr>
+            </tbody>
+        </table>
+    </div> -->
+
+
+    <table style="width: 826px;margin: 10px auto;background-color: white;box-shadow: #bbb 0 2px 6px 1px;padding: 25px 0;">
+        <tr>
+            <td>
+                <table width="90%" style="margin: auto;">
+                    <thead>
+                        <tr>
+                            <td align="left"><img src="./Group.png" alt="indianeagle-logo"></td>
+                            <td align="left" bgcolor="#E6E6E6" style="font-size: 1.4rem;padding: 0 0 0 20px;"><b>Tax Invoice</b></td>
+                        </tr>
+                    </thead>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table cellpadding="2" width="90%" style="margin: 25px auto 0;border: 0.5px solid rgba(128, 128, 128,0.3);padding: 15px 5px;">
+                    <tbody>
+                        <tr align="left">
+                            <th>Invoice No</th>
+                            <th>Trip ID</th>
+                            <th>Place of supply</th>
+                        </tr>
+                        <tr align="left">
+                            <td>IE/2021-22/SALE/2</td>
+                            <td>ATQB78L1E</td>
+                            <td>Telangana</td>
+                        </tr>
+                        <tr>
+                            <td height="8px"></td>
+                        </tr>
+                        <tr align="left">
+                            <th>Date</th>
+                            <th>Transactional Type</th>
+                            <th>Document Type</th>
+                        </tr>
+                        <tr align="left">
+                            <td>31-March-2022</td>
+                            <td>B2C</td>
+                            <td>INVOICE</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table bgcolor="#f47b33" style="color:white; margin: 20px auto 0;font-size: 1.2rem;" width="90%" style="margin-top: 10px;" cellpadding="8">
+                    <tr>
+                        <td align="center"><b>Note:&nbsp;&nbsp;</b>This is not a valid Travel Document.</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table style="margin: 25px auto 0;" width="90%">
+                    <tr>
+                        <th align="center"><b style="font-weight: 600;font-size: 1.2rem;">Booking Details</b></th>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table cellspacing="0" cellpadding="12" style="margin: 0px auto;border: 0.5px solid rgba(128, 128, 128,0.3);" width="90%">
+                    <tr bgcolor="#E6E6E6" align="left" >
+                        <th>Booked by</th>
+                        <th>Trip ID</th>
+                        <th>Booking Date</th>
+                    </tr>
+                    <tr align="left">
+                        <td>Satyanarayanamurthy Kanchikacherla</td>
+                        <td>ATQB78L1ER</td>
+                        <td>April 04, 2022</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table style="margin: 25px auto 0;" width="90%">
+                    <tr>
+                        <th align="center"><b style="font-weight: 600;font-size: 1.2rem;">Flight Details</b></th>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table cellspacing="0" cellpadding="12" style="margin: 0px auto;border: 0.5px solid rgba(128, 128, 128,0.3);" width="90%">
+                    <tr bgcolor="#E6E6E6" align="left" >
+                        <th>Flight No.</th>
+                        <th>Departure</th>
+                        <th>Arrival</th>
+                    </tr>
+                    <tr align="left" style="border: 0.5px solid rgba(128, 128, 128,0.3);">
+                        <td style="border-bottom: 1px solid #c3c3c3;">AI 198</td>
+                        <td style="border-bottom: 1px solid #c3c3c3;">
+                            <span style="display: block; margin-bottom: 5px;">Austin<b>&nbsp;&nbsp;(AUS)</b></span>
+                            <span>04-04-2022, 11:10 AM</span>
+                        </td>
+                        <td style="border-bottom: 1px solid #c3c3c3;">
+                            <span style="display: block; margin-bottom: 5px;">Hyderabad<b>&nbsp;&nbsp;(HYD)</b></span>
+                            <span>06-04-2022, 02:42 AM</span>
+                        </td>
+                    </tr>
+                    <tr align="left">
+                        <td>AI 215</td>
+                        <td style="border-bottom: 1px solid #c3c3c3;">
+                            <span style="display: block; margin-bottom: 5px;">Hyderabad<b>&nbsp;&nbsp;(HYD)</b></span>
+                            <span>16-05-2022, 09:35 PM</span>
+                        </td>
+                        <td style="border-bottom: 1px solid #c3c3c3;">
+                            <span style="display: block; margin-bottom: 5px;">Austin<b>&nbsp;&nbsp;(AUS)</b></span>
+                            <span>16-05-2022, 05:49 PM</span>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table style="margin: 25px auto 0;" width="90%">
+                    <tr>
+                        <th align="center"><b style="font-weight: 600;font-size: 1.2rem;">Traveler Details</b></th>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table cellspacing="0" cellpadding="12" style="margin: 0px auto;border: 0.5px solid rgba(128, 128, 128,0.3);" width="90%">
+                    <tr bgcolor="#E6E6E6" align="left">
+                        <th>Given Name</th>
+                        <th>Last Name</th>
+                        <th>Airline PNR</th>
+                    </tr>
+                    <tr align="left">
+                        <td style="border-bottom: 1px solid #c3c3c3;">Sridhar</td>
+                        <td style="border-bottom: 1px solid #c3c3c3;">Gongalla</td>
+                        <td style="border-bottom: 1px solid #c3c3c3;">ATQBLE</td>
+                    </tr>
+                    <tr align="left">
+                        <td style="border-bottom: 1px solid #c3c3c3;">Kranti Kumar</td>
+                        <td style="border-bottom: 1px solid #c3c3c3;">Pothula</td>
+                        <td style="border-bottom: 1px solid #c3c3c3;">ATQBLE</td>
+                    </tr>
+                    <tr align="left">
+                        <td style="border-bottom: 1px solid #c3c3c3;">Hari Prasad Reddy</td>
+                        <td style="border-bottom: 1px solid #c3c3c3;">Byappudreddy</td>
+                        <td style="border-bottom: 1px solid #c3c3c3;">ATQBLE</td>
+                    </tr>
+                    <tr align="left">
+                        <td>Ramakrishna</td>
+                        <td>Mainam</td>
+                        <td>ATQBLE</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table style="margin: 25px auto 0;" width="90%">
+                    <tr>
+                        <th align="center"><b style="font-weight: 600;font-size: 1.2rem;">Payment Breakup</b></th>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table border="1" cellspacing="5" cellpadding="12" style="border-collapse: collapse;margin: 0px auto;border: 0.5px solid rgba(128, 128, 128,0.3);" width="90%">
+                    <tr align="left" >
+                        <td>
+                            <b style="font-size: 1.3rem;">*Fare Charges</b> <br> <br>
+                            <span>(including applicable flight taxes collected <br> 
+                                on behalf of airline & other ancillary charges)</span>
+                        </td>
+                        <td align="right" valign="top"><b>INR 52,355.00</b></td>
+                    </tr>
+                    <tr align="left">
+                        <td>IndianEagle Service Fee</td>
+                        <td align="right"><b>INR 500.00</b></td>
+                    </tr>
+                    <tr align="left">
+                        <td>CGST @ 9%</td>
+                        <td align="right"><b>INR 45.00</b></td>
+                    </tr>
+                    <tr align="left">
+                        <td>SGST @ 9%</td>
+                        <td align="right"><b>INR 45.00</b></td>
+                    </tr>
+                    <tr align="left">
+                        <td><b style="font-weight: 600;">Total Booking Amount</b></td>
+                        <td align="right" style="font-size: 1.3rem;"><b style="font-weight: 600;">INR 52,945.00</b></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table width="90%" style="margin: 15px auto 0;font-size: 0.9rem;word-spacing: 2px;">
+                    <tr>
+                        <td>
+                            GST credit charged by the airline operator is only available against the invoice issued by the respective airline 
+                            operator. If you are looking for the airline GST invoice, please check the airline website and download it from 
+                            there.
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table width="90%" style="margin: 15px auto 0;">
+                    <tr>
+                        <td style="font-size: 0.9rem;margin-bottom: 10px;">This is a computer generated Invoice and does not require Signature/Stamp.</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table cellpadding="8" cellspacing="15" width="90%" style="margin: 5px auto 0; border: 0.5px solid rgba(128, 128, 128,0.3);font-size: 0.82rem;">
+                    <!-- <tr>
+                        <td><b>PAN</b></td>
+                        <td><b>GST Number</b></td>
+                    </tr>
+                    <tr>
+                        <td>AACCI7780E</td>
+                        <td>36AACCI7780E1ZG</td>
+                    </tr>
+                    <tr>
+                        <td><b>HSN/SAC</b></td>
+                        <td><b>CIN</b></td>
+                    </tr>
+                    <tr>
+                        <td>998551</td>
+                        <td>U72300TG2011PTC077787</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>Service Description</b> <br>
+                            <span>Reservation Services For Air Transportation</span>
+                        </td>
+                    </tr> -->
+                    <tr >
+                        <td>
+                            <b >PAN</b> <br>
+                            <span style="margin: 5px 0; display: block;">AACCI7780E</span>
+                        </td>
+                        <td>
+                            <b>GST Number</b> <br>
+                            <span style="margin: 5px 0; display: block;">36AACCI7780E1ZG</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>HSN/SAC</b> <br>
+                            <span style="margin: 5px 0; display: block;">998551</span>
+                        </td>
+                        <td>
+                            <b>CIN</b> <br>
+                            <span style="margin: 5px 0; display: block;">U72300TG2011PTC077787</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>Service Description</b> <br>
+                            <span style="margin: 5px 0; display: block;">Reservation Services For Air Transportation</span>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table width="90%" style="margin: 55px auto 0;" cellspacing="10">
+                    <tr>
+                        <td align="center">
+                            <img width="200px" style="object-fit: contain; padding: 0 0 20px 0;" src="./Group.png" alt="indianeagle-logo">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center"><b>Indian Eagle Pvt.Ltd.</b></td>
+                    </tr>
+                    <tr>
+                        <td align="center">Plot No 87, Road No 2, Banjara Hills, Hyderabad, 500034, Telangana.</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table width="90%" style="margin: 50px auto 0;">
+                    <tr>
+                        <td align="center">
+                            Tollfree: 001-800-615-3969 | www.IndianEagle.com
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="30px"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
