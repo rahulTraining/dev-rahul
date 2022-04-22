@@ -172,6 +172,13 @@ header.active {
   justify-content: center;
   align-items: center;
 }
+#contents {
+  /* position: absolute; */
+  display: none;
+}
+#contents.active {
+  display: block;
+}
 main :is(h6, p, hr) {
   margin: 0;
   padding: 0;
@@ -208,6 +215,18 @@ main [social-media-icons] i {
 }
 ul.list-unstyled .fa-brands {
   cursor: pointer;
+}
+footer {
+  padding-bottom: 15px;
+}
+footer h1,p {
+  opacity: 0.8;
+}
+footer [social-media] i {
+  font-size: 1.4rem;
+}
+footer [social-media] li:not(:last-of-type) {
+  margin-right: 35px;
 }
 @media all and (max-width: 565px) {
   .hero-section nav a {
