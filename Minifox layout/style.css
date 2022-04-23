@@ -216,6 +216,39 @@ main [social-media-icons] i {
 ul.list-unstyled .fa-brands {
   cursor: pointer;
 }
+.slick-slider .slick-slider-dots{
+  bottom: 0px;
+  display: flex;
+}
+.slick-arrow {
+  display: none !important;
+}
+.slick-slider .slick-dots {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.slick-slider .slick-dots li {
+  display: grid;
+  place-items: center;
+  margin-right: 5px;
+  margin: 0 4px;
+  cursor: pointer;
+}
+.slick-slider .slick-dots button {
+    background:gray;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: none;
+  }
+.slick-dots li.slick-active button {
+      background: rgb(242, 109, 34);
+  }
 footer {
   padding-bottom: 15px;
 }
@@ -227,6 +260,12 @@ footer [social-media] i {
 }
 footer [social-media] li:not(:last-of-type) {
   margin-right: 35px;
+}
+footer .form-control {
+  color: white;
+}
+footer .form-control:focus {
+  color: white;
 }
 @media all and (max-width: 565px) {
   .hero-section nav a {
