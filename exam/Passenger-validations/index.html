@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css"
+        integrity="sha512-Oy+sz5W86PK0ZIkawrG0iv7XwWhYecM3exvUtMKNJMekGFJtVAhibhRPTpmyTj8+lJCkmWfnpxKgT2OopquBHA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Passenger-validations</title>
+</head>
+<body>
+    <div class="container">
+        <div class="passengers">
+            <span class="profile"><i class="fa-regular fa-user"></i></span>
+            <span class="count">1</span>
+            <span class="caret"><i class="fa-solid fa-caret-down"></i></span>
+        </div>
+        <div class="travellers">
+            <div class="travellers-list">
+                <div class="increment adults">
+                    <p>Adults</p>
+                    <div class="adjust">
+                        <span><i class="fa-solid fa-minus"></i></span>
+                        <span>1</span>
+                        <span><i class="fa-solid fa-plus"></i></span>
+                    </div>
+                </div>
+                <div class="increment children">
+                    <div><p>Children</p> <small>Aged 2-11</small></div>
+                    <div class="adjust">
+                        <span><i class="fa-solid fa-minus"></i></span>
+                        <span>0</span>
+                        <span><i class="fa-solid fa-plus"></i></span>
+                    </div>
+                </div>
+                <div class="increment infantsSeat">
+                    <div> <p>Infants</p> <small>In seat</small></div>
+                    <div class="adjust">
+                        <span><i class="fa-solid fa-minus"></i></span>
+                        <span>0</span>
+                        <span><i class="fa-solid fa-plus"></i></span>
+                    </div>
+                </div>
+                <div class="increment infantsLap">
+                    <div><p>Infants</p> <small>On lap</small></div>
+                    <div class="adjust">
+                        <span><i class="fa-solid fa-minus"></i></span>
+                        <span>0</span>
+                        <span><i class="fa-solid fa-plus"></i></span>
+                    </div>
+                </div>
+                <div class="confirm">
+                    <div role="button">Cancel</div>
+                    <div role="button">Done</div>
+                </div>
+            </div>
+        </div>
+        <div class="destinationPath">
+            <div><input type="text" placeholder="Where from?" class="input1"></div>
+            <div class="arrow"><span><i class="bi bi-arrow-down-up"></i></span></div>
+            <div><input type="text" placeholder="Where to?" class="input2"></div>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+</html>
