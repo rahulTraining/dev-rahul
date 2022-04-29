@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body {
+    /* width: fit-content; */
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-29%,-49%);
+    font-family: "Google Sans",Roboto,Arial,sans-serif;
+}
+.passengers {
+    display: flex;
+    gap: 8px;
+    padding: 8px 15px;
+    width: fit-content;
+    border-radius: 3px;
+    opacity: 0.8;
+    background-color: rgba(241, 241, 241,0.4);
+    margin-bottom: 15px;
+    cursor: pointer;
+    
+    .caret {
+        opacity: 0.6;
+    }
+    .caret.active {
+        transform: rotate(180deg);
+    }
+
+    &:hover {
+        background-color: rgb(241, 241, 241);
+    }
+}
+.travellers {
+    position: absolute;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0.3px 1px 5px rgb(200, 200, 200);
+    padding: 5px 20px 15px 20px;
+    z-index: 2;
+    // display: none;
+
+    &.active {
+        display: block;
+    }
+
+    p {
+        font-size: 1.05rem;
+        color: hsl(0, 0%, 50%);
+    }
+
+    small {
+        color: rgb(153,156,158);
+    }
+
+    .increment {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 60px;
+        margin: 20px 0;
+
+        .adjust {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: relative;
+
+            span:nth-of-type(1) {
+                background-color: rgb(232,240,254);
+                color: rgb(60,126,217);
+                padding: 6px 8px;
+                border-radius: 3px;
+                margin-right: 15px;
+                cursor: pointer;
+                transition: 100ms ease-in-out;
+            }
+            span:nth-of-type(1):hover {
+                background-color: rgba(122,174,242,0.25);
+            }
+            span:nth-of-type(2) {
+                color: rgb(127,132,136);
+            }
+            span:nth-of-type(3) {
+                background-color: rgb(232,240,254);
+                color: rgb(60,126,217);
+                padding: 6px 8px;
+                border-radius: 3px;
+                margin-left: 15px;
+                cursor: pointer;
+                transition: 0.2s ease-in-out;
+            }
+            span:nth-of-type(3):hover {
+                background-color: rgba(122,174,242,0.25);
+            }
+            span:nth-of-type(1)::before {
+                content: attr(hover-text-minus);
+                position: absolute;
+                width: max-content;
+                right: 50%;
+                bottom: -92%;
+                // transform: translateX(25%);
+                background-color: black;
+                color: hsl(0, 0%, 80%);
+                font-size: 0.75rem;
+                font-weight: bolder;
+                padding: 5px 10px;
+                border-radius: 5px;
+                transform: scale(0);
+                transform-origin: right;
+                z-index: 2;
+            }
+            span:nth-of-type(1):hover::before {
+                transform: scale(1) translate(25%);
+                transition: transform 0.2s ease-in-out;
+            }
+            span:nth-of-type(3)::before {
+                content: attr(hover-text-plus);
+                position: absolute;
+                width: max-content;
+                right: 0%;
+                bottom: -92%;
+                // transform: translateX(30%);
+                background-color: black;
+                color: hsl(0, 0%, 80%);
+                font-size: 0.75rem;
+                font-weight: bolder;
+                padding: 5px 10px;
+                border-radius: 5px;
+                transform: scale(0);
+                transform-origin: right;
+                z-index: 2;
+            }
+            span:nth-of-type(3):hover::before {
+                transform: scale(1) translateX(30%);
+                transition: transform 0.2s ease-in-out;
+            }
+        }
+    }
+
+    .confirm {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        gap: 10px;
+        color: rgb(55,132,235);
+        font-weight: 600;
+
+        div:nth-of-type(1), div:nth-of-type(2) {
+            padding: 11px 8px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 150ms ease-in-out;
+        }
+        div:nth-of-type(1):hover, div:nth-of-type(2):hover {
+            background-color: rgba(230, 230, 250,0.3);
+        }
+
+        &.active {
+            display: none;
+        }
+    }
+    .alert {
+        font-size:0.7rem;
+        color:red;position:relative;
+        left:0;
+        margin:0;
+        padding:0;
+        display: none;
+        &.active {
+            display: block;
+        }
+    }
+}
+.destinationPath {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    input {
+        outline: none;
+        border: 1px solid rgba(200, 200, 200,1);
+        border-radius: 5px;
+        padding: 10px 20px;
+        z-index: -1;
+    }
+    div:nth-of-type(1) {
+        position: relative;
+        right: -7px;
+    }
+    div:nth-of-type(2) {
+        transform: rotate(90deg);
+        background-color: white;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid rgb(200, 200, 200);
+        border-right-color: transparent;
+        border-left-color: transparent;
+        cursor: pointer;
+        z-index: 1;
+    }
+    div:nth-of-type(3) {
+        position: relative;
+        right: 7px;
+    }
+    .input1:focus-within {
+        border: 1.7px solid rgb(35,121,233) !important;
+    }
+    .input2:focus-within {
+        border: 1.7px solid rgb(35,121,233) !important;
+    }
+    .arrow {
+        span {
+            transition: transform 0.1s ease-in-out;
+        }
+        span.active {
+            transform: rotate(180deg);
+        }
+    }
+}
+.enable {
+    background-color: rgb(232,240,254) !important;
+    color: rgb(60,126,217) !important;
+    pointer-events:auto !important;
+}
+.disable {
+    background-color:rgb(231,232,232) !important;
+    color:rgb(177,178,179) !important;
+    pointer-events:none !important;
+}
