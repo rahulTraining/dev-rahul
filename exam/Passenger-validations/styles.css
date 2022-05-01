@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 html,body {
-    width: fit-content;
+    /* width: fit-content; */
     position: absolute;
     top: 20%;
     left: 50%;
@@ -36,9 +36,9 @@ html,body {
     background-color: white;
     border-radius: 5px;
     box-shadow: 0.3px 1px 5px rgb(200, 200, 200);
-    padding: 5px 20px 25px 20px;
+    padding: 5px 20px 15px 20px;
     z-index: 2;
-    /* display: none; */
+    display: none;
 }
 .travellers.active {
     display: block;
@@ -56,6 +56,11 @@ html,body {
     align-items: center;
     gap: 60px;
     margin: 20px 0;
+}
+.travellers .increment .adjust {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 .travellers .increment .adjust span:nth-of-type(1) {
     background-color: rgb(232,240,254);
@@ -101,7 +106,6 @@ html,body {
 }
 .travellers .confirm div:nth-of-type(1):hover, .travellers .confirm div:nth-of-type(2):hover {
     background-color: rgba(230, 230, 250,0.3);
-    
 }
 .destinationPath {
     display: flex;
@@ -119,6 +123,13 @@ html,body {
     position: relative;
     right: -7px;
 }
+.destinationPath .input1:focus-within {
+    border: 1.7px solid rgb(35,121,233) !important;
+}
+.destinationPath .input2:focus-within {
+    border: 1.7px solid rgb(35,121,233) !important;
+}
+
 .destinationPath div:nth-of-type(3) {
     position: relative;
     right: 7px;

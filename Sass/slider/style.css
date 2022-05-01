@@ -33,7 +33,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  display: none;
   -webkit-animation: fade 1000ms linear;
           animation: fade 1000ms linear;
 }
