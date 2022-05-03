@@ -52,6 +52,7 @@ html, body {
           box-shadow: 0.3px 1px 5px #c8c8c8;
   padding: 5px 20px 15px 20px;
   z-index: 2;
+  display: none;
 }
 
 .travellers.active {
@@ -214,24 +215,6 @@ html, body {
   background-color: rgba(230, 230, 250, 0.3);
 }
 
-.travellers .confirm.active {
-  display: none;
-}
-
-.travellers .alert {
-  font-size: 0.7rem;
-  color: red;
-  position: relative;
-  left: 0;
-  margin: 0;
-  padding: 0;
-  display: none;
-}
-
-.travellers .alert.active {
-  display: block;
-}
-
 .destinationPath {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -303,6 +286,15 @@ html, body {
 .destinationPath .arrow span.active {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+
+.alert {
+  font-size: 0.7rem;
+  color: red;
+  position: relative;
+  left: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .enable {

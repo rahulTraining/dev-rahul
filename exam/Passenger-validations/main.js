@@ -100,7 +100,7 @@ var adultIncrement  = document.querySelector('#adultIncrement');
 var adultCount = document.querySelector('#adultCount');
 var adultText = document.querySelector('.increment.adults p');
 var confirmDiv = document.querySelector('.confirm');
-var alertMsg = document.querySelector('.alert')
+// var alertMsg = document.querySelector('.alert')
 
 adultDecrement.style.cssText = `background-color:rgb(231,232,232);color:rgb(177,178,179);pointer-events:none`;
 
@@ -110,9 +110,10 @@ adultIncrement.onclick = function() {
     countAdult ++;
     adultCount.textContent = countAdult;
     if (countAdult > 1) {
-        adultDecrement.style.cssText = `background-color: rgb(232,240,254);color: rgb(60,126,217);;pointer-events:auto`;
-        confirmDiv.classList.remove('active');
-        alertMsg.classList.remove('active');
+        adultDecrement.style.cssText = `background-color: rgb(232,240,254);color: rgb(60,126,217);pointer-events:auto`;
+        confirmDiv.style.cssText = `justify-content: end;`
+        confirmDiv.innerHTML = `<div role="button">Cancel</div>
+        <div role="button">Done</div>`
         adultText.style.cssText = `color: hsl(0, 0%, 50%);`
     }
     if (countAdult === 9) {
@@ -125,14 +126,15 @@ adultDecrement.onclick = function() {
     adultCount.textContent = countAdult;
    
     if (countAdult < 9) {
-        adultIncrement.style.cssText = `  background-color: rgb(232,240,254);color: rgb(60,126,217);;pointer-events:auto`;
+        adultIncrement.style.cssText = `background-color: rgb(232,240,254);color: rgb(60,126,217);;pointer-events:auto`;
     }
     if (countAdult === 1) {
         adultDecrement.style.cssText = `background-color:rgb(231,232,232);color:rgb(177,178,179);pointer-events:none`;
-        confirmDiv.classList.add('active');
-        alertMsg.classList.add('active');
-        alertMsg.innerHTML = `<i class="bi bi-exclamation-octagon-fill" style="margin-right:6px"></i>
-        must have at least one traveller`
+        confirmDiv.style.cssText = `justify-content: start;`
+        confirmDiv.innerHTML = `<div style="font-size:0.7rem;;color:red;margin:0;padding:0;">
+                                    <i class="bi bi-exclamation-octagon-fill" style="margin-right:6px"></i>
+                                    must have at least one traveller
+                                </div>`
         adultText.style.cssText = `color:red`
     }
 }
@@ -146,16 +148,18 @@ var childrenTextP = document.querySelector('.increment.children >*:first-child p
 var childrenTextsmall = document.querySelector('.increment.children >*:first-child small');
 
 childrenIncrement.addEventListener('click',function() {
+    adultText.style.cssText = `color: hsl(0, 0%, 50%);`
+    confirmDiv.style.cssText = `justify-content: end;`
+        confirmDiv.innerHTML = `<div role="button">Cancel</div>
+        <div role="button">Done</div>`
     count++;
     childrenCount.textContent = count;
 
-    if (count == 7) {
+    if (count === 7) {
         childrenIncrement.classList.add('disable');
-        confirmDiv.classList.add('active');
-        confirmDiv.innerHTML = `Searches cannot have more than 7 children`;
-        alertMsg.classList.add('active')
-        alertMsg.innerHTML = `<i class="bi bi-exclamation-octagon-fill" style="margin-right:6px"></i>
-        Searches cannot have more than 7 children`
+        confirmDiv.innerHTML = `<div style="font-size:0.7rem;;color:red;margin:0;padding:0;">
+                                    Searches cannot have more than 7 children
+                                </div>`;
         childrenTextP.style.cssText = `color:red`
         childrenTextsmall.style.cssText = `color:red`
     }
@@ -170,20 +174,14 @@ childrenDecrement.addEventListener('click',function() {
 
     if (count == 0) {
         childrenDecrement.classList.add('disable');
-        // confirmDiv.classList.add('active');
-        // confirmDiv.innerHTML = `Searches cannot have more than 7 children`;
-        // alertMsg.classList.add('active')
-        // alertMsg.innerHTML = `<i class="bi bi-exclamation-octagon-fill" style="margin-right:6px"></i>
-        // Searches cannot have more than 7 children`
-        // childrenTextP.style.cssText = `color:red`
-        // childrenTextsmall.style.cssText = `color:red`
     }
     if (count < 7) {
         childrenTextP.style.cssText = `color: hsl(0, 0%, 50%);`
         childrenTextsmall.style.cssText = `color: hsl(0, 0%, 50%);`
-        childrenIncrement.classList.add('enable')
-        // confirmDiv.classList.remove('active');
-        // alertMsg.classList.remove('active')
-        // alertMsg.innerHTML = ''
+        childrenIncrement.classList.remove('disable');
+        childrenIncrement.classList.add('enable');
+        confirmDiv.style.cssText = `justify-content: end;`
+        confirmDiv.innerHTML = `<div role="button">Cancel</div>
+        <div role="button">Done</div>`
     }
 })

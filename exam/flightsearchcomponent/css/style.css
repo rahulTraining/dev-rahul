@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Helvetica Neue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.container {
+  position: absolute;
+  left: 20%;
+  top: 30%;
+}
+
+.container h1 {
+  margin-bottom: 30px;
+}
+
+.container .travelingModes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 30px;
+}
+
+.container .travelingModes .type-of-trips {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.container .travelingModes .type-of-trips .trips {
+  cursor: pointer;
+}
+
+.container .travelingModes .type-of-trips .trips span {
+  margin-left: 10px;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.container .travelingModes .type-of-trips .trips span.active {
+  display: inline-block;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.container .travelingModes .type-of-trips .trip-types {
+  position: absolute;
+  background-color: #fff;
+  -webkit-box-shadow: 2px -4px 10px #ddd;
+          box-shadow: 2px -4px 10px #ddd;
+  border-radius: 6px;
+  -webkit-transform: translateY(-18px);
+          transform: translateY(-18px);
+  display: none;
+}
+
+.container .travelingModes .type-of-trips .trip-types.active {
+  display: block;
+}
+
+.container .travelingModes .type-of-trips .trip-types span {
+  width: 110px;
+  font-size: 14px;
+  display: block;
+  padding: 10px 0 10px 15px;
+  cursor: pointer;
+}
+
+.container .travelingModes .type-of-trips .trip-types span:hover {
+  background-color: #e6ebef;
+}
+
+.container .travelingModes .type-of-trips .trip-types span.activeBg {
+  background-color: #e6ebef;
+  font-weight: bold;
+}
+
+.container .travelingModes .type-of-class {
+  width: 180px;
+}
+
+.container .travelingModes .type-of-class .classes {
+  cursor: pointer;
+}
+
+.container .travelingModes .type-of-class .classes span {
+  margin-left: 10px;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.container .travelingModes .type-of-class .classes span.active {
+  display: inline-block;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.container .travelingModes .type-of-class .class-types {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  position: absolute;
+  background-color: #fff;
+  -webkit-box-shadow: 2px -4px 10px #ddd;
+          box-shadow: 2px -4px 10px #ddd;
+  border-radius: 6px;
+  -webkit-transform: translateY(-18px);
+          transform: translateY(-18px);
+  display: none;
+}
+
+.container .travelingModes .type-of-class .class-types.active {
+  display: block;
+}
+
+.container .travelingModes .type-of-class .class-types span {
+  font-size: 14px;
+  display: block;
+  padding: 10px 10px 10px 15px;
+  cursor: pointer;
+}
+
+.container .travelingModes .type-of-class .class-types span:hover {
+  background-color: #e6ebef;
+}
+
+.container .travelingModes .type-of-class .class-types span.activeBg {
+  background-color: #e6ebef;
+  font-weight: bold;
+}
+/*# sourceMappingURL=style.css.map */

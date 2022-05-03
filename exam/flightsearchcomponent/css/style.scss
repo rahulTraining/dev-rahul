@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Helvetica Neue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.container {
+    position: absolute;
+    left: 20%;
+    top: 30%;
+
+    h1 {
+        margin-bottom: 30px;
+    }
+
+    .travelingModes {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 30px;
+        .type-of-trips {
+            width: fit-content;
+            .trips {
+                cursor: pointer;
+                span {
+                    margin-left: 10px;
+                    transition: transform 0.3s ease-in-out;
+
+                    &.active {
+                        display: inline-block;
+                        transform: rotate(180deg);
+                        transition: transform 0.3s ease-in-out;
+                    }
+                }
+            }
+
+            .trip-types {
+                position: absolute;
+                background-color: #fff;
+                box-shadow: 2px -4px 10px #ddd;
+                border-radius: 6px;
+                transform: translateY(-18px);
+                display: none;
+
+                &.active {
+                    display: block;
+                }
+
+                span {
+                    width: 110px;
+                    font-size: 14px;
+                    display: block;
+                    padding: 10px 0 10px 15px;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: rgb(230, 235, 239);
+                    }
+
+                    &.activeBg {
+                        background-color: rgb(230, 235, 239);
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+
+        .type-of-class {
+            width: max(180px);
+            .classes {
+                cursor: pointer;
+                span {
+                    margin-left: 10px;
+                    transition: transform 0.3s ease-in-out;
+
+                    &.active {
+                        display: inline-block;
+                        transform: rotate(180deg);
+                        transition: transform 0.3s ease-in-out;
+                    }
+                }
+            }
+
+            .class-types {
+                width: max-content;
+                position: absolute;
+                background-color: #fff;
+                box-shadow: 2px -4px 10px #ddd;
+                border-radius: 6px;
+                transform: translateY(-18px);
+                display: none;
+
+                &.active {
+                    display: block;
+                }
+
+                span {
+                    font-size: 14px;
+                    display: block;
+                    padding: 10px 10px 10px 15px;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: rgb(230, 235, 239);
+                    }
+
+                    &.activeBg {
+                        background-color: rgb(230, 235, 239);
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}

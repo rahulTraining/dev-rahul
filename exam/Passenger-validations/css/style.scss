@@ -40,7 +40,7 @@ html,body {
     box-shadow: 0.3px 1px 5px rgb(200, 200, 200);
     padding: 5px 20px 15px 20px;
     z-index: 2;
-    // display: none;
+    display: none;
 
     &.active {
         display: block;
@@ -158,20 +158,9 @@ html,body {
             background-color: rgba(230, 230, 250,0.3);
         }
 
-        &.active {
-            display: none;
-        }
-    }
-    .alert {
-        font-size:0.7rem;
-        color:red;position:relative;
-        left:0;
-        margin:0;
-        padding:0;
-        display: none;
-        &.active {
-            display: block;
-        }
+        // &.active {
+        //     display: none;
+        // }
     }
 }
 .destinationPath {
@@ -223,6 +212,17 @@ html,body {
             transform: rotate(180deg);
         }
     }
+}
+.alert {
+    font-size:0.7rem;
+    color:red;
+    position:relative;
+    left:0;
+    margin:0;
+    padding:0;
+    // &.active {
+    //     display: block;
+    // }
 }
 .enable {
     background-color: rgb(232,240,254) !important;
