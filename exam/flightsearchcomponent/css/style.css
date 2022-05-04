@@ -169,28 +169,39 @@
   position: relative;
 }
 
-.container .search-component > *:not(.date) {
-  background-color: #f0f3f5;
-  padding: 8px;
+.container .search-component .inputs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+}
+
+.container .search-component .inputs > *:not(.swap-btn) {
+  background-color: #f0f3f5;
+  padding: 8px 0 8px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   cursor: pointer;
 }
 
-.container .search-component > *:not(.date) span i {
-  font-size: 1.4rem;
-}
-
-.container .search-component .swap-btn {
+.container .search-component .inputs .swap-btn {
+  background-color: #f0f3f5;
   width: 25px;
   height: 25px;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
   outline: 4px solid white;
@@ -199,16 +210,20 @@
   top: 42px;
 }
 
-.container .search-component .swap-btn i {
+.container .search-component .inputs .swap-btn i {
   -webkit-transition: -webkit-transform 0.1s ease-in-out;
   transition: -webkit-transform 0.1s ease-in-out;
   transition: transform 0.1s ease-in-out;
   transition: transform 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out;
 }
 
-.container .search-component .swap-btn i.active {
+.container .search-component .inputs .swap-btn i.active {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+
+.container .search-component > *:not(.date) span i {
+  font-size: 1.4rem;
 }
 
 .container .search-component .date {
@@ -254,7 +269,8 @@
   background-color: transparent;
 }
 
-.container .search-component .from-input, .container .search-component .to-input {
+.container .search-component .from-input,
+.container .search-component .to-input {
   width: 90%;
   border: 0;
   outline: none;
@@ -267,12 +283,11 @@
   background-color: #f85a13;
   color: white;
   font-weight: lighter;
-  margin-top: 10px;
+  margin-top: 6px;
   border-radius: 5px;
-}
-
-.container .search-component .search-div label {
-  padding: 8px 16px;
+  padding: 14px 16px;
+  text-align: center;
+  cursor: pointer;
 }
 
 @media all and (max-width: 564px) {
@@ -281,6 +296,64 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1022px) {
+  .container .search-component .inputs {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .container .search-component .inputs > * {
+    width: 100%;
+  }
+  .container .search-component .inputs .swap-btn {
+    outline: none;
+    position: initial;
+    width: 100px;
+    height: 100%;
+    -webkit-transform: initial;
+            transform: initial;
+  }
+  .container .search-component .inputs .swap-btn i {
+    font-size: 1.4rem;
+  }
+}
+
+@media all and (min-width: 1022px) {
+  .container .search-component {
+    grid-auto-flow: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .container .search-component .inputs {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .container .search-component .inputs .swap-btn {
+    outline: none;
+    position: initial;
+    width: 50px;
+    height: 52px;
+    -webkit-transform: initial;
+            transform: initial;
+  }
+  .container .search-component .inputs .swap-btn i {
+    font-size: 1.4rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
