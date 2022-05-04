@@ -19,6 +19,8 @@
     <div class="container">
         <h1>Where are you flying?</h1>
 
+        <!-- travelling modes -->
+
         <div class="travelingModes">
             <div class="type-of-trips">
                 <div class="trips"><div id="ways" style="display: inline-block;">One-way</div><span><i class="bi bi-chevron-down"></i></span></div>
@@ -30,7 +32,7 @@
                 </div>
             </div>
             <div class="types-of-passengers">
-                <div><div style="display: inline-block;cursor: pointer;">Adults</div><span style="margin-left: 10px;"><i class="bi bi-chevron-down"></i></span></div>
+                <div class="passengers"><span>0</span><div style="display: inline-block;margin-left: 10px;">adults</div><span style="margin-left: 10px;"><i class="bi bi-chevron-down"></i></span></div>
             </div>
             <div class="type-of-class">
                 <div class="classes"><div id="classes" style="display: inline-block;">Economy</div><span><i class="bi bi-chevron-down"></i></span></div>
@@ -43,7 +45,36 @@
                 </div>
             </div>
             <div class="types-of-bags">
-                <div class="bags"><span>0</span><div id="bags" style="display: inline-block;margin-left: 10px;">bags</div><span><i class="bi bi-chevron-down"></i></span></div>
+                <div class="bags"><span>0</span><div id="bags" style="display: inline-block;margin: 0 10px;">bags</div><span><i class="bi bi-chevron-down"></i></span></div>
+            </div>
+        </div>
+
+        <!-- search component -->
+        <div class="search-component">
+            <div class="from-div">
+                <span style="display: inline-block;transform: rotate(-45deg);"><i class="fa-solid fa-jet-fighter"></i></span>
+                <input class="from-input" type="text" placeholder="From?">
+            </div>
+            <div class="swap-btn">
+                <i class="fa-solid fa-right-left"></i>
+            </div>
+            <div class="to-div">
+                <span style="display: inline-block;transform: rotate(-45deg);"><i class="fa-solid fa-jet-fighter"></i></span>
+                <input class="to-input" type="text" placeholder="To?">
+            </div>
+            <div class="date">
+                <div class="date-div">
+                    <span><i class="fa-solid fa-calendar-days"></i></span>
+                    <input class="date-input" type="search" placeholder="mm/dd/yy">
+                </div>
+                <div class="date-div">
+                    <span><i class="fa-solid fa-calendar-days"></i></span>
+                    <input class="date-input" type="search" placeholder="mm/dd/yy">
+                </div>
+            </div>
+            <div class="search-div">
+                <label for="search"><i style="font-size: 1.4rem;" class="fa-solid fa-magnifying-glass"></i></label>
+                <input style="display: none;" id="search" class="search-btn" type="submit">
             </div>
         </div>
     </div>

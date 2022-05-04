@@ -7,11 +7,12 @@
 
 .container {
     position: absolute;
-    left: 20%;
+    left: 10%;
     top: 30%;
+    width: 80%;
 
     h1 {
-        margin-bottom: 30px;
+        margin-bottom: 50px;
     }
 
     .travelingModes {
@@ -20,6 +21,7 @@
         align-items: center;
         flex-wrap: wrap;
         gap: 30px;
+        margin-bottom: 25px;
         .type-of-trips {
             width: fit-content;
             .trips {
@@ -46,6 +48,7 @@
 
                 &.active {
                     display: block;
+                    z-index: 1;
                 }
 
                 span {
@@ -67,8 +70,14 @@
             }
         }
 
+        .types-of-passengers {
+            .passengers {
+                cursor: pointer;
+            }
+        }
+
         .type-of-class {
-            width: max(180px);
+            // width: max(180px);
             .classes {
                 cursor: pointer;
                 span {
@@ -94,6 +103,7 @@
 
                 &.active {
                     display: block;
+                    z-index: 1;
                 }
 
                 span {
@@ -112,6 +122,106 @@
                     }
                 }
             }
+        }
+        .types-of-bags {
+            cursor: pointer;
+        }
+    }
+
+    // search component
+
+    .search-component {
+        display: grid;
+        justify-content: stretch;
+        gap: 4px;
+        position: relative;
+
+        & > *:not(.date) {
+            background-color: rgb(240,243,245);
+            padding: 8px ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+
+            span i {
+                font-size: 1.4rem;
+            }
+        }
+
+        .swap-btn {
+            width: 25px;
+            height: 25px;
+            transform: rotate(90deg);
+            outline: 4px solid white;
+            position: absolute;
+            right: 25px;
+            top: 42px;
+
+            i {
+                transition: transform 0.1s ease-in-out;
+            }
+            i.active {
+                transform: rotate(180deg);
+            }
+        }
+
+        .date {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 5px;
+
+            .date-div {
+                width: 100%;
+                background-color: rgb(240,243,245);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0 0 0 15px;
+
+                span i {
+                    font-size: 1.4rem;
+                }
+            }
+            .date-input {
+                flex-grow:1;
+                border: 0;
+                outline: none;
+                padding: 18px 5px;
+                margin-left: 5px;
+                background-color: transparent;
+            }
+        }
+        .from-input,.to-input {
+            width: 90%;
+            border: 0;
+            outline: none;
+            padding: 10px 5px;
+            margin-left: 5px;
+            background-color: transparent;
+        }
+
+        .search-div {
+            background-color:rgb(248,90,19);
+            color: white;
+            font-weight: lighter;
+            margin-top: 10px;
+            border-radius: 5px;
+
+            label {
+                padding: 8px 16px;
+            }
+        }
+
+        @media all and (max-width:564px) {
+            .date {
+                flex-direction: column;
+            }
+        }
+
+        @media all and (min-width:768px) and (max-width:1022px) {
+            
         }
     }
 }
