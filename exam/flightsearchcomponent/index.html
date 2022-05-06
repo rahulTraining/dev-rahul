@@ -25,8 +25,8 @@
             <div class="type-of-trips">
                 <div class="trips btns"><div id="ways" style="display: inline-block;">One-way</div><span><i class="bi bi-chevron-down"></i></span></div>
                 <div class="trip-types types">
-                    <span>One-way</span>
                     <span>Round-trip</span>
+                    <span>One-way</span>
                     <span>Multi-city</span>
                     <span>Trip Builder</span>
                 </div>
@@ -83,16 +83,55 @@
         <!-- search component -->
         <div class="search-component">
             <div class="inputs">
-                <div class="from-div">
+                <div class="from-div" style="position: relative;">
                     <span style="display: inline-block;transform: rotate(-45deg);"><i class="fa-solid fa-jet-fighter"></i></span>
-                    <input class="from-input" type="text" placeholder="From?">
+                    <input class="from-input focus-input" type="text" placeholder="From?">
+                     <!-- search field -->
+                    <div class="search-field">
+                        <div class="d-flex">
+                            <div style="display: flex;flex-grow: 1;">
+                                <span style="display: inline-block;transform: rotate(-45deg);font-size:22px;margin-right: 12px;"><i class="fa-solid fa-jet-fighter"></i></span>
+                                <input type="text" placeholder="From?"/>
+                            </div>
+                            <span style="cursor: pointer;"><i style="font-size: 24px;" class="bi bi-x"></i></span>
+                        </div>
+                        <hr>
+                        <div class="d-flex fa-userr" style="padding: 14px 16px;">
+                            <span style="margin-right: 15px;font-size: 20px;"><i class="fa-solid fa-user"></i></span>
+                            <div>
+                                <p style="color:#007799">Sign in / Sign Up</p>
+                                <small>Access your searches on any device</small>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="swap-btn">
                     <i class="fa-solid fa-right-left"></i>
                 </div>
                 <div class="to-div">
                     <span style="display: inline-block;transform: rotate(-45deg);"><i class="fa-solid fa-jet-fighter"></i></span>
-                    <input class="to-input" type="text" placeholder="To?">
+                    <input class="to-input focus-input" type="text" placeholder="To?">
+                    <!-- search field -->
+                    <div class="search-field">
+                        <div class="d-flex">
+                            <div style="display: flex;flex-grow: 1;">
+                                <span style="display: inline-block;transform: rotate(-45deg);font-size:22px;margin-right: 12px;"><i class="fa-solid fa-jet-fighter"></i></span>
+                                <input type="text" placeholder="To?"/>
+                            </div>
+                            <span style="cursor: pointer;"><i style="font-size: 24px;" class="bi bi-x"></i></span>
+                        </div>
+                        <hr>
+                        <div class="d-flex bi-globee">
+                            <div class="d-flex" style="flex-grow: 1;">
+                                <span class="bi-globe2"></span>
+                                <div>
+                                    <p style="font-weight: bold;">Can't decide where to go?</p>
+                                    <small>Explore your options with anywhere search</small>
+                                </div>
+                            </div>
+                            <span><i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="date">
@@ -111,14 +150,7 @@
             </div>
         </div>
     </div>
-    <div class="from-search-field">
-        <div>
-            <span style="display: inline-block;transform: rotate(-45deg);"><i class="fa-solid fa-jet-fighter"></i></span>
-            <span>From?</span>
-        </div>
-        <span><i class="bi bi-x-lg"></i></span>
-    </div>
-    
+
 <script src="./main.js"></script>
 </body>
 </html>
