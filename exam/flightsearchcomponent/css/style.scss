@@ -90,7 +90,7 @@ hr {
                 box-shadow: 2px -4px 10px #ddd;
                 border-radius: 6px;
                 padding: 10px;
-                z-index: 1;
+                z-index: 3;
             }
         }
 
@@ -118,7 +118,7 @@ hr {
                 box-shadow: 2px -4px 10px #ddd;
                 border-radius: 6px;
                 transform: translateY(-18px);
-                z-index: 1;
+                z-index: 3;
 
                 span {
                     font-size: 14px;
@@ -152,7 +152,7 @@ hr {
                 border-radius: 6px;
                 padding: 33px;
                 line-height: 40px;
-                z-index: 1;
+                z-index: 3;
 
                 & > * {
                     display: flex;
@@ -214,6 +214,11 @@ hr {
         gap: 4px;
         position: relative;
 
+        input::placeholder :not(.search-field input) {
+            font-size: 17px;
+            font-weight: 500;
+            color: black;
+        }
         .from-div,.swap-btn,.to-div,.date-div,.search-div,.search-div label {
             cursor: pointer;
         }
@@ -236,6 +241,7 @@ hr {
                     background-color: #fff;
                     inset: 0;
                     z-index: 5;
+                    animation: anime 250ms linear;
                     display: none;
                 
                     &.active {
@@ -255,6 +261,7 @@ hr {
                             &::placeholder {
                                 font-size: 17px;
                                 font-weight: bolder;
+                                color: rgb(134,129,122);
                             }
                         }
                     }

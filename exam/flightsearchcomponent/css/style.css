@@ -119,7 +119,7 @@ hr {
           box-shadow: 2px -4px 10px #ddd;
   border-radius: 6px;
   padding: 10px;
-  z-index: 1;
+  z-index: 3;
 }
 
 .container .travelingModes .type-of-class .classes {
@@ -155,7 +155,7 @@ hr {
   border-radius: 6px;
   -webkit-transform: translateY(-18px);
           transform: translateY(-18px);
-  z-index: 1;
+  z-index: 3;
 }
 
 .container .travelingModes .type-of-class .class-types span {
@@ -191,7 +191,7 @@ hr {
   border-radius: 6px;
   padding: 33px;
   line-height: 40px;
-  z-index: 1;
+  z-index: 3;
 }
 
 .container .travelingModes .types-of-bags .bag-types > * {
@@ -283,6 +283,30 @@ hr {
   position: relative;
 }
 
+.container .search-component input::-webkit-input-placeholder {
+  font-size: 17px;
+  font-weight: 500;
+  color: black;
+}
+
+.container .search-component input:-ms-input-placeholder {
+  font-size: 17px;
+  font-weight: 500;
+  color: black;
+}
+
+.container .search-component input::-ms-input-placeholder {
+  font-size: 17px;
+  font-weight: 500;
+  color: black;
+}
+
+.container .search-component input::placeholder {
+  font-size: 17px;
+  font-weight: 500;
+  color: black;
+}
+
 .container .search-component .from-div, .container .search-component .swap-btn, .container .search-component .to-div, .container .search-component .date-div, .container .search-component .search-div, .container .search-component .search-div label {
   cursor: pointer;
 }
@@ -318,6 +342,8 @@ hr {
   background-color: #fff;
   inset: 0;
   z-index: 5;
+  -webkit-animation: anime 250ms linear;
+          animation: anime 250ms linear;
   display: none;
 }
 
@@ -343,21 +369,25 @@ hr {
 .container .search-component .inputs > *:not(.swap-btn) .search-field > *:first-child input::-webkit-input-placeholder {
   font-size: 17px;
   font-weight: bolder;
+  color: #86817a;
 }
 
 .container .search-component .inputs > *:not(.swap-btn) .search-field > *:first-child input:-ms-input-placeholder {
   font-size: 17px;
   font-weight: bolder;
+  color: #86817a;
 }
 
 .container .search-component .inputs > *:not(.swap-btn) .search-field > *:first-child input::-ms-input-placeholder {
   font-size: 17px;
   font-weight: bolder;
+  color: #86817a;
 }
 
 .container .search-component .inputs > *:not(.swap-btn) .search-field > *:first-child input::placeholder {
   font-size: 17px;
   font-weight: bolder;
+  color: #86817a;
 }
 
 .container .search-component .inputs > *:not(.swap-btn) .search-field > .fa-userr:hover {
