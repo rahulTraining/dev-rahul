@@ -3,6 +3,9 @@ var chevron = document.querySelector('.trips span')
 var tripTypes = document.querySelector('.trip-types');
 var ways = document.querySelectorAll('.trip-types span');
 var displayWays = document.querySelector('#ways');
+var searchComponent = document.querySelectorAll('.search_component');
+var multicitydiv = document.querySelector('.multi_city > *:first-child')
+var multi_citycomponent = document.querySelector('.multi-city')
 
 var passengers = document.querySelector('.passengers');
 var passengerTypes = document.querySelector('.passenger-types')
@@ -19,15 +22,17 @@ var bagTypes = document.querySelector('.bag-types');
 var btns = document.querySelectorAll('.btns');
 var types = document.querySelectorAll('.types');
 
-var swapButton = document.querySelector('.swap-btn');
+var swapButton = document.querySelectorAll('.swap-btn');
+
 var focusInput = document.querySelectorAll('.focus-input')
-var fromInput = document.querySelector('.from-input');
-var toInput = document.querySelector('.to-input');
+var fromInput = document.querySelectorAll('.from-input');
+var toInput = document.querySelectorAll('.to-input');
 var fromfieldInput = document.querySelectorAll('.search-field input');
+
 var searchField = document.querySelectorAll('.search-field');
 
-var searchfieldfromInput = document.querySelector('.from-div .search-field input');
-var searchfieldtoInput = document.querySelector('.to-div .search-field input');
+var searchfieldfromInput = document.querySelectorAll('.from-div .search-field input');
+var searchfieldtoInput = document.querySelectorAll('.to-div .search-field input');
 
 var signIn = document.querySelector('.from-div .search-field .fa-userr');
 var wheretoGo = document.querySelector('.to-div .search-field .bi-globee');
@@ -44,16 +49,21 @@ btns.forEach((b,index) => {
 
 // trips
 
-ways.forEach((w) => {
+ways.forEach((w,index) => {
     w.addEventListener('click',function() {
         ways.forEach(bg => bg.classList.remove('activeBg'));
         w.classList.add('activeBg');
         displayWays.innerText = w.innerText;
         tripTypes.classList.remove('active');
+        searchComponent.forEach(s => s.classList.remove('active'));
+        searchComponent[index].classList.add('active')
         chevron.classList.remove('active');
     })
-    ways[0].click()
+    ways[2].click()
 })
+
+var cloneSearchcomponent = multi_citycomponent.cloneNode(true);
+multicitydiv.appendChild(cloneSearchcomponent)
 
 // input search focus
 
@@ -77,47 +87,65 @@ fromfieldInput.forEach((i,index) => {
 
 // swap button
 
-swapButton.onclick = function() {
-    this.firstElementChild.classList.toggle('active');
+swapButton.forEach((btn,index) => {
+    btn.onclick = function() {
+        this.firstElementChild.classList.toggle('active');
 
-    if(fromInput.placeholder === "From?") {
-        fromInput.placeholder = "To?";
-    } else {
-        fromInput.placeholder = "From?"
-    }
-    if (toInput.placeholder === "To?") {
-        toInput.placeholder = "From?"
-    } else {
-        toInput.placeholder = "To?"
-    }
+        var fromValue = window.sessionStorage.getItem('fromvalue');
+        var toValue = window.sessionStorage.getItem('tovalue');
 
-    var fromValue = fromInput.value;
-    var toValue = toInput.value;
+        fromInput.forEach(p => {
+            if (p.placeholder === "From?") {
+                p.placeholder = "To?"
+            } else {
+                p.placeholder = "From?"
+            }
+            window.sessionStorage.setItem('fromvalue',p.value)
+            if (p.value === fromValue) {
+                p.value = toValue
+            }
+        })
+        toInput.forEach(t => {
+            if (t.placeholder === "To?") {
+                t.placeholder = "From?"
+            } else {
+                t.placeholder = "To?"
+            }
+            window.sessionStorage.setItem('tovalue',t.value);
+            if (t.value === toValue) {
+                t.value = fromValue
+            }
+        })
 
-    if(fromInput.value === fromValue || toInput.value === toValue) {
-        fromInput.value = toValue;
-        toInput.value = fromValue
-    }
+        var searchfieldfromValue = window.sessionStorage.getItem('searchfieldfromValue')
+        var searchfieldtoValue = window.sessionStorage.getItem('searchfieldtoValue')
 
-    if (searchfieldfromInput.placeholder === "From?") {
-        searchfieldfromInput.placeholder = "To?"
-    } else {
-        searchfieldfromInput.placeholder = "From?"
+        searchfieldfromInput.forEach(sf => {
+            if (sf.placeholder === "From?") {
+                sf.placeholder = "To?"
+            } else {
+                sf.placeholder = "From?"
+            }
+            window.sessionStorage.setItem('searchfieldfromValue',sf.value);
+            if (sf.value === searchfieldfromValue) {
+                sf.value = searchfieldtoValue
+            }
+        })
+        searchfieldtoInput.forEach(st => {
+            if (st.placeholder === "To?") {
+                st.placeholder = "From?"
+            } else {
+                st.placeholder = "To?"
+            }
+            window.sessionStorage.setItem('searchfieldtoValue',st.value);
+            if (st.value === searchfieldtoValue) {
+                st.value = searchfieldfromValue
+            }
+        })
+        
     }
-    if (searchfieldtoInput.placeholder === "To?") {
-        searchfieldtoInput.placeholder = "From?"
-    } else {
-        searchfieldtoInput.placeholder = "To?"
-    }
+})
 
-    var searchfieldfromValue = searchfieldfromInput.value
-    var searchfieldtoValue = searchfieldtoInput.value
-
-    if(searchfieldfromInput.value === fromValue || searchfieldtoInput.value === toValue) {
-        searchfieldfromInput.value = searchfieldtoValue;
-        searchfieldtoInput.value = searchfieldfromValue
-    }
-}
 // passengers
 
 
@@ -136,7 +164,6 @@ classess.forEach((w) => {
 })
 
 // bags
-
 
 
 // window click function
