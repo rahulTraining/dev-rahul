@@ -38,10 +38,14 @@ var signIn = document.querySelector('.from-div .search-field .fa-userr');
 var wheretoGo = document.querySelector('.to-div .search-field .bi-globee');
 var bixlg = document.querySelectorAll('.bi-x');
 
-var searchBtn = document.querySelector('.search-div')
+var addFlight = document.querySelector('.addsearchdiv >*:first-child')
 
-btns.forEach((b,index) => {
-    b.addEventListener('click',function() {
+var searchBtn = document.querySelector('.search-div');
+
+var count = 0;
+
+btns.forEach((b, index) => {
+    b.addEventListener('click', function () {
         types.forEach(t => t.classList.remove('active'))
         types[index].classList.add('active')
     })
@@ -49,8 +53,8 @@ btns.forEach((b,index) => {
 
 // trips
 
-ways.forEach((w,index) => {
-    w.addEventListener('click',function() {
+ways.forEach((w, index) => {
+    w.addEventListener('click', function () {
         ways.forEach(bg => bg.classList.remove('activeBg'));
         w.classList.add('activeBg');
         displayWays.innerText = w.innerText;
@@ -62,33 +66,59 @@ ways.forEach((w,index) => {
     ways[2].click()
 })
 
-var cloneSearchcomponent = multi_citycomponent.cloneNode(true);
-multicitydiv.appendChild(cloneSearchcomponent)
+function clone() {
+    var cloneSearchcomponent = multi_citycomponent.cloneNode(true);
+    var date = cloneSearchcomponent.lastElementChild
+    var x = document.createElement('div');
+    var txt = document.createTextNode("\u00D7");
+    x.className = "delete";
+    cloneSearchcomponent.setAttribute('id','clone')
+    x.appendChild(txt);
+    date.appendChild(x);
+    multicitydiv.appendChild(cloneSearchcomponent);
+    var delete_x = document.querySelectorAll('.delete');
+    const clone_component = document.querySelectorAll('#clone')
+
+    delete_x.forEach((d,index) => {
+        d.onclick = function() {
+            clone_component[index].style.display = 'none'
+        }
+    });
+    console.log(':::length',delete_x.length);
+}
+clone()
+
+// delete btn length base
+
+addFlight.onclick = function() {
+    clone()
+}
 
 // input search focus
 
-focusInput.forEach((f,index) => {
-    f.addEventListener('focus',function() {
+focusInput.forEach((f, index) => {
+    f.addEventListener('focus', function () {
         searchField.forEach(ff => ff.classList.remove('active'))
-        searchField[index].classList.add('active')
+        searchField[index].classList.add('active');
+        fromfieldInput[index].focus()
     })
 })
-bixlg.forEach((x,index) => {
-    x.onclick = function() {
+bixlg.forEach((x, index) => {
+    x.onclick = function () {
         searchField.forEach(ff => ff.classList.remove('active'))
         searchField[index].classList.remove('active')
     }
 })
-fromfieldInput.forEach((i,index) => {
-    i.addEventListener('change',function() {
+fromfieldInput.forEach((i, index) => {
+    i.addEventListener('change', function () {
         focusInput[index].value = this.value
     })
 })
 
 // swap button
 
-swapButton.forEach((btn,index) => {
-    btn.onclick = function() {
+swapButton.forEach((btn, index) => {
+    btn.onclick = function () {
         this.firstElementChild.classList.toggle('active');
 
         var fromValue = window.sessionStorage.getItem('fromvalue');
@@ -100,7 +130,7 @@ swapButton.forEach((btn,index) => {
             } else {
                 p.placeholder = "From?"
             }
-            window.sessionStorage.setItem('fromvalue',p.value)
+            window.sessionStorage.setItem('fromvalue', p.value)
             if (p.value === fromValue) {
                 p.value = toValue
             }
@@ -111,7 +141,7 @@ swapButton.forEach((btn,index) => {
             } else {
                 t.placeholder = "To?"
             }
-            window.sessionStorage.setItem('tovalue',t.value);
+            window.sessionStorage.setItem('tovalue', t.value);
             if (t.value === toValue) {
                 t.value = fromValue
             }
@@ -126,7 +156,7 @@ swapButton.forEach((btn,index) => {
             } else {
                 sf.placeholder = "From?"
             }
-            window.sessionStorage.setItem('searchfieldfromValue',sf.value);
+            window.sessionStorage.setItem('searchfieldfromValue', sf.value);
             if (sf.value === searchfieldfromValue) {
                 sf.value = searchfieldtoValue
             }
@@ -137,12 +167,12 @@ swapButton.forEach((btn,index) => {
             } else {
                 st.placeholder = "To?"
             }
-            window.sessionStorage.setItem('searchfieldtoValue',st.value);
+            window.sessionStorage.setItem('searchfieldtoValue', st.value);
             if (st.value === searchfieldtoValue) {
                 st.value = searchfieldfromValue
             }
         })
-        
+
     }
 })
 
@@ -153,7 +183,7 @@ swapButton.forEach((btn,index) => {
 // classes
 
 classess.forEach((w) => {
-    w.addEventListener('click',function() {
+    w.addEventListener('click', function () {
         classess.forEach(bg => bg.classList.remove('activeBg'));
         w.classList.add('activeBg');
         displayClasses.innerText = w.innerText;
@@ -167,7 +197,7 @@ classess.forEach((w) => {
 
 
 // window click function
-window.onclick = function(e) {
+window.onclick = function (e) {
     if (e.target === document.documentElement) {
         classTypes.classList.remove('active')
         chevronClass.classList.remove('active')

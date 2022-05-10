@@ -27,6 +27,7 @@ hr {
   border-radius: 5px;
   padding: 14px 16px;
   text-align: center;
+  cursor: pointer;
 }
 
 .search-div:hover {
@@ -349,7 +350,12 @@ hr {
   color: black;
 }
 
-.container .search_component .search-component .from-div, .container .search_component .search-component .swap-btn, .container .search_component .search-component .to-div, .container .search_component .search-component .date-div, .container .search_component .search-component .search-div, .container .search_component .search-component .search-div label {
+.container .search_component .search-component .from-div,
+.container .search_component .search-component .swap-btn,
+.container .search_component .search-component .to-div,
+.container .search_component .search-component .date-div,
+.container .search_component .search-component .search-div,
+.container .search_component .search-component .search-div label {
   cursor: pointer;
 }
 
@@ -664,7 +670,76 @@ hr {
   margin-bottom: 5px;
 }
 
+.container .multi_city .multi-city .date > .date-div:nth-of-type(1)::after {
+  display: none;
+}
+
+.container .multi_city .multi-city .date .type-of-class {
+  width: 100%;
+}
+
+.container .multi_city .multi-city .date .type-of-class .classes {
+  background-color: #f0f3f5;
+  padding: 18px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.container .multi_city .multi-city .date .type-of-class .class-types {
+  width: 235px;
+  position: absolute;
+  background-color: #fff;
+  -webkit-box-shadow: 2px -4px 10px #ddd;
+          box-shadow: 2px -4px 10px #ddd;
+  border-radius: 6px;
+  -webkit-transform: translateY(-52px);
+          transform: translateY(-52px);
+  z-index: 3;
+  display: none;
+}
+
+.container .multi_city .multi-city .date .type-of-class .class-types span {
+  font-size: 14px;
+  display: block;
+  padding: 10px 10px 10px 15px;
+  cursor: pointer;
+}
+
+.container .multi_city .multi-city .date .type-of-class .class-types span:hover {
+  background-color: #e6ebef;
+}
+
+.container .multi_city .multi-city .date .type-of-class .class-types span.activeBg {
+  background-color: #e6ebef;
+  font-weight: bold;
+}
+
+@media all and (min-width: 1022px) {
+  .container .multi_city .multi-city .date .type-of-class .classes {
+    width: calc(182px + 30px);
+  }
+}
+
+.container .multi_city .multi-city .delete {
+  background-color: #f0f3f5;
+  padding: 2.7px 12px;
+  border-radius: 5px;
+  font-size: 36px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
 .container .multi_city .addsearchdiv {
+  width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -676,17 +751,17 @@ hr {
           align-items: center;
 }
 
-.container .multi_city .addsearchdiv .addcleardiv {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 15px;
+.container .multi_city .addsearchdiv > div:nth-of-type(1) {
+  color: #f85a13;
+  cursor: pointer;
+}
+
+.container .multi_city .addsearchdiv > div:nth-of-type(2) {
+  cursor: pointer;
+}
+
+.container .multi_city .addsearchdiv .search-div {
+  margin-top: 0;
 }
 
 @media all and (max-width: 1024px) {

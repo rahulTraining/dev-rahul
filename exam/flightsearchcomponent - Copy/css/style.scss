@@ -4,13 +4,16 @@
     box-sizing: border-box;
     font-family: "Helvetica Neue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
 .d-flex {
     display: flex;
     align-items: center;
 }
+
 hr {
-    border: 0.5px solid #e6ebef ;
+    border: 0.5px solid #e6ebef;
 }
+
 .search-div {
     background-color: rgb(248, 90, 19);
     color: white;
@@ -19,19 +22,23 @@ hr {
     border-radius: 5px;
     padding: 14px 16px;
     text-align: center;
+    cursor: pointer;
 
     &:hover {
-        background-color: rgb(227,91,14);
+        background-color: rgb(227, 91, 14);
     }
 }
+
 @keyframes anime {
-    0%{
+    0% {
         opacity: 0;
     }
-    100%{
+
+    100% {
         opacity: 1;
     }
 }
+
 .container {
     width: 80%;
     margin: 100px auto 0;
@@ -81,7 +88,7 @@ hr {
                 border-radius: 6px;
                 transform: translateY(-18px);
                 z-index: 3;
-                
+
                 span {
                     width: 110px;
                     font-size: 14px;
@@ -105,6 +112,7 @@ hr {
             .passengers {
                 cursor: pointer;
             }
+
             .passenger-types {
                 position: absolute;
                 background-color: #fff;
@@ -116,6 +124,7 @@ hr {
         }
 
         .type-of-class {
+
             // width: max(180px);
             .classes {
                 cursor: pointer;
@@ -162,11 +171,12 @@ hr {
         .types-of-bags {
             cursor: pointer;
             position: relative;
+
             .bag-types {
                 position: absolute;
                 left: -60%;
                 top: -100%;
-                width: 316px; 
+                width: 316px;
                 height: 174px;
                 background-color: #fff;
                 box-shadow: 2px 2px 10px #ddd;
@@ -175,43 +185,47 @@ hr {
                 line-height: 40px;
                 z-index: 3;
 
-                & > * {
+                &>* {
                     display: flex;
                     justify-content: left;
                     align-items: center;
                     gap: 66px;
                 }
+
                 [adjustment] {
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     gap: 5px;
                 }
+
                 .bi-dash {
                     width: 20px;
                     height: 20px;
                     background-color: white;
                     color: #079;
                     border-radius: 3px;
-                    box-shadow:0px 0px 3px #ccc;
+                    box-shadow: 0px 0px 3px #ccc;
                     font-size: 14px;
                     display: inline-flex;
                     justify-content: center;
                     align-items: center;
                 }
+
                 [readonly] {
                     border: none;
                     outline: none;
                     width: 20px;
                     text-align: center;
                 }
+
                 .bi-plus {
                     width: 20px;
                     height: 20px;
                     background-color: white;
                     color: #079;
                     border-radius: 3px;
-                    box-shadow:0px 0px 3px #ccc;
+                    box-shadow: 0px 0px 3px #ccc;
                     font-size: 14px;
                     display: inline-flex;
                     justify-content: center;
@@ -242,22 +256,27 @@ hr {
             gap: 4px;
             position: relative;
             animation: anime 500ms linear;
-            
+
             input::placeholder :not(.search-field input) {
                 font-size: 17px;
                 font-weight: 500;
                 color: black;
             }
-    
-            .from-div,.swap-btn,.to-div,.date-div,.search-div,.search-div label {
+
+            .from-div,
+            .swap-btn,
+            .to-div,
+            .date-div,
+            .search-div,
+            .search-div label {
                 cursor: pointer;
             }
-    
+
             .inputs {
                 display: flex;
                 flex-direction: column;
                 gap: 5px;
-    
+
                 &>*:not(.swap-btn) {
                     background-color: rgb(240, 243, 245);
                     padding: 8px 0 8px 15px;
@@ -265,7 +284,7 @@ hr {
                     justify-content: start;
                     align-items: center;
                     position: relative;
-    
+
                     .search-field {
                         position: fixed;
                         background-color: #fff;
@@ -273,46 +292,49 @@ hr {
                         z-index: 5;
                         animation: anime 250ms linear;
                         display: none;
-                    
+
                         &.active {
                             display: block;
                         }
-                    
-                        & > *:first-child {
+
+                        &>*:first-child {
                             padding: 20px 12px;
-                    
+
                             input {
                                 outline: none;
                                 border: none;
                                 background-color: transparent;
                                 display: flex;
                                 flex-basis: 100%;
-                    
+
                                 &::placeholder {
                                     font-size: 17px;
                                     font-weight: bolder;
-                                    color: rgb(134,129,122);
+                                    color: rgb(134, 129, 122);
                                 }
                             }
                         }
-                        & > .fa-userr {
+
+                        &>.fa-userr {
                             &:hover {
                                 cursor: pointer;
                                 background-color: #e6ebef
                             }
                         }
+
                         .bi-globee {
                             cursor: pointer;
                             padding: 14px 16px;
-                    
+
                             &:hover {
                                 background-color: #079;
                                 color: #f0f3f5;
-                    
+
                                 .fa-arrow-right {
                                     color: #f0f3f5;
                                 }
                             }
+
                             .bi-globe2 {
                                 margin-right: 15px;
                                 font-size: 24px;
@@ -321,13 +343,14 @@ hr {
                                 padding: 5px 6px;
                                 border-radius: 5px;
                             }
+
                             .fa-arrow-right {
                                 color: #079;
                                 font-weight: bold;
                                 font-size: 22px;
                             }
                         }
-                    
+
                         @media all and (min-width:1180px) {
                             & {
                                 position: absolute;
@@ -342,6 +365,7 @@ hr {
                         }
                     }
                 }
+
                 .swap-btn {
                     background-color: rgb(240, 243, 245);
                     width: 25px;
@@ -354,40 +378,41 @@ hr {
                     right: 25px;
                     top: 42px;
                     z-index: 2;
-    
+
                     i {
                         transition: transform 0.1s ease-in-out;
                     }
-    
+
                     i.active {
                         transform: rotate(180deg);
                     }
                 }
             }
-    
+
             &>*:not(.date) {
                 span i {
                     font-size: 1.4rem;
                 }
             }
-    
+
             .date {
                 display: flex;
                 justify-content: space-evenly;
                 align-items: center;
                 gap: 5px;
                 position: relative;
-    
-                & >.date-div:nth-of-type(1)::after {
+
+                &>.date-div:nth-of-type(1)::after {
                     content: "";
                     position: absolute;
                     right: 50%;
                     transform: translateX(50%);
                     width: 5px;
                     height: 30px;
-                    background-color: rgb(179,193,203);
+                    background-color: rgb(179, 193, 203);
                     z-index: 0;
                 }
+
                 .date-div {
                     width: 100%;
                     background-color: rgb(240, 243, 245);
@@ -396,12 +421,12 @@ hr {
                     align-items: center;
                     padding: 0 0 0 15px;
                     z-index: 2;
-    
+
                     span i {
                         font-size: 1.4rem;
                     }
                 }
-    
+
                 .date-input {
                     flex-grow: 1;
                     border: 0;
@@ -411,7 +436,7 @@ hr {
                     background-color: transparent;
                 }
             }
-    
+
             .from-input,
             .to-input {
                 width: 90%;
@@ -421,66 +446,68 @@ hr {
                 margin-left: 5px;
                 background-color: transparent;
             }
-    
+
             @media all and (max-width:564px) {
                 .date {
                     flex-direction: column;
-    
-                    & >.date-div:nth-of-type(1)::after {
+
+                    &>.date-div:nth-of-type(1)::after {
                         display: none;
                     }
                 }
             }
-    
+
             @media all and (min-width:768px) and (max-width:1022px) {
                 .inputs {
                     flex-direction: row;
                     align-items: center;
-    
+
                     &>* {
                         width: 100%;
                     }
-    
+
                     .swap-btn {
                         outline: none;
                         position: initial;
                         width: 100px;
                         height: 100%;
                         transform: initial;
-    
+
                         i {
                             font-size: 1.4rem;
                         }
                     }
                 }
             }
-    
+
             @media all and (min-width:1022px) {
                 & {
                     grid-auto-flow: column;
                     justify-content: left;
                     align-items: center;
                 }
+
                 .inputs {
                     flex-direction: row;
                     align-items: center;
-    
-                    & >*:not(.swap-btn) {
+
+                    &>*:not(.swap-btn) {
                         width: 245px;
                     }
-    
+
                     .swap-btn {
                         outline: none;
                         position: initial;
                         width: 50px;
                         height: 52px;
                         transform: initial;
-    
+
                         i {
                             font-size: 1.4rem;
                         }
                     }
                 }
+
                 .search-div {
                     margin-top: 0;
                     padding: 17px 20px;
@@ -488,28 +515,104 @@ hr {
             }
         }
     }
-    
+
     .search-component.one-way {
         .date {
-            & >.date-div:nth-of-type(1)::after {
+            &>.date-div:nth-of-type(1)::after {
                 display: none;
             }
         }
     }
+
     .multi_city {
         .multi-city {
             margin-bottom: 5px;
+
+            .date {
+                &>.date-div:nth-of-type(1)::after {
+                    display: none;
+                }
+
+                .type-of-class {
+                    width: 100%;
+
+                    .classes {
+                        background-color: rgb(240, 243, 245);
+                        padding: 18px 15px;
+                        display: flex;
+                        justify-content: start;
+                        align-items: center;
+                        position: relative;
+                        // width: calc(205px + 30px);
+                        cursor: pointer;
+                    }
+
+                    .class-types {
+                        width: 235px;
+                        position: absolute;
+                        background-color: #fff;
+                        box-shadow: 2px -4px 10px #ddd;
+                        border-radius: 6px;
+                        transform: translateY(-52px);
+                        z-index: 3;
+                        display: none;
+
+                        span {
+                            font-size: 14px;
+                            display: block;
+                            padding: 10px 10px 10px 15px;
+                            cursor: pointer;
+
+                            &:hover {
+                                background-color: rgb(230, 235, 239);
+                            }
+
+                            &.activeBg {
+                                background-color: rgb(230, 235, 239);
+                                font-weight: bold;
+                            }
+                        }
+                    }
+
+                    @media all and (min-width:1022px) {
+                        & {
+                            .classes {
+                                width: calc(182px + 30px);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .delete {
+                background-color: rgb(240, 243, 245);
+                padding: 2.7px 12px;
+                border-radius: 5px;
+                font-size: 36px;
+                font-weight: 400;
+                cursor: pointer;
+            }
         }
+
         .addsearchdiv {
+            width: 80%;
             display: flex;
             justify-content: space-between;
             align-items: center;
 
-            .addcleardiv {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 15px;
+            &>div:nth-of-type(1) {
+                color: #f85a13;
+                cursor: pointer;
+                // flex-grow: 1;
+            }
+
+            &>div:nth-of-type(2) {
+                // flex-grow: 3.5;
+                cursor: pointer;
+            }
+
+            .search-div {
+                margin-top: 0;
             }
         }
 
