@@ -3,6 +3,8 @@ var chevron = document.querySelector('.trips span')
 var tripTypes = document.querySelector('.trip-types');
 var ways = document.querySelectorAll('.trip-types span');
 var displayWays = document.querySelector('#ways');
+var typeofClass = document.querySelector('.travelingModes .type-of-class');
+var typesofBags = document.querySelector('.travelingModes .types-of-bags')
 var searchComponent = document.querySelectorAll('.search_component');
 var multicitydiv = document.querySelector('.multi_city > *:first-child')
 var multi_citycomponent = document.querySelector('.multi-city')
@@ -13,7 +15,8 @@ var passengerTypes = document.querySelector('.passenger-types')
 var classes = document.querySelector('.classes');
 var chevronClass = document.querySelector('.classes span');
 var classTypes = document.querySelector('.class-types');
-var classess = document.querySelectorAll('.class-types span');
+var classess = document.querySelectorAll('.travelingModes .class-types span');
+
 var displayClasses = document.querySelector('#classes');
 
 var bags = document.querySelector('.bags');
@@ -42,7 +45,10 @@ var addFlight = document.querySelector('.addsearchdiv >*:first-child')
 
 var searchBtn = document.querySelector('.search-div');
 
-var count = 0;
+var clone_economy = document.querySelector('#clone .classes');
+var clone_economyclasses = document.querySelector('#clone .class-types');
+var clone_economyclassesHeading = document.querySelector('#clone #classes');
+var clone_economyclassesSpans = document.querySelectorAll('#clone .class-types span');
 
 btns.forEach((b, index) => {
     b.addEventListener('click', function () {
@@ -63,8 +69,41 @@ ways.forEach((w, index) => {
         searchComponent[index].classList.add('active')
         chevron.classList.remove('active');
     })
-    ways[2].click()
+    ways[2].click();
+    ways[2].addEventListener('click', function () {
+        typeofClass.style.display = "none";
+        typesofBags.style.display = "none"
+    });
+    ways[0].addEventListener('click', function () {
+        typeofClass.style.display = "block";
+        typesofBags.style.display = "block"
+    });
+    ways[1].addEventListener('click', function () {
+        typeofClass.style.display = "block";
+        typesofBags.style.display = "block"
+    });
+    ways[3].addEventListener('click', function () {
+        typeofClass.style.display = "block";
+        typesofBags.style.display = "block"
+    });
 })
+
+// multi-city economy
+
+clone_economy.onclick = function () {
+    clone_economyclasses.classList.add('active');
+}
+clone_economyclassesSpans.forEach((cecs, index) => {
+    cecs.onclick = function () {
+        clone_economyclassesSpans.forEach(ces => ces.classList.remove('activeBg'))
+        clone_economyclassesSpans[index].classList.add('activeBg');
+        clone_economyclassesHeading.innerText = clone_economyclassesSpans[index].innerText
+        clone_economyclasses.classList.remove('active');
+    }
+    clone_economyclassesSpans[0].click();
+});
+
+// clone and add flight
 
 function clone() {
     var cloneSearchcomponent = multi_citycomponent.cloneNode(true);
@@ -72,25 +111,47 @@ function clone() {
     var x = document.createElement('div');
     var txt = document.createTextNode("\u00D7");
     x.className = "delete";
-    cloneSearchcomponent.setAttribute('id','clone')
+    cloneSearchcomponent.setAttribute('id', 'cloned')
     x.appendChild(txt);
     date.appendChild(x);
     multicitydiv.appendChild(cloneSearchcomponent);
     var delete_x = document.querySelectorAll('.delete');
-    const clone_component = document.querySelectorAll('#clone')
+    var economy = document.querySelectorAll('#cloned .classes');
+    var economyclasses = document.querySelectorAll('#cloned .class-types');
+    var economyclassesHeading = document.querySelectorAll('#cloned #classes');
+    var economyclassesSpans = document.querySelectorAll('#cloned .class-types span');
 
-    delete_x.forEach((d,index) => {
-        d.onclick = function() {
-            clone_component[index].style.display = 'none'
+    economy.forEach((e, index) => {
+        e.onclick = function () {
+            economyclasses.forEach(ec => ec.classList.remove('active'))
+            economyclasses[index].classList.add('active');
+        }
+    })
+    economyclassesSpans.forEach((ecs, index) => {
+        ecs.onclick = function () {
+            economyclassesSpans.forEach(ecs => ecs.classList.remove('activeBg'))
+            ecs.classList.add('activeBg');
+            economyclasses.forEach(ec => ec.classList.remove('active'))
+            economyclassesHeading.forEach(ech => {
+                economyclassesHeading[0].innerText = ecs.innerText
+            })
+        }
+    })
+
+    delete_x.forEach((d, index) => {
+        d.onclick = function () {
+            // clone_component[index].style.display = 'none';
+            this.parentElement.parentElement.remove()
+            addFlight.style.transform = "scale(1)"
         }
     });
-    console.log(':::length',delete_x.length);
+    if (delete_x.length == 5) {
+        addFlight.style.transform = "scale(0)"
+    }
 }
 clone()
 
-// delete btn length base
-
-addFlight.onclick = function() {
+addFlight.onclick = function () {
     clone()
 }
 
@@ -206,5 +267,6 @@ window.onclick = function (e) {
         passengerTypes.classList.remove('active')
         bagTypes.classList.remove('active')
         searchField.forEach(ff => ff.classList.remove('active'))
+        clone_economyclasses.classList.remove('active')
     }
 }

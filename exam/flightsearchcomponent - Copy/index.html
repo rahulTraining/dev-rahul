@@ -259,7 +259,7 @@
         </div>
         <div class="search_component multi_city">
             <div>
-                <div class="search-component multi-city">
+                <div class="search-component multi-city" id="clone">
                     <div class="inputs">
                         <div class="from-div" style="position: relative;">
                             <span style="display: inline-block;transform: rotate(-45deg);"><i
@@ -327,7 +327,7 @@
                             <input class="date-input" type="search" placeholder="mm/dd/yy">
                         </div>
                         <div class="type-of-class">
-                            <div class="classes btns">
+                            <div class="classes">
                                 <div id="classes" style="display: inline-block;">Economy</div>
                             </div>
                             <div class="class-types">
@@ -342,10 +342,13 @@
                 </div>
             </div>
             <div class="addsearchdiv">
-                <div> <span><i class="fa-solid fa-plus"></i></span> Add another flight</div>
-                <div>Clear all</div>
+                <div>
+                    <div style="color: #f85a13;cursor: pointer;"><span><i class="fa-solid fa-plus"></i></span> Add
+                        another flight</div>
+                    <div style="cursor: pointer;">Clear all</div>
+                </div>
                 <div class="search-div">
-                    <label for="search"><i class="fa-solid fa-magnifying-glass"></i></label>
+                    <label for="search"><i style="cursor:pointer;" class="fa-solid fa-magnifying-glass"></i></label>
                     <input style="display: none;" id="search" class="search-btn" type="submit">
                 </div>
             </div>

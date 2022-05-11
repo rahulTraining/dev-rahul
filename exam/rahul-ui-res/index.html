@@ -327,7 +327,8 @@
         var clone_div = document.querySelector('#schedule-flights .schedule-flights')
         var Close = document.querySelector('.Close')
         var FORM = document.getElementById('GFG_FORM');
-        let clone = window.localStorage.getItem("rahul")
+        let clone = window.localStorage.getItem("rahul");
+        
 
         addFlight.onclick = function () {
             cityList3.forEach(z => z.classList.remove("active1"))
@@ -335,6 +336,7 @@
             var p_clone = clone_div.cloneNode(true)
             p_clone.setAttribute('id', 'dynamic_form')
             window.localStorage.setItem("rahul", p_clone);
+            
 
             add_div.appendChild(p_clone)
             var x = document.createElement("span");

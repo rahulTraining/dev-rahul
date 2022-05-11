@@ -84,7 +84,7 @@ hr {
             .trip-types {
                 position: absolute;
                 background-color: #fff;
-                box-shadow: 2px -4px 10px #ddd;
+                box-shadow: 2px -2px 15px #ddd;
                 border-radius: 6px;
                 transform: translateY(-18px);
                 z-index: 3;
@@ -116,7 +116,7 @@ hr {
             .passenger-types {
                 position: absolute;
                 background-color: #fff;
-                box-shadow: 2px -4px 10px #ddd;
+                box-shadow: 2px -2px 15px #ddd;
                 border-radius: 6px;
                 padding: 10px;
                 z-index: 3;
@@ -145,7 +145,7 @@ hr {
                 width: max-content;
                 position: absolute;
                 background-color: #fff;
-                box-shadow: 2px -4px 10px #ddd;
+                box-shadow: 2px -2px 15px #ddd;
                 border-radius: 6px;
                 transform: translateY(-18px);
                 z-index: 3;
@@ -359,7 +359,7 @@ hr {
                                 border-radius: 2px;
                                 left: 0;
                                 top: 0;
-                                box-shadow: 2px -4px 10px #ddd;
+                                box-shadow: 2px -2px 15px #ddd;
                                 z-index: 10;
                             }
                         }
@@ -551,11 +551,16 @@ hr {
                         width: 235px;
                         position: absolute;
                         background-color: #fff;
-                        box-shadow: 2px -4px 10px #ddd;
+                        box-shadow: 2px -2px 15px #ddd;
                         border-radius: 6px;
                         transform: translateY(-52px);
                         z-index: 3;
+                        animation: anime 250ms linear;
                         display: none;
+
+                        &.active {
+                            display: block;
+                        }
 
                         span {
                             font-size: 14px;
@@ -601,24 +606,51 @@ hr {
             align-items: center;
 
             &>div:nth-of-type(1) {
-                color: #f85a13;
-                cursor: pointer;
-                // flex-grow: 1;
-            }
-
-            &>div:nth-of-type(2) {
-                // flex-grow: 3.5;
-                cursor: pointer;
+                display: flex;
+                gap: 165px;
             }
 
             .search-div {
                 margin-top: 0;
+            }
+
+        }
+
+        @media all and (max-width:768px) {
+            .multi-city {
+                margin-bottom: 16px;
+
+                .delete {
+                    padding: 0.7px 10px;
+                    font-size: 32px;
+                }
+            }
+
+            .addsearchdiv {
+                width: 100%;
+                flex-flow: column-reverse;
+                gap: 20px;
+
+                &>div:nth-of-type(1) {
+                    width: 100%;
+                    justify-content: space-between;
+                    gap: 0;
+                }
+
+                .search-div {
+                    width: 100%;
+                    padding: 12px 0;
+                }
             }
         }
 
         @media all and (max-width:1024px) {
             .multi-city {
                 margin-bottom: 16px;
+            }
+
+            .addsearchdiv {
+                width: 100%;
             }
         }
     }
