@@ -151,8 +151,112 @@ hr {
   -webkit-box-shadow: 2px -2px 15px #ddd;
           box-shadow: 2px -2px 15px #ddd;
   border-radius: 6px;
-  padding: 10px;
+  padding: 32px;
   z-index: 3;
+  line-height: 40px;
+}
+
+.container .travelingModes .types-of-passengers .passenger-types > * {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .travelingModes .types-of-passengers .passenger-types > * > *:first-child > span:nth-of-type(1) {
+  font-size: 14px;
+  color: #212a30;
+}
+
+.container .travelingModes .types-of-passengers .passenger-types > * > *:first-child > span:nth-of-type(2) {
+  font-size: 12px;
+  line-height: 16px;
+  padding-left: 4px;
+  padding-right: 24px;
+  color: #9ba8b0;
+}
+
+.container .travelingModes .types-of-passengers .passenger-types > * > *:nth-child(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.container .travelingModes .types-of-passengers .passenger-types > * > *:nth-child(2) > span:nth-of-type(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #9ba8b0;
+  background: #fff;
+  border-radius: 4px;
+  padding: 0 !important;
+  width: 20px;
+  height: 20px;
+  color: #079;
+  cursor: pointer;
+}
+
+.container .travelingModes .types-of-passengers .passenger-types > * > *:nth-child(2) > span:nth-of-type(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+  width: 20px;
+  height: 20px;
+}
+
+.container .travelingModes .types-of-passengers .passenger-types > * > *:nth-child(2) > span:nth-of-type(3) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #9ba8b0;
+  background: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 0 !important;
+  width: 20px;
+  color: #079;
+  height: 20px;
+}
+
+@media all and (max-width: 513px) {
+  .container .travelingModes .types-of-passengers .passenger-types {
+    left: 5%;
+  }
 }
 
 .container .travelingModes .type-of-class .classes {
@@ -671,6 +775,41 @@ hr {
 }
 
 .container .multi_city .multi-city .date > .date-div:nth-of-type(1)::after {
+  display: none;
+}
+
+.container .multi_city .multi-city .date .date-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+.container .multi_city .multi-city .date .date-div > *:first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .multi_city .multi-city .date .date-div #date-input {
+  position: absolute;
+  background: white;
+  -webkit-box-shadow: 2px -2px 15px #ddd;
+          box-shadow: 2px -2px 15px #ddd;
+  border-radius: 5px;
+  top: 0%;
+  left: 0;
+  padding: 10px;
   display: none;
 }
 

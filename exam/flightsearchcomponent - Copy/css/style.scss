@@ -118,8 +118,78 @@ hr {
                 background-color: #fff;
                 box-shadow: 2px -2px 15px #ddd;
                 border-radius: 6px;
-                padding: 10px;
+                padding: 32px;
                 z-index: 3;
+                line-height: 40px;
+                // display: block;
+
+                & > * {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    & > *:first-child {
+
+                        & > span:nth-of-type(1) {
+                            font-size: 14px;
+                            color: #212a30;
+                        }
+                        & > span:nth-of-type(2) {
+                            font-size: 12px;
+                            line-height: 16px;
+                            padding-left: 4px;
+                            padding-right: 24px;
+                            color: #9ba8b0;
+                        }
+                    }
+                    & > *:nth-child(2) {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 5px;
+                            height: max-content;
+                        & > span:nth-of-type(1) {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border: 1px solid #9ba8b0;
+                            background: #fff;
+                            border-radius: 4px;
+                            padding: 0!important;
+                            width: 20px;
+                            height: 20px;
+                            color: #079;
+                            cursor: pointer;
+                        }
+                        & > span:nth-of-type(2) {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            font-size: 14px;
+                            font-weight: bold;
+                            width: 20px;
+                            height: 20px;
+                        }
+                        & > span:nth-of-type(3) {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border: 1px solid #9ba8b0;
+                            background: #fff;
+                            border-radius: 4px;
+                            cursor: pointer;
+                            padding: 0!important;
+                            width: 20px;
+                            color: #079;
+                            height: 20px;
+                        }
+                    }
+                }
+                @media all and (max-width:513px) {
+                    & {
+                        left: 5%;
+                    }
+                }
             }
         }
 
@@ -531,6 +601,28 @@ hr {
             .date {
                 &>.date-div:nth-of-type(1)::after {
                     display: none;
+                }
+                .date-div {
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+
+                    & > *:first-child {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    #date-input {
+                        position: absolute;
+                        background: white;
+                        box-shadow: 2px -2px 15px #ddd;
+                        border-radius: 5px;
+                        top: 0%;
+                        left: 0;
+                        padding: 10px;
+                        display: none;
+                    }
                 }
 
                 .type-of-class {

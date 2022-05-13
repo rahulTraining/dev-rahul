@@ -69,7 +69,7 @@ ways.forEach((w, index) => {
         searchComponent[index].classList.add('active')
         chevron.classList.remove('active');
     })
-    ways[2].click();
+    ways[0].click();
     ways[2].addEventListener('click', function () {
         typeofClass.style.display = "none";
         typesofBags.style.display = "none"
@@ -121,6 +121,10 @@ function clone() {
     var economyclassesHeading = document.querySelectorAll('#cloned #classes');
     var economyclassesSpans = document.querySelectorAll('#cloned .class-types span');
 
+    var cloneswapBtn = document.querySelectorAll('#cloned .swap-btn');
+    var cloneFrominput = document.querySelectorAll('#cloned .from-div .from-input');
+    var cloneToinput = document.querySelectorAll('#cloned .to-div .to-input');
+    
     economy.forEach((e, index) => {
         e.onclick = function () {
             economyclasses.forEach(ec => ec.classList.remove('active'))
@@ -148,6 +152,33 @@ function clone() {
     if (delete_x.length == 5) {
         addFlight.style.transform = "scale(0)"
     }
+
+    // swap for clone component
+
+    cloneswapBtn.forEach((csb,index) => {
+        csb.onclick = function() {
+            cloneFrominput.forEach((cfip,index) => {
+                if (cloneFrominput[index].placeholder == "From?") {
+                    cloneFrominput[index].placeholder = "To?"
+                } else {
+                    cloneFrominput[index].placeholder = "From?"
+                }
+                if (cloneToinput[index].placeholder == "To?") {
+                    cloneToinput[index].placeholder = "From?"
+                } else {
+                    cloneToinput[index].placeholder = "To?"
+                }
+            })
+        }
+    })
+    cloneswapBtn.onclick = function() {
+        if (cloneFrominput.placeholder == "From?") {
+            cloneFrominput.placeholder = "To?"
+        } else {
+            cloneFrominput.placeholder = "From?"
+        }
+    }
+
 }
 clone()
 
