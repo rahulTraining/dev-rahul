@@ -23,7 +23,7 @@ header{
     overflow: hidden;
 }
 header .logo img{
-    width: clamp(15vw,50%,26vw);
+    width: clamp(12vw,50%,24vw);
 }
 .menu {
     display: flex;

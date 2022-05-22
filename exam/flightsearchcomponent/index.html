@@ -19,22 +19,28 @@
     <div class="container">
         <h1>Where are you flying?</h1>
 
+        <!-- travelling modes -->
+
         <div class="travelingModes">
             <div class="type-of-trips">
-                <div class="trips"><div id="ways" style="display: inline-block;">One-way</div><span><i class="bi bi-chevron-down"></i></span></div>
-                <div class="trip-types">
-                    <span>One-way</span>
+                <div class="trips btns"><div id="ways" style="display: inline-block;">One-way</div><span><i class="bi bi-chevron-down"></i></span></div>
+                <div class="trip-types types">
                     <span>Round-trip</span>
+                    <span>One-way</span>
                     <span>Multi-city</span>
                     <span>Trip Builder</span>
                 </div>
             </div>
             <div class="types-of-passengers">
-                <div><div style="display: inline-block;cursor: pointer;">Adults</div><span style="margin-left: 10px;"><i class="bi bi-chevron-down"></i></span></div>
+                <div class="passengers btns"><span>0</span><div style="display: inline-block;margin-left: 10px;">adults</div><span style="margin-left: 10px;"><i class="bi bi-chevron-down"></i></span></div>
+                <div class="passenger-types types">
+                    We are working hard! <br>
+                    it will come soon
+                </div>
             </div>
             <div class="type-of-class">
-                <div class="classes"><div id="classes" style="display: inline-block;">Economy</div><span><i class="bi bi-chevron-down"></i></span></div>
-                <div class="class-types">
+                <div class="classes btns"><div id="classes" style="display: inline-block;">Economy</div><span><i class="bi bi-chevron-down"></i></span></div>
+                <div class="class-types types">
                     <span>Economy</span>
                     <span>Premium Economy</span>
                     <span>Business</span>
@@ -43,11 +49,108 @@
                 </div>
             </div>
             <div class="types-of-bags">
-                <div class="bags"><span>0</span><div id="bags" style="display: inline-block;margin-left: 10px;">bags</div><span><i class="bi bi-chevron-down"></i></span></div>
+                <div class="bags btns"><span>0</span><div id="bags" style="display: inline-block;margin: 0 10px;">bags</div><span><i class="bi bi-chevron-down"></i></span></div>
+                <div class="bag-types types">
+                    <div>
+                        <label>
+                            <span style="height: 16px; width: 16px;"><svg class="svg-image" role="img" style="width:inherit;height:inherit;line-height:inherit;color:inherit;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><path d="M126.65 92.48h-53.3a13.29 13.29 0 00-13.3 13.3v53.4a13.29 13.29 0 0013.3 13.3v6.7h13.3v-6.7h26.7v6.7h13.3v-6.7a13.29 13.29 0 0013.3-13.3v-53.3a13.38 13.38 0 00-13.3-13.4zM88.42 34.12a3.33 3.33 0 013.3-3.3H95v3.3h13.3v-3.3h3.3a3.33 3.33 0 013.3 3.3v53.3h10v-53.3a13.29 13.29 0 00-13.3-13.3H91.72a13.29 13.29 0 00-13.3 13.3v53.3h10z"></path></svg></span>
+                            <span style="font-size: 14px;">Carry-on bag</span>
+                        </label>
+                        <div adjustment>
+                            <span class="bi-dash"></span>
+                            <input readonly value="0">
+                            <span class="bi-plus"></i></span>
+                        </div>
+                    </div>
+                    <div>
+                        <label>
+                            <span style="height: 16px; width: 16px;"><svg class="svg-image" role="img" style="width:inherit;height:inherit;line-height:inherit;color:inherit;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><path d="M84.35 40.9h-11.9V25.1a15.83 15.83 0 0115.8-15.8H112a15.83 15.83 0 0115.8 15.8v15.8H116V25.1a3.9 3.9 0 00-3.9-3.9H108v3.9H92.05v-3.9h-3.8a3.9 3.9 0 00-3.9 3.9zm55 7.9h-55.2v17.7L96 78.3v34H68.35v-34l11.8-11.8V48.8h-19.6a15.83 15.83 0 00-15.8 15.8V167a15.83 15.83 0 0015.8 15.8v7.9h15.8v-7.9h47.3v7.3h15.8v-7.3a15.83 15.83 0 0015.8-15.8V64.5a15.9 15.9 0 00-15.9-15.7zm-61.1 27.6a3.9 3.9 0 003.9 3.9a4 4 0 003.9-3.9a3.9 3.9 0 10-7.8 0z"></path></svg></span>
+                            <span style="font-size: 14px;">Checked bag</span>
+                        </label>
+                        <div adjustment>
+                            <span class="bi-dash"></span>
+                            <input readonly value="0">
+                            <span class="bi-plus"></i></span>
+                        </div>
+                    </div>
+                    <div>
+                        <p style="font-size: 12px;color: #212a30;">Baggage per passenger</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- search component -->
+        <div class="search-component">
+            <div class="inputs">
+                <div class="from-div" style="position: relative;">
+                    <span style="display: inline-block;transform: rotate(-45deg);"><i class="fa-solid fa-jet-fighter"></i></span>
+                    <input class="from-input focus-input" type="text" placeholder="From?">
+                     <!-- search field -->
+                    <div class="search-field">
+                        <div class="d-flex">
+                            <div style="display: flex;flex-grow: 1;">
+                                <span style="display: inline-block;transform: rotate(-45deg);font-size:22px;margin-right: 12px;"><i class="fa-solid fa-jet-fighter"></i></span>
+                                <input type="text" placeholder="From?"/>
+                            </div>
+                            <span style="cursor: pointer;"><i style="font-size: 24px;" class="bi bi-x"></i></span>
+                        </div>
+                        <hr>
+                        <div class="d-flex fa-userr" style="padding: 14px 16px;">
+                            <span style="margin-right: 15px;font-size: 20px;"><i class="fa-solid fa-user"></i></span>
+                            <div>
+                                <p style="color:#007799">Sign in / Sign Up</p>
+                                <small>Access your searches on any device</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swap-btn">
+                    <i class="fa-solid fa-right-left"></i>
+                </div>
+                <div class="to-div">
+                    <span style="display: inline-block;transform: rotate(-45deg);"><i class="fa-solid fa-jet-fighter"></i></span>
+                    <input class="to-input focus-input" type="text" placeholder="To?">
+                    <!-- search field -->
+                    <div class="search-field">
+                        <div class="d-flex">
+                            <div style="display: flex;flex-grow: 1;">
+                                <span style="display: inline-block;transform: rotate(-45deg);font-size:22px;margin-right: 12px;"><i class="fa-solid fa-jet-fighter"></i></span>
+                                <input type="text" placeholder="To?"/>
+                            </div>
+                            <span style="cursor: pointer;"><i style="font-size: 24px;" class="bi bi-x"></i></span>
+                        </div>
+                        <hr>
+                        <div class="d-flex bi-globee">
+                            <div class="d-flex" style="flex-grow: 1;">
+                                <span class="bi-globe2"></span>
+                                <div>
+                                    <p style="font-weight: bold;">Can't decide where to go?</p>
+                                    <small>Explore your options with anywhere search</small>
+                                </div>
+                            </div>
+                            <span><i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="date">
+                <div class="date-div">
+                    <span><i class="fa-solid fa-calendar-days"></i></span>
+                    <input class="date-input" type="search" placeholder="mm/dd/yy">
+                </div>
+                <div class="date-div">
+                    <span><i class="fa-solid fa-calendar-days"></i></span>
+                    <input class="date-input" type="search" placeholder="mm/dd/yy">
+                </div>
+            </div>
+            <div class="search-div">
+                <label for="search"><i class="fa-solid fa-magnifying-glass"></i></label>
+                <input style="display: none;" id="search" class="search-btn" type="submit">
             </div>
         </div>
     </div>
-    
+
 <script src="./main.js"></script>
 </body>
 </html>

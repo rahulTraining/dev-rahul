@@ -6,14 +6,26 @@
   font-family: "Helvetica Neue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+hr {
+  border: 0.5px solid #e6ebef;
+}
+
 .container {
-  position: absolute;
-  left: 20%;
-  top: 30%;
+  width: 80%;
+  margin: 100px auto 0;
 }
 
 .container h1 {
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 .container .travelingModes {
@@ -29,6 +41,15 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 30px;
+  margin-bottom: 25px;
+}
+
+.container .travelingModes .types {
+  display: none;
+}
+
+.container .travelingModes .types.active {
+  display: block;
 }
 
 .container .travelingModes .type-of-trips {
@@ -67,11 +88,7 @@
   border-radius: 6px;
   -webkit-transform: translateY(-18px);
           transform: translateY(-18px);
-  display: none;
-}
-
-.container .travelingModes .type-of-trips .trip-types.active {
-  display: block;
+  z-index: 1;
 }
 
 .container .travelingModes .type-of-trips .trip-types span {
@@ -91,8 +108,18 @@
   font-weight: bold;
 }
 
-.container .travelingModes .type-of-class {
-  width: 180px;
+.container .travelingModes .types-of-passengers .passengers {
+  cursor: pointer;
+}
+
+.container .travelingModes .types-of-passengers .passenger-types {
+  position: absolute;
+  background-color: #fff;
+  -webkit-box-shadow: 2px -4px 10px #ddd;
+          box-shadow: 2px -4px 10px #ddd;
+  border-radius: 6px;
+  padding: 10px;
+  z-index: 3;
 }
 
 .container .travelingModes .type-of-class .classes {
@@ -128,11 +155,7 @@
   border-radius: 6px;
   -webkit-transform: translateY(-18px);
           transform: translateY(-18px);
-  display: none;
-}
-
-.container .travelingModes .type-of-class .class-types.active {
-  display: block;
+  z-index: 3;
 }
 
 .container .travelingModes .type-of-class .class-types span {
@@ -149,5 +172,459 @@
 .container .travelingModes .type-of-class .class-types span.activeBg {
   background-color: #e6ebef;
   font-weight: bold;
+}
+
+.container .travelingModes .types-of-bags {
+  cursor: pointer;
+  position: relative;
+}
+
+.container .travelingModes .types-of-bags .bag-types {
+  position: absolute;
+  left: -60%;
+  top: -100%;
+  width: 316px;
+  height: 174px;
+  background-color: #fff;
+  -webkit-box-shadow: 2px 2px 10px #ddd;
+          box-shadow: 2px 2px 10px #ddd;
+  border-radius: 6px;
+  padding: 33px;
+  line-height: 40px;
+  z-index: 3;
+}
+
+.container .travelingModes .types-of-bags .bag-types > * {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 66px;
+}
+
+.container .travelingModes .types-of-bags .bag-types [adjustment] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+
+.container .travelingModes .types-of-bags .bag-types .bi-dash {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  color: #079;
+  border-radius: 3px;
+  -webkit-box-shadow: 0px 0px 3px #ccc;
+          box-shadow: 0px 0px 3px #ccc;
+  font-size: 14px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .travelingModes .types-of-bags .bag-types [readonly] {
+  border: none;
+  outline: none;
+  width: 20px;
+  text-align: center;
+}
+
+.container .travelingModes .types-of-bags .bag-types .bi-plus {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  color: #079;
+  border-radius: 3px;
+  -webkit-box-shadow: 0px 0px 3px #ccc;
+          box-shadow: 0px 0px 3px #ccc;
+  font-size: 14px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media all and (max-width: 478px) {
+  .container .travelingModes .types-of-bags .bag-types {
+    position: initial;
+  }
+}
+
+.container .search-component {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  gap: 4px;
+  position: relative;
+}
+
+.container .search-component input::-webkit-input-placeholder {
+  font-size: 17px;
+  font-weight: 500;
+  color: black;
+}
+
+.container .search-component input:-ms-input-placeholder {
+  font-size: 17px;
+  font-weight: 500;
+  color: black;
+}
+
+.container .search-component input::-ms-input-placeholder {
+  font-size: 17px;
+  font-weight: 500;
+  color: black;
+}
+
+.container .search-component input::placeholder {
+  font-size: 17px;
+  font-weight: 500;
+  color: black;
+}
+
+.container .search-component .from-div, .container .search-component .swap-btn, .container .search-component .to-div, .container .search-component .date-div, .container .search-component .search-div, .container .search-component .search-div label {
+  cursor: pointer;
+}
+
+.container .search-component .inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+}
+
+.container .search-component .inputs > *:not(.swap-btn) {
+  background-color: #f0f3f5;
+  padding: 8px 0 8px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.container .search-component .inputs > *:not(.swap-btn) .search-field {
+  position: fixed;
+  background-color: #fff;
+  inset: 0;
+  z-index: 5;
+  -webkit-animation: anime 250ms linear;
+          animation: anime 250ms linear;
+  display: none;
+}
+
+.container .search-component .inputs > *:not(.swap-btn) .search-field.active {
+  display: block;
+}
+
+.container .search-component .inputs > *:not(.swap-btn) .search-field > *:first-child {
+  padding: 20px 12px;
+}
+
+.container .search-component .inputs > *:not(.swap-btn) .search-field > *:first-child input {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+.container .search-component .inputs > *:not(.swap-btn) .search-field > *:first-child input::-webkit-input-placeholder {
+  font-size: 17px;
+  font-weight: bolder;
+  color: #86817a;
+}
+
+.container .search-component .inputs > *:not(.swap-btn) .search-field > *:first-child input:-ms-input-placeholder {
+  font-size: 17px;
+  font-weight: bolder;
+  color: #86817a;
+}
+
+.container .search-component .inputs > *:not(.swap-btn) .search-field > *:first-child input::-ms-input-placeholder {
+  font-size: 17px;
+  font-weight: bolder;
+  color: #86817a;
+}
+
+.container .search-component .inputs > *:not(.swap-btn) .search-field > *:first-child input::placeholder {
+  font-size: 17px;
+  font-weight: bolder;
+  color: #86817a;
+}
+
+.container .search-component .inputs > *:not(.swap-btn) .search-field > .fa-userr:hover {
+  cursor: pointer;
+  background-color: #e6ebef;
+}
+
+.container .search-component .inputs > *:not(.swap-btn) .search-field .bi-globee {
+  cursor: pointer;
+  padding: 14px 16px;
+}
+
+.container .search-component .inputs > *:not(.swap-btn) .search-field .bi-globee:hover {
+  background-color: #079;
+  color: #f0f3f5;
+}
+
+.container .search-component .inputs > *:not(.swap-btn) .search-field .bi-globee:hover .fa-arrow-right {
+  color: #f0f3f5;
+}
+
+.container .search-component .inputs > *:not(.swap-btn) .search-field .bi-globee .bi-globe2 {
+  margin-right: 15px;
+  font-size: 24px;
+  background-color: #079;
+  color: #f0f3f5;
+  padding: 5px 6px;
+  border-radius: 5px;
+}
+
+.container .search-component .inputs > *:not(.swap-btn) .search-field .bi-globee .fa-arrow-right {
+  color: #079;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+@media all and (min-width: 1180px) {
+  .container .search-component .inputs > *:not(.swap-btn) .search-field {
+    position: absolute;
+    width: 532px;
+    height: 134px;
+    border-radius: 2px;
+    left: 0;
+    top: 0;
+    -webkit-box-shadow: 2px -4px 10px #ddd;
+            box-shadow: 2px -4px 10px #ddd;
+    z-index: 10;
+  }
+}
+
+.container .search-component .inputs .swap-btn {
+  background-color: #f0f3f5;
+  width: 25px;
+  height: 25px;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  outline: 4px solid white;
+  position: absolute;
+  right: 25px;
+  top: 42px;
+  z-index: 2;
+}
+
+.container .search-component .inputs .swap-btn i {
+  -webkit-transition: -webkit-transform 0.1s ease-in-out;
+  transition: -webkit-transform 0.1s ease-in-out;
+  transition: transform 0.1s ease-in-out;
+  transition: transform 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out;
+}
+
+.container .search-component .inputs .swap-btn i.active {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.container .search-component > *:not(.date) span i {
+  font-size: 1.4rem;
+}
+
+.container .search-component .date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+  position: relative;
+}
+
+.container .search-component .date > .date-div:nth-of-type(1)::after {
+  content: "";
+  position: absolute;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  width: 5px;
+  height: 30px;
+  background-color: #b3c1cb;
+  z-index: 0;
+}
+
+.container .search-component .date .date-div {
+  width: 100%;
+  background-color: #f0f3f5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 0 0 15px;
+  z-index: 2;
+}
+
+.container .search-component .date .date-div span i {
+  font-size: 1.4rem;
+}
+
+.container .search-component .date .date-input {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  border: 0;
+  outline: none;
+  padding: 18px 5px;
+  margin-left: 5px;
+  background-color: transparent;
+}
+
+.container .search-component .from-input,
+.container .search-component .to-input {
+  width: 90%;
+  border: 0;
+  outline: none;
+  padding: 10px 5px;
+  margin-left: 5px;
+  background-color: transparent;
+}
+
+.container .search-component .search-div {
+  background-color: #f85a13;
+  color: white;
+  font-weight: lighter;
+  margin-top: 6px;
+  border-radius: 5px;
+  padding: 14px 16px;
+  text-align: center;
+}
+
+.container .search-component .search-div:hover {
+  background-color: #e35b0e;
+}
+
+@media all and (max-width: 564px) {
+  .container .search-component .date {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container .search-component .date > .date-div:nth-of-type(1)::after {
+    display: none;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1022px) {
+  .container .search-component .inputs {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .container .search-component .inputs > * {
+    width: 100%;
+  }
+  .container .search-component .inputs .swap-btn {
+    outline: none;
+    position: initial;
+    width: 100px;
+    height: 100%;
+    -webkit-transform: initial;
+            transform: initial;
+  }
+  .container .search-component .inputs .swap-btn i {
+    font-size: 1.4rem;
+  }
+}
+
+@media all and (min-width: 1022px) {
+  .container .search-component {
+    grid-auto-flow: column;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .container .search-component .inputs {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .container .search-component .inputs > *:not(.swap-btn) {
+    width: 245px;
+  }
+  .container .search-component .inputs .swap-btn {
+    outline: none;
+    position: initial;
+    width: 50px;
+    height: 52px;
+    -webkit-transform: initial;
+            transform: initial;
+  }
+  .container .search-component .inputs .swap-btn i {
+    font-size: 1.4rem;
+  }
+  .container .search-component .search-div {
+    margin-top: 0;
+    padding: 17px 20px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
