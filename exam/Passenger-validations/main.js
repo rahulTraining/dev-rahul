@@ -2,7 +2,9 @@ var passengers = document.querySelector('.passengers');
 var cancel = document.querySelector('.confirm >*:first-child')
 var body = document.documentElement;
 var caret = document.querySelector('.caret');
-var travellers = document.querySelector('.travellers')
+var travellers = document.querySelector('.travellers');
+var submit = document.querySelector('#submit');
+var total = 0;
 
 passengers.addEventListener('click',function() {
     passengers.style.color = "rgb(29,106,211)";
@@ -108,6 +110,7 @@ var count = 0;
 var countAdult = 1;
 adultIncrement.onclick = function() {
     countAdult ++;
+    total = countAdult
     adultCount.textContent = countAdult;
     if (countAdult > 1) {
         adultDecrement.style.cssText = `background-color: rgb(232,240,254);color: rgb(60,126,217);pointer-events:auto`;
@@ -119,10 +122,12 @@ adultIncrement.onclick = function() {
     if (countAdult === 9) {
         adultIncrement.style.cssText = `background-color:rgb(231,232,232);color:rgb(177,178,179);pointer-events:none`
     }
+    //  getValue()
 }
 
 adultDecrement.onclick = function() {
     countAdult--;
+    total = countAdult
     adultCount.textContent = countAdult;
    
     if (countAdult < 9) {
@@ -137,6 +142,7 @@ adultDecrement.onclick = function() {
                                 </div>`
         adultText.style.cssText = `color:red`
     }
+    // getValue()
 }
 
 // children
@@ -153,6 +159,7 @@ childrenIncrement.addEventListener('click',function() {
         confirmDiv.innerHTML = `<div role="button">Cancel</div>
         <div role="button">Done</div>`
     count++;
+    total = count
     childrenCount.textContent = count;
 
     if (count === 7) {
@@ -166,10 +173,12 @@ childrenIncrement.addEventListener('click',function() {
     if (count >= 1) {
         childrenDecrement.classList.remove('disable');
     }
+    // getValue()
 })
 
 childrenDecrement.addEventListener('click',function() {
     count--;
+    total = count
     childrenCount.textContent = count;
 
     if (count == 0) {
@@ -184,4 +193,29 @@ childrenDecrement.addEventListener('click',function() {
         confirmDiv.innerHTML = `<div role="button">Cancel</div>
         <div role="button">Done</div>`
     }
+    //  getValue()
 })
+
+// sum  of all the values
+
+function getValue() {
+    var allInputs = document.querySelectorAll('.inputValue');
+    
+
+    // total += (adultCount.innerText + childrenCount);
+    var totalCount = document.querySelector('.count');
+    totalCount.innerText = total
+    // for (var i=1;i<=allInputs.length;i++) {
+    //     if (parseInt(allInputs[i].innerText)) {
+    //         total += parsInt(allInputs[i].innerText)
+    //         console.log(total);
+    //     }
+    // }
+    // var totalCount = document.querySelector('.count');
+    // totalCount.innerText = total
+    // console.log(total);
+}
+
+submit.onclick = function() {
+    getValue()
+}

@@ -27,7 +27,7 @@
                     <p>Adults</p>
                     <div class="adjust">
                         <span hover-text-minus="Remove adult" id="adultDecrement"><i class="fa-solid fa-minus"></i></span>
-                        <span id="adultCount">1</span>
+                        <span id="adultCount" class="inputValue">1</span>
                         <span hover-text-plus="Add adult" id="adultIncrement"><i class="fa-solid fa-plus"></i></span>
                     </div>
                 </div>
@@ -35,7 +35,7 @@
                     <div><p>Children</p> <small>Aged 2-11</small></div>
                     <div class="adjust">
                         <span class="disable" hover-text-minus="Remove child" id="childrenDecrement"><i class="fa-solid fa-minus"></i></span>
-                        <span id="childrenCount">0</span>
+                        <span id="childrenCount" class="inputValue">0</span>
                         <span hover-text-plus="Add child" id="childrenIncrement"><i class="fa-solid fa-plus"></i></span>
                     </div>
                 </div>
@@ -43,7 +43,7 @@
                     <div> <p>Infants</p> <small>In seat</small></div>
                     <div class="adjust">
                         <span hover-text-minus="Remove infant in seat"><i class="fa-solid fa-minus"></i></span>
-                        <span>0</span>
+                        <span class="inputValue">0</span>
                         <span hover-text-plus="Add infant in seat"><i class="fa-solid fa-plus"></i></span>
                     </div>
                 </div>
@@ -51,13 +51,13 @@
                     <div><p>Infants</p> <small>On lap</small></div>
                     <div class="adjust">
                         <span hover-text-minus="Remove infant in lap"><i class="fa-solid fa-minus"></i></span>
-                        <span>0</span>
+                        <span class="inputValue">0</span>
                         <span hover-text-plus="Add infant in lap"><i class="fa-solid fa-plus"></i></span>
                     </div>
                 </div>
                 <div class="confirm">
                     <div role="button">Cancel</div>
-                    <div role="button">Done</div>
+                    <div role="button" id="submit">Done</div>
                 </div>
                 <!-- <div class="alert"></div> -->
             </div>
