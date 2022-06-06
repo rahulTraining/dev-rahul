@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox-error</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .insurance {
+            height: 200vh;
+            position: relative;
+            padding: 0 1rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.1rem;
+        }
+
+        .checkbox-error,
+        .insurance-error {
+            display: inline-block;
+            background-color: red;
+            color: white;
+            font-size: 10px;
+            padding: 3px 5px;
+            border-radius: 5px;
+            top: 20px;
+            display: none;
+        }
+        .second-checkbox {
+            position: absolute;
+            top: 50%;
+        }
+        .submit {
+            position: relative;
+            width: 100%;
+            padding: 0 1rem;
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .checkbox-error {
+            position: absolute;
+            top: 20px;
+        }
+
+        button[type="submit"] {
+            border: none;
+            outline: none;
+            background-color: orange;
+            color: white;
+            padding: 6px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <div class="insurance">
+            <label for="i_check">
+                <input type="checkbox" id="i_check">Select insurance policy
+            </label>
+            <div class="insurance-error">
+                Please select insurance
+            </div>
+            <div class="second-checkbox">
+                <label>
+                    <input type="checkbox" name="two" id="second-checkbox">select checkbox
+                </label>
+                <div class="insurance-error second-checkbox">
+                    Please select checkbox
+                </div>
+            </div>
+        </div>
+        <div class="submit">
+            <label for="tc_check">
+                <input type="checkbox" id="tc_check">I agree terms and conditions
+            </label>
+            <div class="checkbox-error">
+                Please accept terms & conditions
+            </div>
+            <button type="submit">Confirm</button>
+        </div>
+    </form>
+
+
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
+    <script>
+
+        var submit = document.querySelector('[type="submit"]');
+        var tc_check = document.getElementById("tc_check");
+        var i_check = document.getElementById("i_check");
+        var checkbox_error = document.querySelector('.checkbox-error');
+        var i_check = document.querySelector('#i_check');
+        var insurance_error = document.querySelector('.insurance-error');
+        var second_checkboxError = document.querySelector('.insurance-error.second-checkbox');
+        var sc_check = document.getElementById("second-checkbox")
+
+        submit.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            if (i_check.checked && tc_check && sc_check) {
+                    insurance_error.style.display = "none";
+                    checkbox_error.style.display="none";
+                    second_checkboxError.style.display="none";
+                    console.log('::: Submitted');
+                }
+                if (!i_check.checked) {
+                    insurance_error.style.display = "inline-block";
+                    // insurance_error.scrollIntoView(0,0)
+                    insurance_error.scrollIntoView({behavior:"smooth",block:"end",inline:"nearest"})
+                } else {
+                    insurance_error.style.display = "none";
+                }
+                if (!sc_check.checked) {
+                    second_checkboxError.style.display = "inline-block";
+                    second_checkboxError.scrollIntoView({behavior:"smooth",block:"center",inline:"center"})
+                } else {
+                    second_checkboxError.style.display = "none";
+                }
+                if (!tc_check.checked) {
+                    checkbox_error.style.display = "block";
+                    checkbox_error.scrollIntoView({behavior:"smooth",block:"center"})
+                } else {
+                    checkbox_error.style.display = "none";
+                }
+        })
+
+
+        // with jquery
+
+        $(function () {
+            $(submit).click(function () {
+                if (i_check.checked && tc_check && sc_check) {
+                    insurance_error.style.display = "none";
+                    checkbox_error.style.display="none";
+                    second_checkboxError.style.display="none";
+                    console.log('::: Submitted');
+                }
+                if (!i_check.checked) {
+                    insurance_error.style.display = "inline-block";
+                    $('html, body').animate({
+                        scrollTop: ($(insurance_error).offset().top - 300)
+                    }, 800);
+                } else {
+                    insurance_error.style.display = "none";
+                }
+                if (!sc_check.checked) {
+                    second_checkboxError.style.display = "inline-block";
+                    $('html, body').animate({
+                        scrollTop: ($(second_checkboxError).offset().top - 300)
+                    }, 800);
+                } else {
+                    second_checkboxError.style.display = "none";
+                }
+                if (!tc_check.checked) {
+                    checkbox_error.style.display = "block";
+                    $('html, body').animate({
+                        scrollTop: ($(checkbox_error).offset().top - 300)
+                    }, 800);
+                } else {
+                    checkbox_error.style.display = "none";
+                }
+            })
+        })
+
+
+    </script>
+
+</body>
