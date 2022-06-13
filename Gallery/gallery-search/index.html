@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Photo-Gallery</title>
+</head>
+
+<body>
+    <h1>Photo-Gallery</h1>
+    <input id="search-input" type="text" placeholder="search your favorites...">
+    <!-- <div class="btns">
+        <button onclick="getPhoto()">click1</button>
+        <button>click2</button>
+        <button>click3</button>
+        <button>click4</button>
+    </div> -->
+    <div id="photos-container"></div>
+    <div class="loader">
+        <img src="./loader.gif" alt="loader">
+    </div>
+    <template id="user-data-template">
+        <div class="card">
+            <img src="" alt="" class="image" width=300 height=200>
+        </div>
+    </template>
+
+    <script>
+        var search_input = document.getElementById("search-input");
+        var photos_container = document.getElementById('photos-container');
+        var user_data_template = document.getElementById("user-data-template");
+        var loader = document.querySelector('.loader')
+
+        let gallery = [];
+
+        function fetchData() {
+            fetch('https://picsum.photos/v2/list?limit=30').then(response => response.json())
+            .then(data => {
+                console.log(data);
+                gallery = data.map(photo => {
+                    const card = user_data_template.content.cloneNode(true).children[0];
+                    var image = card.querySelector(".image");
+
+                    image.src = photo.download_url;
+                    image.alt = photo.author;
+                    image.title = photo.author;
+
+                    // Object.assign(image, {
+                    //     src   :photo.download_url,
+                    //     alt   :photo.author,
+                    //     title :photo.author
+                    // })
+
+                    photos_container.appendChild(card)
+
+                    return { img: photo.download_url, author: photo.author, element: card }
+                })
+            })
+        }
+
+        setTimeout(function () {
+            loader.style.display = "none"
+            fetchData()
+        }, 2000)
+
+        search_input.addEventListener('input', function () {
+            inputValue = search_input.value.toLowerCase();
+            gallery.forEach(photo => {
+                const isVisible = photo.author.toLowerCase().includes(inputValue);
+                loader.style.display = "block"
+                document.body.style.overflow = "hidden"
+                setTimeout(function () {
+                    loader.style.display = "none"
+                    document.body.style.overflow = "auto"
+                    photo.element.classList.toggle("hide", !isVisible)
+                }, 2000)
+            })
+        })
+
+    </script>
+</body>
+
+</html>

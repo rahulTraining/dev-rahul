@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.heading {
+    background-color: rgb(248,140,0);
+    padding: 10px 15px;
+    margin: 15px auto;
+    width: 97%;
+    border-radius: 4px;
+}
+.heading h1 {
+    color: white;
+    text-align: center;
+    font-size: clamp(16px, -14px + 8.333vw, 32px);
+}
+.data-container {
+    width: 97%;
+    margin: auto;
+}
+.card > *:first-child {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}

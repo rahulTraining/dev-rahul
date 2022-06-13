@@ -80,6 +80,8 @@
         searchInput.addEventListener('input', e => {
             value = e.target.value.toLowerCase();
             users.forEach(user => {
+                console.log(':::userrr',user);
+                
                 const isVisible = user.name.toLowerCase().includes(value) ||
                 user.email.toLowerCase().includes(value);
 

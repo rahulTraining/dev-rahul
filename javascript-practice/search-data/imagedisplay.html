@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Image display</title>
+	<style type="text/css">
+		body {
+			text-align: center;
+		}
+
+		.container {
+			width: 80%;
+			margin: 20px auto;
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			gap: 10px;
+		}
+
+		img {
+			width: 180px;
+			height: 180px;
+		}
+
+		.hide {
+			display: none;
+		}
+
+		.show {
+			display: block;
+		}
+	</style>
+</head>
+
+<body>
+	<input type="text" placeholder="search your item">
+	<button type="submit">Search</button>
+	<div class="container"></div>
+
+	<script>
+		var container = document.querySelector('.container');
+		let gallery = [];
+
+		gallery1 = fetch("data.json").then(res => res.json())
+		.then(data => {
+			data.map(photo => {
+				gallery.push(`<img src=${photo.Imageurl} alt=${photo.dress} />`);
+				container.innerHTML = gallery
+
+				return {imageDiv:photo.Imageurl,df:photo.dress,element:gallery}
+			})
+		})
+		console.log(gallery);
+		
+	</script>
+</body>
+
+</html>

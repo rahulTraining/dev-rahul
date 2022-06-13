@@ -67,6 +67,7 @@
             var li = document.querySelectorAll('li');
 
             for(i=0;i<li.length;i++){
+                console.log(li[i]);
                 if(li[i].innerHTML.toUpperCase().includes(filter)){
                     li[i].style.display="list-item";
                     // li[i].style.display="block";

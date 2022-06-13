@@ -1,0 +1,177 @@
+[
+    {
+        "id":1,
+        "dot":".",
+        "name":"Vaishno Devi Temple",
+        "place":"Jammu",
+        "image_url":"https://www.transindiatravels.com/wp-content/uploads/vaishno-devi-temple-jammu.jpg"
+    },
+    {
+        "id":2,
+        "dot":".",
+        "name":"Kedarnath Temple",
+        "place":"Uttarakhand",
+        "image_url":"https://www.transindiatravels.com/wp-content/uploads/kedarnath-temple-uttarakhand.jpg"
+    },
+    {
+        "id":3,
+        "dot":".",
+        "name":"Golden Temple",
+        "place":"Punjab",
+        "image_url":"https://www.transindiatravels.com/wp-content/uploads/golden-temple-punjab.jpg"
+    },
+    {
+        "id":4,
+        "dot":".",
+        "name":"Shri Padmanabha Swamy Temple",
+        "place":"Kerala",
+        "image_url":"https://www.transindiatravels.com/wp-content/uploads/shri-padmanabha-swamy-temple-kerala.jpg"
+    },
+    {
+        "id":5,
+        "dot":".",
+        "name":"Badrinath Temple",
+        "place":"Uttarakhand",
+        "image_url":"https://www.transindiatravels.com/wp-content/uploads/badrinath-temple-uttarakhand.jpg"
+    },
+    {
+        "id":6,
+        "dot":".",
+        "name":"Dwarkadish Temple",
+        "place":"Gujarat",
+        "image_url":"https://www.transindiatravels.com/wp-content/uploads/dwarkadish-temple-gujarat.jpg"
+    },
+    {
+        "id":7,
+        "dot":".",
+        "name":"Amarnath Cave Temple",
+        "place":"Jammu & Kashmir",
+        "image_url":"https://www.transindiatravels.com/wp-content/uploads/amarnath-cave-temple-jammu-and-kashmir.jpg"
+    },
+    {
+        "id":8,
+        "dot":".",
+        "name":"Tirupati Balaji Temple",
+        "place":"Andhra Pradesh",
+        "image_url":"https://www.transindiatravels.com/wp-content/uploads/tirupati-balaji-temple-andhra-pradesh.jpg"
+    },
+    {
+        "id":9,
+        "dot":".",
+        "name":"Somnath Temple",
+        "place":"Gujarat",
+        "image_url":"https://www.transindiatravels.com/wp-content/uploads/somnath-temple-gujrat.jpg"
+    },
+    {
+        "id":10,
+        "dot":".",
+        "name":"Kashi Vishwanath Temple",
+        "place":"Uttar Pradesh",
+        "image_url":"https://www.transindiatravels.com/wp-content/uploads/kashi-vishwanath-temple-uttar-pradesh.jpg"
+    },
+    {
+        "id":11,
+        "dot":".",
+        "name":"Gangotri Temple",
+        "place":"Uttarakhand",
+        "image_url":"https://www.transindiatravels.com/wp-content/uploads/gangotri-temple-uttarakhand.jpg"
+    },
+    {
+        "id":12,
+        "dot":".",
+        "name":"Sabarimala Temple",
+        "place":"Kerala",
+        "image_url":"https://www.transindiatravels.com/wp-content/uploads/sabarimala-temple-kerala.jpg"
+    },
+    {
+        "id":13,
+        "dot":".",
+        "name":"The Konark Sun Temple",
+        "place":"Odisha",
+        "image_url":"https://www.transindiatravels.com/wp-content/uploads/the-konark-sun-temple-odisha.jpg"
+    },
+    {
+        "id":14,
+        "dot":".",
+        "name":"Shri Jagannatha Temple",
+        "place":"Odisha",
+        "image_url":"https://www.transindiatravels.com/wp-content/uploads/shri-jagannatha-temple-odisha.jpg"
+    },
+    {
+        "id":15,
+        "dot":".",
+        "name":"Shirdi Sai Baba Temple",
+        "place":"Maharashtra",
+        "image_url":"https://www.transindiatravels.com/wp-content/uploads/shirdi-sai-baba-temple-maharashtra.jpg"
+    },
+    {
+        "id":16,
+        "dot":".",
+        "name":"Yamunotri Temple",
+        "place":"Uttarakhand",
+        "image_url":"https://www.transindiatravels.com/wp-content/uploads/yamunotri-temple-uttarakhand.jpg"
+    },
+    {
+        "id":17,
+        "dot":".",
+        "name":"Khajuraho Temple",
+        "place":"Madhya Pradesh",
+        "image_url":"https://www.transindiatravels.com/wp-content/uploads/khajuraho-temple-madhya-pradesh.jpg"
+    },
+    {
+        "id":18,
+        "dot":".",
+        "name":"Sanchi Stupa",
+        "place":"Madhya Pradesh",
+        "image_url":"https://www.transindiatravels.com/wp-content/uploads/sanchi-stupa-madhya-pradesh.jpg"
+    },
+    {
+        "id":19,
+        "dot":".",
+        "name":"Siddhivinayak Temple",
+        "place":"Maharashtra",
+        "image_url":"https://www.transindiatravels.com/wp-content/uploads/siddhivinayak-temple-maharashtra.jpg"
+    },
+    {
+        "id":20,
+        "dot":".",
+        "name":"Ramanathaswamy Temple",
+        "place":"Tamil Nadu",
+        "image_url":"https://www.transindiatravels.com/wp-content/uploads/ramanathaswamy-temple-tamil-nadu.jpg"
+    },
+    {
+        "id":21,
+        "dot":".",
+        "name":"Karni Mata Temple",
+        "place":"Rajasthan",
+        "image_url":"https://www.transindiatravels.com/wp-content/uploads/karni-mata-temple-rajasthan.jpg"
+    },
+    {
+        "id":22,
+        "dot":".",
+        "name":"Banke Bihari Temple",
+        "place":"Uttar Pradesh",
+        "image_url":"https://www.transindiatravels.com/wp-content/uploads/banke-bihari-temple-uttar-pradesh.jpg"
+    },
+    {
+        "id":23,
+        "dot":".",
+        "name":"Shri Krishna Janmabhoomi Temple",
+        "place":"Uttar Pradesh",
+        "image_url":"https://www.transindiatravels.com/wp-content/uploads/shri-krishna-janmabhoomi-temple-uttar-pradesh.jpg"
+    },
+    {
+        "id":24,
+        "dot":".",
+        "name":"Guruvayoor Temple",
+        "place":"Kerala",
+        "image_url":"https://www.transindiatravels.com/wp-content/uploads/guruvayoor-temple-kerala.jpg"
+    },
+    {
+        "id":25,
+        "dot":".",
+        "name":"Meenakshi Temple",
+        "place":"Tamil Nadu",
+        "image_url":"https://www.transindiatravels.com/wp-content/uploads/meenakshi-temple-tamil-nadu.jpg"
+    }
+]
