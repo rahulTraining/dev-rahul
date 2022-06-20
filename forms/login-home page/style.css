@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+form {
+  width: clamp(315px, 50vw, 490px);
+  margin: 50px auto 0;
+  display: none;
+}
+.signUp-form > *:first-child {
+  font-size: clamp(22px, 7.8vw, 30px);
+  text-align: center;
+  margin-bottom: 20px;
+}
+small {
+  color: hsl(240, 50%, 50%);
+  text-decoration: underline;
+  cursor: pointer;
+}
+small:hover {
+  color: hsl(240, 100%, 50%);
+}
+h2 {
+  text-align: center;
+  background: linear-gradient(to right, aquamarine, aqua, darkcyan);
+  opacity: 0.75;
+  padding: 10px 0;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+h2 + span {
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: gray;
+  position: relative;
+}
+h2 + span::before,
+h2 + span::after {
+  content: "";
+  display: inherit;
+  width: 150px;
+  height: 0.5px;
+  background-color: gray;
+  position: absolute;
+  top: 50%;
+}
+h2 + span::after {
+  right: 0;
+}
+.sign-up div,
+.sign-in div {
+  position: relative;
+}
+.sign-up label,
+.sign-in label {
+  font-size: 15px;
+  position: absolute;
+  top: 50%;
+  left: 3%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  transition: 0.3s ease-in-out;
+}
+input {
+  width: 100%;
+  border: 1px solid rgba(128, 128, 128, 0.4);
+  border-radius: 2px;
+  outline: none;
+  display: block;
+  padding: 14px 10px;
+  margin: 10px auto;
+  font-size: 14px;
+}
+input[type="submit"] {
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(to right, red, rgba(0, 0, 0, 0.8));
+  background-size: 150%;
+  color: white;
+  cursor: pointer;
+}
+input[type="submit"]:hover {
+  background-size: auto;
+}
+input:focus + label {
+  top: 22%;
+  left: 1.5%;
+  font-size: 12px;
+  padding: 0px 0 5px;
+  color:blue;
+  transition:  0.3s ease-in-out;
+}
+form.active {
+  display: block;
+}
+.error-msg {
+    font-size: 12px;
+    color: red;
+    /* display: none; */
+}
+.error-msg.active {
+  display: block;
+}

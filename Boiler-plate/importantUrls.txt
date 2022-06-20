@@ -1,0 +1,17 @@
+https://www.javascripttutorial.net/
+
+https://www.tektutorialshub.com/angulr
+
+https://www.programiz.com/javascript/get-started
+
+<!-- copy paste validation -->
+https://stackoverflow.com/questions/50138910/angular-on-paste-event-get-content
+
+https://stackoverflow.com/questions/49087405/storing-html-inputs-in-javascript-array
+
+https://code-boxx.com/show-error-messages-html-forms/
+
+<-- regular expressions -->
+https://www3.ntu.edu.sg/home/ehchua/programming/howto/Regexe.html#:~:text=%5Cw%2B%29*%20is%20used%20to,zA-Z0-9_%5D%20
+
+/^((\d{5}-\d{4})|(\d{5})|([A-Z]\d[A-Z])|([A-Z]\d[A-Z]\s\d[A-Z]\d))$/

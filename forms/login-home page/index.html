@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sign-in and sign-up with home page</title>
+</head>
+
+<body>
+    <form action="" class="signUp-form">
+        <div>Create a FREE Account</div>
+        <h2>Sign-Up</h2>
+        <span>or</span>
+        <div>Already have an account? <small>Sign in</small></div>
+        <div class="sign-up">
+            <div>
+                <input autocomplete="off" type="text" id="fname">
+                <label for="fname">First Name</label>
+            </div>
+            <div>
+                <input autocomplete="off" type="text" id="lname" name="name">
+                <label for="lname">Last Name</label>
+            </div>
+            <div>
+                <input autocomplete="off" type="text" id="signUp_passw" name="pass">
+                <label for="signUp_passw">Password</label>
+            </div>
+            <div>
+                <input autocomplete="off" type="password" id="signUp_confirm_passw" name="pass">
+                <label for="signUp_confirm_passw">Confirm password</label>
+            </div>
+            <input type="submit" class="Sign-up-submit" onclick="signUp()" value="Sign-up">
+        </div>
+    </form>
+    <form action="" class="signIn-form">
+        <h2>Sign-In</h2>
+        <div class="sign-in">
+            <div>
+                <input autocomplete="off" type="text" id="username">
+                <label for="username">User Name or Email</label>
+            </div>
+            <div>
+                <input autocomplete="off" type="password" id="password">
+                <label for="password">Password</label>
+            </div>
+            <input type="submit" class="Sign-in-submit" onclick="signIn()" value="Sign-In">
+        </div>
+        <div>Don't have an account? <small>Sign Up</small></div>
+    </form>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
