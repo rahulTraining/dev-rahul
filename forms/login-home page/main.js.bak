@@ -9,6 +9,14 @@ var signupLabels = document.querySelectorAll('.signUp-form label');
 var nameInputs = document.querySelectorAll(`[name="name"]`);
 var passInputs = document.querySelectorAll(`[name="pass"]`);
 
+Window.onbeforeunload() = function(){
+	JSON.parse(localStorage.getItem('signupdetails'));
+	console.log('loaded')
+}
+
+window.onbeforeunload = (event) => {
+  console.log('page is fully loaded');
+};
 // var users = {firstName:[],lastName:[],password:[],confirmPassword:[]};
 // const signupuserValues = {
 //     firstName: "",

@@ -52,12 +52,8 @@ A <script> tag that appears in the <head> of the document and doesn't have a def
 A <link rel="stylesheet"> tag that does not have a disabled or media attribute.
 A <link rel="import"> tag that does not have an async attribute.
 
-
- <---- push to object array ----->
- https://www.geeksforgeeks.org/how-to-push-an-array-into-the-object-in-javascript/#:~:text=In%20order%20to%20push%20an,and%20returns%20the%20new%20length.
- https://www.geeksforgeeks.org/difference-between-array-and-array-of-objects-in-javascript/
- 
  <--- Access nested objects ---->
+ 
  https://stackoverflow.com/questions/9463233/how-to-access-nested-json-data
  
  var myStorage = {
@@ -73,42 +69,6 @@ A <link rel="import"> tag that does not have an async attribute.
 }
 
  var gloveBoxContents = "myStorage.car.inside['glove box']";
-
-
-<--- break loop --->
-
-var found = false;
-for(var i = 0; i < vendors.length; i++) {
-    if (vendors[i].Name == 'Magenic') {
-        found = true;
-        break;
-    }
-}
-
------ anethor way -----
-function name() {
-    try {
-        ...
-
-        //get out of here
-        if (a == 'stop')
-            throw "exit";
-
-        ...
-    } catch (e) {
-        // TODO: handle exception
-    }
-}
-https://stackoverflow.com/questions/3330193/early-exit-from-function
-
-<-- upload image using javascript --->
-https://stackoverflow.com/questions/31710127/javascript-image-upload-and-display
-
-<--- edit button for input filed --->
-https://stackoverflow.com/questions/45125094/using-jquery-and-a-button-to-toggle-editable-field-and-class-name-jquery-html
-
-
-
 
 
 

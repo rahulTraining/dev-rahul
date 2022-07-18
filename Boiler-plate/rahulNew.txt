@@ -1,0 +1,351 @@
+checkout.scss 259 iEagle
+
+
+checkout.js 4315 iEagle
+/*For showing and hiding the cc-Card image*/
+function showCardImg() {
+    $('div.click-to-top span').css('display','block');
+}
+function imgClose() {
+    $('.demoCard').hide();
+}
+
+
+
+
+<--!cc verification page -->
+
+console.log($(".cap-btn"),"cap");
+    //  function toggleCard() {
+    //      if ($(".bankAmount").hasClass("activeHeight")) {
+    //          $(".bankAmount").removeClass("activeHeight");
+    //      } else {
+    //          $(".bankAmount").addClass("activeHeight");
+    //      }
+    //      $(".cap-btn").toggleClass('fa-angle-down');
+    //  }
+    // if ($(".otpDiv")) {
+    //     $(".ccNum_heading").click(function () {
+    //         alert("its clicked")
+    //         toggleCard();
+    //     })
+    // }
+    console.log($(".ccNum_heading"),$(".cap-btn"),"jquery")
+    $(document).ready(function () {
+        $(".ccNum_heading").click(function () {
+            console.log("its comming")
+            $(".bankAmount").toggle();
+        })
+    })
+	
+	
+	$('#verifyCCChargeId' + index).show();
+	
+	
+	function showCcError(value) {
+    $("." + value).slideDown(300);
+}
+function hideCcError(value) {
+    $("." + value).slideUp(300);
+}
+function bankPhoneNum(){
+    var numberInput = document.querySelector('.numberInput .form-control');
+    if ($('.numberInput')){
+        if (numberInput.value.length > 0 || numberInput.value.length < 10){
+            showCcError('cc_error_num');
+        }
+        if (numberInput.value.length == 0 || numberInput.value.length == 10){
+            hideCcError('cc_error_num')
+        }
+    }
+}
+function ccAmount(){
+    var ccAmount = document.querySelector('.cc-amount .form-control');
+    if ($('.cc-amount')){
+        if (ccAmount.value.length > 0 || ccAmount.value.length < 2){
+            showCcError('cc_error_amount');
+        }
+        if (ccAmount.value.length == 0 || ccAmount.value.length >= 2){
+            hideCcError('cc_error_amount')
+        }
+    }
+}
+
+
+var numberInput = document.querySelectorAll('.numberInput .form-control');
+var ccAmount = document.querySelectorAll('.cc-amount .form-control');
+var ccErrorNum = document.querySelectorAll(".numberInput .cc_error_num");
+var ccErrorAmt = document.querySelectorAll(".cc-amount .cc_error_amount");
+
+numberInput.forEach(function (numInput,index) {
+    numInput.addEventListener("change",function () {
+        console.log(numInput);
+        if (this.value.length > 0 || this.value.length < 10) {
+            console.log(this.value.length,"this.value.length bankphonenumber show");
+            ccErrorNum[index].style.display="block"
+            console.log(ccErrorNum[index])
+        }
+        if (this.value.length == 0 || this.value.length >= 10) {
+            console.log(this.value.length,"this.value.length bankphonenumber hide")
+            ccErrorNum[index].style.display="none";
+        }
+    })
+})
+ccAmount.forEach(function (ccAmt,index) {
+    ccAmt.addEventListener("change",function () {
+        console.log(ccAmt);
+        if (this.value.length > 0 || this.value.length < 2) {
+            console.log(this.value.length,"this.value.length ccAmount show")
+            ccErrorAmt[index].classList.add("active");
+        }
+        if (this.value.length == 0 || this.value.length >= 2) {
+            console.log(this.value.length,"this.value.length ccAmount hide")
+            ccErrorAmt[index].classList.remove("active");
+        }
+    })
+})
+
+var longName = $('#' + id).val();
+var numberInput = document.querySelector('.numberInput .form-control');
+
+var ccAmount = document.querySelector('.cc-amount .form-control');
+
+log.info("@@@IGE-5993 :: cardNumber : ${creditCardChargeFormModel.creditCardCharges[index].cardNumber} ,chargedAmount : ${creditCardChargeFormModel.creditCardCharges[index].chargedAmount},  bankNumber : ${creditCardChargeFormModel.creditCardCharges[index].bankPhoneNumber}")
+checkout controller groovy.
+
+log.info("chargedAmount-->"+ chargedAmount)  credit card service mpl 75-line
+log.info("@@@IGE-5993 :: "+ it.ccChargedAmount + "chargedAmount : "+ chargedAmount) 82-line
+
+route_btns.forEach(function (btn, index) {
+        btn.addEventListener('click', function () {
+            console.log('btn-working');
+            route_btns.forEach(function (b) { b.classList.remove('active-btns') });
+            btn.classList.add('active-btns')
+        });
+        route_btns[0].click();
+    });
+
+mvn process-resources -Penv-dev -DskipTests -DbuildNumber=1 -Dmin -Dskip.yarn
+
+You will receive an separate email with the Lounge Voucher and other details of the Lounge of your transit stay.
+
+chanakya1.m@indianeagle.com
+kaleshaaaa
+
+nagaraju.v@indianeagle.com
+Yakshith@2708
+
+<---- fullStory credentials ---->
+
+itools@indianeagle.com
+Cde34rfv
+
+
+filter images with temples,
+
+static image search filter and data-filter
+
+data-filter with different apis
+
+signin and sign up form with home page & user login details checked with stored data to login
+
+user sign in to store data
+
+show suggestions list while typing in input field
+ 
+form data javascript
+
+edit filled form
+
+
+
+pattern="[1-9]{1}[0-9]{9}"
+
+(cut)="$event.preventDefault()" (copy)="$event.preventDefault()" (paste)="$event.preventDefault()"
+/^((\d{5}-\d{4})|(\d{5})|([A-Z]\d[A-Z])|([A-Z]\d[A-Z]\s\d[A-Z]\d))$/
+/^\d{5}(-\d{4})?$/
+
+
+
+http://54.237.217.178:8761/
+
+
+<--! -------- login and passwords ----------------->
+chanakya1.m@indianeagle.com
+kaleshaaaa
+
+nagaraju.v@indianeagle.com
+Yakshith@2708
+
+<--! -------- login and passwords ----------------->
+
+fourInputs.forEach(fi => {
+    fi.insertAdjacentHTML('afterend', `<div class="error-msg">Please enter valid details</div>`)
+})
+var errorMsg = document.querySelectorAll('.error-msg');
+
+https://fsty.io/v/qLZ3snBB
+
+// savedTravelersList_get.forEach(function(td,index) {
+    //     console.log(td,'each td value from local data',index);
+    //     if (td === fullName.toLowerCase()) {
+    //     // if (td.includes(fullName.toLowerCase())) {
+    //         console.log('This traveller name is already exists');
+    //         var warningMessage = "This traveler name already exists in this list";
+    //         $("#showMessageDivId").text(warningMessage).slideDown(500);
+    //         foundTravelerName = true;
+    //         // break;
+    //         // $("#showMessageDivId").text(warningMessage);
+    //     } else {
+    //         console.log('condition not checked');
+    //         // $("#showMessageDivId").text("").slideUp(500);
+    //         $("#showMessageDivId").text("This traveler name not exists in this list").slideDown(500);
+    //     }
+    // })
+    // try {
+    //     // var savedTravelersList_get = JSON.parse(localStorage.getItem('travelersList'));
+    //     savedTravelersList_get.forEach(function(td,index) {
+    //         if(td === fullName.toLowerCase()) {
+    //             console.log('This traveller name already exists')
+    //             return true;
+    //         } else {
+    //             console.log('condition not checked')
+    //             return false;
+    //         }
+    //     })
+    // } catch (err) {
+    //     console.log("Condition checking, Oops there has been an error::::::",err);
+    //     // return err;
+    // }
+
+// function validateTravelerName(id,index) {
+//     console.log(id,'input id')
+//     var lastName = $('#' + id).val();
+//     var adultFName = $('#adultFirstNameInput' + index).next().val();console.log($('#adultFirstNameInput' + index),'adultFName')
+//     var childFName = $('#childFirstNameInput' + index).next().val();console.log($('#childFirstNameInput' + index),'adultFName')
+//     var infantLapFName = $('#infantLapFirstNameInput' + index).next().val();console.log($('#infantLapFirstNameInput' + index),'adultFName')
+//     var infantSeatFName = $('#infantSeatFirstNameInput' + index).next().val();console.log($('#infantSeatFirstNameInput' + index),'adultFName')
+//     var adultFullName = adultFName + " " + lastName;
+//     var childFullName = childFName + " " + lastName;
+//     var infantLapFullName = infantLapFName + " " + lastName;
+//     var infantSeatFullName = infantSeatFName + " " + lastName;
+//
+//     var foundTravelerName = false;
+//     var savedTravelersList_get = JSON.parse(localStorage.getItem('travelersList'));
+//     console.log(savedTravelersList_get,'savedTravelersList_get')
+//
+//     for(var i = 0; i < savedTravelersList_get.length; i++) {
+//         if (savedTravelersList_get[i] === adultFullName.toLowerCase() || savedTravelersList_get[i] === childFullName.toLowerCase() ||
+//             savedTravelersList_get[i] === infantLapFullName.toLowerCase() || savedTravelersList_get[i] === infantSeatFullName.toLowerCase()) {
+//             console.log(savedTravelersList_get[i],'each tds value from local data',i);
+//             console.log('This traveller name is already exists  :u');
+//             var warningMessage = "This traveler name already exists in this list";
+//             $("#TravelerNameMessageDivId").text(warningMessage).css('color','red').addClass('active');
+//             foundTravelerName = true;
+//             return true;
+//         } else {
+//             console.log('This traveler name not exists');
+//             $("#TravelerNameMessageDivId").removeClass('active');
+//         }
+//         // else {
+//         //     console.log('condition not checked');
+//         //     //$("#showMessageDivId").text("").slideUp(500);
+//         //     $("#showMessageDivId").text("This traveler name not exists in this list").slideDown(500);
+//         //     return false;
+//         // }
+//     }
+// }
+
+--- original-----------
+function validateTravelerName(id,index,travelerKey,erId,paxType) {
+    console.log(id,'input id,index',index);
+    var lastName = $.trim($('#' + id).val());
+    var adultFName = jQuery.trim($('#adultFirstNameInput' + index).next().val());
+    var childFName = jQuery.trim($('#childFirstNameInput' + index).next().val());
+    var infantLapFName = jQuery.trim($('#infantLapFirstNameInput' + index).next().val());
+    var infantSeatFName = jQuery.trim($('#infantSeatFirstNameInput' + index).next().val());
+    var adultFullName = adultFName + " " + lastName;
+    var childFullName = childFName + " " + lastName;
+    var infantLapFullName = infantLapFName + " " + lastName;
+    var infantSeatFullName = infantSeatFName + " " + lastName;
+    var foundTravelerName = false;
+    var savedTravelersList_get = JSON.parse(localStorage.getItem('travelersList'));
+
+    for(var i = 0; i < savedTravelersList_get[travelerKey].length; i++) {
+        console.log(savedTravelersList_get[travelerKey][i],'savedTravelersList_get[travelerKey] i');
+        if (savedTravelersList_get[travelerKey][i] === adultFullName.toLowerCase() || savedTravelersList_get[travelerKey][i] === childFullName.toLowerCase() ||
+            savedTravelersList_get[travelerKey][i] === infantLapFullName.toLowerCase() || savedTravelersList_get[travelerKey][i] === infantSeatFullName.toLowerCase()) {
+            console.log('This traveller name is already exists  :u');
+            var warningMessage = "This "+paxType+" traveler name is already exists.";
+            $('#' + erId + index).text(warningMessage).addClass('active');
+            foundTravelerName = true;
+            return true;
+        } else {
+            console.log('This traveler name not exists');
+            $('#' + erId + index).removeClass('active');
+        }
+    }
+}
+
+----
+
+function validateTravelerFName(id,index,travelerKey,erId,paxType) {
+    var firstName = $.trim($('#' + id).val());
+    var adultLName = jQuery.trim($('#adultLN' + index).val());
+    var childLName = jQuery.trim($('#childLN' + index).val());
+    var infantLapLName = jQuery.trim($('#infantLN' + index).val());
+    var infantSeatLName = jQuery.trim($('#infantLN' + index).val());
+    var adultFullName = firstName + " " + adultLName;
+    var childFullName = firstName + " " + childLName;
+    var infantLapFullName = firstName + " " + infantLapLName;
+    var infantSeatFullName = firstName + " " + infantSeatLName;
+    var foundTravelerName = false;
+    var savedTravelersList_get = JSON.parse(localStorage.getItem('travelersList'));
+
+    for(var i = 0; i < savedTravelersList_get[travelerKey].length; i++) {
+        // console.log(savedTravelersList_get[travelerKey][i],'savedTravelersList_get[travelerKey] i');
+        if (savedTravelersList_get[travelerKey][i] === adultFullName.toLowerCase() || savedTravelersList_get[travelerKey][i] === childFullName.toLowerCase() ||
+            savedTravelersList_get[travelerKey][i] === infantLapFullName.toLowerCase() || savedTravelersList_get[travelerKey][i] === infantSeatFullName.toLowerCase()) {
+            console.log('This traveller name is already exists  :u');
+            var warningMessage = "This "+paxType+" traveler name is already exists.";
+            $('#' + erId + index).text(warningMessage).addClass('active');
+            foundTravelerName = true;
+            return true;
+        } else {
+            console.log('This traveler name not exists');
+            $('#' + erId + index).removeClass('active');
+        }
+    }
+}
+
+function validateTravelerLName(id,index,travelerKey,erId,paxType) {
+    var lastName = $.trim($('#' + id).val());
+    var adultFName = jQuery.trim($('#adultFN' + index).val());
+    var childFName = jQuery.trim($('#childFN' + index).val());
+    var infantLapFName = jQuery.trim($('#infantFN' + index).val());
+    var infantSeatFName = jQuery.trim($('#infantFN' + index).val());
+    var adultLFullName = adultFName + " " + lastName;
+    var childLFullName = childFName + " " + lastName;
+    var infantLLapFullName = infantLapFName + " " + lastName;
+    var infantLSeatFullName = infantSeatFName + " " + lastName;
+    var foundTravelerName = false;
+    var savedTravelersList_get = JSON.parse(localStorage.getItem('travelersList'));
+
+    for(var i = 0; i < savedTravelersList_get[travelerKey].length; i++) {
+        // console.log(savedTravelersList_get[travelerKey][i],'savedTravelersList_get[travelerKey] i');
+        if (savedTravelersList_get[travelerKey][i] === adultLFullName.toLowerCase() || savedTravelersList_get[travelerKey][i] === childLFullName.toLowerCase() ||
+            savedTravelersList_get[travelerKey][i] === infantLLapFullName.toLowerCase() || savedTravelersList_get[travelerKey][i] === infantLSeatFullName.toLowerCase()) {
+            console.log('This traveller name is already exists  :u');
+            var warningMessage = "This "+paxType+" traveler name is already exists.";
+            $('#' + erId + index).text(warningMessage).addClass('active');
+            foundTravelerName = true;
+            return true;
+        } else {
+            console.log('This traveler name not exists');
+            $('#' + erId + index).removeClass('active');
+        }
+    }
+}
+
+
+

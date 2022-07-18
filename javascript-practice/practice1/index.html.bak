@@ -77,12 +77,11 @@
     <button style="cursor: pointer;">click-here</button>
 
 
-	<input type="text" id="text">
+	<input type="text" id="text
 	<input type="text" id="text">
 
 	<script>
-		var inputs = document.querySelectorAll("#text");
-		console.log(inputs)
+		var inputs = document.querySelectorAll("#text")
 		inputs.forEach((inp,index)=> {
 			inp.addEventListener('change',function(e) {
 			var tv = inputs[0].value + " " + inputs[1].value

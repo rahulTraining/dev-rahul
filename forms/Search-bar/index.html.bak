@@ -105,6 +105,23 @@
         // var gloveBoxContents = "myStorage.car.inside['glove box']";
 		// https://stackoverflow.com/questions/9463233/how-to-access-nested-json-data
 		
+		var data = {
+    "id": 1,
+    "name": "abc",
+    "addresses": [{
+        "streetName": "cde",
+        "streetId": 2
+    }, {
+        "streetName": "xyz",
+        "streetId": 102
+    }, ]
+}
+
+data2 = data["addresses"]
+for (let i of data2) {
+    console.log(data2[i]["streetName"]);
+	console.log(i,'i')
+}
     </script>
 </body>
 

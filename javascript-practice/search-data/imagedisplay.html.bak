@@ -41,7 +41,7 @@
 
 	<script>
 	function inputChange(name) {
-		console.log("'" + name + "'",'name')
+		console.log(" + name + ",'name')
 	}
 		var container = document.querySelector('.container');
 		let gallery = [];

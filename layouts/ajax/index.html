@@ -24,30 +24,66 @@
 
     <script>
 
-        // function load(){
-        //     const xhttp = new XMLHttpRequest();
-        //     xhttp.onload = function(){
-        //         document.querySelector('p').innerHTML=""
-        //         document.querySelector('.loading-bar').classList.add('active')
-        //         setTimeout(()=>{
-        //             document.querySelector('.loading-bar').classList.remove('active')
-        //             document.querySelector('p').innerHTML = this.responseText
-        //         },2000)
+        function load() {
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function() {
+                document.querySelector('p').innerHTML=""
+                document.querySelector('.loading-bar').classList.add('active')
+                setTimeout(()=>{
+                    document.querySelector('.loading-bar').classList.remove('active')
+                    document.querySelector('.content').innerHTML = this.responseText
+                },2000)
+            }
+            xhttp.open('GET',"rahul-ui.html",true);
+            xhttp.send()
+        }
+
+        // xhr.onreadystatechange = function () {
+        //     if (this.readyState == 4 && this.status == 200) {
+        //         console.log(this.responseText);
         //     }
-        //     xhttp.open('GET',"data.txt");
-        //     xhttp.send()
         // }
 
-        $(function(){
-            $('button').click(function(){
-                $('p').text('')
-                $('.loading-bar').addClass('active')
-                setTimeout(()=>{
-                    $('.loading-bar').removeClass('active')
-                    $('p').load('data.txt').draggable()
-                },2000)
+        // xhr.onreadystatechange = function() {
+        //     if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+        //         // Request finished. Do processing here.
+        //     }
+        // }
+
+        
+        var from1 = document.querySelectorAll(".content #one");
+        var to1 = document.querySelectorAll("#oneO");
+        console.log(from1);
+        console.log(to1);
+
+
+        from1.forEach((from, index) => {
+            from.addEventListener("click", function () {
+                to1.forEach(t => t.classList.remove("active"))
+                to1[index].classList.add("active")
+            })
+        });
+
+        var from2 = document.querySelectorAll("#two");
+        var to2 = document.querySelectorAll("#twoO");
+
+        from2.forEach((from, index) => {
+            from.addEventListener("click", function () {
+                to2.forEach(t => t.classList.remove("active"))
+                to2[index].classList.add("active")
             })
         })
+
+        // $(function(){
+        //     $('button').click(function(){
+        //         $('p').text('')
+        //         $('.loading-bar').addClass('active')
+        //         setTimeout(()=>{
+        //             $('.loading-bar').removeClass('active')
+        //             $('p').load('data.txt').draggable()
+        //         },2000)
+        //     })
+        // })
 
         // $.ajax({
         //     url: "data.txt",
@@ -58,7 +94,6 @@
         //         $( "#weather-temp" ).html( "<strong>" + result + "</strong> degrees" );
         //     }
         // });
-
 
 
 
