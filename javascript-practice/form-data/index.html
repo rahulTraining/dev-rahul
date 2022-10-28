@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form-data</title>
+</head>
+
+<body>
+    <form id="form">
+        <input type="text" name="text1" value="foo">
+        <input type="text" name="text2" value="bar">
+        <input type="text" name="text3" value="baz">
+        <input type="checkbox" name="check" checked disabled>
+
+        <button id="submitbtn">Submit</button>
+    </form>
+
+    <div id="output"></div>
+
+    <script>
+        const form = document.getElementById('form');
+        const formData = new FormData(form);
+        const output = document.getElementById('output');
+        const submitbtn = document.getElementById('submitbtn')
+
+
+        //append
+        formData.append('firstname','rahul');
+        formData.append('lastname','reddy');
+        formData.append('lastname','katkuri');
+
+        // entries
+
+        for (const pair of formData.entries()) {
+            output.innerText += `${pair[0]}: ${pair[1]}\n`
+        }
+
+        //without entries
+        // for (const [key,value] of formData) {
+        //     output.innerText += `${key}:${value}\n`
+        // }
+
+        //get
+
+        console.log(formData.get('firstname'));
+
+        //getAll
+
+        console.log(formData.getAll('lastname'));
+
+        //has
+
+        console.log(formData.has('firstname'));
+        console.log(formData.has('middlename'));
+
+        //keys
+
+        for (const key of formData.keys()) {
+            console.log(key,'=>key');
+        }
+
+        //values
+
+        for (const value of formData.values()) {
+            console.log(value,'=>value');
+        }
+
+        submitbtn.onclick = function(e) {
+            e.preventDefault();
+
+            console.log(...formData.entries());
+        }
+    </script>
+
+</body>
+
+</html>

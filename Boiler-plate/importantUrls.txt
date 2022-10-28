@@ -75,30 +75,7 @@ A <link rel="import"> tag that does not have an async attribute.
  var gloveBoxContents = "myStorage.car.inside['glove box']";
 
 
-<--- break loop --->
 
-var found = false;
-for(var i = 0; i < vendors.length; i++) {
-    if (vendors[i].Name == 'Magenic') {
-        found = true;
-        break;
-    }
-}
-
------ anethor way -----
-function name() {
-    try {
-        ...
-
-        //get out of here
-        if (a == 'stop')
-            throw "exit";
-
-        ...
-    } catch (e) {
-        // TODO: handle exception
-    }
-}
 https://stackoverflow.com/questions/3330193/early-exit-from-function
 
 <-- upload image using javascript --->
@@ -106,6 +83,12 @@ https://stackoverflow.com/questions/31710127/javascript-image-upload-and-display
 
 <--- edit button for input filed --->
 https://stackoverflow.com/questions/45125094/using-jquery-and-a-button-to-toggle-editable-field-and-class-name-jquery-html
+
+<---- https://www.intricatecloud.io ---->
+
+*****tymleaf condition****
+xmlns:th="http://www.w3.org/1999/xhtml
+
 
 
 

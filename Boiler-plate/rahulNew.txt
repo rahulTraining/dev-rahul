@@ -1,3 +1,11 @@
+///// ---------search results
+
+PricingServiceImpl.java,
+l.no: 1068
+FlightUtils.updateTransactionFee(flight, packageTransactionFee);
+
+---------------->
+
 checkout.scss 259 iEagle
 
 
@@ -129,16 +137,6 @@ mvn process-resources -Penv-dev -DskipTests -DbuildNumber=1 -Dmin -Dskip.yarn
 
 You will receive an separate email with the Lounge Voucher and other details of the Lounge of your transit stay.
 
-chanakya1.m@indianeagle.com
-kaleshaaaa
-
-nagaraju.v@indianeagle.com
-Yakshith@2708
-
-<---- fullStory credentials ---->
-
-itools@indianeagle.com
-Cde34rfv
 
 
 filter images with temples,
@@ -166,18 +164,6 @@ pattern="[1-9]{1}[0-9]{9}"
 /^\d{5}(-\d{4})?$/
 
 
-
-http://54.237.217.178:8761/
-
-
-<--! -------- login and passwords ----------------->
-chanakya1.m@indianeagle.com
-kaleshaaaa
-
-nagaraju.v@indianeagle.com
-Yakshith@2708
-
-<--! -------- login and passwords ----------------->
 
 fourInputs.forEach(fi => {
     fi.insertAdjacentHTML('afterend', `<div class="error-msg">Please enter valid details</div>`)
@@ -348,4 +334,124 @@ function validateTravelerLName(id,index,travelerKey,erId,paxType) {
 }
 
 
+
+----------dummy
+.att.registeredEmailError {
+  .tooltip {
+    top: 120px !important;
+  }
+}
+
+@media only screen and (min-width: 1013px) and (max-width: 1487px) {
+  .att.registeredEmailError {
+    .tooltip {
+      top: 130px !important;
+    }
+  }
+}
+
+@media only screen and (min-width: 991px) and (max-width: 1012px) {
+  .att.registeredEmailError {
+    .tooltip {
+      top: 150px !important;
+    }
+  }
+}
+
+else{
+        setTimeout(function() {
+            $('#sentPassword').hide();
+            showSignInFormAtSR();
+        }, 5000);
+    }
+	
+9/21/2022
+http://localhost:8585/flight/checkout?reviewId=60f34f19-3189-4999-85f4-cc52ca8df3fc-21161909
+
+
+
+ console.log(totalAmountValue,'totalamountvalue',amount);
+$('#pplTotalAmountId').text(amount);
+$('#fareComponentPplAmount').text(amount);
+console.log($('#pplTotalAmountId').text(),parseInt($('#pplTotalAmountId').text()),parseInt(amount))
+$('#totalPriceDiv').text('$' + ((totalAmountValue) - $('#pplTotalAmountId').text()));
+
+6:38pm
+
+if (jQuery(this).is(":checked")) {
+ console.log('checked'+this.id)
+ console.log('checked'+$('#'+this.id).val());
+ var pplAmnt = parseInt($('#'+this.id).val());
+ console.log(pplAmnt,typeof pplAmnt,'pplamnt')
+ pplTotalAmt = pplTotalAmt + pplAmnt;
+ console.log("pplTotalAmt",pplTotalAmt);
+ $('#pplTotalAmountId').text(pplTotalAmt);
+  $('#tempPPLAmountInput').val(pplTotalAmt);
+ c11111++;
+ 
+ 
+ 
+ List<Map<String, LoungeDetails>> showLoungeDetails(Flight flight) {
+
+         List<Map<String, LoungeDetails>> finalLoungeDetails = new ArrayList<>()
+         Map<String, LoungeDetails> finalLoungeDetailsMap1 =  [:]
+         Map<String, LoungeDetails> finalLoungeDetailsMap2 =  [:]
+         LoungeDetails  loungeDetails = new  LoungeDetails()
+         LoungeDetails  loungeDetailsTwo = new  LoungeDetails()
+         loungeDetails.relaxingCouch = "true"
+         loungeDetails.chargingStation = true
+         loungeDetails.draughtBeer = true
+         loungeDetails.cost = new BigDecimal(35)
+         loungeDetails.terminal ='3'
+         /*loungeDetails.connectionTime = 5
+         loungeDetails.airportCode = LocationUtils.getAirportNameWithCode('DXB')*/
+         log.warn("checking the lounge cost"+ loungeDetails.cost )
+         loungeDetailsTwo.relaxingCouch = "true"
+         loungeDetailsTwo.chargingStation = true
+         loungeDetailsTwo.draughtBeer = true
+         loungeDetailsTwo.cost = new BigDecimal(35)
+         loungeDetailsTwo.terminal ='5'
+         /*loungeDetailsTwo.connectionTime = 7
+         loungeDetailsTwo.airportCode = LocationUtils.getAirportNameWithCode('HYD')*/
+         log.warn("checking the lounge cost"+ loungeDetails.cost )
+         finalLoungeDetailsMap1.put("OW", loungeDetails)
+         finalLoungeDetailsMap2.put("RT", loungeDetailsTwo)
+         finalLoungeDetails.add(finalLoungeDetailsMap1)
+         finalLoungeDetails.add(finalLoungeDetailsMap2)
+         return  finalLoungeDetails
+		 
+		 
+		 long legOneConnectionTime = 0L --> return finalLoungeDetails comment
+		 
+		 addObject('loungeTripType', "BOTH") ,addObject('loungeTripType', loungeTripType)
+		 
+		 
+		 IGE-6320-PPL-2
+		 increasedAmtId
+		 
+		 http://localhost:8585/flight/checkout?reviewId=138ccf45-f83b-4ac1-85c4-04ce3bab530a-26180533
+		 
+		 
+		 LoungeDetails showLoungeDetails(Flight flight) {
+        List<LoungeDetails> finalLoungeDetails = new ArrayList<>()
+        LoungeDetails loungeDetails = new LoungeDetails()
+        LoungeDetails loungeDetailsTwo = new LoungeDetails()
+        loungeDetails.relaxingCouch = "true"
+        loungeDetails.chargingStation = true
+        loungeDetails.draughtBeer = true
+        loungeDetails.cost = new BigDecimal(35)
+        loungeDetails.terminal = '3'
+        return loungeDetails
+    }
+	
+	function addOrRemoveTravalerToPPL(){
+        jQuery('input:checkbox[id^="pplCheckbox"]', "#plazaPremiumLounge").each(function() {
+                if (jQuery(this).is(":checked")) {
+                   console.log('checked'+this.id)
+                }else{
+                   console.log('un else checked'+this.id)
+                }
+
+            });
+}
 

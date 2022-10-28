@@ -1,0 +1,54 @@
+****how to fix sticky header on scroll?--------
+
+window.addEventListener('scroll', function(){
+	var header = document.querySelector('header');
+	header.classList.toggle('sticky', window.scrollY > 0);
+});
+
+*******width ----------
+clamp(1024px,85%,100%), max(1024px,calc(85% + 100px))
+
+******<--- break loop --->
+
+var found = false;
+for(var i = 0; i < vendors.length; i++) {
+    if (vendors[i].Name == 'Magenic') {
+        found = true;
+        break;
+    }
+}
+
+----- anethor way -----
+function name() {
+    try {
+        ...
+
+        //get out of here
+        if (a == 'stop')
+            throw "exit";
+
+        ...
+    } catch (e) {
+        // TODO: handle exception
+    }
+}
+
+*********is element exist  ------------
+
+function isElementExist(elementId) {
+    var element = $('#' + elementId);
+    return element != null && element != undefined && element.length > 0;
+}
+
+function isClassElementExists(elementId) {
+    var element = $('.' + elementId);
+    return element != null && element != undefined && element.length > 0;
+}
+
+
+*********** change annotation name in git ************
+$ git config --global user.name "John Smith"
+
+mvn compile -Dskip.yarn
+
+
