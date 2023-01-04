@@ -90,6 +90,26 @@ https://stackoverflow.com/questions/45125094/using-jquery-and-a-button-to-toggle
 xmlns:th="http://www.w3.org/1999/xhtml
 
 
+<--- git --->
+https://devconnected.com/category/software-engineering/
+
+
+<---- angular error ----->
+https://www.c-sharpcorner.com/article/how-to-fix-ps1-can-not-be-loaded-because-running-scripts-is-disabled-on-this-sys/
+
+<---- 20 best chrome extensions ---->
+https://marker.io/blog/chrome-extensions-for-web-developers
+
+<---thymeleaf doc --->
+https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#standard-expression-syntax
+
+
+<--- convert nodelist to array --->
+https://www.geeksforgeeks.org/how-to-convert-a-dom-nodelist-to-an-array-using-javascript/
+
+
+
+
 
 
 

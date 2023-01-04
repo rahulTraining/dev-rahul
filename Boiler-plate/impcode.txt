@@ -51,4 +51,43 @@ $ git config --global user.name "John Smith"
 
 mvn compile -Dskip.yarn
 
+<--- checkboxes checked with id started with ppl ---->
+jQuery('input:checkbox[id^="ppl"]', "#plazaPremiumLounge").each(function() {
+
+<--normal check --->
+travelChecked = $('#travelId').is(':checked');
+
+<-- checkboxes duolictae issue --->
+var idString = '';
+var tripTypeDiv
+tripTypeDiv = ",#onwardTripDiv";
+jQuery('input:checkbox[id^="ppl"]'+tripTypeDiv).each(function() {
+	   var currentId = this.id;
+   if (jQuery(this).is(":checked")) {
+	   if (!(idString.includes(currentId))) {
+		   console.log('checked'+this.id);
+		   console.log('checked'+$('#'+this.id).val());
+		   var pplAmnt = parseInt($('#'+this.id).val());
+		   console.log(pplAmnt,typeof pplAmnt,'pplamnt');
+		   pplTotalAmt = pplTotalAmt + pplAmnt;
+		   console.log("pplTotalAmt",pplTotalAmt);
+		   $('#pplTotalAmountId').text(pplTotalAmt);
+		   $('#tempPPLAmountInput').val(pplTotalAmt);
+		   c11111++;
+		   idString = idString+ '-' + currentId;
+	   }
+   }
+ });
+ 
+ <--- print array size --->
+ <span th:text="${#lists.size(searchInfo.multiCityInfoList)}">[Engine Size]</span> in themeleafe
+
+<--- for firefox css --->
+@-moz-document url-prefix() {}
+
+<---- loders ---->
+https://lottiefiles.com/
+
+<-- star rating functionality JS-->
+https://codepen.io/naulacambra/pen/gbzvPa
 
