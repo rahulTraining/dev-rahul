@@ -108,6 +108,10 @@ https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#standard-express
 https://www.geeksforgeeks.org/how-to-convert-a-dom-nodelist-to-an-array-using-javascript/
 
 
+<--- generate random number as percentage --->
+https://www.educative.io/answers/how-to-generate-a-random-number-between-a-range-in-javascript
+
+
 
 
 

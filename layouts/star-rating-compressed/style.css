@@ -1,0 +1,188 @@
+#FeedbackOverlay {
+    position: fixed;
+    /* display: none; */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:black;
+    z-index: 2;
+    opacity: .5;
+    cursor: pointer;
+    }
+    #feedback-formA,#feedback-formB{
+   z-index: 9;
+   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 2px 0px, rgba(14, 30, 37, 0.32) 0px 2px 12px 0px;
+   background: white;
+   border-radius: 7px;
+   padding: 50px;
+   transition: transform 0.3s ease-in-out;
+}
+#feedback-formA,#feedback-formB {
+   position: absolute;
+   left: 50%;
+   transform: translateX(-50%);
+}
+#feedback-formA {
+   top: 10px;
+}
+#feedback-formB {
+   /* top: 310px; */
+   top: 10px;
+}
+.text-center {
+   text-align:center;
+}
+.heading{
+   font-weight: bold;
+   font-size: 20px;
+   width: 350px;
+margin-left: 20px;
+}
+.feedback-text{
+   font-size: 15px;
+}
+.star{
+   background: #ccc;
+   cursor: pointer;
+   margin: 5px;
+   display: inline-block;
+   transition: all 0.3s ease-in-out;
+}
+.rating-stars ul {
+ list-style-type:none;
+ padding:0;
+}
+.rating-stars ul > li.star {
+ display:inline-block;
+ 
+}
+
+.cancelbtn{
+   background: none;
+   border: 1px solid #ccc;
+}
+
+.Finalstatement{
+   float: left;
+ align-items: center;
+}
+.ReviewBtn, .CancelBtn2{
+   width: 320px;
+   margin-bottom: 10px;
+}
+.CanceleSubmitBtns{
+   display: none;
+}
+textarea{
+   resize: none;
+   outline: none;
+   background-color: #f6fdfd;
+   padding: 10px;
+}
+textarea::placeholder{
+   color: #ccc;
+}
+.feedbacktext{
+   color:#3b9dcf
+}
+.FinalDismiss{
+   background: none;
+}
+.fa-exclamation-circle{
+   font-size:22px;
+   color:rgb(114 109 109);
+   transform: rotate(180deg); 
+}
+.Trustpilotlink{
+   color: rgb(73, 72, 72);
+   text-decoration: none
+}
+.component1, .component2, .component3, .component4, .component5, .component6{
+   display: none;
+}
+.submitdataheigh>a{
+   color: white;
+   text-decoration: none
+}
+/* reusedcode */
+.btn-orenge{
+   color: white;
+   background-color: #f26d22;
+   border-color: rgba(0,0,0,0);
+}
+.btn-lg{
+   padding: 7px 36px;
+   font-size: 18px;
+   line-height: 1.33333;
+   border-radius: 6px;
+}
+.smr {
+ margin-right: 5px
+}
+.text-green-light {
+ color: #39B64A;
+}
+.mml {
+ margin-left: 10px
+}
+.xlpl {
+ padding-left: 20px;
+}
+.xlpr {
+ padding-right: 20px;
+}
+.border2 {
+ border: 2px solid #ddd;
+}
+.radiusFour {
+ border-radius: 4px !important;
+}
+.xlmt{
+ margin-top: 20px;
+}
+.lmt {
+ margin-top: 15px;
+}
+.mmt {
+ margin-top: 10px
+}
+.no-border {
+ border: none;
+}
+.xlmb {
+ margin-bottom: 20px;
+}
+.mmr {
+ margin-right: 10px
+}
+.pointer {
+ cursor: pointer
+}
+
+
+.red {
+   background-color: red;
+   transition: all 0.3s ease-in-out;
+}
+.orange {
+   background-color: orange;
+   transition:  all 0.3s ease-in-out;
+}
+.green {
+   background-color: green;
+   transition: all 0.3s ease-in-out;
+}
+.gray {
+   background-color: #ccc;
+   transition: all 0.3s ease-in-out;
+}
+.block {
+   display: block;
+}
+.none {
+   display: none;
+}
+/* .form1,.form2 {
+   display: none;
+} */
