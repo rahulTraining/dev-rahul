@@ -48,36 +48,27 @@ if  (randomNo > 50) {
 
 function forms(ss) {
     var clicked = 0;
+    const starsArray = Array.prototype.slice.call(ss);
     ss.forEach(function (s, i) {
         s.addEventListener('click', function () {
             if (i === 0) {
-                console.log('true');
                 ss.forEach(function (s) { s.className = "star" })
                 ss[0].classList.add('red');
                 clicked = 1;
             }
             if (i === 1) {
                 ss.forEach(function (s) { s.className = "star" })
-                ss[0].classList.add("red");
-                ss[1].classList.add("red");
-
+                starsArray.slice(0,2).forEach(s => s.classList.add("red"))
                 clicked = 2;
             }
             if (i === 2) {
                 ss.forEach(function (s) { s.className = "star" })
-                ss[0].classList.add("orange")
-                ss[1].classList.add("orange")
-                ss[2].classList.add("orange")
-
+                starsArray.slice(0,3).forEach(s => s.classList.add("orange"))
                 clicked = 3
             }
             if (i === 3) {
                 ss.forEach(function (s) { s.className = "star" })
-                ss[0].classList.add("green")
-                ss[1].classList.add("green")
-                ss[2].classList.add("green")
-                ss[3].classList.add("green")
-
+                starsArray.slice(0,4).forEach(s => s.classList.add("green"))
                 clicked = 4
             }
             if (i === 4) {
@@ -90,25 +81,18 @@ function forms(ss) {
             if (i === 0) {
                 ss.forEach(function (s) { s.className = "star" })
                 ss[0].classList.add('red')
-
             }
             if (i === 1) {
                 ss.forEach(function (s) { s.className = "star" })
-                ss[0].classList.add("red");
-                ss[1].classList.add("red")
+                starsArray.slice(0,2).forEach(s => s.classList.add("red"))
             }
             if (i === 2) {
                 ss.forEach(function (s) { s.className = "star" })
-                ss[0].classList.add("orange")
-                ss[1].classList.add("orange")
-                ss[2].classList.add("orange")
+                starsArray.slice(0,3).forEach(s => s.classList.add("orange"))
             }
             if (i === 3) {
                 ss.forEach(function (s) { s.className = "star" })
-                ss[0].classList.add("green")
-                ss[1].classList.add("green")
-                ss[2].classList.add("green")
-                ss[3].classList.add("green")
+                starsArray.slice(0,4).forEach(s => s.classList.add("green"))
             }
             if (i === 4) {
                 ss.forEach(function (s) { s.className = "green star" })
@@ -117,105 +101,74 @@ function forms(ss) {
         s.addEventListener('mouseleave', function () {
             if (i === 0) {
                 ss[0].className = "star gray"
-
                 if (clicked === 1) {
                     ss[0].className = "star red"
                 }
                 if (clicked === 2) {
-                    ss[0].className = "star red"
-                    ss[1].className = "star red"
+                    starsArray.slice(0,2).forEach(s => s.className = "star red")
                 }
                 if (clicked === 3) {
-                    ss[0].className = "star orange"
-                    ss[1].className = "star orange"
-                    ss[2].className = "star orange"
+                    starsArray.slice(0,3).forEach(s => s.className = "star orange")
                 }
                 if (clicked === 4) {
-                    ss[0].className = "star green"
-                    ss[1].className = "star green"
-                    ss[2].className = "star green"
-                    ss[3].className = "star green"
+                    starsArray.slice(0,4).forEach(s => s.className = "star green")
                 }
                 if (clicked === 5) {
                     ss.forEach(function (s) { s.className = "star green" })
                 }
             }
             if (i === 1) {
-                ss[0].className = "star gray"
-                ss[1].className = "star gray"
+                starsArray.slice(0,2).forEach(s => s.className = "star gray")
 
                 if (clicked === 1) {
                     ss[0].className = "star red"
                 }
                 if (clicked === 2) {
-                    ss[0].className = "star red"
-                    ss[1].className = "star red"
+                    starsArray.slice(0,2).forEach(s => s.className = "star red")
                 }
                 if (clicked === 3) {
-                    ss[0].className = "star orange"
-                    ss[1].className = "star orange"
-                    ss[2].className = "star orange"
+                    starsArray.slice(0,3).forEach(s => s.className = "star orange")
                 }
                 if (clicked === 4) {
-                    ss[0].className = "star green"
-                    ss[1].className = "star green"
-                    ss[2].className = "star green"
-                    ss[3].className = "star green"
+                    starsArray.slice(0,4).forEach(s => s.className = "star green")
                 }
                 if (clicked === 5) {
                     ss.forEach(function (s) { s.className = "star green" })
                 }
             }
             if (i === 2) {
-                ss[0].className = "star gray"
-                ss[1].className = "star gray"
-                ss[2].className = "star gray"
+                starsArray.slice(0,3).forEach(s => s.className = "star gray")
 
                 if (clicked === 1) {
                     ss[0].className = "star red"
                 }
                 if (clicked === 2) {
-                    ss[0].className = "star red"
-                    ss[1].className = "star red"
+                    starsArray.slice(0,2).forEach(s => s.className = "star red")
                 }
                 if (clicked === 3) {
-                    ss[0].className = "star orange"
-                    ss[1].className = "star orange"
-                    ss[2].className = "star orange"
+                    starsArray.slice(0,3).forEach(s => s.className = "star orange")
                 }
                 if (clicked === 4) {
-                    ss[0].className = "star green"
-                    ss[1].className = "star green"
-                    ss[2].className = "star green"
-                    ss[3].className = "star green"
+                    starsArray.slice(0,4).forEach(s => s.className = "star green")
                 }
                 if (clicked === 5) {
                     ss.forEach(function (s) { s.className = "star green" })
                 }
             }
             if (i === 3) {
-                ss[0].className = "star gray"
-                ss[1].className = "star gray"
-                ss[2].className = "star gray"
-                ss[3].className = "star gray"
+                starsArray.slice(0,4).forEach(s => s.className = "star gray")
 
                 if (clicked === 1) {
                     ss[0].className = "star red"
                 }
                 if (clicked === 2) {
-                    ss[0].className = "star red"
-                    ss[1].className = "star red"
+                    starsArray.slice(0,2).forEach(s => s.className = "star red")
                 }
                 if (clicked === 3) {
-                    ss[0].className = "star orange"
-                    ss[1].className = "star orange"
-                    ss[2].className = "star orange"
+                    starsArray.slice(0,3).forEach(s => s.className = "star orange")
                 }
                 if (clicked === 4) {
-                    ss[0].className = "star green"
-                    ss[1].className = "star green"
-                    ss[2].className = "star green"
-                    ss[3].className = "star green"
+                    starsArray.slice(0,4).forEach(s => s.className = "star green")
                 }
                 if (clicked === 5) {
                     ss.forEach(function (s) { s.className = "star green" })
@@ -228,19 +181,13 @@ function forms(ss) {
                     ss[0].className = "star red"
                 }
                 if (clicked === 2) {
-                    ss[0].className = "star red"
-                    ss[1].className = "star red"
+                    starsArray.slice(0,2).forEach(s => s.className = "star red")
                 }
                 if (clicked === 3) {
-                    ss[0].className = "star orange"
-                    ss[1].className = "star orange"
-                    ss[2].className = "star orange"
+                    starsArray.slice(0,3).forEach(s => s.className = "star orange")
                 }
                 if (clicked === 4) {
-                    ss[0].className = "star green"
-                    ss[1].className = "star green"
-                    ss[2].className = "star green"
-                    ss[3].className = "star green"
+                    starsArray.slice(0,4).forEach(s => s.className = "star green")
                 }
                 if (clicked === 5) {
                     ss.forEach(function (s) { s.className = "star green" })
