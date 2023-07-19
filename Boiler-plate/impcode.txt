@@ -79,6 +79,9 @@ jQuery('input:checkbox[id^="ppl"]'+tripTypeDiv).each(function() {
    }
  });
  
+ <----- restrict spaces and charectors ------->
+ oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+ 
  <--- print array size --->
  <span th:text="${#lists.size(searchInfo.multiCityInfoList)}">[Engine Size]</span> in themeleafe
 
@@ -90,4 +93,41 @@ https://lottiefiles.com/
 
 <-- star rating functionality JS-->
 https://codepen.io/naulacambra/pen/gbzvPa
+
+<--- install parcel for live reload --->
+1.npm i parcel-bundler -g to run parcel watch index.html
+
+2. npm i lite-server   to run lite-server
+
+<------------ to match path ---------->
+
+#httpServletRequest.getRequestURI().contains('/in/flights') or #httpServletRequest.getRequestURI() == '/'
+
+< --- hide scroll bars in all browsers --->
+div.bhoechie-tab-menu::-webkit-scrollbar {
+    display: none;
+}
+div.bhoechie-tab-menu {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+< --- remove () parenthesis from input value --- >
+var value = 'Hyderabad (HYD)'
+    value.replace(/[()]/g, '');
+	
+	function populateMatches(value) {
+    var matches = [];
+    var cleanValue = value.replace(/[()]/g, '');
+    var substringRegex = new RegExp(cleanValue, 'i');
+    $.each(cities, function (i, obj) {
+        if (substringRegex.test(obj.airport) || substringRegex.test(obj.code) || substringRegex.test(obj.city)) {
+            matches.push(obj);
+        }
+    });
+    return matches;
+}
+
+var matches populateMatches(pass input value here);
+
 

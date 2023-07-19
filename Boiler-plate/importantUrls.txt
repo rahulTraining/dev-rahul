@@ -112,10 +112,27 @@ https://www.geeksforgeeks.org/how-to-convert-a-dom-nodelist-to-an-array-using-ja
 https://www.educative.io/answers/how-to-generate-a-random-number-between-a-range-in-javascript
 
 
+<--- git setup commands --->
+https://blog.greenroots.info/top-10-git-commands-every-developer-should-know
 
 
 
+<--- multiple event listeners ---->
+https://stackoverflow.com/questions/11845678/adding-multiple-event-listeners-to-one-element
 
+
+<----- css websites ---->
+https://cssnectar.com/
+
+
+<----- html to pdf code --->
+https://codepen.io/REMCOOLE/pen/xxOGoKo
+
+https://www.tutorialspoint.com/how-to-add-html-and-css-to-pdf
+
+
+<--- auto complete with filters ---->
+https://www.tutorjoes.in/JS_tutorial/custom_auto_complete_text_box_heighlight_in_js
 
 
 
