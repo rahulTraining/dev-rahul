@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.3dsintegrator.com/threeds.min.2.1.0.js"></script> 
+    <title>3ds</title>
+</head>
+<body>
+    <form name="payment" id="payment" onsubmit="event.preventDefault()">
+        <input type="text" data-threeds="pan"/>
+        <input type="text" data-threeds="month"/>
+        <input type="text" data-threeds="year"/>
+
+        <input type="submit" value="submit" onclick="formSubmit()"/>
+    </form>
+
+    <script src="main.js"></script>
+</body>
+</html>

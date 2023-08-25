@@ -6,19 +6,6 @@ FlightUtils.updateTransactionFee(flight, packageTransactionFee);
 
 ---------------->
 
-checkout.scss 259 iEagle
-
-
-checkout.js 4315 iEagle
-/*For showing and hiding the cc-Card image*/
-function showCardImg() {
-    $('div.click-to-top span').css('display','block');
-}
-function imgClose() {
-    $('.demoCard').hide();
-}
-
-
 
 
 <--!cc verification page -->
@@ -46,9 +33,7 @@ console.log($(".cap-btn"),"cap");
         })
     })
 	
-	
 	$('#verifyCCChargeId' + index).show();
-	
 	
 	function showCcError(value) {
     $("." + value).slideDown(300);
@@ -56,88 +41,8 @@ console.log($(".cap-btn"),"cap");
 function hideCcError(value) {
     $("." + value).slideUp(300);
 }
-function bankPhoneNum(){
-    var numberInput = document.querySelector('.numberInput .form-control');
-    if ($('.numberInput')){
-        if (numberInput.value.length > 0 || numberInput.value.length < 10){
-            showCcError('cc_error_num');
-        }
-        if (numberInput.value.length == 0 || numberInput.value.length == 10){
-            hideCcError('cc_error_num')
-        }
-    }
-}
-function ccAmount(){
-    var ccAmount = document.querySelector('.cc-amount .form-control');
-    if ($('.cc-amount')){
-        if (ccAmount.value.length > 0 || ccAmount.value.length < 2){
-            showCcError('cc_error_amount');
-        }
-        if (ccAmount.value.length == 0 || ccAmount.value.length >= 2){
-            hideCcError('cc_error_amount')
-        }
-    }
-}
-
-
-var numberInput = document.querySelectorAll('.numberInput .form-control');
-var ccAmount = document.querySelectorAll('.cc-amount .form-control');
-var ccErrorNum = document.querySelectorAll(".numberInput .cc_error_num");
-var ccErrorAmt = document.querySelectorAll(".cc-amount .cc_error_amount");
-
-numberInput.forEach(function (numInput,index) {
-    numInput.addEventListener("change",function () {
-        console.log(numInput);
-        if (this.value.length > 0 || this.value.length < 10) {
-            console.log(this.value.length,"this.value.length bankphonenumber show");
-            ccErrorNum[index].style.display="block"
-            console.log(ccErrorNum[index])
-        }
-        if (this.value.length == 0 || this.value.length >= 10) {
-            console.log(this.value.length,"this.value.length bankphonenumber hide")
-            ccErrorNum[index].style.display="none";
-        }
-    })
-})
-ccAmount.forEach(function (ccAmt,index) {
-    ccAmt.addEventListener("change",function () {
-        console.log(ccAmt);
-        if (this.value.length > 0 || this.value.length < 2) {
-            console.log(this.value.length,"this.value.length ccAmount show")
-            ccErrorAmt[index].classList.add("active");
-        }
-        if (this.value.length == 0 || this.value.length >= 2) {
-            console.log(this.value.length,"this.value.length ccAmount hide")
-            ccErrorAmt[index].classList.remove("active");
-        }
-    })
-})
-
-var longName = $('#' + id).val();
-var numberInput = document.querySelector('.numberInput .form-control');
-
-var ccAmount = document.querySelector('.cc-amount .form-control');
-
-log.info("@@@IGE-5993 :: cardNumber : ${creditCardChargeFormModel.creditCardCharges[index].cardNumber} ,chargedAmount : ${creditCardChargeFormModel.creditCardCharges[index].chargedAmount},  bankNumber : ${creditCardChargeFormModel.creditCardCharges[index].bankPhoneNumber}")
-checkout controller groovy.
-
-log.info("chargedAmount-->"+ chargedAmount)  credit card service mpl 75-line
-log.info("@@@IGE-5993 :: "+ it.ccChargedAmount + "chargedAmount : "+ chargedAmount) 82-line
-
-route_btns.forEach(function (btn, index) {
-        btn.addEventListener('click', function () {
-            console.log('btn-working');
-            route_btns.forEach(function (b) { b.classList.remove('active-btns') });
-            btn.classList.add('active-btns')
-        });
-        route_btns[0].click();
-    });
 
 mvn process-resources -Penv-dev -DskipTests -DbuildNumber=1 -Dmin -Dskip.yarn
-
-You will receive an separate email with the Lounge Voucher and other details of the Lounge of your transit stay.
-
-
 
 filter images with temples,
 
@@ -168,7 +73,6 @@ pattern="[1-9]{1}[0-9]{9}"
 fourInputs.forEach(fi => {
     fi.insertAdjacentHTML('afterend', `<div class="error-msg">Please enter valid details</div>`)
 })
-var errorMsg = document.querySelectorAll('.error-msg');
 
 https://fsty.io/v/qLZ3snBB
 
@@ -333,125 +237,723 @@ function validateTravelerLName(id,index,travelerKey,erId,paxType) {
     }
 }
 
+soxomar236@ceoshub.com
+			
+<b th:text="|{${airportCode}}|"></b>
 
 
-----------dummy
-.att.registeredEmailError {
-  .tooltip {
-    top: 120px !important;
-  }
-}
 
-@media only screen and (min-width: 1013px) and (max-width: 1487px) {
-  .att.registeredEmailError {
-    .tooltip {
-      top: 130px !important;
-    }
-  }
-}
+https://stackblitz.com/edit/angular-ivy-8gkvhh?file=src%2Fapp%2Fhello.component.ts
+		
 
-@media only screen and (min-width: 991px) and (max-width: 1012px) {
-  .att.registeredEmailError {
-    .tooltip {
-      top: 150px !important;
-    }
-  }
-}
+coolroad458
 
-else{
-        setTimeout(function() {
-            $('#sentPassword').hide();
-            showSignInFormAtSR();
-        }, 5000);
-    }
+
+		
+	 SDT-12730
 	
-9/21/2022
-http://localhost:8585/flight/checkout?reviewId=60f34f19-3189-4999-85f4-cc52ca8df3fc-21161909
-
-
-
- console.log(totalAmountValue,'totalamountvalue',amount);
-$('#pplTotalAmountId').text(amount);
-$('#fareComponentPplAmount').text(amount);
-console.log($('#pplTotalAmountId').text(),parseInt($('#pplTotalAmountId').text()),parseInt(amount))
-$('#totalPriceDiv').text('$' + ((totalAmountValue) - $('#pplTotalAmountId').text()));
-
-6:38pm
-
-if (jQuery(this).is(":checked")) {
- console.log('checked'+this.id)
- console.log('checked'+$('#'+this.id).val());
- var pplAmnt = parseInt($('#'+this.id).val());
- console.log(pplAmnt,typeof pplAmnt,'pplamnt')
- pplTotalAmt = pplTotalAmt + pplAmnt;
- console.log("pplTotalAmt",pplTotalAmt);
- $('#pplTotalAmountId').text(pplTotalAmt);
-  $('#tempPPLAmountInput').val(pplTotalAmt);
- c11111++;
- 
- 
- 
- List<Map<String, LoungeDetails>> showLoungeDetails(Flight flight) {
-
-         List<Map<String, LoungeDetails>> finalLoungeDetails = new ArrayList<>()
-         Map<String, LoungeDetails> finalLoungeDetailsMap1 =  [:]
-         Map<String, LoungeDetails> finalLoungeDetailsMap2 =  [:]
-         LoungeDetails  loungeDetails = new  LoungeDetails()
-         LoungeDetails  loungeDetailsTwo = new  LoungeDetails()
-         loungeDetails.relaxingCouch = "true"
-         loungeDetails.chargingStation = true
-         loungeDetails.draughtBeer = true
-         loungeDetails.cost = new BigDecimal(35)
-         loungeDetails.terminal ='3'
-         /*loungeDetails.connectionTime = 5
-         loungeDetails.airportCode = LocationUtils.getAirportNameWithCode('DXB')*/
-         log.warn("checking the lounge cost"+ loungeDetails.cost )
-         loungeDetailsTwo.relaxingCouch = "true"
-         loungeDetailsTwo.chargingStation = true
-         loungeDetailsTwo.draughtBeer = true
-         loungeDetailsTwo.cost = new BigDecimal(35)
-         loungeDetailsTwo.terminal ='5'
-         /*loungeDetailsTwo.connectionTime = 7
-         loungeDetailsTwo.airportCode = LocationUtils.getAirportNameWithCode('HYD')*/
-         log.warn("checking the lounge cost"+ loungeDetails.cost )
-         finalLoungeDetailsMap1.put("OW", loungeDetails)
-         finalLoungeDetailsMap2.put("RT", loungeDetailsTwo)
-         finalLoungeDetails.add(finalLoungeDetailsMap1)
-         finalLoungeDetails.add(finalLoungeDetailsMap2)
-         return  finalLoungeDetails
-		 
-		 
-		 long legOneConnectionTime = 0L --> return finalLoungeDetails comment
-		 
-		 addObject('loungeTripType', "BOTH") ,addObject('loungeTripType', loungeTripType)
-		 
-		 
-		 IGE-6320-PPL-2
-		 increasedAmtId
-		 
-		 http://localhost:8585/flight/checkout?reviewId=138ccf45-f83b-4ac1-85c4-04ce3bab530a-26180533
-		 
-		 
-		 LoungeDetails showLoungeDetails(Flight flight) {
-        List<LoungeDetails> finalLoungeDetails = new ArrayList<>()
-        LoungeDetails loungeDetails = new LoungeDetails()
-        LoungeDetails loungeDetailsTwo = new LoungeDetails()
-        loungeDetails.relaxingCouch = "true"
-        loungeDetails.chargingStation = true
-        loungeDetails.draughtBeer = true
-        loungeDetails.cost = new BigDecimal(35)
-        loungeDetails.terminal = '3'
-        return loungeDetails
-    }
+	<div class="iAgentProfileGreyText" style="width: 130px;">
+		<div style="text-align: left;">
+			Given Name <span class="iAgentProfileStar">*</span></div>
+		<span style="display: inline-block;text-align: left;line-height: 14px;font-size: 10px;display: block;">(First Name &amp; Middle Name)</span>
+	</div>
 	
-	function addOrRemoveTravalerToPPL(){
-        jQuery('input:checkbox[id^="pplCheckbox"]', "#plazaPremiumLounge").each(function() {
-                if (jQuery(this).is(":checked")) {
-                   console.log('checked'+this.id)
-                }else{
-                   console.log('un else checked'+this.id)
+	
+	<link rel="preload" href="../../static/css/allHomeStyles.css" th:href="@{/css/allHomeStyles.min.css}" as="style"/>
+    <!-- Defer non-critical css -->
+    <link href="../../static/css/allHomeStyles.css" th:href="@{/css/allHomeStyles.min.css}" rel="stylesheet" media="print" onload="this.media='all'"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" media="all"/>
+    <link rel="stylesheet" href="../../static/css/style.css" th:href="@{/css/allStyles.min.css}" media="print" onload="this.onload=null;this.media='all'"/>
+	
+	
+	$(".searchPageHeader").addClass("nav-fix").css("outline","none");
+	function isDisabledCookies(){
+		var cookieDisabled = (navigator.cookieEnabled) ? false : true;
+		if (typeof navigator.cookieEnabled == "undefined" && !cookieDisabled) {
+			document.cookie="testcookie";
+			cookieDisabled = (document.cookie.indexOf("testcookie") != -1) ? false : true;
+		}
+		$('#disableCookies').val(cookieDisabled);
+	 }
+
+	//disak
+	
+	switchTab()
+	
+	637
+	
+	
+	
+	<style>
+        .sf-modal .modal {
+            top: 50% !important;
+            transform: translateY(-25%);
+        }
+    </style>
+	
+	<div><a data-target="#signInModal" data-toggle="modal" onclick="showSignInFormForSF()"><span class="OI myEagle pointer"></span>Sign In</a></div>
+	
+<div id="signInModal" class="sf-modal modal fade" role="dialog">
+    <div class="modal-dialog bg-white">
+        <div class="modal-content no-border bg-white no-shadow">
+            <div class="modal-header bg-skyblue">
+                <span type="button" class="modelClose pointer text-white md-24 fa fa-close" data-dismiss="modal" onclick="modelClose()"></span>
+                <h4 id="mTitle" class="modal-title text-white text-center bold">Login In</h4>
+            </div>
+            <div class="modal-body row lpb">
+                Write content here
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+------------- webworkers -------------
+
+<script>
+   /* var slick_js_script_url = "//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js";
+    var worker_url = getWorkerURL( slick_js_script_url );
+    var worker = new Worker( worker_url );
+    worker.onmessage = (event) => console.log(event.data,'event data *************');
+    URL.revokeObjectURL(worker_url);
+
+    function getWorkerURL(url) {
+        var content = `importScripts("${url}")`;
+        return URL.createObjectURL(new Blob([content],{type: "text/javascript"}));
+        console.log('DOM fully loaded and parsed **********');
+    }*/
+    // window.addEventListener('DOMContentLoaded',() => {
+    //     console.log('DOM fully loaded and parsed');
+    //     new Worker("//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js");
+    // });
+
+   /* const worker_code = `//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js`;
+    const worker = new Worker(
+        URL.createObjectURL(
+            new Blob(
+                [ worker_code ],
+                { type: "text/javascript" } // second argument to the Blob constructor
+            )
+        ),
+    );
+    worker.onmessage = (event) => console.log(event.data,'event data *************');
+   window.addEventListener('DOMContentLoaded',() => {
+       console.log('DOM fully loaded and parsed');
+       worker
+   });*/
+
+   const worker = new Worker('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js');
+   worker.postMessage(['send message to worker']);
+   worker.onmessage = (ev) => {
+       console.log('data from worker', ev.data);
+   };
+</script>
+
+
+<div style="background: radial-gradient(circle, rgba(249,238,255,1) 0%, rgba(233,197,220,1) 100%);"></div>
+
+radial-gradient(circle, rgba(249,238,255,1) 0%, rgba(233,197,220,1) 100%);
+
+ IGC-1740-3
+ 
+ 
+ button :- data-target="#splLoginAndRegister" data-toggle="modal"
+ 
+ <div id="splLoginAndRegister" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+ <div class="modal-dialog" role="document">
+ 
+
+$("#splRegFrag").addClass("none");
+    $("#Register-login").removeClass("none");
+    $(".verifyIdenText").removeClass('none');
+    $("#splLoginFrag").addClass("none");
+    $("#splLoginAndRegister").hide()
+	
+	Inlining extracted styles in the <head> of the HTML document eliminates the need to make an additional request to fetch these styles.
+
+	
+<--- special fare enable in local --->
+VisitorLoggingInterceptor.groovy file 
+
+do code uncomment
+
+String visitorId = request.getAttribute(VISITOR_ID)
+STUDENT_HOME == event ? memCacheSessionService.put(visitorId + STUDENT, 'STUDENT', VISITOR_CACHE_REGION) : null
+
+
+
+////////////////type ahead
+
+
+ var substringMatcher = function (strs) {
+        return function findMatches(q, cb) {
+            var matches, substringRegex;
+            matches = [];
+            substringRegex = new RegExp(q, 'i');
+            $.each(strs, function (i, str) {
+                if (substringRegex.test(str.code)) {
+                    matches.push(str);
+                } else if (substringRegex.test(str.airport)) {
+                    matches.push(str);
+                }
+            });
+            cb(matches);
+        };
+    };
+
+    var cities = [
+        {
+            code: 'AUS',
+            airport: 'Austin, TX - Austin-Bergstrom International Airport (AUS)'
+        },
+        {
+            code: 'GRB',
+            airport: 'Green Bay, WI - Austin Straubel International Airport'
+        },
+        {
+            code: 'ORD',
+            airport: 'Chicago, IL - O`Hare International Airport'
+        },
+        {
+            code: 'SFO',
+            airport: 'San Francisco, CA - San Francisco International Airport'
+        },
+        {
+            code: 'HYD',
+            airport: 'Hyderabad, India - Rajiv Gandhi International Airport'
+        },
+        {
+            code: 'YXX',
+            airport: 'Abbotsford, Canada - Abbotsford Airport'
+        },
+        {
+            code: 'ISI',
+            airport: 'Isisford, Australia - Isisford Airport '
+        },
+        {
+            code: 'GOS',
+            airport: 'Gosford, Australia - Gosford Airport'
+        }
+    ];
+
+    $('input.from-input, input.to-input').typeahead(
+        {
+            hint: true,
+            highlight: true,
+            minLength: 3,
+            limit:15,
+            classNames: {
+                input: 't-input',
+                hint: 't-hint',
+                menu: 't-menu',
+                dataset: 't-dataset',
+                suggestion: 't-suggestion',
+                empty: 't-empty',
+                open: 't-open',
+                cursor: 't-cursor',
+                highlight: 't-highlight',
+            }
+        },
+        {
+            name: 'cities',
+            display: 'airport',
+            source: substringMatcher(cities),
+            templates: {
+                empty: '<h5 class="league-name">No matching locations found</h5>',
+                suggestion: function (data) {
+                    return '<div class="cont-list"><span class="country-code">'+ data.code + '</span> <span>' + data.airport + '</span></div>';
+                }
+            }
+        }
+    );
+	
+	$(".from-input,.to-input").focus(function () {
+        /*if ($(this).is(":focus") && $(this).val().length <= 0) {
+            $(this).css({"font-size":"17px",});
+            $(this).parent().next().css({"font-size":"12px","font-weight":"initial","color":"#f37023"});
+        }*/
+        if ($(".t-dataset").children().length > 0 && $(this).val().length >= 0) {
+            $(".t-menu").hide();
+        }
+    }).blur(function () {
+        // $(this).css({"font-size":"14px",});
+        // $(this).parent().next().removeAttr('style');
+        if ($(".t-dataset").children().length > 0 && $(this).val().length <= 20) {
+            /*if($('#'+this.id).val().indexOf('(') <= 0) {
+                $(".t-suggestion:nth-of-type(1)").trigger('click');
+            }*/
+            $(".t-suggestion:nth-of-type(1)").trigger('click');
+        }
+    }).on('input',function (e) {
+        if (e.target.value.length > 0) {
+            $(this).parent().next().css({"font-size":"12px","font-weight":"initial","color":"#f37023"});
+        } else {
+            $(this).parent().next().removeAttr('style');
+        }
+    });
+	
+	
+	
+	   /* New customizable typeahead plug-in */
+   /* var substringMatcher = function (strs) {
+        return function findMatches(q, cb) {
+            var matches, substringRegex;
+            matches = [];
+            substringRegex = new RegExp(q, 'i');
+            $.each(strs, function (i, str) {
+                if (substringRegex.test(str.code)) {
+                    matches.push(str);
+                } else if (substringRegex.test(str.airport)) {
+                    matches.push(str);
+                }
+            });
+            cb(matches);
+        };
+    };
+
+    var cities = [
+        {
+            code: 'AUS',
+            airport: 'Austin, TX - Austin-Bergstrom International Airport (AUS)'
+        },
+        {
+            code: 'GRB',
+            airport: 'Green Bay, WI - Austin Straubel International Airport'
+        },
+        {
+            code: 'ORD',
+            airport: 'Chicago, IL - O`Hare International Airport'
+        },
+        {
+            code: 'SFO',
+            airport: 'San Francisco, CA - San Francisco International Airport'
+        },
+        {
+            code: 'HYD',
+            airport: 'Hyderabad, India - Rajiv Gandhi International Airport'
+        },
+        {
+            code: 'YXX',
+            airport: 'Abbotsford, Canada - Abbotsford Airport'
+        },
+        {
+            code: 'ISI',
+            airport: 'Isisford, Australia - Isisford Airport '
+        },
+        {
+            code: 'GOS',
+            airport: 'Gosford, Australia - Gosford Airport'
+        }
+    ];*/
+
+
+
+    /*$('input.from-input, input.to-input').typeahead(
+        {
+            hint: true,
+            highlight: true,
+            minLength: 3,
+            limit:15,
+            classNames: {
+                input: 't-input',
+                hint: 't-hint',
+                menu: 't-menu',
+                dataset: 't-dataset',
+                suggestion: 't-suggestion',
+                empty: 't-empty',
+                open: 't-open',
+                cursor: 't-cursor',
+                highlight: 't-highlight',
+            }
+        },
+        {
+            name: 'cities',
+            display: 'airport',
+            source: substringMatcher(cities),
+            templates: {
+                empty: '<h5 class="league-name">No matching locations found</h5>',
+                suggestion: function (data) {
+                    return '<div class="cont-list"><span class="country-code">'+ data.code + '</span> <span>' + data.airport + '</span></div>';
+                }
+            }
+        }
+    );*/
+
+    /*$(".from-input,.to-input").focus(function () {
+        /!*if ($(this).is(":focus") && $(this).val().length <= 0) {
+            $(this).css({"font-size":"17px",});
+            $(this).parent().next().css({"font-size":"12px","font-weight":"initial","color":"#f37023"});
+        }*!/
+        if ($(".t-dataset").children().length > 0 && $(this).val().length >= 0) {
+            $(".t-menu").hide();
+        }
+    }).blur(function () {
+        // $(this).css({"font-size":"14px",});
+        // $(this).parent().next().removeAttr('style');
+        if ($(".t-dataset").children().length > 0 && $(this).val().length <= 20) {
+            /!*if($('#'+this.id).val().indexOf('(') <= 0) {
+                $(".t-suggestion:nth-of-type(1)").trigger('click');
+            }*!/
+            $(".t-suggestion:nth-of-type(1)").trigger('click');
+        }
+    }).on('input',function (e) {
+        if (e.target.value.length > 0) {
+            $(this).parent().next().css({"font-size":"12px","font-weight":"initial","color":"#f37023"});
+        } else {
+            $(this).parent().next().removeAttr('style');
+        }
+    });*/
+	
+	
+	<-- upanddown arrow function -->
+	function upDownArrowNavigation(e,id,sd) {
+    const InputId = $("#" + id);
+    const  dropDownDiv = $(".t-menu .t-dataset");
+    if (e.keyCode === 38) {
+
+        console.log(sd,'sd');
+        // up arrow
+        const activeItem = dropDownDiv.find(".cont-list.activeState");
+        $(".t-dataset").children().last().addClass("activeState");
+        if (activeItem) {
+            activeItem.removeClass("activeState");
+            const previousItem = activeItem.prev();
+            if (previousItem) {
+                previousItem.addClass("activeState").siblings().removeClass('activeState');
+            }
+        }
+        e.preventDefault();
+    } else if (e.keyCode === 40) {
+
+
+        // down arrow
+        const activeItem = dropDownDiv.find(".cont-list.activeState");
+        $(".t-dataset").children().first().addClass("activeState");
+        if (activeItem) {
+            activeItem.removeClass("activeState");
+            const nextItem = activeItem.next();
+            if (nextItem) {
+                nextItem.addClass("activeState").siblings().removeClass('activeState');
+            }
+        }
+        e.preventDefault();
+    } else if (e.keyCode === 13) {
+        // enter
+        e.preventDefault();
+        const activeItem = dropDownDiv.find(".cont-list.activeState");
+
+        if (activeItem) {
+            e.preventDefault();
+            console.log(activeItem.index(),'activeItem');
+            let airportName = InputId.parent().children('.airportName').text(`${sd[activeItem.index()].airport}`);
+            console.log(InputId.parent(),'this, i',i);
+            InputId.val(`${sd[activeItem.index()].country}, ${sd[activeItem.index()].code}`).css({'font-weight':'bold','padding-top':'0'});
+            InputId.parent().css('line-height','10px');
+            InputId.parent().children('.t-menu').remove();
+            InputId.next().show().text(airportName.slice(airportName.indexOf(',') + 1));
+        }
+    }
+}
+
+<---- simlify code --->
+/*document.onkeyup = function (e) {
+            const  dropDownDiv = $(".t-menu .t-dataset");
+            let activeItem = dropDownDiv.find(".cont-list.activeState");
+            if (e.keyCode === 38) {
+                // up arrow
+                if (activeItem.length === 0) {
+                    console.log('activeItem 0 up')
+                    $(".t-dataset").children().last().addClass("activeState");
+                } else {
+                    console.log('activeItem not 0 up');
+                    const previousItem = activeItem.prev();
+                    previousItem.addClass("activeState").siblings().removeClass('activeState');
+                }
+                e.preventDefault();
+            } else if (e.keyCode === 40) {
+                // down arrow
+                if (activeItem.length === 0) {
+                    console.log('activeItem 0 down')
+                    $(".t-dataset").children().first().addClass("activeState");
+                } else {
+                    console.log('activeItem not 0 down');
+                    const previousItem = activeItem.next();
+                    previousItem.addClass("activeState").siblings().removeClass('activeState');
+                }
+                e.preventDefault();
+            } else if (e.keyCode === 13) {
+                // enter
+                e.stopPropagation();
+                if (activeItem.length !==0) {
+                    e.stopPropagation();
+                    console.log(activeItem.index(),'activeItem index');
+                    // let airportName = idName.parent().children('.airportName').text(`${matches[activeItem.index()].airport}`);
+                    let airportName = `${matches[activeItem.index()].airport}`;
+                    idName.val(`${matches[activeItem.index()].country}, ${matches[activeItem.index()].code}`).css({'font-weight':'bold','padding-top':'0'});
+                    idName.parent().css('line-height','10px');
+                    idName.parent().children('.t-menu').remove();
+                    console.log(airportName,'airportName');
+                    idName.next().show().text(airportName.slice(airportName.indexOf(',') + 1));
+                }
+            }
+        }*/
+		
+		//first
+		
+		let airportName = $(this).children('.airportName').text();
+		idName.val(`${matches[i].country}, ${matches[i].code}`).css({'font-weight':'bold','padding-top':'0'});
+		idName.parent().css('line-height','10px');
+		idName.parent().children('.t-menu').remove();
+		idName.next().show().text(airportName.slice(airportName.indexOf(',') + 1));
+		
+		//keyCode
+		
+		let airportName = `${matches[activeItem.index()].airport}`;
+		idName.val(`${matches[activeItem.index()].country}, ${matches[activeItem.index()].code}`).css({'font-weight':'bold','padding-top':'0'});
+		idName.parent().css('line-height','10px');
+		idName.parent().children('.t-menu').remove();
+		console.log(airportName,'airportName');
+		idName.next().show().text(airportName.slice(airportName.indexOf(',') + 1));
+		
+		
+		$(document).keydown(function (e) {
+            const dropDownDiv = $(".t-menu .t-dataset");
+            let activeItem = dropDownDiv.find(".cont-list.activeState");
+
+            if (e.keyCode === 38) { // up arrow
+                rotateNavigation(-1);
+            } else if (e.keyCode === 40) { // down arrow
+                rotateNavigation(1);
+            } else if (e.keyCode === 13) { // enter
+                if (activeItem.length !== 0) {
+                    matches = populateMatches(value);
+                    let airportName = `${matches[activeItem.index()].airport}`;
+                    idName.val(`${matches[activeItem.index()].country}, ${matches[activeItem.index()].code}`).css({'font-weight':'bold','padding-top':'0'});
+                    idName.parent().css('line-height','10px');
+                    idName.parent().children('.t-menu').remove();
+                    idName.next().show().text(airportName.slice(airportName.indexOf(',') + 1));
+                }
+            }
+
+            function rotateNavigation(direction) {
+                const items = dropDownDiv.children();
+                let currentIndex = activeItem.index();
+                let newIndex = currentIndex + direction;
+
+                if (newIndex < 0) {
+                    newIndex = items.length - 1;
+                } else if (newIndex >= items.length) {
+                    newIndex = 0;
                 }
 
-            });
+                activeItem.removeClass("activeState");
+                activeItem = items.eq(newIndex);
+                activeItem.addClass("activeState");
+            }
+        });
+		
+		var toInput = $("#" + id).parent().parent().parent().next().find(".spanTxt").next().next().attr("id");
+		
+		---------------------------   multi-city-date picker   ------------->
+		
+		
+		$(document).ready(function () {
+			datePickerFrom("fromDp","depLabel","toDp","dateWMD","dateY");
+			// datePickerTo("fromDp","returnLabel","toDp")
+		});
+		
+		// datePickerTo(clonedIdFrom,clonedLabelTo,clonedIdTo);
+		
+		function datePickerTo(from,label,to) {
+    var IdFrom = $("#" + from);
+    var IdTo = $("#" + to);
+    $("#" + from,"#" + label).datepicker({
+    defaultDate: "",
+    changeMonth: false,
+    numberOfMonths: 2,
+    firstDay: 1,
+    minDate: 0,
+    dateFormat: "D, dd-M-yy",
+    beforeShowDay: function(date) {
+        var startDate = $.datepicker.parseDate($(this).datepicker("option", "dateFormat"), IdFrom.val());
+        var endDate = $.datepicker.parseDate($(this).datepicker("option", "dateFormat"), IdTo.val());
+        var className;
+        if (startDate && (date.getTime() == startDate.getTime())) {
+            className = "start-date"
+        } else if (endDate && (date.getTime() == endDate.getTime())) {
+            className = "end-date";
+        } else if ((startDate && endDate) && (startDate < date && date < endDate)) {
+            className = "between-date";
+        } else {
+            className = "";
+        }
+        return [true, className];
+    },
+    beforeShow: function () {
+        $('#ui-datepicker-div').addClass('notranslate');
+        var departureDate = $.datepicker.parseDate($(this).datepicker("option", "dateFormat"), IdTo.val());
+        if(departureDate!=null){
+            $(this).datepicker('option', "minDate", departureDate);
+        }
+        $(this).datepicker('option', 'altField', '#returnDateAlternateField');
+        $(this).datepicker('option', 'altFormat', 'yy-mm-dd');
+    },
+    onSelect: function(selectedDateTo) {
+        var selNewDateTo = new Date(selectedDateTo);
+        var selWMDTo = selNewDateTo.toLocaleString('en-us', { weekday: 'short', month: 'short', day: 'numeric' });
+        var selYTo = selNewDateTo.toLocaleString('en-us', { year: 'numeric'});
+        document.getElementById("dateWMDTo").value = selWMDTo;
+        document.getElementById("dateYTo").innerHTML = selYTo;
+        $('.deptReturn').css({'font-size': '12px', 'color': 'rgb(243, 112, 35)'});
+        $("#dateWMDTo").css({"font-weight":"bold","padding-top":"0"});
+        $(".labelForDept,.labelForReturn").css({"line-height":"10px"});
+    }
+});
 }
 
+<----- search results -->
+
+<form class="row" id="searchForm" name="searchForm" action="flights/search" th:action="@{flights/search}" th:object="${searchInfo}" method="POST">
+            <input type="hidden" name="lang" th:value="${lang ?: 'en'}" />
+            <!-- New iEagle modify search design -->
+            <div class="modify_search_container">
+                <div class="trip_sel_header">
+                    <fieldset class="col-xs-12">
+                        <div>
+                            <input type="radio" name="trip" id="m_OW" />
+                            <label for="m_OW" th:text="#{search.component.label.one.way}">One Way</label>
+                        </div>
+                        <div class="mml">
+                            <input type="radio" name="trip" id="m_RT"/>
+                            <label for="m_RT" th:text="#{search.component.label.round.trip}">Round Trip</label>
+                        </div>
+                        <div class="mml">
+                            <input type="radio" name="trip" id="m_MC" />
+                            <label for="m_MC"  th:text="#{search.component.label.multi.city}"> Multi City</label>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </form>
+		
+		
+		<tr>
+		<td bgcolor="#ffffff" width="608" style="padding: 10px 20px;">
+			<table style="margin-bottom: 15px">
+				<tr>
+					<td style="font-weight: 800;font-size: 16px;width:260px">WHAT OUR CUSTOMER SAYS</td>
+					<td>
+						<span style="width: 310px;height: 2px;background: black;display: inline-block;margin-left: 2%;"></span>
+					</td>
+				</tr>
+			</table>
+			<table cellpadding="0" cellspacing="0" width="100%">
+				<tr>
+					<td width="33%" style="border: 1px solid #e6e6e6;border-radius: 5px;padding: 6px">
+						<table cellpadding="0" cellspacing="0">
+							<tr>
+								<td>
+									<img width="100%" src="https://d1qznzlun37fj0.cloudfront.net/images/winterEmail/Tristpilot2x.png" alt="Trustpilot"/>
+								</td>
+							</tr>
+							<tr>
+								<td style="font-weight: 700;font-size: 12px;font-family: Open Sans, Helvetica, Arial, sans-serif;">
+									Good price with service.
+								</td>
+							</tr>
+							<tr>
+								<td style="font-size: 10px;color: #777777;font-family: Open Sans, Helvetica, Arial, sans-serif;line-height: 12px;">
+									I am a returning customer to this agency and I am always satisfied with the service I get from the representatives.
+								</td>
+							</tr>
+							<tr>
+								<td style="text-align: center;font-size: 12px;margin-top: 20px;color: #b4b4b4;margin-bottom: 10px">Ravi Chandra</td>
+							</tr>
+						</table>
+					</td>
+
+					<td width="33%" style="border: 1px solid #e6e6e6;border-radius: 5px;padding: 6px">
+						<table cellpadding="0" cellspacing="0">
+							<tr>
+								<td>
+									<img width="100%" src="https://d1qznzlun37fj0.cloudfront.net/images/winterEmail/Sitejabber2x.png" alt="Sitejabber"/>
+								</td>
+							</tr>
+							<tr>
+								<td style="font-weight: 700;font-size: 12px;font-family: Open Sans, Helvetica, Arial, sans-serif;">
+									Best place to book your flight tickets.
+								</td>
+							</tr>
+							<tr>
+								<td style="font-size: 10px;color: #777777;font-family: Open Sans, Helvetica, Arial, sans-serif;line-height: 12px;">
+									Thank you IndianEagle for assisting and helping we with my flights.
+								</td>
+							</tr>
+							<tr>
+								<td style="text-align: center;font-size: 12px;color: #b4b4b4;">Somesh K</td>
+							</tr>
+						</table>
+					</td>
+
+					<td width="33%" style="border: 1px solid #e6e6e6;border-radius: 5px;padding: 6px">
+						<table cellpadding="0" cellspacing="0">
+							<tr>
+								<img width="100%" height="100%" src="https://d1qznzlun37fj0.cloudfront.net/images/winterEmail/Reviews2x.png" alt="Review.io" />
+							</tr>
+							<tr>
+								<td style="font-weight: 700;font-size: 12px;font-family: Open Sans, Helvetica, Arial, sans-serif;">
+									Best price out there.
+								</td>
+							</tr>
+							<tr>
+								<td style="font-size: 10px;color: #777777;font-family: Open Sans, Helvetica, Arial, sans-serif;line-height: 12px;">
+									Best prices out there. Reschedduring is also super quick and easy. Very supportive team
+								</td>
+							</tr>
+							<tr>
+								<td style="text-align: center;font-size: 12px;color: #b4b4b4;">Harin</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+		
+		
+		string to object:
+		
+		var response = convertStringToObject(responseData.response);
+                    console.log(response,"jsonObject");
+
+                    function convertStringToObject(jsonString) {
+                        var obj = {};
+                        var keyValuePairs = jsonString
+                            .replace(/^\{|\}$/g, '')  // Remove leading and trailing curly braces
+                            .split(',');              // Split by commas
+
+                        keyValuePairs.forEach(function(keyValue) {
+                            var [key, value] = keyValue.split(':').map(str => str.trim());
+                            obj[key] = value.startsWith('"') && value.endsWith('"')
+                                ? value.slice(1, -1)  // Remove quotes for strings
+                                : parseFloat(value) || value;  // Try to convert to number if possible
+                        });
+
+                        return obj;
+                    }
+					
+					
+		object to string
+		
+		var stringifyData;
+            if (data != null) {
+                stringifyData = Object.entries(data).reduce(function (a, e) {
+                    if (typeof e[1] !== "function") {
+                        a += '"' + e[0] + '" : "' + e[1] + '", ';
+                    }
+                    return a;
+                }, "{").slice(0, -2) + "}";
+            }
+
+            console.log(stringifyData, typeof stringifyData, "stringifyData");

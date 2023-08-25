@@ -135,6 +135,33 @@ https://www.tutorialspoint.com/how-to-add-html-and-css-to-pdf
 https://www.tutorjoes.in/JS_tutorial/custom_auto_complete_text_box_heighlight_in_js
 
 
+<--- convert string to JSON with out using json.parse ---->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/json5@2.2.3/dist/index.min.js"></script>
+JSON5.parse(data);
+
+<--- convert object to string with out using json.stringify ---->
+var obj = {
+  num: 0,
+  string: "string",
+  func: function () {},
+  emptyString: '',
+  null: null,
+  undefined: undefined
+};
+
+var str = Object
+        .entries(obj)
+        .reduce((a, e) => {
+          if (typeof e[1] != "function") {
+            a += `"${e[0]}" : "${e[1]}", `;
+          }
+          return a;
+        }, "`{")
+        .slice(1, -2) + "}`";
+
+console.log(str)
+
+
 
 
 

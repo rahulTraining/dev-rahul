@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Todo-list</title>
+</head>
+
+<body>
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div>
+                <div>
+                    <input type="text" id="inputData1" placeholder="firstname">
+                </div>
+                <div>
+                    <input type="text" id="inputData2" placeholder="lastname">
+                </div>
+                <div>
+                    <input type="text" id="inputData3" placeholder="address">
+                </div>
+                <div>
+                    <input type="text" id="inputData4" placeholder="pincode">
+                </div>
+                <button class="create" onclick="newdata()">New Data</button>
+            </div>
+        </div>
+
+    </div>
+    <div class="table-list">
+        <div class="search-add">
+            <div>
+                <input type="text" placeholder="search">
+            </div>
+            <div id="myBtn" class="add">ADD</div>
+        </div>
+
+        <div class="data">
+            <table id="myTable">
+                <tr class="header">
+                  <th>FirstName</th>
+                  <th>LastName</th>
+                  <th>address</th>
+                  <th>pincode</th>
+                </tr>
+                <tr>
+                  <td>Alfreds</td>
+                  <td>Futterkiste</td>
+                  <td>Germany</td>
+                  <td>52664</td>
+                </tr>
+                <tr>
+                  <td>Berglunds</td>
+                  <td>snabbkop</td>
+                  <td>Sweden</td>
+                  <td>032264</td>
+                </tr>
+              </table>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
