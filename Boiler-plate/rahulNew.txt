@@ -957,3 +957,68 @@ STUDENT_HOME == event ? memCacheSessionService.put(visitorId + STUDENT, 'STUDENT
             }
 
             console.log(stringifyData, typeof stringifyData, "stringifyData");
+			
+			
+			function readMoreAndReadLessFun(){
+        var mainDivOfFaqLen = $("#mainDivOfFaq").children().size();
+        var eleFaq = $("#mainDivOfFaq").children();
+        $(eleFaq).each(function(i, e){
+            $(e).addClass('mainDivOfFaq')
+        });
+        var x=3,i=2,z=5;
+
+        <!-- x is the default loading length of Faq's -->
+
+        $('.mainDivOfFaq:lt('+x+')').show();
+        var y = $('.mainDivOfFaq:lt('+x+')').show().length;
+        $('#showLessFaq').hide();
+
+        $('#showMoreFaq').click(function () {
+            x = mainDivOfFaqLen;
+            z=y*i++;
+            $('.mainDivOfFaq:lt('+z+')').show(500);
+            if(z > y){
+                $('#showLessFaq').show(500).slideDown();
+            }
+            if(z >= x){
+                $('#showMoreFaq').hide();
+            }
+        });
+
+        $('#showLessFaq').click(function () {
+        var mainDivOfFaqLen = $("#mainDivOfFaq").children().size();
+            x = 3 ; i = 2;
+            z = x;
+            $('.mainDivOfFaq').not(':lt('+x+')').hide(500);
+            if(z==3){
+                $('#showLessFaq').hide().slideUp();
+                $('#showMoreFaq').show();
+            }
+            if(x === 3){
+             $('#showMoreFaq').show();
+            }
+        });
+    }
+	
+	
+	<--- HTML --->
+	<div id="mainDivOfFaq">
+                            <th:block
+                                    th:each="cityPairHeading : ${seoContent['book.cheap.flights.with.us.text.question'][0]}">
+                                <div class="lm lpl lpr none">
+                                    <div class="questionDiv bold md-18 none">
+                                        <i class="fa fa-angle-right fa-2x arrowIcon md-26" aria-hidden="true"></i>
+                                        <p class="inline-block md-18 no-margin">
+                                            <th:block th:utext="${cityPairHeading.value}"/>
+                                        </p>
+                                    </div>
+                                    <div class="answerPanel lml smt mmb">
+                                        <p class="textLight md-16 no-margin"
+                                           th:each="cityPairContentText : ${seoContent['book.cheap.flights.with.us.text.answer'][0][cityPairHeadingStat.index]}"
+                                           th:utext="${cityPairContentText.value}">City pair content sample
+                                            paragraph</p>
+                                    </div>
+                                    <hr style="border-top: 1px solid #ccc9c9;" class="mmt mmb"/>
+                                </div>
+                            </th:block>
+                        </div>
