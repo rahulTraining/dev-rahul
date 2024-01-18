@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {
+            width:100px;
+            height: 100px;
+            background: rgba(5 , 5, 5, 0.1);
+            border-radius: 50%;
+        }
+        p {
+            width: inherit;
+            height: inherit;
+            position: relative;
+        }
+        p span{
+            position: absolute;
+            left: 50%;
+            top: -15%;
+            transform-origin: 5px 65px;
+            font-size: 1.2em;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>Make the html</p>
+    </div>
+
+    <script>
+        var p = document.querySelector('p');
+        var text = p.innerText.split("");
+        var join;
+        join = text.map((alpha, i) => {
+            return `<span style="transform:rotate(${(i * 15)}deg)">${alpha}</span>`
+        })
+        p.innerHTML = join.join("")
+
+        // for (let i = 0; i < text.length; i++) {
+        //     p.innerHTML = `<span>${text[i]}</span>`
+        // }
+    </script>
+</body>
+
+</html>

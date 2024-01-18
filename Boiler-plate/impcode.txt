@@ -130,4 +130,62 @@ var value = 'Hyderabad (HYD)'
 
 var matches populateMatches(pass input value here);
 
+<---- print keys or values of obnject ---->
+const object1 = {
+  a: 'somestring',
+  b: 42,
+  c: false,
+};
+
+console.log(Object.values(object1));
+// Expected output: Array ["a", "b", "c"]
+
+
+
+// jquery select drop down
+https://jqueryniceselect.hernansartorio.com
+
+
+// code for browser back button
+jQuery(document).ready(function($) {
+
+if (window.history && window.history.pushState) {
+
+window.history.pushState('forward', null, './#forward');
+
+$(window).on('popstate', function() {
+alert('Back button was pressed.');
+});
+
+}
+});
+
+//code for jQuery ajax with async and await
+function processRequestAndReturnResultForCodWithPromise(requestURL, formId) {
+    return new Promise((resolve, reject) => {
+        requestURL = appendVisitorIdAndSearchKeyToRequestURL(requestURL);
+        let serializedData = '';
+        if (formId != '' && formId != null && formId != undefined) {
+            serializedData = jQuery('#' + formId).serialize();
+        }
+        $.ajax({
+            url: requestURL,
+            data: serializedData,
+            type: "POST",
+            success: function (response) {
+                resolve(response);
+            },
+            error: function (xhr, status, error) {
+                console.error("Error in makeRequestAndHandleResponse:", error);
+                reject({xhr, status, error});
+                if (xhr.status === 600) {
+                    console.log('xhr status error 600', xhr.status === 600);
+                    submitForm(document.logoutForm, '/user/sign-out');
+                }
+            }
+        });
+    });
+}
+
+
 

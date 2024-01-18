@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation for confirmation page</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"
+        integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <svg width="150px" height="150px" viewBox="0 0 133 133" version="1.1" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g id="confirmation-check" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <!-- <circle id="filled-circle" fill="#6cb4cc" cx="66.5" cy="66.5" r="54.5"></circle> -->
+            <circle id="white-circle" fill="#FFFFFF" cx="66.5" cy="66.5" r="55.5"></circle>
+            <circle id="outline" stroke="#6cb4cc" stroke-width="12" cx="66.5" cy="66.5" r="54.5"></circle>
+            <!-- <circle id cx="100" cy="100" r="90" fill="transparent" stroke="#ff0000" stroke-width="20" stroke-dasharray="565.48" stroke-dashoffset="565.48" /> -->
+            <!-- <polyline id="check" stroke="#FFFFFF" stroke-width="10" points="38 68 60 85 92 49"></polyline> -->
+            <polyline id="check" stroke="#FFFFFF" stroke-width="14" points="38 68 60 85 92 49"
+                stroke-linejoin="round" />
+        </g>
+    </svg>
+
+    <div id="reference"></div>
+
+    <script>
+        function startAnimations() {
+            const outlineElement = document.getElementById('outline');
+            const whiteCircleElement = document.getElementById('white-circle');
+            const checkElement = document.getElementById('check');
+            const checkKeyFrame = document.createElement("style");
+            const confirmationCheckElement = document.getElementById('confirmation-check');
+
+            const radius = 55;
+            const circumf = 2 * Math.PI * radius;
+            const checkLen = 75;
+
+            whiteCircleElement.style.transform = 'scale(0)'
+            whiteCircleElement.style.fill = 'none'
+
+            outlineElement.animate([
+                { strokeDasharray: `0, ${circumf}` },
+                { strokeDasharray: `${circumf}, ${circumf}` }
+            ], {
+                duration: 600,
+                easing: 'linear',
+                fill: 'forwards',
+            });
+
+            whiteCircleElement.animate([
+                { fill: '#6cb4cc', transform: 'scale(0)' },
+                { fill: '#6cb4cc', transform: 'scale(1)' }
+            ], {
+                duration: 350,
+                easing: 'ease-in',
+                fill: 'forwards',
+                delay: 550
+            });
+            // checkKeyFrame.innerHTML = `
+            //             :root {
+            //     --circumf: 2 * 3.14159265359 * 55px;
+            //     --check-len: 75px
+            // }
+            //             #check {
+            //     animation: check .34s cubic-bezier(0.65, 0, 1, 1) 0.85s forwards; 
+            //     stroke-dasharray: 0, var(--check-len);
+            //   }
+            //                         @keyframes check {
+            //                 0% {
+            //                 stroke-dasharray: 0, var(--check-len);
+            //                 }
+            //                 20% {
+            //                     stroke-linecap: round;
+            //                 }
+            //                 100% {
+            //                 stroke-linecap: round;
+            //                 stroke-dasharray: var(--check-len),var(--check-len);
+            //                 }
+            //             }
+            //             `
+            // checkElement.appendChild(checkKeyFrame)
+            const checkAnimation = checkElement.animate([
+                { strokeDasharray: `0, ${checkLen}` },
+                { strokeLinecap: 'round' },
+                { strokeDasharray: `${checkLen}, ${checkLen}`, strokeLinecap: 'round' }
+            ], {
+                duration: 340,
+                easing: 'cubic-bezier(0.65, 0, 1, 1)',
+                fill: 'forwards',
+                delay: 850
+            });
+
+            // checkElement.classList.add("check")
+
+            // checkElement.animate({
+            //         duration: 340,
+            //         easing: 'cubic-bezier(0.65, 0, 1, 1)',
+            //         fill: 'forwards',
+            //         delay: 850
+            //     });
+            // var supportedFlag = $.keyframe.isSupported();
+            // $("#check").playKeyframe({
+            //     name: 'check',
+            //     duration: 340,
+            //     delay: 850
+            // });
+            // $.keyframe.define([{
+            //     name: 'check',
+            //     '0%': {
+            //         'stroke-dasharray': '0, ' + checkLen,
+            //     },
+            //     '20%': {
+            //         'stroke-linecap': 'round',
+            //     },
+            //     '100%': {
+            //         'stroke-linecap': 'round',
+            //         'stroke-dasharray': checkLen + ', ' + checkLen,
+            //     }
+            // }]);
+
+
+
+            confirmationCheckElement.animate([
+                { transform: 'scale(1)' },
+                { transform: 'scale(1.09)' },
+                { transform: 'scale(1)' }
+            ], {
+                duration: 320,
+                easing: 'ease-in-out',
+                fill: 'forwards',
+                delay: 1130
+            });
+        }
+
+        // Call the function whenever you need to start the animations
+        startAnimations();
+
+        function isElementInViewport(element) {
+            var elementOffsetTop = element.offsetTop;
+            var scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+            return elementOffsetTop >= scrollTop && elementOffsetTop <= (scrollTop + window.innerHeight);
+        }
+
+        // Example usage
+        var divElement = document.getElementById('confirmation-check');
+        if (isElementInViewport('confirmation-check')) {
+            // The div is in the viewport
+            console.log('Div is in the viewport');
+        } else {
+            // The div is not in the viewport
+            console.log('Div is not in the viewport');
+        }
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+  height: 300vh;
+}
+
+:root {
+    --circumf: 2 * 3.14159265359 * 55px;
+    --check-len: 75px
+}
+
+#outline {
+    transform: rotate(-90deg);
+    transform-origin: center;
+    /* animation: outline 0.6s linear forwards; */
+}
+
+/* @keyframes outline {
+    from {
+        stroke-dasharray:0, calc(var(--circumf));
+    }
+
+    to {
+        stroke-dasharray:  calc(var(--circumf)), calc(var(--circumf));
+    }
+} */
+
+#white-circle {
+    transform-origin: center;
+    /* animation: circle .35s ease-in .55s forwards; */
+}
+
+/* @keyframes circle {
+    from {
+        fill: #6cb4cc;
+        transform: scale(0);
+    }
+
+    to {
+        fill: #6cb4cc;
+        transform: scale(1);
+    }
+} */
+
+#check {
+    /* animation: check .34s cubic-bezier(0.65, 0, 1, 1) 0.85s forwards;  */
+    stroke-dasharray: 0, var(--check-len);
+  }
+
+/* @keyframes check {
+    0% {
+      stroke-dasharray: 0, var(--check-len);
+    }
+    20% {
+        stroke-linecap: round;
+    }
+    100% {
+      stroke-linecap: round;
+      stroke-dasharray: var(--check-len),var(--check-len);
+    }
+  } */
+  
+#confirmation-check {
+    /* animation: check-group .32s ease-in-out 1.13s; */
+    transform-origin: center;
+  }
+
+/* @keyframes check-group {
+    from {
+      transform: scale(1);
+    }
+    
+    50% {
+      transform: scale(1.09);
+    }
+    
+    to {
+      transform: scale(1);
+    }
+  } */
+
+  svg {
+    margin-top: 50px
+  }
+
+  #reference {
+    background-color: red;
+    padding: 20px;
+    margin-top: 50px;
+  }

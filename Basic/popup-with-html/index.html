@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>popup-with-html</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .buttonDiv {
+            text-align: center;
+            margin-block: 20px;
+        }
+        button {
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .popup {
+            width: 150px;
+            aspect-ratio: 1;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            text-align: center;
+            padding-top: 65px;
+            position: relative;
+        }
+        .close {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            cursor: pointer;
+            color: red;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="buttonDiv"><button onclick="openDialog()">open-popup</button></div>
+    <dialog class="popup">
+        my pop-up
+
+        <div class="close" >close</div>
+    </dialog>
+
+    <script>
+        function openDialog() {
+            document.querySelector(".popup").showModal()
+        }
+        const modal = document.querySelector(".popup");
+        document.addEventListener('click', ({target})=> {
+            console.log(target, 'target');
+            if (target == modal ) {
+                modal.close()
+            }
+        })
+    </script>
+</body>
+</html>
