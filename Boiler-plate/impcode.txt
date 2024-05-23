@@ -188,4 +188,68 @@ function processRequestAndReturnResultForCodWithPromise(requestURL, formId) {
 }
 
 
+async function checkImageExists(url) {
+  try {
+    const response = await fetch(url, { method: 'HEAD' });
+    return response.ok && response.headers.get('content-type').startsWith('image');
+  } catch (error) {
+    console.error('Error checking image existence:', error);
+    return false; // Return false in case of any errors
+  }
+}
+
+// Test the function
+const imageUrl = 'https://example.com/image.jpg'; // Replace with your image URL
+checkImageExists(imageUrl).then(exists => {
+  console.log('Image exists:', exists);
+});
+
+
+//without async
+
+function checkImageExists(url) {
+    try {
+        const xhr = new XMLHttpRequest();
+        xhr.open('HEAD', url, false);  // Synchronous request
+        xhr.send();
+        
+        if (xhr.status === 200) {
+            const contentType = xhr.getResponseHeader('content-type');
+            return contentType && contentType.startsWith('image');
+        } else {
+            return false;
+        }
+    } catch (error) {
+        console.error('Error checking image existence:', error);
+        return false; // Return false in case of any errors
+    }
+}
+
+const imageExists = checkImageExists('https://example.com/image.jpg');
+console.log(imageExists); // Will log true or false
+
+<!--- To know the ajax call status globally -->
+$(document).ajaxStart(function() {
+	$('#loader').show();
+	console.log('AJAX request started.');
+});
+
+// Hide loader when any AJAX call completes
+$(document).ajaxComplete(function() {
+	$('#loader').hide();
+	console.log('AJAX request completed.');
+});
+
+// Log successful AJAX responses
+$(document).ajaxSuccess(function(event, xhr, settings) {
+	console.log('AJAX request succeeded.');
+	console.log('Response:', xhr.responseText);
+});
+
+// Handle AJAX errors globally
+$(document).ajaxError(function(event, jqXHR, ajaxSettings, thrownError) {
+	console.log('AJAX request failed.');
+	console.log('Error:', thrownError);
+});
+
 
