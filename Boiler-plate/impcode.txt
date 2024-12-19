@@ -50,6 +50,12 @@ function isClassElementExists(elementId) {
 $ git config --global user.name "John Smith"
 
 mvn compile -Dskip.yarn
+ng build --configuration=ieprod
+
+ip2Locaiton: gradle clean build -x test publish
+travel-domain, cache-service: gradle clean build -x test publish -x codenarcMain
+dist folder genaration: ng build --configuration=ieprod
+
 
 <--- checkboxes checked with id started with ppl ---->
 jQuery('input:checkbox[id^="ppl"]', "#plazaPremiumLounge").each(function() {
@@ -252,4 +258,96 @@ $(document).ajaxError(function(event, jqXHR, ajaxSettings, thrownError) {
 	console.log('Error:', thrownError);
 });
 
+// detect slow network resources
+
+function slowNetworkResources() {
+     console.log('calling slowNetworkResources function');
+     window.performance.getEntriesByType('resource').forEach((entry) => {
+         // Check if the resource was loaded slowly (e.g., over 5 seconds)
+         if (entry.responseEnd - entry.startTime > 500) { // 5000ms = 5 seconds
+             console.log(`Slow network detected for resource: ${entry.name}`);
+             console.log(`Load time: ${(entry.responseEnd - entry.startTime) / 1000}s`);
+         }
+     });
+ }
+ 
+ //detect network type
+
+ function slowNetworkCondition() {
+     if (navigator.connection) {
+         const connection = navigator.connection;
+         console.log(`Network type: ${connection.effectiveType}`);
+         console.log(`Downlink speed: ${connection.downlink} Mbps`);
+
+         if (connection.effectiveType === '2g' || connection.effectiveType === '3g') {
+             console.log('Warning: Slow network detected. Network type is', connection.effectiveType);
+         } else {
+             console.log('Fast network detected. Network type is', connection.effectiveType);
+         }
+     }
+ }
+
+//capture networklogs for fetch URL's
+
+ function captureNetworkLogs() {
+     const originalFetch = window.fetch;
+     console.log('captureNetworkLogs');
+
+     window.fetch = function (url, options) {
+         const startTime = Date.now();
+         var method;
+         if (options) {
+             method = options.method
+         }
+         console.log('FETCH Request:', url);
+         console.log('Method:', method);
+
+         return originalFetch(url, options)
+             .then((response) => {
+                 const duration = Date.now() - startTime;
+                 console.log('FETCH Response Status:', response.status);
+                 console.log('FETCH Duration:', duration, 'ms');
+
+                 return response.clone().text().then((bodyText) => {
+                     console.log('FETCH Response Body:', bodyText);
+                 }).finally(() => {
+                     return response;
+                 });
+             })
+             .catch((error) => {
+                 console.error('FETCH Error:', error);
+             });
+     };
+ }
+ 
+ //capture network logs for AJAX calss
+
+ function captureNetworkLogs() {
+     const originalAjax = $.ajax;
+     console.log('captureNetworkLogs::ajax');
+
+     $.ajax = function (options) {
+         const startTime = Date.now();
+         var method, url;
+         if (options) {
+             method = options.method;
+             url = options.url
+         }
+         console.log('AJAX Request URL:', url);
+         console.log('Method:', method);
+
+         return originalAjax(options)
+             .done((data, textStatus, jqXHR) => {
+                 const duration = Date.now() - startTime;
+                 console.log('AJAX Response Status:', jqXHR.status);
+                 console.log('AJAX Duration:', duration, 'ms');
+
+                 // Log response body (if available)
+                 console.log('AJAX Response Body:', JSON.stringify(data));
+             })
+             .fail((jqXHR, textStatus, errorThrown) => {
+                 console.error('AJAX Error:', errorThrown);
+             });
+     };
+ }
 

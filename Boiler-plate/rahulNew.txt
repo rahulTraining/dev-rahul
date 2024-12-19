@@ -1022,3 +1022,14 @@ STUDENT_HOME == event ? memCacheSessionService.put(visitorId + STUDENT, 'STUDENT
                                 </div>
                             </th:block>
                         </div>
+						
+						
+						let StartDate = $('#m-inputFieldsId #departureDate').val();
+        let EndDate = $('#m-inputFieldsId #returnDate').val();
+        if (EndDate === "") {
+            console.log('true:::::');
+            let updateRtDate = moment(StartDate).add(1, 'week').format("ddd MMMM DD");
+            console.log(updateRtDate, 'updateRtDate');
+            $("#m-inputFieldsId #modifyRtInput").val(updateRtDate);
+            console.log($("#m-inputFieldsId #modifyRtInput").val())
+        }
