@@ -1033,3 +1033,33 @@ STUDENT_HOME == event ? memCacheSessionService.put(visitorId + STUDENT, 'STUDENT
             $("#m-inputFieldsId #modifyRtInput").val(updateRtDate);
             console.log($("#m-inputFieldsId #modifyRtInput").val())
         }
+		
+		http://localhost:8585/Flights/updatePaymentDetails.action?OIYLNRRH1J  //cc decline
+		
+		http://localhost:8585/Flights/updatePaymentDetails.action?OQTENGZL0P&1029671&30&true&Visaissue    //cc commision
+		
+		sfo - bom
+		airindia
+		
+		cashback 
+		
+		############sendOtpToEmail:
+		
+		
+		//enable cashback for cc
+		
+		creditCardChargeAndUpdatePayment
+		
+		} finally {
+			payment.setAmount(paymentAmount);
+			flight.setSpecialCriteria(specialCriteria);
+			paymentDetail.setCcVerificationAttempts("0_0");
+			flight.setIpcc(sourceIPCC);
+		}
+		LOGGER.info("UID-756 ::chargedAmount::"+chargedAmount);
+		if (authorizationCode != null) {
+		paymentserviceImpl
+
+		
+		 
+

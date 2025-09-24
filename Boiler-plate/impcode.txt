@@ -350,4 +350,87 @@ function slowNetworkResources() {
              });
      };
  }
+ 
+  // Check if the payload is a URL-encoded string
+        if (payload && typeof payload === 'string') {
+            console.log('AJAX Request Payload (URL-encoded):');
+            // Parse the URL-encoded string into key-value pairs
+            const params = new URLSearchParams(payload);
+            params.forEach((value, key) => {
+                console.log(`${key}: ${value}`);
+            });
+        } else if (payload && typeof payload === 'object') {
+            // If it's an object, log it as key-value pairs
+            console.log('AJAX Request Payload (Object):');
+            for (const [key, value] of Object.entries(payload)) {
+                console.log(`${key}: ${value}`);
+            }
+        }
+		
+		
+		
+		//print in console.table
+function captureNetworkLogs() {
+     const originalAjax = $.ajax;
+     console.log('captureNetworkLogs::ajax');
+
+     $.ajax = function (options) {
+         const startTime = Date.now();
+         var method, url, payload;
+         if (options) {
+             method = options.method;
+             url = options.url;
+             payload = options.data;
+         }
+         console.log('Capturing request...');
+
+         // Create an object to hold the data for the table
+         const logData = {
+             URL: url,
+             Method: method,
+             Payload: payload ? JSON.stringify(payload) : "No Payload",
+             Status: "Pending",
+             Duration: "Pending",
+             Response: "Pending"
+         };
+
+         // Perform the AJAX request
+         return originalAjax(options)
+             .done((data, textStatus, jqXHR) => {
+                 const duration = Date.now() - startTime;
+                 logData.Status = jqXHR.status;
+                 logData.Duration = duration + " ms";
+                 logData.Response = JSON.stringify(data);
+
+                 // Print the log data in table format
+                 console.table([logData]);
+             })
+             .fail((jqXHR, textStatus, errorThrown) => {
+                 logData.Status = "Error";
+                 logData.Duration = Date.now() - startTime + " ms";
+                 logData.Response = errorThrown;
+
+                 // Print the error log in table format
+                 console.table([logData]);
+             });
+     };
+ }
+ 
+ function serializeToObject(serializedData) {
+    let obj = {};
+    let pairs = serializedData.split('&');
+    pairs.forEach(function (pair) {
+        let [key, value] = pair.split('=');
+        if (key) {
+            obj[decodeURIComponent(key)] = decodeURIComponent(value || '');
+        }
+    });
+    return obj;
+}
+
+let formDataObj = serializeToObject(formData);
+delete formDataObj['paymentOptionForms[0].creditCardDetailsForm.securityCode'];
+
+local google api key AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg
+
 
